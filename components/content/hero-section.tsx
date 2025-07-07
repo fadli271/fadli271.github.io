@@ -4,6 +4,7 @@ import React from "react";
 import { ArrowDown } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import NextImage from "next/image";
 
 interface HeroSectionProps {
   content: {

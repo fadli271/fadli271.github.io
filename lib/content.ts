@@ -14,17 +14,24 @@ export const content = {
         "Hey, Let's talk about tech and make some magic for your business",
       scroll: "Scroll",
     },
-    bento: {
+    experienceSection: {
       about: {
-        title: "Tentang Saya",
+        title: "Pengalaman",
         content:
-          "Sejak 2016, saya terpesona dengan kemampuan teknologi untuk memecahkan masalah nyata. Bagi saya, coding adalah alat untuk menciptakan sistem yang efisien.",
+          "Sejak 2016, saya membangun bukan hanya baris kode—tapi sistem yang menyelesaikan masalah nyata. Dengan pendekatan produk dan mindset engineering, saya bantu bisnis tumbuh lewat solusi digital yang scalable, maintainable, dan meaningful.",
         link: "Selengkapnya...",
       },
       experience: { title: "Pengalaman", subtitle: "Tahun di industri" },
       projects: { title: "Proyek Selesai", subtitle: "Dari berbagai domain" },
       stack: { title: "Teknologi Utama" },
-      cta: { title: "Punya Ide Proyek?", button: "Mari Diskusi" },
+      cta: {
+        title: "Punya Ide Proyek?",
+        button: "Diskusikan ide bisnismu",
+      },
+      partner: {
+        title: "Partner Kerja Sama",
+        subtitle: "Dari Berbagai Perusahaan",
+      },
     },
     projects: {
       title: "Galeri Proyek",
@@ -143,16 +150,6 @@ export const content = {
     ],
   },
 };
-
-export const bentoSkillsData = [
-  { name: "Go", icon: "https://placehold.co/48x48/e5e7eb/1f2937?text=Go" },
-  { name: "PHP", icon: "https://placehold.co/48x48/e5e7eb/1f2937?text=PHP" },
-  { name: "Python", icon: "https://placehold.co/48x48/e5e7eb/1f2937?text=Py" },
-  {
-    name: "TypeScript",
-    icon: "https://placehold.co/48x48/e5e7eb/1f2937?text=TS",
-  },
-];
 
 export const experienceData = [
   {
