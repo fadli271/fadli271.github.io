@@ -2,6 +2,7 @@ export const content = {
   id: {
     nav: {
       home: "Home",
+      experience: "Pengalaman",
       projects: "Proyek",
       about: "Tentang",
       contact: "Kontak",
@@ -9,7 +10,8 @@ export const content = {
     hero: {
       line1: "Mohamad Fadli",
       line2: "Software Engineer",
-      tagline: "Hey, Let's talk about tech and make some magic for your business",
+      tagline:
+        "Hey, Let's talk about tech and make some magic for your business",
       scroll: "Scroll",
     },
     bento: {
