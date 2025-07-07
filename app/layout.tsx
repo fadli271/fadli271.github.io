@@ -29,7 +29,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen font-sans antialiased bg-white",
+          "min-h-screen font-sans antialiased",
           fontSans.variable,
         )}
       >
@@ -78,10 +78,12 @@ export default function RootLayout({
           type="application/ld+json"
         />
 
-        <Providers themeProps={{ attribute: "class", defaultTheme: "white" }}>
-          <div className="aurora-background" />
-          <div className="relative flex flex-col h-screen ">
-            <main className="mx-auto w-full flex-grow">{children}</main>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+          <div className="relative flex flex-col h-screen">
+            <div className="aurora-background" />
+            <main className="mx-auto w-full flex-grow bg-white">
+              {children}
+            </main>
             <footer className="w-full flex items-center justify-center py-4 text-sm text-black">
               <p>© 2025 Mohamad Fadli. All rights reserved.</p>
             </footer>
