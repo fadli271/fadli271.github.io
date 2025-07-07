@@ -56,7 +56,7 @@ export default function FloatingNavbar({
       {/* Menu Button */}
       <div className="relative">
         <button
-          className="w-12 h-12 flex items-center justify-center bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all transform hover:scale-110"
+          className="w-12 h-12 flex items-center justify-center bg-sky-500 text-white rounded-full shadow-lg hover:bg-sky-600 transition-all transform hover:scale-110"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <Menu className="w-6 h-6" />

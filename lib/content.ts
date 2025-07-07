@@ -7,10 +7,9 @@ export const content = {
       contact: "Kontak",
     },
     hero: {
-      line1: "Software Engineer &",
-      line2: "Problem Solver",
-      tagline:
-        "Saya mengubah ide kompleks menjadi solusi digital yang andal, performan, dan siap berkembang bersama bisnis Anda.",
+      line1: "Mohamad Fadli",
+      line2: "Software Engineer",
+      tagline: "Hey, Let's talk about tech and make some magic for your business",
       scroll: "Scroll",
     },
     bento: {

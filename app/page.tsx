@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import FloatingNavbar from "@/components/floating-navbar";
 import { content } from "@/lib/content";
+import { HeroSection } from "@/components/content/hero-section";
 
 export default function HomePage() {
   const [lang, setLang] = useState("id");
@@ -20,6 +21,7 @@ export default function HomePage() {
         currentLang={lang}
         setLang={setLang}
       />
+      <HeroSection content={currentContent.hero} />
     </>
   );
 }

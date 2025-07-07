@@ -1,117 +1,86 @@
 "use client";
 
 import React from "react";
-import { Button, Link } from "@heroui/react";
+import { ArrowDown } from "lucide-react";
+import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
-import NextImage from "next/image";
 
-import { trackEvent } from "@/lib/gtag";
+interface HeroSectionProps {
+  content: {
+    line1: string;
+    line2: string;
+    tagline: string;
+    scroll: string;
+  };
+}
 
-const WHATSAPP_CTA =
-  "https://api.whatsapp.com/send/?phone=6282253596399&text=Hallo+Jago+Compro%2C+saya+mau+pesan+desain+express&type=phone_number&app_absent=0";
+// Animation variants for staggered fade-in effect
+const containerVariant = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0 },
 };
 
-const zoomIn = {
-  hidden: { opacity: 0, scale: 0.8 },
-  show: { opacity: 1, scale: 1 },
-};
-
-export const HeroSection = () => {
-  const ctaText = "Ready! Desain Express 1 Hari";
-
+export const HeroSection = ({ content }: HeroSectionProps) => {
   return (
-    <div className="relative bg-[#0f172a] overflow-hidden">
-      <NextImage
-        fill
-        priority
-        alt="Background pattern with abstract shapes"
-        className="absolute inset-0 object-cover opacity-30"
-        src="/background.webp"
-      />
+    <section
+      className="page-section relative min-h-screen flex flex-col justify-center items-center px-4 text-center"
+      id="hero"
+    >
+      {/* Hero Title Section */}
+      <motion.h1
+        animate="show"
+        className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight"
+        initial="hidden"
+        variants={containerVariant}
+      >
+        {/* First Line */}
+        <motion.span
+          className="block text-gray-800"
+          transition={{ duration: 0.6, ease: "circOut" }}
+          variants={fadeUpVariant}
+        >
+          {content.line1}
+        </motion.span>
 
-      <section className="relative z-10 text-white" id="hero">
-        <div className="container  mx-auto px-6 lg:px-36 py-24 flex flex-col lg:flex-row items-center gap-12 text-center lg:text-left">
-          {/* Left Text Column */}
-          <div className="lg:w-1/2">
-            <motion.h1
-              animate="show"
-              className="text-4xl md:text-6xl font-bold mb-4"
-              initial="hidden"
-              transition={{ duration: 0.6 }}
-              variants={fadeUp}
-            >
-              Jasa Desain <br />
-              <span className="text-emerald-400">Company Profile</span> Profesional
-            </motion.h1>
+        {/* Second Line with Gradient */}
+        <motion.span
+          className="block gradient-text mt-2 text-sky-500"
+          transition={{ duration: 0.6, ease: "circOut", delay: 0.2 }}
+          variants={fadeUpVariant}
+        >
+          {content.line2}
+        </motion.span>
+      </motion.h1>
 
-            <motion.p
-              animate="show"
-              className="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 mb-6"
-              initial="hidden"
-              transition={{ duration: 0.6, delay: 0.2 }}
-              variants={fadeUp}
-            >
-              Company profile bukan sekadar formalitas, tapi alat penting untuk menunjukkan
-              profesionalisme, membangun kepercayaan, dan menjelaskan bisnis Anda secara ringkas dan
-              menarik.
-            </motion.p>
+      {/* Tagline with Typing Animation */}
+      <div className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-500 italic h-10">
+        <TypeAnimation
+          cursor={false}
+          sequence={[`"${content.tagline}"`]}
+          speed={65}
+          wrapper="p"
+        />
+      </div>
 
-            <motion.div
-              animate="show"
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
-              initial="hidden"
-              transition={{ duration: 0.6, delay: 0.4 }}
-              variants={fadeUp}
-            >
-              <Button
-                as={Link}
-                className="font-semibold text-slate-800 bg-yellow-400"
-                endContent={<FaArrowRight />}
-                href={WHATSAPP_CTA}
-                rel="noopener noreferrer"
-                size="lg"
-                target="_blank"
-                variant="shadow"
-                onPress={() =>
-                  trackEvent("click_whatsapp", {
-                    category: "engagement",
-                    label: "footer_whatsapp_button",
-                    fbEventName: "Lead",
-                    fbParams: { source: "hero" },
-                  })
-                }
-              >
-                {ctaText}
-              </Button>
-            </motion.div>
-          </div>
-
-          {/* Right Image Column */}
-          <div className="lg:w-1/2 flex justify-center">
-            <motion.div
-              animate="show"
-              initial="hidden"
-              transition={{ duration: 0.8, type: "spring" }}
-              variants={zoomIn}
-            >
-              <NextImage
-                priority
-                alt="Mockup desain company profile modern dan profesional"
-                className="drop-shadow-[0_20px_50px_rgba(20,184,166,0.2)]"
-                height={450}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                src="/KV.webp"
-                width={800}
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </div>
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <a
+          className="animate-bounce flex flex-col items-center text-gray-500 hover:text-sky-500 transition-colors"
+          href="#bento"
+        >
+          <span className="text-sm">{content.scroll}</span>
+          <ArrowDown className="w-6 h-6" />
+        </a>
+      </div>
+    </section>
   );
 };
