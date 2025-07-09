@@ -1,11 +1,33 @@
 import {
-  FaPhp, FaLaravel, FaPython, FaNodeJs, FaReact, FaGitAlt, FaAws, FaDocker, FaJs,
-} from 'react-icons/fa';
-import { SiGoland, SiDjango, SiNestjs, SiTypescript, SiNextdotjs, SiTailwindcss, SiPostgresql, SiMysql, SiRedis, SiGooglecloud, SiRuby, SiRubyonrails, } from 'react-icons/si';
+  FaPhp,
+  FaLaravel,
+  FaPython,
+  FaNodeJs,
+  FaReact,
+  FaGitAlt,
+  FaAws,
+  FaDocker,
+  FaJs,
+} from "react-icons/fa";
+import {
+  SiGoland,
+  SiDjango,
+  SiNestjs,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiPostgresql,
+  SiMysql,
+  SiRedis,
+  SiGooglecloud,
+  SiRuby,
+  SiRubyonrails,
+} from "react-icons/si";
 
 export const fullSkillsData = [
   {
-    category: "Backend", skills: [
+    category: "Backend",
+    skills: [
       { name: "Go", url: "https://golang.org/", icon: SiGoland },
       { name: "PHP", url: "https://www.php.net/", icon: FaPhp },
       { name: "Laravel", url: "https://laravel.com/", icon: FaLaravel },
@@ -14,29 +36,51 @@ export const fullSkillsData = [
       { name: "Node.js", url: "https://nodejs.org/", icon: FaNodeJs },
       { name: "NestJS", url: "https://nestjs.com/", icon: SiNestjs },
       { name: "Ruby", url: "https://www.ruby-lang.org/", icon: SiRuby },
-      { name: "Ruby On Rails", url: "https://rubyonrails.org/", icon: SiRubyonrails },
-    ]
+      {
+        name: "Ruby On Rails",
+        url: "https://rubyonrails.org/",
+        icon: SiRubyonrails,
+      },
+    ],
   },
   {
-    category: "Frontend", skills: [
-      { name: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: FaJs },
-      { name: "TypeScript", url: "https://www.typescriptlang.org/", icon: SiTypescript },
+    category: "Frontend",
+    skills: [
+      {
+        name: "JavaScript",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        icon: FaJs,
+      },
+      {
+        name: "TypeScript",
+        url: "https://www.typescriptlang.org/",
+        icon: SiTypescript,
+      },
       { name: "React", url: "https://react.dev/", icon: FaReact },
       { name: "Next.js", url: "https://nextjs.org/", icon: SiNextdotjs },
-      { name: "Tailwind CSS", url: "https://tailwindcss.com/", icon: SiTailwindcss }
-    ]
+      {
+        name: "Tailwind CSS",
+        url: "https://tailwindcss.com/",
+        icon: SiTailwindcss,
+      },
+    ],
   },
   {
-    category: "Database & Lainnya", skills: [
+    category: "Database & Lainnya",
+    skills: [
       { name: "MySQL", url: "https://www.mysql.com/", icon: SiMysql },
-      { name: "PostgreSQL", url: "https://www.postgresql.org/", icon: SiPostgresql },
+      {
+        name: "PostgreSQL",
+        url: "https://www.postgresql.org/",
+        icon: SiPostgresql,
+      },
       { name: "Redis", url: "https://redis.io/", icon: SiRedis },
       { name: "Docker", url: "https://www.docker.com/", icon: FaDocker },
       { name: "AWS", url: "https://aws.amazon.com/", icon: FaAws },
       { name: "GCP", url: "https://cloud.google.com/", icon: SiGooglecloud },
-      { name: "Git", url: "https://git-scm.com/", icon: FaGitAlt }
-    ]
-  }
+      { name: "Git", url: "https://git-scm.com/", icon: FaGitAlt },
+    ],
+  },
 ];
 
 export const content = {
@@ -74,9 +118,10 @@ export const content = {
         subtitle: "Dari Berbagai Perusahaan",
       },
     },
-    skills: { 
-      title: "Keahlian & Teknologi", 
-      subtitle: "Kumpulan teknologi yang saya kuasai untuk merancang, membangun, dan menerapkan solusi perangkat lunak yang efektif dari hulu ke hilir." 
+    skills: {
+      title: "Keahlian & Teknologi",
+      subtitle:
+        "Kumpulan teknologi yang saya kuasai untuk merancang, membangun, dan menerapkan solusi perangkat lunak yang efektif dari hulu ke hilir.",
     },
     projects: {
       title: "Galeri Proyek",
@@ -87,6 +132,9 @@ export const content = {
       title: "Perjalanan Karier",
       subtitle:
         "Pengalaman yang membentuk saya menjadi engineer seperti sekarang.",
+      narrative:
+        "Sejak memulai perjalanan di dunia pemrograman pada 2016, saya selalu terpesona bukan hanya oleh teknologi itu sendiri, tetapi oleh kemampuannya memecahkan masalah manusia yang nyata. Bagi saya, coding adalah alat untuk menciptakan sistem yang efisien dan pengalaman yang lebih baik. Dengan pola pikir fleksibel dan etos kerja kuat, saya mendedikasikan diri untuk terus belajar dan beradaptasi, baik saat mengerjakan sistem akademik maupun arsitektur microservices berskala besar.",
+      cta: "Download CV",
     },
     contact: {
       title: "Mari Terhubung",
@@ -99,116 +147,143 @@ export const content = {
       {
         title: "Aplikasi POS Bakti Nusantara",
         category: "Sistem Manajemen Bisnis & Industri",
-        description: "Sistem Point-of-Sale lengkap dengan manajemen gudang, kasir, dan modul akunting terintegrasi.",
+        description:
+          "Sistem Point-of-Sale lengkap dengan manajemen gudang, kasir, dan modul akunting terintegrasi.",
         tags: ["Golang", "Python", "Flutter"],
         stack: ["Golang", "Python", "Flutter", "PostgreSQL"],
         caseStudy: {
-          problem: "Manajemen inventaris dan keuangan di apotek dilakukan manual, menyebabkan stok tidak sesuai dan pelaporan lambat.",
-          solution: "Membangun sistem POS terintegrasi dengan modul Gudang, Kasir, dan Akunting otomatis.",
-          impact: "Sinkronisasi stok secara real-time, mengurangi kesalahan input 95%, dan mempercepat laporan keuangan dari hitungan hari menjadi menit."
+          problem:
+            "Manajemen inventaris dan keuangan di apotek dilakukan manual, menyebabkan stok tidak sesuai dan pelaporan lambat.",
+          solution:
+            "Membangun sistem POS terintegrasi dengan modul Gudang, Kasir, dan Akunting otomatis.",
+          impact:
+            "Sinkronisasi stok secara real-time, mengurangi kesalahan input 95%, dan mempercepat laporan keuangan dari hitungan hari menjadi menit.",
         },
         images: [
           "/portfolio/1 (1).webp",
           "/portfolio/1 (1).webp",
           "/portfolio/1 (1).webp",
-        ]
+        ],
       },
       {
         title: "KTJM-App",
         category: "Sistem Manajemen Bisnis & Industri",
-        description: "Sistem pelacakan pengiriman kelapa sawit dari perkebunan hingga pabrik.",
+        description:
+          "Sistem pelacakan pengiriman kelapa sawit dari perkebunan hingga pabrik.",
         tags: ["PHP", "Laravel", "JavaScript"],
         stack: ["PHP", "Laravel", "JavaScript", "MySQL", "Leaflet.js"],
         caseStudy: {
-          problem: "Kurangnya transparansi dan data real-time dalam rantai pasok kelapa sawit.",
-          solution: "Mengembangkan aplikasi web & mobile untuk melacak posisi truk (GPS), mencatat berat muatan, dan estimasi waktu tiba.",
-          impact: "Meningkatkan kepercayaan, menekan potensi kehilangan 20%, dan menyediakan data akurat untuk logistik."
+          problem:
+            "Kurangnya transparansi dan data real-time dalam rantai pasok kelapa sawit.",
+          solution:
+            "Mengembangkan aplikasi web & mobile untuk melacak posisi truk (GPS), mencatat berat muatan, dan estimasi waktu tiba.",
+          impact:
+            "Meningkatkan kepercayaan, menekan potensi kehilangan 20%, dan menyediakan data akurat untuk logistik.",
         },
         images: [
           "Peta Pelacakan Truk secara Real-time",
-          "Form Input Data Timbangan Digital"
-        ]
+          "Form Input Data Timbangan Digital",
+        ],
       },
       {
         title: "MC-Profile",
         category: "Aplikasi Web & Profil",
-        description: "Website profil untuk Mutiara Cantik, sebuah toko kecantikan.",
+        description:
+          "Website profil untuk Mutiara Cantik, sebuah toko kecantikan.",
         tags: ["HTML", "CSS", "JavaScript"],
         stack: ["HTML", "CSS", "JavaScript"],
         caseStudy: {
-          problem: "Toko kecantikan 'Mutiara Cantik' tidak memiliki kehadiran online, kehilangan potensi pelanggan yang mencari produk dan layanan secara digital.",
-          solution: "Membangun website profil modern dan responsif menampilkan katalog produk, layanan, galeri, dan informasi kontak.",
-          impact: "Menciptakan etalase digital 24/7, meningkatkan jangkauan pasar, dan memberi saluran komunikasi baru bagi pelanggan."
+          problem:
+            "Toko kecantikan 'Mutiara Cantik' tidak memiliki kehadiran online, kehilangan potensi pelanggan yang mencari produk dan layanan secara digital.",
+          solution:
+            "Membangun website profil modern dan responsif menampilkan katalog produk, layanan, galeri, dan informasi kontak.",
+          impact:
+            "Menciptakan etalase digital 24/7, meningkatkan jangkauan pasar, dan memberi saluran komunikasi baru bagi pelanggan.",
         },
-        images: [
-          "Tampilan Halaman Depan Website",
-          "Galeri Produk dan Layanan"
-        ]
+        images: ["Tampilan Halaman Depan Website", "Galeri Produk dan Layanan"],
       },
       {
         title: "Jago Compro",
         category: "Aplikasi Web & Profil",
-        description: "Website profil untuk Mutiara Cantik, sebuah toko kecantikan.",
+        description:
+          "Website profil untuk Mutiara Cantik, sebuah toko kecantikan.",
         tags: ["HTML", "CSS", "JavaScript"],
         stack: ["HTML", "CSS", "JavaScript"],
         caseStudy: {
-          problem: "Tidak memiliki representasi digital yang menarik untuk menarik pelanggan baru.",
-          solution: "Membuat website profil menarik dengan layout profesional dan informasi bisnis lengkap.",
-          impact: "Meningkatkan kredibilitas brand dan mempermudah akses pelanggan ke informasi produk dan layanan."
+          problem:
+            "Tidak memiliki representasi digital yang menarik untuk menarik pelanggan baru.",
+          solution:
+            "Membuat website profil menarik dengan layout profesional dan informasi bisnis lengkap.",
+          impact:
+            "Meningkatkan kredibilitas brand dan mempermudah akses pelanggan ke informasi produk dan layanan.",
         },
-        images: ["Halaman Landing Page", "Profil Produk"]
+        images: ["Halaman Landing Page", "Profil Produk"],
       },
       {
         title: "Siketa",
         category: "Sistem Informasi Akademik & Kepegawaian",
-        description: "Sistem informasi manajemen proses dan bimbingan tugas akhir mahasiswa.",
+        description:
+          "Sistem informasi manajemen proses dan bimbingan tugas akhir mahasiswa.",
         tags: ["PHP", "MySQL"],
         stack: ["PHP (Native)", "MySQL", "jQuery"],
         caseStudy: {
-          problem: "Proses administrasi tugas akhir yang lambat dan tidak transparan.",
-          solution: "Membangun portal terpusat untuk pengajuan proposal, bimbingan online, dan pelacakan kemajuan digital.",
-          impact: "Memangkas waktu administrasi 60%, transparansi penuh, dan mengurangi penggunaan kertas."
+          problem:
+            "Proses administrasi tugas akhir yang lambat dan tidak transparan.",
+          solution:
+            "Membangun portal terpusat untuk pengajuan proposal, bimbingan online, dan pelacakan kemajuan digital.",
+          impact:
+            "Memangkas waktu administrasi 60%, transparansi penuh, dan mengurangi penggunaan kertas.",
         },
-        images: ["Dashboard Kemajuan Mahasiswa", "Fitur Chat Bimbingan"]
+        images: ["Dashboard Kemajuan Mahasiswa", "Fitur Chat Bimbingan"],
       },
       {
         title: "Sirupas",
         category: "Sistem Informasi Akademik & Kepegawaian",
-        description: "Aplikasi sistem informasi arsip dan manajemen data untuk sebuah fakultas akademi besar.",
+        description:
+          "Aplikasi sistem informasi arsip dan manajemen data untuk sebuah fakultas akademi besar.",
         tags: ["Ruby on Rails", "PHP"],
         stack: ["Ruby on Rails", "PostgreSQL", "Elasticsearch"],
         caseStudy: {
-          problem: "Pencarian dokumen fisik yang lambat dan risiko kehilangan arsip.",
-          solution: "Membangun sistem arsip digital dengan unggah dokumen dan pencarian full-text.",
-          impact: "Pencarian jadi detik, data lebih aman, dan audit jadi lebih mudah."
+          problem:
+            "Pencarian dokumen fisik yang lambat dan risiko kehilangan arsip.",
+          solution:
+            "Membangun sistem arsip digital dengan unggah dokumen dan pencarian full-text.",
+          impact:
+            "Pencarian jadi detik, data lebih aman, dan audit jadi lebih mudah.",
         },
-        images: ["Pencarian Arsip", "Detail Dokumen"]
+        images: ["Pencarian Arsip", "Detail Dokumen"],
       },
       {
         title: "Sibema",
         category: "Sistem Informasi Akademik & Kepegawaian",
-        description: "Sistem informasi untuk pendaftaran dan seleksi beasiswa mahasiswa.",
+        description:
+          "Sistem informasi untuk pendaftaran dan seleksi beasiswa mahasiswa.",
         tags: ["PHP", "JavaScript"],
         stack: ["PHP", "JavaScript", "MySQL"],
         caseStudy: {
           problem: "Informasi beasiswa tersebar dan proses manual.",
-          solution: "Membangun portal satu pintu untuk semua info dan seleksi beasiswa.",
-          impact: "Partisipasi meningkat, seleksi efisien, dan administrasi ringan."
+          solution:
+            "Membangun portal satu pintu untuk semua info dan seleksi beasiswa.",
+          impact:
+            "Partisipasi meningkat, seleksi efisien, dan administrasi ringan.",
         },
-        images: ["Daftar Beasiswa", "Formulir Pendaftaran"]
+        images: ["Daftar Beasiswa", "Formulir Pendaftaran"],
       },
       {
         title: "Monitoring Staf",
         category: "Sistem Informasi Akademik & Kepegawaian",
-        description: "Aplikasi untuk memonitor status staf dan rekapitulasi jam kerja.",
+        description:
+          "Aplikasi untuk memonitor status staf dan rekapitulasi jam kerja.",
         tags: ["PHP", "MySQL"],
         stack: ["PHP", "MySQL", "jQuery", "AJAX"],
         caseStudy: {
           problem: "Pelacakan kehadiran staf manual dan rentan kesalahan.",
-          solution: "Aplikasi dasbor untuk input status harian dan rekap otomatis.",
-          impact: "Visibilitas real-time, rekap otomatis, dan cuti mudah diajukan."
+          solution:
+            "Aplikasi dasbor untuk input status harian dan rekap otomatis.",
+          impact:
+            "Visibilitas real-time, rekap otomatis, dan cuti mudah diajukan.",
         },
-        images: ["Dasbor Staf", "Laporan Jam Kerja"]
+        images: ["Dasbor Staf", "Laporan Jam Kerja"],
       },
       {
         title: "Siporat",
@@ -218,24 +293,28 @@ export const content = {
         stack: ["PHP", "JavaScript", "MySQL"],
         caseStudy: {
           problem: "Nomor surat tidak konsisten dan proses lambat.",
-          solution: "Sistem yang mengenerate nomor otomatis sesuai format dan arsip digital.",
-          impact: "Nomor unik 100%, cepat, dan arsip rapi."
+          solution:
+            "Sistem yang mengenerate nomor otomatis sesuai format dan arsip digital.",
+          impact: "Nomor unik 100%, cepat, dan arsip rapi.",
         },
-        images: ["Form Nomor Surat", "Tabel Arsip"]
+        images: ["Form Nomor Surat", "Tabel Arsip"],
       },
       {
         title: "Sijaki",
         category: "Sistem Informasi Akademik & Kepegawaian",
-        description: "Sistem informasi untuk penjadwalan dan pelaporan kinerja dosen.",
+        description:
+          "Sistem informasi untuk penjadwalan dan pelaporan kinerja dosen.",
         tags: ["PHP", "MySQL"],
         stack: ["PHP", "MySQL"],
         caseStudy: {
           problem: "Data kinerja dosen tersebar dan sulit dievaluasi.",
-          solution: "Platform input kegiatan dosen dan laporan kinerja otomatis.",
-          impact: "Evaluasi mudah, akreditasi terbantu, dan keputusan pimpinan lebih akurat."
+          solution:
+            "Platform input kegiatan dosen dan laporan kinerja otomatis.",
+          impact:
+            "Evaluasi mudah, akreditasi terbantu, dan keputusan pimpinan lebih akurat.",
         },
-        images: ["Rekap Kinerja", "Jadwal Mengajar"]
-      }
+        images: ["Rekap Kinerja", "Jadwal Mengajar"],
+      },
     ],
   },
   en: {

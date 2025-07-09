@@ -132,7 +132,7 @@ export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
               className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-500 rounded-full shadow-md hover:scale-105 transition-transform duration-300 text-md"
               href="#contact"
             >
-              {content.cta.button}
+              Tap disini untuk kolaborasi
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>

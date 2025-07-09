@@ -84,7 +84,7 @@ export default function RootLayout({
             <main className="mx-auto w-full flex-grow bg-white">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-4 text-sm text-black">
+            <footer className="w-full flex items-center justify-center py-4 text-sm text-black bg-white">
               <p>© 2025 Mohamad Fadli. All rights reserved.</p>
             </footer>
           </div>

@@ -8,6 +8,8 @@ import { HeroSection } from "@/components/content/hero-section";
 import { ExperienceSection } from "@/components/content/experience-section";
 import SkillsSection from "@/components/content/skills-section";
 import ProjectsSection from "@/components/content/project-section";
+import AboutSection from "@/components/content/about-section";
+import ContactSection from "@/components/content/contact-section";
 
 type ContentType = typeof content.id;
 
@@ -29,7 +31,12 @@ export default function HomePage() {
       <HeroSection content={currentContent.hero} />
       <ExperienceSection content={currentContent.experienceSection} />
       <SkillsSection content={currentContent.skills} />
-      <ProjectsSection content={currentContent.projects} projectsData={currentContent.projectsData} />
+      <ProjectsSection
+        content={currentContent.projects}
+        projectsData={currentContent.projectsData}
+      />
+      <AboutSection content={currentContent.about} />
+      <ContactSection content={currentContent.contact} />
     </>
   );
 }

@@ -21,7 +21,7 @@ export default function FloatingNavbar({
   };
 
   return (
-    <div className="fixed top-4 right-4 z-50 flex items-center gap-2 mx-96 mt-10">
+    <div className="fixed top-4 right-4 z-50 flex items-center gap-2 mt-10">
       {/* Language Switcher */}
       <div className="relative">
         <button
