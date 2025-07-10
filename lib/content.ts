@@ -141,6 +141,7 @@ export const content = {
       subtitle:
         "Saya selalu terbuka untuk diskusi mengenai proyek baru, peluang kolaborasi, atau sekadar bertukar pikiran tentang teknologi.",
       emailPrompt: "Anda dapat menghubungi saya melalui email di:",
+      socialPrompt: ""
     },
     footer: { credit: "Didesain dengan penuh semangat di Palu." },
     projectsData: [
