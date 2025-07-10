@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint --fix",
-    "deploy": "npm run build && gh-pages -d out -b main"
+    "deploy": "gh-pages -d out -b main"
   },
   "dependencies": {
     "@heroui/button": "2.2.21",
