@@ -164,11 +164,7 @@ export const content = {
           impact:
             "Sinkronisasi stok secara real-time, mengurangi kesalahan input 95%, dan mempercepat laporan keuangan dari hitungan hari menjadi menit.",
         },
-        images: [
-          "/portfolio/1 (1).webp",
-          "/portfolio/1 (1).webp",
-          "/portfolio/1 (1).webp",
-        ],
+        images: [],
       },
       {
         title: "KTJM-App",
@@ -185,10 +181,7 @@ export const content = {
           impact:
             "Meningkatkan kepercayaan, menekan potensi kehilangan 20%, dan menyediakan data akurat untuk logistik.",
         },
-        images: [
-          "Peta Pelacakan Truk secara Real-time",
-          "Form Input Data Timbangan Digital",
-        ],
+        images: [],
       },
       {
         title: "MC-Profile",
@@ -205,7 +198,7 @@ export const content = {
           impact:
             "Menciptakan etalase digital 24/7, meningkatkan jangkauan pasar, dan memberi saluran komunikasi baru bagi pelanggan.",
         },
-        images: ["Tampilan Halaman Depan Website", "Galeri Produk dan Layanan"],
+        images: [],
       },
       {
         title: "Jago Compro",
@@ -222,7 +215,7 @@ export const content = {
           impact:
             "Meningkatkan kredibilitas brand dan mempermudah akses pelanggan ke informasi produk dan layanan.",
         },
-        images: ["Halaman Landing Page", "Profil Produk"],
+        images: [],
       },
       {
         title: "Siketa",
@@ -239,24 +232,7 @@ export const content = {
           impact:
             "Memangkas waktu administrasi 60%, transparansi penuh, dan mengurangi penggunaan kertas.",
         },
-        images: ["Dashboard Kemajuan Mahasiswa", "Fitur Chat Bimbingan"],
-      },
-      {
-        title: "Sirupas",
-        category: "Sistem Informasi Akademik & Kepegawaian",
-        description:
-          "Aplikasi sistem informasi arsip dan manajemen data untuk sebuah fakultas akademi besar.",
-        tags: ["Ruby on Rails", "PHP"],
-        stack: ["Ruby on Rails", "PostgreSQL", "Elasticsearch"],
-        caseStudy: {
-          problem:
-            "Pencarian dokumen fisik yang lambat dan risiko kehilangan arsip.",
-          solution:
-            "Membangun sistem arsip digital dengan unggah dokumen dan pencarian full-text.",
-          impact:
-            "Pencarian jadi detik, data lebih aman, dan audit jadi lebih mudah.",
-        },
-        images: ["Pencarian Arsip", "Detail Dokumen"],
+        images: [],
       },
       {
         title: "Sibema",
@@ -272,7 +248,7 @@ export const content = {
           impact:
             "Partisipasi meningkat, seleksi efisien, dan administrasi ringan.",
         },
-        images: ["Daftar Beasiswa", "Formulir Pendaftaran"],
+        images: [],
       },
       {
         title: "Monitoring Staf",
@@ -288,7 +264,7 @@ export const content = {
           impact:
             "Visibilitas real-time, rekap otomatis, dan cuti mudah diajukan.",
         },
-        images: ["Dasbor Staf", "Laporan Jam Kerja"],
+        images: [],
       },
       {
         title: "Siporat",
@@ -302,7 +278,7 @@ export const content = {
             "Sistem yang mengenerate nomor otomatis sesuai format dan arsip digital.",
           impact: "Nomor unik 100%, cepat, dan arsip rapi.",
         },
-        images: ["Form Nomor Surat", "Tabel Arsip"],
+        images: [],
       },
       {
         title: "Sijaki",
@@ -318,7 +294,7 @@ export const content = {
           impact:
             "Evaluasi mudah, akreditasi terbantu, dan keputusan pimpinan lebih akurat.",
         },
-        images: ["Rekap Kinerja", "Jadwal Mengajar"],
+        images: [],
       },
     ],
   },
@@ -385,12 +361,6 @@ export const content = {
         description:
           "An information system to manage the final thesis process and supervision for students.",
         tags: ["PHP", "MySQL"],
-      },
-      {
-        title: "Sirupas",
-        description:
-          "An archive and data management information system for a large university faculty.",
-        tags: ["Ruby on Rails", "PHP"],
       },
     ],
   },

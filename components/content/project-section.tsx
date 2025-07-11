@@ -10,36 +10,32 @@ import {
   ModalBody,
   Button,
   Link,
+  Chip,
 } from "@heroui/react";
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
 import {
-  FiAlertCircle,
-  FiTrendingUp,
-  FiTool,
-  FiImage,
   FiArrowRight,
+  FiImage,
+  FiTool,
+  FiTrendingUp,
+  FiAlertCircle,
 } from "react-icons/fi";
 import { TfiLightBulb } from "react-icons/tfi";
+import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
+import { Rocket } from "lucide-react";
 
 import ImageCarousel from "../Image-carousel";
 
 interface ProjectsSectionProps {
-  content: {
-    title: string;
-    subtitle: string;
-  };
+  content: { title: string; subtitle: string };
   projectsData: {
     title: string;
     description: string;
     tags: string[];
     category: string;
     stack?: string[];
-    caseStudy?: {
-      problem: string;
-      solution: string;
-      impact: string;
-    };
+    caseStudy?: { problem: string; solution: string; impact: string };
     images?: string[];
   }[];
 }
@@ -48,11 +44,20 @@ export default function ProjectsSection({
   content,
   projectsData,
 }: ProjectsSectionProps) {
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState<
     ProjectsSectionProps["projectsData"][0] | null
   >(null);
   const [isOpen, setIsOpen] = useState(false);
-  const categories = Array.from(new Set(projectsData.map((p) => p.category)));
+
+  const categories = [
+    "All",
+    ...Array.from(new Set(projectsData.map((p) => p.category))),
+  ];
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projectsData
+      : projectsData.filter((p) => p.category === selectedCategory);
 
   const openModal = (project: ProjectsSectionProps["projectsData"][0]) => {
     setSelectedProject(project);
@@ -62,18 +67,19 @@ export default function ProjectsSection({
   return (
     <section className="max-w-7xl mx-auto py-24 px-4" id="projects">
       {/* Section Header */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-12">
         <motion.h1
-          className="text-4xl md:text-5xl font-bold text-sky-500"
+          className="text-3xl md:text-3xl font-bold gradient-text"
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
         >
+          <Rocket className="w-9 h-9 text-sky-500 gradient-text" />
           {content.title}
         </motion.h1>
         <motion.p
-          className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto"
+          className="text-base text-gray-600 mt-4 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
@@ -83,72 +89,86 @@ export default function ProjectsSection({
         </motion.p>
       </div>
 
-      {/* Project Cards by Category */}
-      <div className="space-y-16">
-        {categories.map((category, catIndex) => (
+      {/* Category Filter */}
+      <div className="flex flex-wrap justify-center gap-3 mb-12">
+        {categories.map((cat) => (
+          <Chip
+            key={cat}
+            className={`
+          cursor-pointer text-sm font-medium transition-all duration-300
+          ${
+            selectedCategory === cat
+              ? "bg-gradient-to-r from-sky-500 to-blue-500 text-white shadow-sm"
+              : "bg-white text-gray-600 border border-gray-300 hover:border-sky-500 hover:text-sky-500"
+          }
+        `}
+            variant={selectedCategory === cat ? "solid" : "flat"}
+            onClick={() => setSelectedCategory(cat)}
+          >
+            {cat}
+          </Chip>
+        ))}
+      </div>
+
+      {/* Project Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredProjects.map((project, i) => (
           <motion.div
-            key={category}
+            key={project.title}
             initial={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: catIndex * 0.2 }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            <h2 className="text-2xl font-semibold text-sky-500 mb-6">
-              {category}
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projectsData
-                .filter((p) => p.category === category)
-                .map((project, projIndex) => (
-                  <motion.div
-                    key={project.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    transition={{ duration: 0.5, delay: projIndex * 0.1 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+            <Card className="group relative overflow-hidden shadow-md rounded-2xl">
+              {/* Image Preview */}
+              <div className="w-full h-48 relative">
+                <Image
+                  fill
+                  alt={project.title}
+                  className="object-cover"
+                  src={
+                    project?.images?.[0]
+                      ? project?.images?.[0]
+                      : "/portfolio/placeholder-project.svg"
+                  }
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                  <Button
+                    className="bg-white text-sky-600 font-semibold px-5 py-2 rounded-full shadow-md hover:scale-105 transition-transform"
+                    onPress={() => openModal(project)}
                   >
-                    <Card
-                      className="relative rounded-2xl overflow-hidden group transition-all"
-                      shadow="md"
+                    Lihat Detail
+                  </Button>
+                </div>
+              </div>
+
+              {/* Info */}
+              <CardBody className="p-5 bg-white z-0 relative space-y-2">
+                <div className="flex items-center gap-2 text-gray-900 font-semibold">
+                  <FaGithub />
+                  <h3>{project.title}</h3>
+                </div>
+                <p className="text-sm text-gray-600 line-clamp-3">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded-full"
                     >
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity z-10">
-                        <Button
-                          className="bg-white text-sky-600 font-semibold px-5 py-2 rounded-full shadow-md hover:scale-105 transition-transform"
-                          onPress={() => openModal(project)}
-                        >
-                          Lihat Detail
-                        </Button>
-                      </div>
-                      <CardBody className="p-6 flex flex-col justify-between gap-4 bg-white relative z-0">
-                        <div className="flex items-center gap-3">
-                          <FaGithub size={22} />
-                          <h3 className="text-xl font-semibold text-gray-900">
-                            {project.title}
-                          </h3>
-                        </div>
-                        <p className="text-sm text-gray-600 line-clamp-3">
-                          {project.description}
-                        </p>
-                        <div className="flex flex-wrap gap-2 mt-2">
-                          {project.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded-full"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </CardBody>
-                    </Card>
-                  </motion.div>
-                ))}
-            </div>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </CardBody>
+            </Card>
           </motion.div>
         ))}
       </div>
 
-      {/* Project Detail Modal */}
+      {/* Detail Modal */}
       <Modal
         isOpen={isOpen}
         placement="top"
@@ -156,90 +176,106 @@ export default function ProjectsSection({
         size="5xl"
         onOpenChange={setIsOpen}
       >
-        <ModalContent className="rounded-2xl p-2 bg-white">
-          <ModalHeader className="text-xl font-bold text-gray-800">
-            {selectedProject?.title}
+        <ModalContent className="rounded-3xl p-4 bg-white shadow-xl">
+          <ModalHeader className="text-2xl font-bold text-gray-800">
+            {selectedProject?.title ?? "Project Title"}
           </ModalHeader>
           <ModalBody>
-            <section className="space-y-5">
-              <p className="text-gray-800 text-base leading-relaxed whitespace-pre-line">
-                {selectedProject?.description}
-              </p>
+            {selectedProject ? (
+              <section className="space-y-8">
+                {/* Deskripsi */}
+                {selectedProject.description && (
+                  <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line">
+                    {selectedProject.description}
+                  </p>
+                )}
 
-              {selectedProject?.caseStudy && (
-                <div className="text-gray-700 space-y-3">
-                  <div className="flex items-start gap-2">
-                    <FiAlertCircle className="text-red-500 mt-0.5" />
-                    <div>
-                      <span className="font-semibold">Problem:</span>
-                      <br />
-                      {selectedProject.caseStudy.problem}
+                {/* Case Study */}
+                {selectedProject.caseStudy && (
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="bg-red-50 p-4 rounded-xl border border-red-100">
+                      <div className="flex items-center gap-2 mb-2 text-red-600 font-semibold">
+                        <FiAlertCircle className="w-5 h-5" />
+                        Problem
+                      </div>
+                      <p className="text-sm text-gray-700 leading-snug">
+                        {selectedProject.caseStudy.problem}
+                      </p>
                     </div>
-                  </div>
 
-                  <div className="flex items-start gap-2">
-                    <TfiLightBulb className="text-yellow-500 mt-0.5" />
-                    <div>
-                      <span className="font-semibold">Solution:</span>
-                      <br />
-                      {selectedProject.caseStudy.solution}
+                    <div className="bg-yellow-50 p-4 rounded-xl border border-yellow-100">
+                      <div className="flex items-center gap-2 mb-2 text-yellow-600 font-semibold">
+                        <TfiLightBulb className="w-5 h-5" />
+                        Solution
+                      </div>
+                      <p className="text-sm text-gray-700 leading-snug">
+                        {selectedProject.caseStudy.solution}
+                      </p>
                     </div>
-                  </div>
 
-                  <div className="flex items-start gap-2">
-                    <FiTrendingUp className="text-green-600 mt-0.5" />
-                    <div>
-                      <span className="font-semibold">Impact:</span>
-                      <br />
-                      {selectedProject.caseStudy.impact}
+                    <div className="bg-green-50 p-4 rounded-xl border border-green-100">
+                      <div className="flex items-center gap-2 mb-2 text-green-600 font-semibold">
+                        <FiTrendingUp className="w-5 h-5" />
+                        Impact
+                      </div>
+                      <p className="text-sm text-gray-700 leading-snug">
+                        {selectedProject.caseStudy.impact}
+                      </p>
                     </div>
-                  </div>
-                </div>
-              )}
-
-              {selectedProject?.stack && selectedProject?.stack?.length > 0 && (
-                <div>
-                  <h4 className="flex items-center gap-2 font-medium text-gray-800 mb-2">
-                    <FiTool className="text-sky-500" /> Tech Stack
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedProject.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="bg-gray-100 text-gray-700 px-3 py-1 text-xs rounded-full font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {selectedProject?.images &&
-                selectedProject?.images?.length > 0 && (
-                  <div>
-                    <h4 className="flex items-center gap-2 font-medium text-gray-800 mb-2">
-                      <FiImage className="text-purple-500" /> Preview Aplikasi
-                    </h4>
-                    <ImageCarousel
-                      images={selectedProject.images.map((img) => `${img}`)}
-                    />
                   </div>
                 )}
-            </section>
 
-            {/* CTA */}
-            <div className="mt-6 text-center space-y-4">
-              <p className="text-gray-800 text-base font-medium">
-                Tertarik buat project seperti ini?
+                {/* Tech Stack */}
+                {selectedProject.stack && (
+                  <div>
+                    <h4 className="flex items-center gap-2 text-lg font-semibold text-gray-800 mb-3">
+                      <FiTool className="text-sky-500" />
+                      Tech Stack
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="bg-gray-100 text-gray-700 px-3 py-1 text-xs rounded-full font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Modern Image Carousel */}
+                {selectedProject.images && (
+                  <div className="space-y-3">
+                    <h4 className="flex items-center gap-2 text-lg font-semibold text-gray-800">
+                      <FiImage className="text-purple-500" />
+                      Preview Aplikasi
+                    </h4>
+                    <div className="relative overflow-hidden rounded-2xl shadow-md">
+                      <ImageCarousel images={selectedProject.images} />
+                    </div>
+                  </div>
+                )}
+
+                {/* CTA */}
+                <div className="text-center pt-6 border-t border-gray-100 mt-8">
+                  <p className="text-base font-medium text-gray-800 mb-3">
+                    Tertarik buat project seperti ini?
+                  </p>
+                  <Link
+                    className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-500 rounded-full shadow-md hover:scale-105 transition-transform duration-300 text-sm"
+                    href="#contact"
+                  >
+                    Ayook, Diskusi <FiArrowRight />
+                  </Link>
+                </div>
+              </section>
+            ) : (
+              <p className="text-center text-gray-500 text-sm">
+                Tidak ada project yang dipilih.
               </p>
-              <Link
-                className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-500 rounded-full shadow-md hover:scale-105 transition-transform duration-300 text-sm"
-                href="#contact"
-              >
-                Ayook, Diskusi <FiArrowRight />
-              </Link>
-            </div>
+            )}
           </ModalBody>
         </ModalContent>
       </Modal>
