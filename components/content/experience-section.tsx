@@ -168,7 +168,6 @@ export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
                   {/* --- Previous Jobs Accordion --- */}
                   {previousJobs.length > 0 && (
                     <>
-                      <Divider className="my-4" />
                       <Accordion
                         hideIndicator
                         isCompact
