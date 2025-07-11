@@ -4,7 +4,7 @@ import React from "react";
 import { ArrowDown } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import NextImage from "next/image";
+import { Link as ScrollLink } from "react-scroll";
 
 interface HeroSectionProps {
   content: {
@@ -15,7 +15,6 @@ interface HeroSectionProps {
   };
 }
 
-// Animation variants for staggered fade-in effect
 const containerVariant = {
   hidden: {},
   show: {
@@ -54,7 +53,7 @@ export const HeroSection = ({ content }: HeroSectionProps) => {
 
         {/* Second Line with Gradient */}
         <motion.span
-          className="block gradient-text mt-2 text-sky-500"
+          className="block gradient-text mt-2"
           transition={{ duration: 0.6, ease: "circOut", delay: 0.2 }}
           variants={fadeUpVariant}
         >
@@ -68,19 +67,22 @@ export const HeroSection = ({ content }: HeroSectionProps) => {
           cursor={false}
           sequence={[`"${content.tagline}"`]}
           speed={65}
-          wrapper="p"
+          wrapper="span"
         />
       </div>
 
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-        <a
-          className="animate-bounce flex flex-col items-center text-gray-500 hover:text-sky-500 transition-colors"
-          href="#bento"
+        <ScrollLink
+          className="animate-bounce flex flex-col items-center text-gray-500 hover:text-sky-500 transition-colors cursor-pointer"
+          duration={800}
+          offset={-50}
+          smooth={true}
+          to="experience"
         >
           <span className="text-sm">{content.scroll}</span>
           <ArrowDown className="w-6 h-6" />
-        </a>
+        </ScrollLink>
       </div>
     </section>
   );

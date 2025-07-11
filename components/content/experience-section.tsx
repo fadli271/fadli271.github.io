@@ -73,7 +73,10 @@ const MetricCard = ({
 // Main Experience Section
 export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
   return (
-    <section className="page-section relative mx-auto py-24 px-4" id="bento">
+    <section
+      className="page-section relative mx-auto py-24 px-4"
+      id="experience"
+    >
       <div className="w-full max-w-7xl mx-auto">
         <motion.div
           className="space-y-16"
