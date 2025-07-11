@@ -1,3 +1,4 @@
+import { Home, Briefcase, Folder, Mail } from "lucide-react";
 import {
   FaPhp,
   FaLaravel,
@@ -86,11 +87,10 @@ export const fullSkillsData = [
 export const content = {
   id: {
     nav: {
-      home: "Home",
-      experience: "Pengalaman",
-      projects: "Proyek",
-      about: "Tentang",
-      contact: "Kontak",
+      home: { label: "Home", icon: Home },
+      experience: { label: "Pengalaman", icon: Briefcase },
+      projects: { label: "Proyek", icon: Folder },
+      contact: { label: "Kontak", icon: Mail },
     },
     hero: {
       line1: "Mohamad Fadli",

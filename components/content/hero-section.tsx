@@ -33,7 +33,7 @@ export const HeroSection = ({ content }: HeroSectionProps) => {
   return (
     <section
       className="page-section relative min-h-screen flex flex-col justify-center items-center px-4 text-center"
-      id="hero"
+      id="home"
     >
       {/* Hero Title Section */}
       <motion.h1

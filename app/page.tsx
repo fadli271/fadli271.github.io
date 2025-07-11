@@ -9,6 +9,7 @@ import { ExperienceSection } from "@/components/content/experience-section";
 import SkillsSection from "@/components/content/skills-section";
 import ProjectsSection from "@/components/content/project-section";
 import ContactSection from "@/components/content/contact-section";
+import ScrollToTopButton from "@/components/scroll-to-top-button";
 
 type ContentType = typeof content.id;
 
@@ -35,6 +36,7 @@ export default function HomePage() {
         projectsData={currentContent.projectsData}
       />
       <ContactSection content={currentContent.contact} />
+      <ScrollToTopButton />
     </>
   );
 }
