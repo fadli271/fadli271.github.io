@@ -113,6 +113,10 @@ export const content = {
         title: "Punya Ide Proyek?",
         button: "Diskusikan ide bisnismu",
       },
+      download: {
+        cv: "Unduh CV",
+        link: "/cv-mohamad-fadli.pdf",
+      },
       partner: {
         title: "Partner Kerja Sama",
         subtitle: "Dari Berbagai Perusahaan",
@@ -409,8 +413,13 @@ export const experienceData = [
     period: "Jan 2021 - Mar 2023",
   },
   {
-    role: "Universitas Tadulako",
-    company: "Lead Programming Division",
+    role: "Fullstack Engineer",
+    company: "PT. Raksasa Laju Lintang (ralali.com)",
+    period: "Mar 2020 - Juni 2020",
+  },
+  {
+    role: "Fullstack Engineer",
+    company: "Universitas Tadulako",
     period: "Aug 2016 - Mar 2020",
   },
 ];

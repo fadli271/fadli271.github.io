@@ -18,7 +18,7 @@ export default function SkillsSection({ content }: SkillsSectionProps) {
     <section className="page-section max-w-7xl mx-auto py-24 px-4" id="skills">
       <div className="text-center mb-16">
         <motion.h1
-          className="text-4xl font-bold gradient-text text-center text-sky-500"
+          className="text-4xl font-bold gradient-text text-center"
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
