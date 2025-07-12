@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import FloatingNavbar from "@/components/floating-navbar";
 import { content } from "@/lib/content";
@@ -11,15 +11,12 @@ import ProjectsSection from "@/components/content/project-section";
 import ContactSection from "@/components/content/contact-section";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 
-type ContentType = typeof content.id;
+type Language = keyof typeof content;
+type ContentType = (typeof content)[Language];
 
 export default function HomePage() {
-  const [lang, setLang] = useState("id");
-  const [currentContent, setCurrentContent] = useState<ContentType>(content.id);
-
-  useEffect(() => {
-    setCurrentContent(content[lang as keyof typeof content] as ContentType);
-  }, [lang]);
+  const [lang, setLang] = useState<Language>("id");
+  const currentContent: ContentType = content[lang];
 
   return (
     <>

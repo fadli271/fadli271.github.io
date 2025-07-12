@@ -1,15 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu, X, Check, LucideIcon } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import type { Language } from "@/lib/content";
 
-type NavigationItem = { label: string; icon: LucideIcon };
+import { useState } from "react";
+import { ChevronDown, Menu } from "lucide-react";
+
+interface NavItem {
+  label: string;
+  icon: React.ElementType;
+}
 
 interface FloatingNavbarProps {
-  content: Record<string, NavigationItem>;
-  setLang: (lang: string) => void;
-  currentLang: string;
+  content: Record<string, NavItem>;
+  setLang: React.Dispatch<React.SetStateAction<Language>>;
+  currentLang: Language;
 }
 
 export default function FloatingNavbar({
@@ -19,122 +23,70 @@ export default function FloatingNavbar({
 }: FloatingNavbarProps) {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const langRef = useRef<HTMLDivElement>(null);
-  const menuRef = useRef<HTMLDivElement>(null);
 
-  // Close on outside click
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (
-        langRef.current &&
-        !langRef.current.contains(e.target as Node) &&
-        menuRef.current &&
-        !menuRef.current.contains(e.target as Node)
-      ) {
-        setIsLangOpen(false);
-        setIsMenuOpen(false);
-      }
-    };
+  const toggleLang = () => setIsLangOpen((prev) => !prev);
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const handleLangChange = (lang: string) => {
+  const handleLangChange = (lang: Language) => {
     setLang(lang);
     setIsLangOpen(false);
   };
 
   return (
-    <div className="fixed top-6 right-6 z-50 flex items-center gap-3">
-      {/* Lang Switch */}
-      <div ref={langRef} className="relative">
+    <div className="fixed top-4 right-4 z-50 flex items-center gap-2 mt-10">
+      {/* Language Switcher */}
+      <div className="relative">
         <button
-          className="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 rounded-full shadow-md text-sm font-medium hover:bg-gray-100 transition-all"
-          onClick={() => setIsLangOpen(!isLangOpen)}
+          className="flex items-center gap-2 content-card px-3 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-200 transition-colors"
+          onClick={toggleLang}
         >
           <span>{currentLang === "id" ? "Indonesia" : "English"}</span>
           <ChevronDown
-            className={`w-4 h-4 transition-transform ${
-              isLangOpen ? "rotate-180" : ""
-            }`}
+            className={`w-4 h-4 transition-transform ${isLangOpen ? "rotate-180" : ""}`}
           />
         </button>
-
-        <AnimatePresence>
-          {isLangOpen && (
-            <motion.div
-              animate={{ opacity: 1, y: 0 }}
-              className="absolute right-0 mt-2 w-44 rounded-lg bg-white shadow-lg ring-1 ring-gray-200"
-              exit={{ opacity: 0, y: -8 }}
-              initial={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.2 }}
+        {isLangOpen && (
+          <div className="absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+            <button
+              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              onClick={() => handleLangChange("id")}
             >
-              <button
-                className="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition"
-                onClick={() => handleLangChange("id")}
-              >
-                Indonesia{" "}
-                {currentLang === "id" && (
-                  <Check className="w-4 h-4 text-green-500" />
-                )}
-              </button>
-              <button
-                className="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition"
-                onClick={() => handleLangChange("en")}
-              >
-                English{" "}
-                {currentLang === "en" && (
-                  <Check className="w-4 h-4 text-green-500" />
-                )}
-              </button>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              Indonesia
+            </button>
+            <button
+              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              onClick={() => handleLangChange("en")}
+            >
+              English
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* Menu */}
-      <div ref={menuRef} className="relative">
+      {/* Menu Button */}
+      <div className="relative">
         <button
-          aria-label="Navigation Menu"
-          className={`w-12 h-12 flex items-center justify-center rounded-full transition-all shadow-lg ${
-            isMenuOpen
-              ? "bg-red-500 text-white hover:bg-red-600"
-              : "bg-sky-500 text-white hover:bg-sky-600"
-          }`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="w-12 h-12 flex items-center justify-center bg-sky-500 text-white rounded-full shadow-lg hover:bg-sky-600 transition-all transform hover:scale-110"
+          onClick={toggleMenu}
         >
-          {isMenuOpen ? (
-            <X className="w-5 h-5" />
-          ) : (
-            <Menu className="w-5 h-5" />
-          )}
+          <Menu className="w-6 h-6" />
         </button>
-
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              animate={{ opacity: 1, y: 0 }}
-              className="absolute right-0 mt-2 w-56 rounded-xl bg-white shadow-lg ring-1 ring-gray-200"
-              exit={{ opacity: 0, y: -8 }}
-              initial={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.2 }}
-            >
+        {isMenuOpen && (
+          <div className="absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+            <div className="py-1">
               {Object.entries(content).map(([key, { label, icon: Icon }]) => (
                 <a
                   key={key}
-                  className="flex items-center gap-2 px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 transition"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   href={`#${key}`}
-                  onClick={() => setIsMenuOpen(false)}
                 >
-                  <Icon className="w-4 h-4 text-sky-500" />
+                  <Icon className="w-4 h-4" />
                   {label}
                 </a>
               ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

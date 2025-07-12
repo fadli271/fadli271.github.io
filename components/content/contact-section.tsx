@@ -65,9 +65,6 @@ export default function ContactSection({ content }: ContactSectionProps) {
             {/* Social */}
             <div className="mt-8">
               <p className="text-base text-slate-600">{content.socialPrompt}</p>
-              <p className="text-base text-slate-600 mt-1">
-                Atau temukan saya di:
-              </p>
 
               <div className="flex justify-center gap-4 mt-4">
                 <Tooltip content="GitHub">

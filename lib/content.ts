@@ -84,10 +84,12 @@ export const fullSkillsData = [
   },
 ];
 
+export type Language = "id" | "en";
+
 export const content = {
   id: {
     nav: {
-      home: { label: "Home", icon: Home },
+      home: { label: "Beranda", icon: Home },
       experience: { label: "Pengalaman", icon: Briefcase },
       projects: { label: "Proyek", icon: Folder },
       contact: { label: "Kontak", icon: Mail },
@@ -96,58 +98,60 @@ export const content = {
       line1: "Mohamad Fadli",
       line2: "Software Engineer",
       tagline:
-        "Hey, Let's talk about tech and make some magic for your business",
-      scroll: "Scroll",
+        "Ngobrol soal teknologi dan bikin solusi digital keren bareng? Yuk gas!",
+      scroll: "Scroll ke bawah",
     },
     experienceSection: {
       about: {
         title: "Pengalaman",
         content:
-          "Sejak 2016, saya membangun bukan hanya baris kode—tapi sistem yang menyelesaikan masalah nyata. Dengan pendekatan produk dan mindset engineering, saya bantu bisnis tumbuh lewat solusi digital yang scalable, maintainable, dan meaningful.",
-        link: "Selengkapnya...",
+          "Sejak 2016, aku nggak cuma nulis kode—tapi bikin sistem yang bantu selesaikan masalah nyata. Dengan mindset produk dan jiwa engineer, aku bantu bisnis berkembang lewat solusi digital yang scalable dan gampang dirawat.",
+        link: "Lihat kisah lengkap",
       },
-      experience: { title: "Pengalaman", subtitle: "Tahun di industri" },
-      projects: { title: "Proyek Selesai", subtitle: "Dari berbagai domain" },
-      stack: { title: "Teknologi Utama" },
+      experience: { title: "Pengalaman", subtitle: "Tahun di dunia tech" },
+      projects: {
+        title: "Proyek Diselesaikan",
+        subtitle: "Dari berbagai industri",
+      },
+      stack: { title: "Stack Andalan" },
       cta: {
-        title: "Punya Ide Proyek?",
-        button: "Diskusikan ide bisnismu",
+        title: "Punya ide proyek seru?",
+        button: "Diskusi bareng kuy!",
       },
       download: {
         cv: "Unduh CV",
         link: "/cv-mohamad-fadli.pdf",
       },
       partner: {
-        title: "Partner Kerja Sama",
-        subtitle: "Dari Berbagai Perusahaan",
+        title: "Pernah Kerja Sama Dengan",
+        subtitle: "Brand & Perusahaan",
       },
     },
     skills: {
       title: "Keahlian & Teknologi",
       subtitle:
-        "Kumpulan teknologi yang saya kuasai untuk merancang, membangun, dan menerapkan solusi perangkat lunak yang efektif dari hulu ke hilir.",
+        "Teknologi yang sering kupakai buat bangun sistem — dari backend, frontend, sampai ke production.",
     },
     projects: {
       title: "Galeri Proyek",
       subtitle:
-        "Kumpulan proyek yang menunjukkan bagaimana saya memecahkan masalah nyata. Gulir untuk menjelajah.",
+        "Intip gimana aku menyelesaikan masalah lewat kode. Scroll aja.",
     },
     about: {
       title: "Perjalanan Karier",
-      subtitle:
-        "Pengalaman yang membentuk saya menjadi engineer seperti sekarang.",
+      subtitle: "Kisah gimana aku berkembang jadi developer seperti sekarang.",
       narrative:
-        "Sejak memulai perjalanan di dunia pemrograman pada 2016, saya selalu terpesona bukan hanya oleh teknologi itu sendiri, tetapi oleh kemampuannya memecahkan masalah manusia yang nyata. Bagi saya, coding adalah alat untuk menciptakan sistem yang efisien dan pengalaman yang lebih baik. Dengan pola pikir fleksibel dan etos kerja kuat, saya mendedikasikan diri untuk terus belajar dan beradaptasi, baik saat mengerjakan sistem akademik maupun arsitektur microservices berskala besar.",
+        "Mulai ngoding sejak 2016 karena penasaran. Sekarang udah jadi rutinitas buat bikin sistem yang bener-bener berguna. Buatku, teknologi itu alat buat bikin hidup lebih gampang. Dari sistem kampus sampai microservices skala gede, aku terus belajar dan adaptasi biar bisa kasih solusi terbaik.",
       cta: "Download CV",
     },
     contact: {
-      title: "Mari Terhubung",
+      title: "Mari Terhubung!",
       subtitle:
-        "Saya selalu terbuka untuk diskusi mengenai proyek baru, peluang kolaborasi, atau sekadar bertukar pikiran tentang teknologi.",
-      emailPrompt: "Anda dapat menghubungi saya melalui email di:",
-      socialPrompt: "",
+        "Selalu terbuka buat ngobrol—baik soal proyek, kolaborasi, atau sekadar bahas teknologi.",
+      emailPrompt: "Bisa kirim email ke:",
+      socialPrompt: "Atau temukan aku di sini:",
     },
-    footer: { credit: "Didesain dengan penuh semangat di Palu." },
+    footer: { credit: "Dibuat dengan Semangat di Palu, Sulawesi Tengah." },
     projectsData: [
       {
         title: "Aplikasi POS Bakti Nusantara",
@@ -300,67 +304,212 @@ export const content = {
   },
   en: {
     nav: {
-      home: "Home",
-      projects: "Projects",
-      about: "About",
-      contact: "Contact",
+      home: { label: "Home", icon: Home },
+      experience: { label: "Experience", icon: Briefcase },
+      projects: { label: "Projects", icon: Folder },
+      contact: { label: "Contact", icon: Mail },
     },
     hero: {
-      line1: "Software Engineer &",
-      line2: "Problem Solver",
-      tagline:
-        "I turn complex ideas into reliable, high-performance digital solutions ready to scale with your business.",
-      scroll: "Scroll",
+      line1: "Mohamad Fadli",
+      line2: "Software Engineer",
+      tagline: "Lets talk tech and build awesome stuff that actually works!",
+      scroll: "Scroll down",
     },
-    bento: {
+    experienceSection: {
       about: {
-        title: "About Me",
+        title: "Experience",
         content:
-          "Since 2016, I've been fascinated by technology's ability to solve real-world problems. For me, coding is a tool to create efficient systems.",
-        link: "Read more...",
+          "Since 2016, I’ve been building systems—not just writing code. With a product mindset and engineering soul, I help businesses grow with scalable and maintainable digital solutions.",
+        link: "See full story",
       },
-      experience: { title: "Experience", subtitle: "Years in the industry" },
-      projects: {
-        title: "Projects Completed",
-        subtitle: "Across various domains",
+      experience: { title: "Experience", subtitle: "Years in tech" },
+      projects: { title: "Projects Done", subtitle: "Across industries" },
+      stack: { title: "Tech Stack" },
+      cta: {
+        title: "Got a cool project idea?",
+        button: "Let’s collaborate!",
       },
-      stack: { title: "Main Technologies" },
-      cta: { title: "Have a Project Idea?", button: "Let's Talk" },
+      download: {
+        cv: "Download CV",
+        link: "/cv-mohamad-fadli.pdf",
+      },
+      partner: {
+        title: "Worked With",
+        subtitle: "Brands & Companies",
+      },
+    },
+    skills: {
+      title: "Skills & Tech",
+      subtitle:
+        "A collection of tools and technologies I use to build from backend to frontend to deployment.",
     },
     projects: {
       title: "Project Gallery",
       subtitle:
-        "A collection of projects showcasing how I solve real problems. Scroll to explore.",
+        "Here’s how I solve real-world problems with code. Take a scroll and explore.",
     },
     about: {
       title: "Career Journey",
-      subtitle: "Experiences that shaped me into the engineer I am today.",
+      subtitle: "How I grew into the engineer I am today.",
+      narrative:
+        "I started coding in 2016 out of curiosity—now it’s a daily habit of crafting real, usable systems. For me, tech is a tool to make life easier. From academic systems to enterprise-scale microservices, I keep learning and adapting to bring out the best solutions.",
+      cta: "Download CV",
     },
     contact: {
-      title: "Let's Connect",
+      title: "Let’s Connect!",
       subtitle:
-        "I'm always open to discussing new projects, collaboration opportunities, or just talking about technology.",
-      emailPrompt: "You can reach me via email at:",
+        "Always up for a chat—whether it's about a project, collaboration, or just geeking out about tech.",
+      emailPrompt: "Drop me an email at:",
+      socialPrompt: "Or find me here:",
     },
-    footer: { credit: "Designed with passion in Palu." },
-    projectsData: [
+    footer: { credit: "Made with love in Palu, Indonesia." },
+        projectsData: [
       {
-        title: "Bakti Nusantara POS Application",
+        title: "Aplikasi POS Bakti Nusantara",
+        category: "Sistem Manajemen Bisnis & Industri",
         description:
-          "A complete Point-of-Sale system with integrated warehouse management, cashier, and accounting modules.",
+          "Sistem Point-of-Sale lengkap dengan manajemen gudang, kasir, dan modul akunting terintegrasi.",
         tags: ["Golang", "Python", "Flutter"],
+        stack: ["Golang", "Python", "Flutter", "PostgreSQL"],
+        caseStudy: {
+          problem:
+            "Manajemen inventaris dan keuangan di apotek dilakukan manual, menyebabkan stok tidak sesuai dan pelaporan lambat.",
+          solution:
+            "Membangun sistem POS terintegrasi dengan modul Gudang, Kasir, dan Akunting otomatis.",
+          impact:
+            "Sinkronisasi stok secara real-time, mengurangi kesalahan input 95%, dan mempercepat laporan keuangan dari hitungan hari menjadi menit.",
+        },
+        images: [],
       },
       {
         title: "KTJM-App",
+        category: "Sistem Manajemen Bisnis & Industri",
         description:
-          "A tracking system for palm oil shipments from plantation to factory.",
+          "Sistem pelacakan pengiriman kelapa sawit dari perkebunan hingga pabrik.",
         tags: ["PHP", "Laravel", "JavaScript"],
+        stack: ["PHP", "Laravel", "JavaScript", "MySQL", "Leaflet.js"],
+        caseStudy: {
+          problem:
+            "Kurangnya transparansi dan data real-time dalam rantai pasok kelapa sawit.",
+          solution:
+            "Mengembangkan aplikasi web & mobile untuk melacak posisi truk (GPS), mencatat berat muatan, dan estimasi waktu tiba.",
+          impact:
+            "Meningkatkan kepercayaan, menekan potensi kehilangan 20%, dan menyediakan data akurat untuk logistik.",
+        },
+        images: [],
+      },
+      {
+        title: "MC-Profile",
+        category: "Aplikasi Web & Profil",
+        description:
+          "Website profil untuk Mutiara Cantik, sebuah toko kecantikan.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        stack: ["HTML", "CSS", "JavaScript"],
+        caseStudy: {
+          problem:
+            "Toko kecantikan 'Mutiara Cantik' tidak memiliki kehadiran online, kehilangan potensi pelanggan yang mencari produk dan layanan secara digital.",
+          solution:
+            "Membangun website profil modern dan responsif menampilkan katalog produk, layanan, galeri, dan informasi kontak.",
+          impact:
+            "Menciptakan etalase digital 24/7, meningkatkan jangkauan pasar, dan memberi saluran komunikasi baru bagi pelanggan.",
+        },
+        images: [],
+      },
+      {
+        title: "Jago Compro",
+        category: "Aplikasi Web & Profil",
+        description:
+          "Website profil untuk Mutiara Cantik, sebuah toko kecantikan.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        stack: ["HTML", "CSS", "JavaScript"],
+        caseStudy: {
+          problem:
+            "Tidak memiliki representasi digital yang menarik untuk menarik pelanggan baru.",
+          solution:
+            "Membuat website profil menarik dengan layout profesional dan informasi bisnis lengkap.",
+          impact:
+            "Meningkatkan kredibilitas brand dan mempermudah akses pelanggan ke informasi produk dan layanan.",
+        },
+        images: [],
       },
       {
         title: "Siketa",
+        category: "Sistem Informasi Akademik & Kepegawaian",
         description:
-          "An information system to manage the final thesis process and supervision for students.",
+          "Sistem informasi manajemen proses dan bimbingan tugas akhir mahasiswa.",
         tags: ["PHP", "MySQL"],
+        stack: ["PHP (Native)", "MySQL", "jQuery"],
+        caseStudy: {
+          problem:
+            "Proses administrasi tugas akhir yang lambat dan tidak transparan.",
+          solution:
+            "Membangun portal terpusat untuk pengajuan proposal, bimbingan online, dan pelacakan kemajuan digital.",
+          impact:
+            "Memangkas waktu administrasi 60%, transparansi penuh, dan mengurangi penggunaan kertas.",
+        },
+        images: [],
+      },
+      {
+        title: "Sibema",
+        category: "Sistem Informasi Akademik & Kepegawaian",
+        description:
+          "Sistem informasi untuk pendaftaran dan seleksi beasiswa mahasiswa.",
+        tags: ["PHP", "JavaScript"],
+        stack: ["PHP", "JavaScript", "MySQL"],
+        caseStudy: {
+          problem: "Informasi beasiswa tersebar dan proses manual.",
+          solution:
+            "Membangun portal satu pintu untuk semua info dan seleksi beasiswa.",
+          impact:
+            "Partisipasi meningkat, seleksi efisien, dan administrasi ringan.",
+        },
+        images: [],
+      },
+      {
+        title: "Monitoring Staf",
+        category: "Sistem Informasi Akademik & Kepegawaian",
+        description:
+          "Aplikasi untuk memonitor status staf dan rekapitulasi jam kerja.",
+        tags: ["PHP", "MySQL"],
+        stack: ["PHP", "MySQL", "jQuery", "AJAX"],
+        caseStudy: {
+          problem: "Pelacakan kehadiran staf manual dan rentan kesalahan.",
+          solution:
+            "Aplikasi dasbor untuk input status harian dan rekap otomatis.",
+          impact:
+            "Visibilitas real-time, rekap otomatis, dan cuti mudah diajukan.",
+        },
+        images: [],
+      },
+      {
+        title: "Siporat",
+        category: "Sistem Informasi Akademik & Kepegawaian",
+        description: "Sistem penomoran surat otomatis dan arsip digital.",
+        tags: ["PHP", "JavaScript"],
+        stack: ["PHP", "JavaScript", "MySQL"],
+        caseStudy: {
+          problem: "Nomor surat tidak konsisten dan proses lambat.",
+          solution:
+            "Sistem yang mengenerate nomor otomatis sesuai format dan arsip digital.",
+          impact: "Nomor unik 100%, cepat, dan arsip rapi.",
+        },
+        images: [],
+      },
+      {
+        title: "Sijaki",
+        category: "Sistem Informasi Akademik & Kepegawaian",
+        description:
+          "Sistem informasi untuk penjadwalan dan pelaporan kinerja dosen.",
+        tags: ["PHP", "MySQL"],
+        stack: ["PHP", "MySQL"],
+        caseStudy: {
+          problem: "Data kinerja dosen tersebar dan sulit dievaluasi.",
+          solution:
+            "Platform input kegiatan dosen dan laporan kinerja otomatis.",
+          impact:
+            "Evaluasi mudah, akreditasi terbantu, dan keputusan pimpinan lebih akurat.",
+        },
+        images: [],
       },
     ],
   },
