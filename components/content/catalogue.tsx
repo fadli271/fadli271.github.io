@@ -1,8 +1,3 @@
-// ================================================================
-// File: components/CataloguePage.tsx
-// Deskripsi: Komponen lengkap untuk halaman katalog layanan Anda.
-// Anda bisa menyimpan ini sebagai app/catalogue/page.tsx
-// ================================================================
 "use client";
 
 import React from "react";
@@ -233,10 +228,9 @@ export default function CataloguePage() {
     catalogueContent;
 
   return (
-    <div className="bg-gray-50">
+    <div>
       {/* Hero Section */}
       <Section className="text-center bg-white" id="hero-catalogue">
-        <Hand className="w-16 h-16 text-yellow-500 mx-auto mb-4" />
         <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900">
           {hero.greeting}
         </h1>
