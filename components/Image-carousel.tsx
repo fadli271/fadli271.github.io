@@ -18,13 +18,13 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
   return (
-    <div className="relative w-full px-3 mx-auto overflow-hidden bg-white shadow">
+    <div className="relative w-full h-full px-3 mx-auto overflow-hidden bg-gray-200 shadow">
       <AnimatePresence mode="wait">
         <motion.img
           key={images[current]}
           alt={`Preview ${current + 1}`}
           animate={{ opacity: 1, x: 0 }}
-          className="w-full object-contain max-h-[400px]"
+          className="w-full object-contain max-h-[480px] "
           exit={{ opacity: 0, x: -50 }}
           initial={{ opacity: 0, x: 50 }}
           src={images[current]}

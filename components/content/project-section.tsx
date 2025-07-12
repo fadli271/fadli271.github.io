@@ -257,19 +257,6 @@ export default function ProjectsSection({
                     </div>
                   </div>
                 )}
-
-                {/* CTA */}
-                <div className="text-center pt-6 border-t border-gray-100 mt-8">
-                  <p className="text-base font-medium text-gray-800 mb-3">
-                    Tertarik buat project seperti ini?
-                  </p>
-                  <Link
-                    className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-500 rounded-full shadow-md hover:scale-105 transition-transform duration-300 text-sm"
-                    href="#contact"
-                  >
-                    Ayook, Diskusi <FiArrowRight />
-                  </Link>
-                </div>
               </section>
             ) : (
               <p className="text-center text-gray-500 text-sm">
