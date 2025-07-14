@@ -245,8 +245,14 @@ export default function AddonsCustomSection() {
               <CardFooter className="px-8 pb-8 pt-4 mt-auto">
                 <Button
                   fullWidth
+                  as="a"
                   className="font-bold bg-gradient-to-r from-sky-500 to-blue-600 text-white"
+                  href={`https://wa.me/6282219094081?text=${encodeURIComponent(
+                    "Halo kak, saya tertarik dengan layanan Solusi Kustom — Aplikasi & Sistem Web. Boleh minta info lebih lanjut?",
+                  )}`}
+                  rel="noopener noreferrer"
                   size="lg"
+                  target="_blank"
                 >
                   Pilih Paket Ini
                 </Button>

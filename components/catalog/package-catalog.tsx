@@ -174,8 +174,14 @@ export default function PackageCatalogue() {
                 <CardFooter className="pt-6 mt-auto">
                   <Button
                     fullWidth
+                    as="a"
                     className="font-bold bg-gradient-to-r from-sky-500 to-blue-600"
+                    href={`https://wa.me/6282219094081?text=Halo%20kak%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(
+                      pkg.name,
+                    )}.%20Boleh%20minta%20informasi%20lebih%20lanjut%3F`}
+                    rel="noopener noreferrer"
                     size="lg"
+                    target="_blank"
                     variant="solid"
                   >
                     Pilih Paket Ini

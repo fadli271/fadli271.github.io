@@ -192,18 +192,6 @@ export default function FinalSection() {
                     </div>
                   ))}
                 </div>
-
-                <div className="pt-2 text-center">
-                  <Button
-                    as={Link}
-                    className="w-full sm:w-auto bg-gradient-to-r from-sky-500 to-blue-600 text-white"
-                    color="primary"
-                    href={cta.contacts[0].href}
-                    size="lg"
-                  >
-                    Konsultasi Sekarang
-                  </Button>
-                </div>
               </CardBody>
             </Card>
           </motion.div>

@@ -100,9 +100,11 @@ export default function HeroCatalog() {
             <Button
               as="a"
               className="px-6 py-3 text-base sm:text-lg font-bold text-gray-800 border-gray-300 rounded-full"
-              href="#kontak"
+              href="https://wa.me/082219094081?text=Halo%20kak%2C%20saya%20tertarik%20dengan%20layanan%20website-nya"
+              rel="noopener noreferrer"
               size="lg"
               startContent={<FiPhone />}
+              target="_blank"
               variant="bordered"
             >
               Hubungi Saya Langsung
