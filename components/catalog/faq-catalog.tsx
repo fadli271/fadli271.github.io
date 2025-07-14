@@ -1,12 +1,14 @@
 "use client";
 
-import { Accordion, AccordionItem } from "@heroui/react";
+import { Accordion, AccordionItem, Card, CardBody } from "@heroui/react";
 import { HelpCircle, ChevronDownCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function FAQCatalog() {
   const faq = {
-    title: "❓ Pertanyaan Umum (FAQ)",
+    title: "Pertanyaan Umum (FAQ)",
+    description:
+      "Jawaban atas pertanyaan yang sering diajukan sebelum proyek dimulai.",
     items: [
       {
         q: "Apakah harga sudah termasuk domain & hosting?",
@@ -32,12 +34,25 @@ export default function FAQCatalog() {
         q: "Bisa minta desain sesuai brand?",
         a: "Tentu! Khusus di Paket “Tumbuh Profesional”, saya akan sesuaikan warna, tone, dan nuansa brand Anda.",
       },
+      {
+        q: "Apakah bisa integrasi WhatsApp atau Instagram?",
+        a: "Bisa, bahkan saya bantu pasang CTA WhatsApp floating, embed Instagram Feed, dan tombol sosial media lainnya.",
+      },
+      {
+        q: "Apakah bisa cicilan atau pembayaran bertahap?",
+        a: "Ya, bisa. Kita bisa diskusikan skema pembayaran yang sesuai dan tidak memberatkan.",
+      },
+      {
+        q: "Bisa redesign website lama?",
+        a: "Tentu, saya bisa bantu evaluasi dan mendesain ulang agar tampil lebih modern dan fungsional.",
+      },
     ],
   };
 
   return (
-    <section className="py-24 bg-white dark:bg-zinc-950" id="faq">
+    <section className="py-24 bg-white" id="faq">
       <div className="container mx-auto px-6">
+        {/* Header */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 50 }}
@@ -45,58 +60,61 @@ export default function FAQCatalog() {
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white flex items-center justify-center gap-3">
-            <HelpCircle className="w-8 h-8 text-sky-500" />
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 flex items-center justify-center gap-3">
+            <HelpCircle className="w-7 h-7 text-sky-500" />
             {faq.title}
           </h2>
-          <p className="mt-3 text-gray-600 dark:text-gray-400 max-w-xl mx-auto text-base">
-            Jawaban atas pertanyaan yang sering diajukan sebelum proyek dimulai.
+          <p className="mt-3 text-gray-600 max-w-xl mx-auto text-base">
+            {faq.description}
           </p>
         </motion.div>
 
+        {/* Card FAQ */}
         <motion.div
-          className="max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <Accordion
-            itemClasses={{
-              base: "border border-gray-200 dark:border-zinc-700 rounded-xl mb-4",
-              title: "font-semibold text-left text-gray-800 dark:text-white",
-              trigger:
-                "py-5 px-6 hover:bg-sky-50 dark:hover:bg-zinc-900 transition-colors",
-              content: "px-6 pb-6 text-gray-700 dark:text-gray-300 text-sm",
-            }}
-            motionProps={{
-              variants: {
-                enter: { opacity: 1, height: "auto" },
-                exit: { opacity: 0, height: 0 },
-              },
-              transition: { duration: 0.25 },
-            }}
-            selectionMode="multiple"
-            variant="splitted"
-          >
-            {faq.items.map((item, index) => (
-              <AccordionItem
-                key={index}
-                aria-label={item.q}
-                indicator={
-                  <ChevronDownCircle className="w-5 h-5 text-sky-500" />
-                }
-                title={
-                  <span className="flex items-center gap-2">
-                    <HelpCircle className="w-5 h-5 text-sky-500" />
-                    {item.q}
-                  </span>
-                }
+          <Card className="shadow-md border border-gray-200 rounded-2xl bg-white max-w-5xl mx-auto p-6">
+            <CardBody>
+              <Accordion
+                itemClasses={{
+                  base: "bg-white border-1 shadow-md my-1",
+                  title: "font-semibold text-left text-gray-800",
+                  trigger: "py-5 px-0 cursor-pointer transition-colors",
+                  content: "pb-5 pr-0 text-gray-700 text-sm leading-relaxed",
+                }}
+                motionProps={{
+                  variants: {
+                    enter: { opacity: 1, height: "auto" },
+                    exit: { opacity: 0, height: 0 },
+                  },
+                  transition: { duration: 0.25 },
+                }}
+                selectionMode="multiple"
+                variant="splitted"
               >
-                {item.a}
-              </AccordionItem>
-            ))}
-          </Accordion>
+                {faq.items.map((item, index) => (
+                  <AccordionItem
+                    key={index}
+                    aria-label={item.q}
+                    indicator={
+                      <ChevronDownCircle className="w-5 h-5 text-sky-500" />
+                    }
+                    title={
+                      <div className="flex items-center gap-2">
+                        <HelpCircle className="w-5 h-5 text-sky-500" />
+                        <span className="flex-1">{item.q}</span>
+                      </div>
+                    }
+                  >
+                    {item.a}
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </CardBody>
+          </Card>
         </motion.div>
       </div>
     </section>
