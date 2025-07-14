@@ -10,7 +10,7 @@ import {
   Divider,
 } from "@heroui/react";
 import { CheckCircle, Timer, Info, Rocket } from "lucide-react";
-import { motion } from "framer-motion";
+import { circOut, motion } from "framer-motion";
 
 const packages = {
   title: "Paket Website UMKM",
@@ -55,17 +55,45 @@ const packages = {
   ],
 };
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: circOut,
+    },
+  },
+};
+
 export default function PackageCatalogue() {
   return (
     <section className="py-24 bg-white" id="packages">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-4xl font-bold gradient-text inline-flex items-center justify-center gap-2">
+        <motion.div
+          className="text-center max-w-2xl mx-auto"
+          initial="hidden"
+          variants={fadeInUp}
+          viewport={{ once: true, amount: 0.5 }}
+          whileInView="visible"
+        >
+          <motion.h2
+            className="text-4xl font-bold gradient-text inline-flex items-center justify-center gap-2"
+            variants={fadeInUp}
+          >
             <Rocket className="w-10 h-10 text-sky-500 gradient-text" />
             {packages.title}
-          </h2>
-          <p className="mt-3 text-lg text-gray-600">{packages.subtitle}</p>
-        </div>
+          </motion.h2>
+
+          <motion.p
+            className="mt-3 text-lg text-gray-600"
+            transition={{ delay: 0.2 }} // delay sedikit untuk paragraf
+            variants={fadeInUp}
+          >
+            {packages.subtitle}
+          </motion.p>
+        </motion.div>
 
         <div className="mt-20 grid md:grid-cols-2 gap-12">
           {packages.items.map((pkg, index) => (
@@ -158,12 +186,18 @@ export default function PackageCatalogue() {
           ))}
         </div>
 
-        <div className="mt-14 text-center text-sm text-gray-500 mx-auto">
+        <motion.div
+          className="mt-14 text-center text-sm text-gray-500 mx-auto"
+          initial="hidden"
+          variants={fadeInUp}
+          viewport={{ once: true, amount: 0.5 }}
+          whileInView="visible"
+        >
           <div className="inline-flex items-center gap-2 justify-center">
             <Info className="w-5 h-5 text-gray-400" />
-            <span> Semua paket termasuk: {packages.includes.join(", ")}.</span>
+            <span>Semua paket termasuk: {packages.includes.join(", ")}.</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

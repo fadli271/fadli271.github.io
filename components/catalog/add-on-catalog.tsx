@@ -100,13 +100,18 @@ export default function AddonsCustomSection() {
   return (
     <section className="py-24 bg-white" id="addons-custom">
       <div className="container mx-auto px-6">
-        {/* Heading di luar grid */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
           <h2 className="text-4xl font-bold gradient-text inline-flex items-center justify-center gap-3">
             <Wand2 className="text-sky-500 w-9 h-9 gradient-text" />
             {addons.title}
           </h2>
-        </div>
+        </motion.div>
 
         {/* Grid konten */}
         <div className="grid md:grid-cols-2 gap-16">
