@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardBody, CardHeader, Divider, Chip } from "@heroui/react";
+import { Card, CardBody, CardHeader, Divider } from "@heroui/react";
 import { motion } from "framer-motion";
 import {
   Banknote,
@@ -21,19 +21,19 @@ export default function FinalSection() {
       "Berikut skema pembayaran standar untuk memastikan proses berjalan profesional dan aman.",
     steps: [
       {
-        icon: <Banknote className="w-6 h-6 text-sky-500" />,
+        icon: <Banknote className="w-5 h-5 sm:w-6 sm:h-6 text-sky-500" />,
         stage: "DP (Down Payment)",
         percentage: "50%",
         description: "Setelah kesepakatan awal & kick-off proyek.",
       },
       {
-        icon: <ArrowRight className="w-6 h-6 text-yellow-500" />,
+        icon: <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500" />,
         stage: "Review & Uji Coba",
         percentage: "-",
         description: "Preview dan revisi desain, konten, serta fungsionalitas.",
       },
       {
-        icon: <CheckCircle className="w-6 h-6 text-green-500" />,
+        icon: <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500" />,
         stage: "Pelunasan",
         percentage: "50%",
         description: "Setelah website selesai & sebelum go live.",
@@ -77,9 +77,9 @@ export default function FinalSection() {
   ];
 
   return (
-    <section className="py-24 bg-white" id="payment-cta">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-10 items-stretch">
+    <section className="py-16 sm:py-24 bg-white" id="payment-cta">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 items-stretch">
           {/* === Skema Pembayaran === */}
           <motion.div
             className="flex flex-col h-full"
@@ -88,24 +88,22 @@ export default function FinalSection() {
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            <Card className="h-full flex flex-col bg-white shadow-md border border-gray-200">
-              <CardHeader className="text-center p-6">
+            <Card className="h-full flex flex-col bg-white shadow-md border border-gray-200 rounded-2xl">
+              <CardHeader className="text-center px-6 pt-6 pb-3">
                 <div className="flex items-center justify-center gap-3">
                   <div className="bg-sky-100 text-sky-500 p-2 rounded-full shadow-sm">
-                    <Banknote className="w-6 h-6" />
+                    <Banknote className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-zinc-800">
+                  <h2 className="text-xl sm:text-2xl font-bold text-zinc-800">
                     {payment.title}
                   </h2>
                 </div>
               </CardHeader>
 
-              <CardBody className="py-4 px-8 space-y-4 flex-grow">
-                <p className="mt-3 text-gray-600 text-base">
-                  {payment.description}
-                </p>
+              <CardBody className="py-4 px-6 space-y-4 flex-grow">
+                <p className="text-gray-600 text-base">{payment.description}</p>
                 {payment.steps.map((step, i) => (
-                  <div key={i} className="flex items-start gap-4">
+                  <div key={i} className="flex items-start gap-3">
                     <div className="pt-1">{step.icon}</div>
                     <div>
                       <p className="font-semibold text-base text-zinc-800">
@@ -122,9 +120,9 @@ export default function FinalSection() {
                     </div>
                   </div>
                 ))}
-                <Chip className="bg-yellow-100 text-yellow-600" variant="flat">
+                <p className="mt-4 px-3 py-2 bg-yellow-100 text-yellow-700 text-sm rounded-md text-center">
                   {payment.note}
-                </Chip>
+                </p>
               </CardBody>
             </Card>
           </motion.div>
@@ -137,28 +135,26 @@ export default function FinalSection() {
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            <Card className="h-full flex flex-col bg-white shadow-md border border-gray-200">
-              <CardHeader className="text-center p-6">
+            <Card className="h-full flex flex-col bg-white shadow-md border border-gray-200 rounded-2xl">
+              <CardHeader className="text-center px-6 pt-6 pb-3">
                 <div className="flex items-center justify-center gap-3">
                   <div className="bg-blue-100 text-blue-600 p-2 rounded-full shadow-sm">
-                    <Handshake className="w-6 h-6" />
+                    <Handshake className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-zinc-800">
+                  <h2 className="text-xl sm:text-2xl font-bold text-zinc-800">
                     {cta.title}
                   </h2>
                 </div>
               </CardHeader>
 
               <CardBody className="py-4 px-6 space-y-4 flex-grow">
-                <p className="mt-3 text-gray-600 text-base">
-                  {cta.description}
-                </p>
+                <p className="text-gray-600 text-base">{cta.description}</p>
 
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {cta.contacts.map((c, i) => (
                     <Link
                       key={i}
-                      className="flex items-center justify-center px-5 py-4 border rounded-xl border-gray-200 hover:bg-sky-50 transition"
+                      className="flex items-center justify-center px-4 py-3 border rounded-xl border-gray-200 hover:bg-sky-50 transition text-sm sm:text-base"
                       href={c.href}
                       rel="noopener noreferrer"
                       target="_blank"

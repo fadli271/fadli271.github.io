@@ -88,7 +88,7 @@ export default function HeroCatalog() {
           >
             <Button
               as="a"
-              className="px-6 py-3 text-base sm:text-lg font-bold bg-gradient-to-r from-sky-500 to-blue-500 rounded-full shadow-md hover:scale-[1.03] transition-transform"
+              className="px-6 py-3 text-white text-base sm:text-lg font-bold bg-gradient-to-r from-sky-500 to-blue-500 rounded-full shadow-md hover:scale-[1.03] transition-transform"
               endContent={<FiArrowRight />}
               href="/"
               size="lg"
