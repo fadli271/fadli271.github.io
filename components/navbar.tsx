@@ -26,7 +26,10 @@ const NAV_ITEMS = [
 export const NavbarSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuToggle = useCallback(() => setIsMenuOpen((prev) => !prev), []);
+  const handleMenuToggle = useCallback(
+    () => setIsMenuOpen((prev) => !prev),
+    [],
+  );
   const handleCloseMenu = useCallback(() => setIsMenuOpen(false), []);
 
   return (

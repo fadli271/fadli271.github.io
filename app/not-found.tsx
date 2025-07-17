@@ -1,13 +1,8 @@
-// File: app/not-found.tsx atau pages/404.tsx (tergantung struktur Next.js kamu)
 "use client";
 
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
 
 export default function NotFoundPage() {
-  const router = useRouter();
-
   return (
     <div className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-50 dark:bg-gray-900">
       {/* Ilustrasi SVG */}
