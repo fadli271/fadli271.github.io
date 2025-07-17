@@ -1,18 +1,18 @@
+
 "use client";
-
-import type { Language } from "@/lib/content";
-
-import { useState } from "react";
 import { ChevronDown, Menu } from "lucide-react";
+import { useState, useEffect } from "react";
+import { LucideIcon } from "lucide-react";
 
-interface NavItem {
-  label: string;
-  icon: React.ElementType;
-}
-
+import { Language } from "@/lib/content";
 interface FloatingNavbarProps {
-  content: Record<string, NavItem>;
-  setLang: React.Dispatch<React.SetStateAction<Language>>;
+  content: {
+    [key: string]: {
+      label: string;
+      icon: LucideIcon;
+    };
+  };
+  setLang: (lang: Language) => void;
   currentLang: Language;
 }
 
@@ -23,6 +23,7 @@ export default function FloatingNavbar({
 }: FloatingNavbarProps) {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
 
   const toggleLang = () => setIsLangOpen((prev) => !prev);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
@@ -31,6 +32,20 @@ export default function FloatingNavbar({
     setLang(lang);
     setIsLangOpen(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      setShowNav(scrollY < 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  if (!showNav) return null;
 
   return (
     <div className="fixed top-4 right-4 z-50 flex items-center gap-2 mt-10">

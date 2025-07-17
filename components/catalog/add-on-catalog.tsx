@@ -173,7 +173,8 @@ export default function AddonsCustomSection() {
               <CardHeader className="px-4 sm:px-6 md:px-8 pt-6 sm:pt-8 pb-2 text-left">
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-zinc-800 flex items-center gap-2">
                   {React.cloneElement(custom.icon, {
-                    className: "w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-sky-500",
+                    className:
+                      "w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-sky-500",
                   })}
                   {custom.title}
                 </h2>
