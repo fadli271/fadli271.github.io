@@ -9,17 +9,10 @@ import {
   ModalHeader,
   ModalBody,
   Button,
-  Link,
   Chip,
 } from "@heroui/react";
 import { motion } from "framer-motion";
-import {
-  FiArrowRight,
-  FiImage,
-  FiTool,
-  FiTrendingUp,
-  FiAlertCircle,
-} from "react-icons/fi";
+import { FiImage, FiTool, FiTrendingUp, FiAlertCircle } from "react-icons/fi";
 import { TfiLightBulb } from "react-icons/tfi";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
@@ -28,7 +21,19 @@ import { Rocket } from "lucide-react";
 import ImageCarousel from "../Image-carousel";
 
 interface ProjectsSectionProps {
-  content: { title: string; subtitle: string };
+  content: {
+    title: string;
+    subtitle: string;
+    viewDetailButton: string;
+    modal: {
+      noProjectSelected: string;
+      previewTitle: string;
+      problem: string;
+      solution: string;
+      impact: string;
+      techStack: string;
+    };
+  };
   projectsData: {
     title: string;
     description: string;
@@ -95,13 +100,13 @@ export default function ProjectsSection({
           <Chip
             key={cat}
             className={`
-          cursor-pointer text-sm font-medium transition-all duration-300
-          ${
-            selectedCategory === cat
-              ? "bg-gradient-to-r from-sky-500 to-blue-500 text-white shadow-sm"
-              : "bg-white text-gray-600 border border-gray-300 hover:border-sky-500 hover:text-sky-500"
-          }
-        `}
+              cursor-pointer text-sm font-medium transition-all duration-300
+              ${
+                selectedCategory === cat
+                  ? "bg-gradient-to-r from-sky-500 to-blue-500 text-white shadow-sm"
+                  : "bg-white text-gray-600 border border-gray-300 hover:border-sky-500 hover:text-sky-500"
+              }
+            `}
             variant={selectedCategory === cat ? "solid" : "flat"}
             onClick={() => setSelectedCategory(cat)}
           >
@@ -121,7 +126,6 @@ export default function ProjectsSection({
             whileInView={{ opacity: 1, y: 0 }}
           >
             <Card className="group relative overflow-hidden shadow-md rounded-2xl">
-              {/* Image Preview */}
               <div className="w-full h-48 relative">
                 <Image
                   fill
@@ -138,12 +142,11 @@ export default function ProjectsSection({
                     className="bg-white text-sky-600 font-semibold px-5 py-2 rounded-full shadow-md hover:scale-105 transition-transform"
                     onPress={() => openModal(project)}
                   >
-                    Lihat Detail
+                    {content.viewDetailButton}
                   </Button>
                 </div>
               </div>
 
-              {/* Info */}
               <CardBody className="p-5 bg-white z-0 relative space-y-2">
                 <div className="flex items-center gap-2 text-gray-900 font-semibold">
                   <FaGithub />
@@ -183,20 +186,18 @@ export default function ProjectsSection({
           <ModalBody>
             {selectedProject ? (
               <section className="space-y-8">
-                {/* Deskripsi */}
                 {selectedProject.description && (
                   <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line">
                     {selectedProject.description}
                   </p>
                 )}
 
-                {/* Case Study */}
                 {selectedProject.caseStudy && (
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="bg-red-50 p-4 rounded-xl border border-red-100">
                       <div className="flex items-center gap-2 mb-2 text-red-600 font-semibold">
                         <FiAlertCircle className="w-5 h-5" />
-                        Problem
+                        {content.modal.problem}
                       </div>
                       <p className="text-sm text-gray-700 leading-snug">
                         {selectedProject.caseStudy.problem}
@@ -206,7 +207,7 @@ export default function ProjectsSection({
                     <div className="bg-yellow-50 p-4 rounded-xl border border-yellow-100">
                       <div className="flex items-center gap-2 mb-2 text-yellow-600 font-semibold">
                         <TfiLightBulb className="w-5 h-5" />
-                        Solution
+                        {content.modal.solution}
                       </div>
                       <p className="text-sm text-gray-700 leading-snug">
                         {selectedProject.caseStudy.solution}
@@ -216,7 +217,7 @@ export default function ProjectsSection({
                     <div className="bg-green-50 p-4 rounded-xl border border-green-100">
                       <div className="flex items-center gap-2 mb-2 text-green-600 font-semibold">
                         <FiTrendingUp className="w-5 h-5" />
-                        Impact
+                        {content.modal.impact}
                       </div>
                       <p className="text-sm text-gray-700 leading-snug">
                         {selectedProject.caseStudy.impact}
@@ -225,12 +226,11 @@ export default function ProjectsSection({
                   </div>
                 )}
 
-                {/* Tech Stack */}
                 {selectedProject.stack && (
                   <div>
                     <h4 className="flex items-center gap-2 text-lg font-semibold text-gray-800 mb-3">
                       <FiTool className="text-sky-500" />
-                      Tech Stack
+                      {content.modal.techStack}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedProject.stack.map((tech) => (
@@ -245,12 +245,11 @@ export default function ProjectsSection({
                   </div>
                 )}
 
-                {/* Modern Image Carousel */}
                 {selectedProject.images && (
                   <div className="space-y-3">
                     <h4 className="flex items-center gap-2 text-lg font-semibold text-gray-800">
                       <FiImage className="text-purple-500" />
-                      Preview Aplikasi
+                      {content.modal.previewTitle}
                     </h4>
                     <div className="relative overflow-hidden rounded-2xl shadow-md">
                       <ImageCarousel images={selectedProject.images} />
@@ -260,7 +259,7 @@ export default function ProjectsSection({
               </section>
             ) : (
               <p className="text-center text-gray-500 text-sm">
-                Tidak ada project yang dipilih.
+                {content.modal.noProjectSelected}
               </p>
             )}
           </ModalBody>

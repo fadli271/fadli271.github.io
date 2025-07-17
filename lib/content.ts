@@ -54,29 +54,41 @@ export const content = {
         title: "Proyek Diselesaikan",
         subtitle: "Dari berbagai industri",
       },
-      stack: { title: "Stack Andalan" },
-      cta: {
-        title: "Punya ide proyek seru?",
-        button: "Diskusi bareng !",
-      },
-      download: {
-        cv: "Unduh CV",
-        link: "/cv-mohamad-fadli.pdf",
-      },
       partner: {
         title: "Pernah Kerja Sama Dengan",
         subtitle: "Brand & Perusahaan",
+      },
+      stack: { title: "Stack Andalan" },
+      cta: { title: "Punya ide proyek seru?", button: "Diskusi bareng !" },
+      download: { cv: "Unduh CV", link: "/cv-mohamad-fadli.pdf" },
+      ui: {
+        careerTitle: "Perjalanan karir",
+        showMore: "Lihat Selengkapnya",
+        showLess: "Sembunyikan Riwayat",
       },
     },
     skills: {
       title: "Keahlian & Teknologi",
       subtitle:
         "Teknologi yang sering kupakai buat bangun sistem — dari backend, frontend, sampai ke production.",
+      ui: {
+        seeAll: "Lihat Semua",
+        seeLess: "Sembunyikan",
+      },
     },
     projects: {
       title: "Galeri Proyek",
       subtitle:
         "Intip gimana aku menyelesaikan masalah lewat kode. Scroll aja.",
+      viewDetailButton: "Lihat Detail",
+      modal: {
+        noProjectSelected: "Tidak ada project yang dipilih.",
+        previewTitle: "Preview Aplikasi",
+        problem: "Problem",
+        solution: "Solution",
+        impact: "Impact",
+        techStack: "Tech Stack",
+      },
     },
     about: {
       title: "Perjalanan Karier",
@@ -91,6 +103,13 @@ export const content = {
         "Selalu terbuka buat ngobrol—baik soal proyek, kolaborasi, atau sekadar bahas teknologi.",
       emailPrompt: "Bisa kirim email ke:",
       socialPrompt: "Atau temukan aku di sini:",
+      email: "fadli.mohamad62@gmail.com",
+      socialLinks: {
+        github: "https://github.com/fadli271",
+        linkedin: "https://linkedin.com/in/mfadli27a",
+        whatsapp:
+          "https://wa.me/6281234567890?text=Halo%20Fadli%2C%20saya%20tertarik%20dengan%20portofoliomu!",
+      },
     },
     footer: { credit: "Dibuat dengan Semangat di Palu, Sulawesi Tengah." },
     projectsData: [
@@ -293,7 +312,7 @@ export const content = {
     hero: {
       line1: "Mohamad Fadli",
       line2: "Software Engineer",
-      tagline: "Lets talk tech and build awesome stuff that actually works!",
+      tagline: "Let's talk tech and build awesome stuff that actually works!",
       scroll: "Scroll down",
     },
     experienceSection: {
@@ -305,6 +324,7 @@ export const content = {
       },
       experience: { title: "Experience", subtitle: "Years in tech" },
       projects: { title: "Projects Done", subtitle: "Across industries" },
+      partner: { title: "Worked With", subtitle: "Brands & Companies" },
       stack: { title: "Tech Stack" },
       cta: {
         title: "Got a cool project idea?",
@@ -314,20 +334,34 @@ export const content = {
         cv: "Download CV",
         link: "/cv-mohamad-fadli.pdf",
       },
-      partner: {
-        title: "Worked With",
-        subtitle: "Brands & Companies",
+      ui: {
+        careerTitle: "Career Timeline",
+        showMore: "Show More",
+        showLess: "Show Less",
       },
     },
     skills: {
       title: "Skills & Tech",
       subtitle:
-        "A collection of tools and technologies I use to build from backend to frontend to deployment.",
+        "Technologies I frequently use to build systems — from backend and frontend to production.",
+      ui: {
+        seeAll: "See All",
+        seeLess: "Show Less",
+      },
     },
     projects: {
       title: "Project Gallery",
       subtitle:
         "Here’s how I solve real-world problems with code. Take a scroll and explore.",
+      viewDetailButton: "View Details",
+      modal: {
+        noProjectSelected: "No project selected.",
+        previewTitle: "App Preview",
+        problem: "Problem",
+        solution: "Solution",
+        impact: "Impact",
+        techStack: "Tech Stack",
+      },
     },
     about: {
       title: "Career Journey",
@@ -339,158 +373,203 @@ export const content = {
     contact: {
       title: "Let’s Connect!",
       subtitle:
-        "Always up for a chat—whether it's about a project, collaboration, or just geeking out about tech.",
-      emailPrompt: "Drop me an email at:",
-      socialPrompt: "Or find me here:",
+        "Always open for a chat—whether it’s about a project, collaboration, or just talking tech.",
+      emailPrompt: "You can email me at:",
+      socialPrompt: "Or find me on:",
+      email: "fadli.mohamad62@gmail.com",
+      socialLinks: {
+        github: "https://github.com/fadli271",
+        linkedin: "https://linkedin.com/in/mfadli27a",
+        whatsapp:
+          "https://wa.me/6281234567890?text=Hi%20Fadli%2C%20I%27m%20interested%20in%20your%20portfolio!",
+      },
     },
-    footer: { credit: "Made with love in Palu, Indonesia." },
+    footer: {
+      credit: "Made with love in Palu, Indonesia.",
+    },
     projectsData: [
       {
-        title: "Aplikasi POS Bakti Nusantara",
-        category: "Sistem Manajemen Bisnis & Industri",
-        description:
-          "Sistem Point-of-Sale lengkap dengan manajemen gudang, kasir, dan modul akunting terintegrasi.",
-        tags: ["Golang", "Python", "Flutter"],
-        stack: ["Golang", "Python", "Flutter", "PostgreSQL"],
-        caseStudy: {
-          problem:
-            "Manajemen inventaris dan keuangan di apotek dilakukan manual, menyebabkan stok tidak sesuai dan pelaporan lambat.",
-          solution:
-            "Membangun sistem POS terintegrasi dengan modul Gudang, Kasir, dan Akunting otomatis.",
-          impact:
-            "Sinkronisasi stok secara real-time, mengurangi kesalahan input 95%, dan mempercepat laporan keuangan dari hitungan hari menjadi menit.",
-        },
-        images: [],
-      },
-      {
-        title: "KTJM-App",
-        category: "Sistem Manajemen Bisnis & Industri",
-        description:
-          "Sistem pelacakan pengiriman kelapa sawit dari perkebunan hingga pabrik.",
-        tags: ["PHP", "Laravel", "JavaScript"],
-        stack: ["PHP", "Laravel", "JavaScript", "MySQL", "Leaflet.js"],
-        caseStudy: {
-          problem:
-            "Kurangnya transparansi dan data real-time dalam rantai pasok kelapa sawit.",
-          solution:
-            "Mengembangkan aplikasi web & mobile untuk melacak posisi truk (GPS), mencatat berat muatan, dan estimasi waktu tiba.",
-          impact:
-            "Meningkatkan kepercayaan, menekan potensi kehilangan 20%, dan menyediakan data akurat untuk logistik.",
-        },
-        images: [],
-      },
-      {
-        title: "MC-Profile",
-        category: "Aplikasi Web & Profil",
-        description:
-          "Website profil untuk Mutiara Cantik, sebuah toko kecantikan.",
-        tags: ["HTML", "CSS", "JavaScript"],
-        stack: ["HTML", "CSS", "JavaScript"],
-        caseStudy: {
-          problem:
-            "Toko kecantikan 'Mutiara Cantik' tidak memiliki kehadiran online, kehilangan potensi pelanggan yang mencari produk dan layanan secara digital.",
-          solution:
-            "Membangun website profil modern dan responsif menampilkan katalog produk, layanan, galeri, dan informasi kontak.",
-          impact:
-            "Menciptakan etalase digital 24/7, meningkatkan jangkauan pasar, dan memberi saluran komunikasi baru bagi pelanggan.",
-        },
-        images: [],
-      },
-      {
         title: "Jago Compro",
-        category: "Aplikasi Web & Profil",
+        category: "Web & Company Profile App",
         description:
-          "Website profil untuk Mutiara Cantik, sebuah toko kecantikan.",
-        tags: ["HTML", "CSS", "JavaScript"],
-        stack: ["HTML", "CSS", "JavaScript"],
+          "A company profile website for a fast, professional profile-making service provider.",
+        tags: ["Next.js", "Tailwind CSS", "JavaScript"],
+        stack: ["Next.js", "Tailwind CSS", "JavaScript"],
+        caseStudy: {
+          problem: "No compelling digital presence to attract new customers.",
+          solution:
+            "Built a modern company profile website with professional layout and complete business information. SEO-optimized for search visibility. Ads campaign integration for broader outreach.",
+          impact:
+            "Increased brand credibility and easier customer access to services and products. Higher website traffic.",
+        },
+        images: [
+          "/portfolio/project-jago-compro-1.png",
+          "/portfolio/project-jago-compro-2.png",
+          "/portfolio/project-jago-compro-3.png",
+        ],
+      },
+      {
+        title: "Point Of Sale - Bakti Nusantara Printing",
+        category: "Business & Industrial Management System",
+        description:
+          "A complete Point-of-Sale system with warehouse, cashier, and integrated accounting modules.",
+        tags: ["Laravel", "JavaScript", "MySQL"],
+        stack: ["Laravel", "JavaScript", "MySQL"],
         caseStudy: {
           problem:
-            "Tidak memiliki representasi digital yang menarik untuk menarik pelanggan baru.",
+            "Manual inventory and finance processes caused stock mismatches and delayed reporting.",
           solution:
-            "Membuat website profil menarik dengan layout profesional dan informasi bisnis lengkap.",
+            "Built a centralized POS system with real-time Warehouse, Cashier, and Accounting modules to manage transactions and financials in one platform.",
           impact:
-            "Meningkatkan kredibilitas brand dan mempermudah akses pelanggan ke informasi produk dan layanan.",
+            "Real-time stock sync, 95% reduction in input errors, and monthly report generation accelerated from days to minutes.",
         },
-        images: [],
+        images: [
+          "/portfolio/project-pos-2.png",
+          "/portfolio/project-pos-1.png",
+          "/portfolio/project-pos-3.png",
+        ],
+      },
+      {
+        title: "Palm Oil Truck Tracking System",
+        category: "Business & Industrial Management System",
+        description:
+          "Tracking system for palm oil delivery from plantations to factories.",
+        tags: ["Laravel", "JavaScript", "MySQL", "Leaflet.js"],
+        stack: ["Laravel", "JavaScript", "MySQL", "Leaflet.js"],
+        caseStudy: {
+          problem:
+            "Lack of transparency and real-time data in the palm oil supply chain.",
+          solution:
+            "Built a mobile-friendly web app to track truck GPS location, payload weight, and ETA. Recorded checkpoints during each delivery.",
+          impact:
+            "Improved trust, reduced potential loss, and provided accurate logistics data.",
+        },
+        images: [
+          "/portfolio/project-tracking-3.png",
+          "/portfolio/project-tracking-1.png",
+          "/portfolio/project-tracking-2.png",
+        ],
+      },
+      {
+        title: "Mutiara Company Profile",
+        category: "Web & Company Profile App",
+        description:
+          "Company profile website for 'Mutiara Cantik', a beauty product store.",
+        tags: ["Laravel", "JavaScript", "MySQL"],
+        stack: ["Laravel", "JavaScript", "MySQL"],
+        caseStudy: {
+          problem:
+            "No online presence, missing out on potential customers searching digitally.",
+          solution:
+            "Built a modern responsive website with product catalog, services, gallery, and contact info.",
+          impact:
+            "24/7 digital storefront, expanded market reach, and a new communication channel for customers.",
+        },
+        images: [
+          "/portfolio/project-mutiara-4.png",
+          "/portfolio/project-mutiara-3.png",
+          "/portfolio/project-mutiara-1.png",
+          "/portfolio/project-mutiara-2.png",
+        ],
       },
       {
         title: "Siketa",
-        category: "Sistem Informasi Akademik & Kepegawaian",
+        category: "Academic & HR Information System",
         description:
-          "Sistem informasi manajemen proses dan bimbingan tugas akhir mahasiswa.",
-        tags: ["PHP", "MySQL"],
-        stack: ["PHP (Native)", "MySQL", "jQuery"],
+          "Management system for student thesis and supervision processes.",
+        tags: ["Laravel", "JavaScript", "MySQL"],
+        stack: ["Laravel", "JavaScript", "MySQL"],
         caseStudy: {
-          problem:
-            "Proses administrasi tugas akhir yang lambat dan tidak transparan.",
+          problem: "Slow and non-transparent thesis administration process.",
           solution:
-            "Membangun portal terpusat untuk pengajuan proposal, bimbingan online, dan pelacakan kemajuan digital.",
+            "Centralized portal for proposal submission, online supervision, and digital progress tracking.",
           impact:
-            "Memangkas waktu administrasi 60%, transparansi penuh, dan mengurangi penggunaan kertas.",
+            "Reduced admin time by 60%, full transparency, and less paper usage.",
         },
-        images: [],
+        images: [
+          "/portfolio/project-siketa-2.png",
+          "/portfolio/project-siketa-3.png",
+          "/portfolio/project-siketa-1.png",
+        ],
       },
       {
         title: "Sibema",
-        category: "Sistem Informasi Akademik & Kepegawaian",
+        category: "Academic & HR Information System",
         description:
-          "Sistem informasi untuk pendaftaran dan seleksi beasiswa mahasiswa.",
-        tags: ["PHP", "JavaScript"],
-        stack: ["PHP", "JavaScript", "MySQL"],
+          "Information system for student scholarship application and selection.",
+        tags: ["Laravel", "JavaScript", "MySQL"],
+        stack: ["Laravel", "JavaScript", "MySQL"],
         caseStudy: {
-          problem: "Informasi beasiswa tersebar dan proses manual.",
+          problem: "Scattered scholarship info and manual selection process.",
           solution:
-            "Membangun portal satu pintu untuk semua info dan seleksi beasiswa.",
+            "Built a unified portal for all scholarship info and application flow.",
           impact:
-            "Partisipasi meningkat, seleksi efisien, dan administrasi ringan.",
+            "Increased participation, faster selection, and easier admin tasks.",
         },
-        images: [],
+        images: [
+          "/portfolio/project-sibema-1.png",
+          "/portfolio/project-sibema-2.png",
+          "/portfolio/project-sibema-3.png",
+        ],
       },
       {
-        title: "Monitoring Staf",
-        category: "Sistem Informasi Akademik & Kepegawaian",
-        description:
-          "Aplikasi untuk memonitor status staf dan rekapitulasi jam kerja.",
-        tags: ["PHP", "MySQL"],
-        stack: ["PHP", "MySQL", "jQuery", "AJAX"],
+        title: "Staff Monitoring System",
+        category: "Academic & HR Information System",
+        description: "Application to track staff presence and working hours.",
+        tags: ["Django", "JavaScript", "MySQL"],
+        stack: ["Django", "JavaScript", "MySQL"],
         caseStudy: {
-          problem: "Pelacakan kehadiran staf manual dan rentan kesalahan.",
+          problem:
+            "Manual presence tracking prone to errors. Managers needed clearer delegation visibility.",
           solution:
-            "Aplikasi dasbor untuk input status harian dan rekap otomatis.",
+            "Dashboard app for daily status updates and automatic attendance summaries. Leave requests made easier.",
           impact:
-            "Visibilitas real-time, rekap otomatis, dan cuti mudah diajukan.",
+            "Real-time visibility, auto-recap, and easy leave submission.",
         },
-        images: [],
+        images: [
+          "/portfolio/project-monitoring-staf-1.png",
+          "/portfolio/project-monitoring-staf-2.png",
+          "/portfolio/project-monitoring-staf-3.png",
+        ],
       },
       {
         title: "Siporat",
-        category: "Sistem Informasi Akademik & Kepegawaian",
-        description: "Sistem penomoran surat otomatis dan arsip digital.",
-        tags: ["PHP", "JavaScript"],
-        stack: ["PHP", "JavaScript", "MySQL"],
+        category: "Academic & HR Information System",
+        description:
+          "Automatic document numbering and searchable digital archive system.",
+        tags: ["Django", "JavaScript", "MySQL"],
+        stack: ["Django", "JavaScript", "MySQL"],
         caseStudy: {
-          problem: "Nomor surat tidak konsisten dan proses lambat.",
+          problem: "Inconsistent document numbers and slow archiving process.",
           solution:
-            "Sistem yang mengenerate nomor otomatis sesuai format dan arsip digital.",
-          impact: "Nomor unik 100%, cepat, dan arsip rapi.",
+            "System to auto-generate numbers based on format and maintain searchable digital archive.",
+          impact: "100% unique numbers, faster access, and neat archiving.",
         },
-        images: [],
+        images: [
+          "/portfolio/project-siporat-2.png",
+          "/portfolio/project-siporat-3.png",
+          "/portfolio/project-siporat-1.png",
+        ],
       },
       {
         title: "Sijaki",
-        category: "Sistem Informasi Akademik & Kepegawaian",
+        category: "Academic & HR Information System",
         description:
-          "Sistem informasi untuk penjadwalan dan pelaporan kinerja dosen.",
-        tags: ["PHP", "MySQL"],
-        stack: ["PHP", "MySQL"],
+          "Scheduling and performance reporting system for lecturers.",
+        tags: ["Django", "JavaScript", "MySQL"],
+        stack: ["Django", "JavaScript", "MySQL"],
         caseStudy: {
-          problem: "Data kinerja dosen tersebar dan sulit dievaluasi.",
+          problem: "Scattered performance data made evaluation difficult.",
           solution:
-            "Platform input kegiatan dosen dan laporan kinerja otomatis.",
+            "Platform for logging activities and generating automatic performance reports.",
           impact:
-            "Evaluasi mudah, akreditasi terbantu, dan keputusan pimpinan lebih akurat.",
+            "Simplified evaluations, improved accreditation process, and more accurate leadership decisions.",
         },
-        images: [],
+        images: [
+          "/portfolio/project-sijaki-2.png",
+          "/portfolio/project-sijaki-3.png",
+          "/portfolio/project-sijaki-1.png",
+        ],
       },
     ],
   },

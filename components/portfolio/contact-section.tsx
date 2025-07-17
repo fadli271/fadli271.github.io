@@ -11,6 +11,12 @@ interface ContactSectionProps {
     subtitle: string;
     emailPrompt: string;
     socialPrompt: string;
+    email: string;
+    socialLinks: {
+      github: string;
+      linkedin: string;
+      whatsapp: string;
+    };
   };
 }
 
@@ -55,10 +61,10 @@ export default function ContactSection({ content }: ContactSectionProps) {
               <p className="text-base text-slate-600">{content.emailPrompt}</p>
               <a
                 className="mt-2 inline-flex items-center justify-center gap-2 text-xl md:text-2xl font-semibold text-sky-500 hover:text-sky-700 transition-colors"
-                href="mailto:fadli.mohamad62@gmail.com"
+                href={`mailto:${content.email}`}
               >
                 <Mail className="w-5 h-5" />
-                fadli.mohamad62@gmail.com
+                {content.email}
               </a>
             </div>
 
@@ -73,33 +79,35 @@ export default function ContactSection({ content }: ContactSectionProps) {
                     aria-label="GitHub"
                     as="a"
                     className="bg-gray-200 text-slate-600 hover:text-black shadow-md hover:scale-110 transition"
-                    href="https://github.com/fadli271"
+                    href={content.socialLinks.github}
                     target="_blank"
                     variant="flat"
                   >
                     <FaGithub className="w-6 h-6" />
                   </Button>
                 </Tooltip>
+
                 <Tooltip content="LinkedIn">
                   <Button
                     isIconOnly
                     aria-label="LinkedIn"
                     as="a"
                     className="bg-gray-200 text-slate-600 hover:text-sky-700 shadow-md hover:scale-110 transition"
-                    href="https://linkedin.com/in/mfadli27a"
+                    href={content.socialLinks.linkedin}
                     target="_blank"
                     variant="flat"
                   >
                     <FaLinkedin className="w-6 h-6" />
                   </Button>
                 </Tooltip>
+
                 <Tooltip content="WhatsApp">
                   <Button
                     isIconOnly
                     aria-label="WhatsApp"
                     as="a"
                     className="bg-gray-200 text-slate-600 hover:text-green-600 shadow-md hover:scale-110 transition"
-                    href="https://wa.me/6281234567890?text=Halo%20Fadli%2C%20saya%20tertarik%20dengan%20portofoliomu!"
+                    href={content.socialLinks.whatsapp}
                     target="_blank"
                     variant="flat"
                   >

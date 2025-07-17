@@ -16,7 +16,6 @@ import {
   Button,
   Card,
   CardBody,
-  Divider,
 } from "@heroui/react";
 import NextImage from "next/image";
 

@@ -12,6 +12,7 @@ interface SkillsSectionProps {
   content: {
     title: string;
     subtitle: string;
+    ui: { seeAll: string; seeLess: string };
   };
 }
 
@@ -119,12 +120,12 @@ export default function SkillsSection({ content }: SkillsSectionProps) {
                         {isExpanded ? (
                           <>
                             <ChevronUp className="w-4 h-4" />
-                            Sembunyikan
+                            {content.ui.seeLess}
                           </>
                         ) : (
                           <>
                             <ChevronDown className="w-4 h-4" />
-                            Lihat Semua
+                            {content.ui.seeAll}
                           </>
                         )}
                       </Button>

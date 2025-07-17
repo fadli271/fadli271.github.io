@@ -4,11 +4,11 @@ import { useState } from "react";
 
 import FloatingNavbar from "@/components/floating-navbar";
 import { content } from "@/lib/content";
-import { HeroSection } from "@/components/content/hero-section";
-import { ExperienceSection } from "@/components/content/experience-section";
-import SkillsSection from "@/components/content/skills-section";
-import ProjectsSection from "@/components/content/project-section";
-import ContactSection from "@/components/content/contact-section";
+import { HeroSection } from "@/components/portfolio/hero-section";
+import { ExperienceSection } from "@/components/portfolio/experience-section";
+import SkillsSection from "@/components/portfolio/skills-section";
+import ProjectsSection from "@/components/portfolio/project-section";
+import ContactSection from "@/components/portfolio/contact-section";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 
 type Language = keyof typeof content;
