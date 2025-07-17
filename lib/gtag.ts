@@ -15,7 +15,7 @@ type TrackEventOptions = {
 
 export const trackEvent = (
   action: string,
-  { category, label, value, fbEventName, fbParams }: TrackEventOptions = {}
+  { category, label, value, fbEventName, fbParams }: TrackEventOptions = {},
 ) => {
   // Google Analytics
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
@@ -27,7 +27,11 @@ export const trackEvent = (
   }
 
   // Meta Pixel
-  if (typeof window !== "undefined" && typeof window.fbq === "function" && fbEventName) {
+  if (
+    typeof window !== "undefined" &&
+    typeof window.fbq === "function" &&
+    fbEventName
+  ) {
     window.fbq("track", fbEventName, fbParams || {});
   }
 };

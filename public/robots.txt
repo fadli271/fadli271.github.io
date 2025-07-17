@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jagocompro.id/sitemap.xml
+Sitemap: https://fadli.github.io/sitemap.xml

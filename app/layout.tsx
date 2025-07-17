@@ -8,7 +8,48 @@ import { Providers } from "./providers";
 
 import { fontSans } from "@/config/fonts";
 
-export const metadata: Metadata = {};
+export const metadata: Metadata = {
+  metadataBase: new URL("https://fadli.github.io"),
+  title: {
+    default: "Mohamad Fadli – Software Engineer",
+    template: "%s | Mohamad Fadli",
+  },
+  description:
+    "Portfolio & Projects of Mohamad Fadli — software engineer with experience in modern web and AI integration.",
+  authors: [{ name: "Mohamad Fadli", url: "https://fadli.github.io" }],
+  keywords: ["Fadli", "Software Engineer", "Web Developer", "AI", "Portfolio"],
+  openGraph: {
+    title: "Mohamad Fadli – Software Engineer",
+    description:
+      "Showcasing work in AI, logistics tech, and modern web development.",
+    url: "https://fadli.github.io",
+    siteName: "Mohamad Fadli",
+    images: [
+      {
+        url: "/myProfile.png",
+        width: 1200,
+        height: 630,
+        alt: "Mohamad Fadli Portfolio Preview",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export const viewport: Viewport = {
   themeColor: [
@@ -22,7 +63,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {};
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Mohamad Fadli",
+    url: "https://fadli.github.io",
+    sameAs: [
+      "https://github.com/fadli271",
+      "https://www.linkedin.com/in/mfadli27a",
+    ],
+    jobTitle: "Software Engineer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Paerte Code",
+    },
+  };
 
   return (
     <html suppressHydrationWarning lang="id">
