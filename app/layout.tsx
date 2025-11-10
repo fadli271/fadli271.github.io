@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [{ rel: "icon", url: "/favicon.png", type: "image/png" }],
   },
   twitter: {
     card: "summary_large_image",
