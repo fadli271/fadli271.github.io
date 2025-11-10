@@ -131,6 +131,7 @@ export default function ProjectsSection({
                   fill
                   alt={project.title}
                   className="object-cover"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   src={
                     project?.images?.[0]
                       ? project?.images?.[0]

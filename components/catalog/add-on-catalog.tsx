@@ -26,6 +26,8 @@ import {
 import { motion } from "framer-motion";
 import React from "react";
 
+import { buildWhatsAppLink } from "@/lib/contact-info";
+
 export default function AddonsCustomSection() {
   const addons = {
     title: "Add-on & Langganan",
@@ -253,9 +255,9 @@ export default function AddonsCustomSection() {
                   fullWidth
                   as="a"
                   className="font-bold bg-gradient-to-r from-sky-500 to-blue-600 text-white"
-                  href={`https://wa.me/6282219094081?text=${encodeURIComponent(
+                  href={buildWhatsAppLink(
                     "Halo kak, saya tertarik dengan layanan Solusi Kustom — Aplikasi & Sistem Web. Boleh minta info lebih lanjut?",
-                  )}`}
+                  )}
                   rel="noopener noreferrer"
                   size="lg"
                   target="_blank"

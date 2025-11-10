@@ -1,3 +1,5 @@
+import { CONTACT_INFO, buildWhatsAppLink } from "@/lib/contact-info";
+
 export const catalogueContent = {
   hero: {
     greeting: "🙌 Halo, saya Fadli — Software Engineer",
@@ -123,12 +125,14 @@ export const catalogueContent = {
     contacts: [
       {
         method: "WhatsApp",
-        value: "0822 1909 4081",
+        value: CONTACT_INFO.whatsapp.display,
+        href: buildWhatsAppLink(),
         icon: "",
       },
       {
         method: "Email",
-        value: "fadli.mohamad62@gmail.com",
+        value: CONTACT_INFO.email,
+        href: `mailto:${CONTACT_INFO.email}`,
         icon: "",
       },
     ],

@@ -1,10 +1,12 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Menu } from "lucide-react";
-import { useState, useEffect } from "react";
+import clsx from "clsx";
 import { LucideIcon } from "lucide-react";
 
 import { Language } from "@/lib/content";
+
 interface FloatingNavbarProps {
   content: {
     [key: string]: {
@@ -12,96 +14,158 @@ interface FloatingNavbarProps {
       icon: LucideIcon;
     };
   };
-  setLang: (lang: Language) => void;
+  onLangChange: (lang: Language) => void;
   currentLang: Language;
 }
 
 export default function FloatingNavbar({
   content,
-  setLang,
+  onLangChange,
   currentLang,
 }: FloatingNavbarProps) {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showNav, setShowNav] = useState(true);
+  const lastScrollY = useRef(0);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const toggleLang = () => setIsLangOpen((prev) => !prev);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   const handleLangChange = (lang: Language) => {
-    setLang(lang);
+    onLangChange(lang);
     setIsLangOpen(false);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
+      const current = window.scrollY;
+      const isAtTop = current < 80;
+      const isScrollingUp = current < lastScrollY.current;
 
-      setShowNav(scrollY < 100);
+      setShowNav(isAtTop || isScrollingUp);
+      lastScrollY.current = current;
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (!showNav) return null;
+  useEffect(() => {
+    if (isLangOpen || isMenuOpen) {
+      setShowNav(true);
+    }
+  }, [isLangOpen, isMenuOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setIsLangOpen(false);
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const languageLabel = currentLang === "id" ? "Indonesia" : "English";
 
   return (
-    <div className="fixed top-4 right-4 z-50 flex items-center gap-2 mt-10">
-      {/* Language Switcher */}
-      <div className="relative">
-        <button
-          className="flex items-center gap-2 content-card px-3 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-200 transition-colors"
-          onClick={toggleLang}
-        >
-          <span>{currentLang === "id" ? "Indonesia" : "English"}</span>
-          <ChevronDown
-            className={`w-4 h-4 transition-transform ${isLangOpen ? "rotate-180" : ""}`}
-          />
-        </button>
-        {isLangOpen && (
-          <div className="absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
-            <button
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              onClick={() => handleLangChange("id")}
+    <div
+      ref={containerRef}
+      className={clsx(
+        "fixed z-50 w-[calc(100%-2rem)] max-w-md left-1/2 -translate-x-1/2 bottom-5 sm:w-auto sm:max-w-none sm:left-auto sm:translate-x-0 sm:top-6 sm:right-6",
+        "transition-all duration-300",
+        showNav
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 translate-y-4 pointer-events-none",
+      )}
+    >
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+        {/* Language Switcher */}
+        <div className="relative flex-1 sm:flex-none">
+          <button
+            aria-expanded={isLangOpen}
+            aria-haspopup="listbox"
+            className="content-card flex w-full items-center justify-between rounded-full px-4 py-3 text-sm font-medium text-gray-700 hover:bg-white"
+            onClick={toggleLang}
+          >
+            <span>{languageLabel}</span>
+            <ChevronDown
+              className={clsx(
+                "h-4 w-4 transition-transform",
+                isLangOpen && "rotate-180",
+              )}
+            />
+          </button>
+          {isLangOpen && (
+            <div
+              className={clsx(
+                "absolute inset-x-0 bottom-full mb-2 w-full rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl",
+                "sm:inset-auto sm:right-0 sm:top-full sm:mb-0 sm:mt-2 sm:w-48",
+              )}
             >
-              Indonesia
-            </button>
-            <button
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              onClick={() => handleLangChange("en")}
-            >
-              English
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Menu Button */}
-      <div className="relative">
-        <button
-          className="w-12 h-12 flex items-center justify-center bg-sky-500 text-white rounded-full shadow-lg hover:bg-sky-600 transition-all transform hover:scale-110"
-          onClick={toggleMenu}
-        >
-          <Menu className="w-6 h-6" />
-        </button>
-        {isMenuOpen && (
-          <div className="absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
-            <div className="py-1">
-              {Object.entries(content).map(([key, { label, icon: Icon }]) => (
-                <a
-                  key={key}
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  href={`#${key}`}
+              {(["id", "en"] as Language[]).map((lang) => (
+                <button
+                  key={lang}
+                  className={clsx(
+                    "w-full rounded-xl px-4 py-2 text-left text-sm transition-colors",
+                    lang === currentLang
+                      ? "bg-sky-50 text-sky-600 font-semibold"
+                      : "text-gray-600 hover:bg-gray-100",
+                  )}
+                  onClick={() => handleLangChange(lang)}
                 >
-                  <Icon className="w-4 h-4" />
-                  {label}
-                </a>
+                  {lang === "id" ? "Indonesia" : "English"}
+                </button>
               ))}
             </div>
-          </div>
-        )}
+          )}
+        </div>
+
+        {/* Menu Button */}
+        <div className="relative flex-1 sm:flex-none">
+          <button
+            aria-expanded={isMenuOpen}
+            aria-haspopup="true"
+            className="content-card flex w-full items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-white sm:min-w-[56px]"
+            onClick={toggleMenu}
+          >
+            <Menu className="h-5 w-5 text-sky-600" />
+            <span className="sm:hidden">Menu</span>
+          </button>
+          {isMenuOpen && (
+            <nav
+              className={clsx(
+                "absolute inset-x-0 bottom-full mb-2 w-full rounded-3xl border border-gray-100 bg-white shadow-2xl",
+                "sm:inset-auto sm:right-0 sm:top-full sm:mb-0 sm:mt-2 sm:w-56",
+                "max-h-[60vh] overflow-y-auto",
+              )}
+            >
+              <ul className="divide-y divide-gray-100 text-sm text-gray-700">
+                {Object.entries(content).map(([key, { label, icon: Icon }]) => (
+                  <li key={key}>
+                    <a
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"
+                      href={`#${key}`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Icon className="h-4 w-4 text-sky-500" />
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+        </div>
       </div>
     </div>
   );

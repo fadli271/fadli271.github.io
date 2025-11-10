@@ -1,0 +1,16 @@
+{
+  "name": "Mohamad Fadli – Software Engineer",
+  "short_name": "Fadli",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "description": "Portfolio & web service catalogue by Mohamad Fadli.",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}

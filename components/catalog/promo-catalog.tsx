@@ -5,6 +5,8 @@ import { Button, Card, CardBody, Chip, Image } from "@heroui/react";
 import { circOut, motion } from "framer-motion";
 import { FiCheckCircle, FiArrowRight, FiGift, FiClock } from "react-icons/fi";
 
+import { buildWhatsAppLink } from "@/lib/contact-info";
+
 // Data konten (bisa dipisah ke file lain)
 const promo = {
   title: "Bangun Website Profesional untuk UMKM",
@@ -157,7 +159,9 @@ export default function PromoCatalog() {
                     as={motion.a}
                     className="bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold rounded-full px-8 py-4 shadow-lg inline-flex items-center gap-2 justify-center"
                     endContent={<FiArrowRight />}
-                    href="https://wa.me/082219094081?text=Halo%20kak%2C%20saya%20tertarik%20dengan%20promo%20website%20UMKM-nya.%20Boleh%20minta%20info%20lebih%20lanjut%3F"
+                    href={buildWhatsAppLink(
+                      "Halo kak, saya tertarik dengan promo website UMKM-nya. Boleh minta info lebih lanjut?",
+                    )}
                     rel="noopener noreferrer"
                     size="lg"
                     target="_blank"

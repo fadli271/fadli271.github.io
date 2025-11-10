@@ -25,7 +25,15 @@ import {
   SiRubyonrails,
 } from "react-icons/si";
 
+import { CONTACT_INFO, buildWhatsAppLink } from "@/lib/contact-info";
+
 export type Language = "id" | "en";
+
+const buildSocialLinks = (whatsappMessage?: string) => ({
+  github: CONTACT_INFO.social.github,
+  linkedin: CONTACT_INFO.social.linkedin,
+  whatsapp: buildWhatsAppLink(whatsappMessage),
+});
 
 export const content = {
   id: {
@@ -103,13 +111,10 @@ export const content = {
         "Selalu terbuka buat ngobrol—baik soal proyek, kolaborasi, atau sekadar bahas teknologi.",
       emailPrompt: "Bisa kirim email ke:",
       socialPrompt: "Atau temukan aku di sini:",
-      email: "fadli.mohamad62@gmail.com",
-      socialLinks: {
-        github: "https://github.com/fadli271",
-        linkedin: "https://linkedin.com/in/mfadli27a",
-        whatsapp:
-          "https://wa.me/6281234567890?text=Halo%20Fadli%2C%20saya%20tertarik%20dengan%20portofoliomu!",
-      },
+      email: CONTACT_INFO.email,
+      socialLinks: buildSocialLinks(
+        "Halo Fadli, saya tertarik dengan portofoliomu!",
+      ),
     },
     footer: { credit: "Dibuat dengan Semangat di Palu, Sulawesi Tengah." },
     projectsData: [
@@ -376,13 +381,10 @@ export const content = {
         "Always open for a chat—whether it’s about a project, collaboration, or just talking tech.",
       emailPrompt: "You can email me at:",
       socialPrompt: "Or find me on:",
-      email: "fadli.mohamad62@gmail.com",
-      socialLinks: {
-        github: "https://github.com/fadli271",
-        linkedin: "https://linkedin.com/in/mfadli27a",
-        whatsapp:
-          "https://wa.me/6281234567890?text=Hi%20Fadli%2C%20I%27m%20interested%20in%20your%20portfolio!",
-      },
+      email: CONTACT_INFO.email,
+      socialLinks: buildSocialLinks(
+        "Hi Fadli, I'm interested in your portfolio!",
+      ),
     },
     footer: {
       credit: "Made with love in Palu, Indonesia.",

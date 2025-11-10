@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import { CONTACT_INFO, buildWhatsAppLink } from "@/lib/contact-info";
+
 export default function FinalSection() {
   const payment = {
     title: "Skema Pembayaran",
@@ -48,14 +50,14 @@ export default function FinalSection() {
     contacts: [
       {
         method: "WhatsApp",
-        value: "0822 1909 4081",
-        href: "https://wa.me/6282219094081?text=Halo%20Fadli,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website.",
+        value: CONTACT_INFO.whatsapp.display,
+        href: buildWhatsAppLink(),
         icon: <Phone className="w-5 h-5 text-green-500" />,
       },
       {
         method: "Email",
-        value: "fadli.mohamad62@gmail.com",
-        href: "mailto:fadli.mohamad62@gmail.com",
+        value: CONTACT_INFO.email,
+        href: `mailto:${CONTACT_INFO.email}`,
         icon: <Mail className="w-5 h-5 text-sky-500" />,
       },
     ],
@@ -154,7 +156,7 @@ export default function FinalSection() {
                   {cta.contacts.map((c, i) => (
                     <Link
                       key={i}
-                      className="flex items-center justify-center px-4 py-3 border rounded-xl border-gray-200 hover:bg-sky-50 transition text-sm sm:text-base"
+                      className="flex flex-col items-center justify-center px-4 py-3 border rounded-xl border-gray-200 hover:bg-sky-50 transition text-sm sm:text-base text-center"
                       href={c.href}
                       rel="noopener noreferrer"
                       target="_blank"
@@ -165,6 +167,11 @@ export default function FinalSection() {
                           {c.method}
                         </span>
                       </div>
+                      {c.value && (
+                        <span className="text-xs text-gray-600 mt-1">
+                          {c.value}
+                        </span>
+                      )}
                     </Link>
                   ))}
                 </div>

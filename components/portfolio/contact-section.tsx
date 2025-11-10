@@ -60,11 +60,11 @@ export default function ContactSection({ content }: ContactSectionProps) {
             <div>
               <p className="text-base text-slate-600">{content.emailPrompt}</p>
               <a
-                className="mt-2 inline-flex items-center justify-center gap-2 text-xl md:text-2xl font-semibold text-sky-500 hover:text-sky-700 transition-colors"
+                className="mt-2 flex w-full flex-wrap items-center justify-center gap-2 break-all px-2 text-xl font-semibold text-sky-500 transition-colors hover:text-sky-700 md:text-2xl"
                 href={`mailto:${content.email}`}
               >
-                <Mail className="w-5 h-5" />
-                {content.email}
+                <Mail className="w-5 h-5 flex-shrink-0" />
+                <span className="text-center">{content.email}</span>
               </a>
             </div>
 

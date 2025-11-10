@@ -12,6 +12,8 @@ import {
 import { CheckCircle, Timer, Info, Rocket } from "lucide-react";
 import { circOut, motion } from "framer-motion";
 
+import { buildWhatsAppLink } from "@/lib/contact-info";
+
 const packages = {
   title: "Paket Website UMKM",
   subtitle:
@@ -175,9 +177,9 @@ export default function PackageCatalogue() {
                     fullWidth
                     as="a"
                     className="font-bold bg-gradient-to-r from-sky-500 to-blue-600 !text-white"
-                    href={`https://wa.me/6282219094081?text=Halo%20kak%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(
-                      pkg.name,
-                    )}.%20Boleh%20minta%20informasi%20lebih%20lanjut%3F`}
+                    href={buildWhatsAppLink(
+                      `Halo kak, saya tertarik dengan ${pkg.name}. Boleh minta informasi lebih lanjut?`,
+                    )}
                     rel="noopener noreferrer"
                     size="lg"
                     target="_blank"

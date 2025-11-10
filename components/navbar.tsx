@@ -7,11 +7,14 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { trackEvent } from "@/lib/gtag";
+import { buildWhatsAppLink } from "@/lib/contact-info";
 
 /* === Constants === */
 const WHATSAPP_INFO = {
   label: "Konsultasi WhatsApp",
-  href: "https://api.whatsapp.com/send/?phone=6282253596399&text=Hallo+Jago+Compro%2C+saya+mau+pesan+desain+company+profile&type=phone_number&app_absent=0",
+  href: buildWhatsAppLink(
+    "Hallo Jago Compro, saya mau pesan desain company profile",
+  ),
 };
 
 const NAV_ITEMS = [
