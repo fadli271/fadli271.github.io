@@ -13,49 +13,7 @@ import { CheckCircle, Timer, Info, Rocket } from "lucide-react";
 import { circOut, motion } from "framer-motion";
 
 import { buildWhatsAppLink } from "@/lib/contact-info";
-
-const packages = {
-  title: "Paket Website UMKM",
-  subtitle:
-    "Solusi praktis dan scalable untuk bisnis kecil hingga menengah yang ingin tampil profesional secara online.",
-  includes: [
-    "Domain & Hosting Support",
-    "Gratis Maintenance 1 Bulan",
-    "Video Tutorial",
-  ],
-  items: [
-    {
-      name: "Paket Sat Set Online",
-      price: "Rp 2.500.000",
-      estimate: "7 – 14 Hari Kerja",
-      idealFor: "UMKM/Personal butuh website cepat & profesional",
-      features: [
-        "3 Halaman Utama",
-        "Desain Template Premium",
-        "Mobile Friendly",
-        "Tombol WhatsApp",
-        "Integrasi Media Sosial",
-      ],
-      bonus: null,
-      isPopular: false,
-    },
-    {
-      name: "Paket Tumbuh Profesional",
-      price: "Mulai dari Rp 5.500.000",
-      estimate: "3 – 5 Minggu",
-      idealFor: "Bisnis berkembang yang butuh fitur lebih lengkap",
-      features: [
-        "Hingga 8 Halaman",
-        "Desain Kustom",
-        "Blog / Galeri",
-        "Setup Awal SEO",
-        "Semua fitur Paket Sat Set",
-      ],
-      bonus: "1 Jam Strategi Digital Gratis",
-      isPopular: true,
-    },
-  ],
-};
+import { catalogContent } from "@/data/catalog-content";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -70,6 +28,8 @@ const fadeInUp = {
 };
 
 export default function PackageCatalogue() {
+  const packages = catalogContent.packages;
+
   return (
     <section className="py-20 sm:py-24 bg-white" id="packages">
       <div className="container mx-auto px-4 sm:px-6">

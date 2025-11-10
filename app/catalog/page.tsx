@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
-import AddonsCatalog from "@/components/catalog/add-on-catalog";
-import FAQCatalog from "@/components/catalog/faq-catalog";
-import HeroCatalog from "@/components/catalog/hero-catalog";
-import PackageCatalogue from "@/components/catalog/package-catalog";
-import PaymentCatalog from "@/components/catalog/payment-catalog";
-import PromoCatalog from "@/components/catalog/promo-catalog";
+import AddonsCatalog from "@/components/sections/catalog/add-on-catalog";
+import FAQCatalog from "@/components/sections/catalog/faq-catalog";
+import HeroCatalog from "@/components/sections/catalog/hero-catalog";
+import PackageCatalogue from "@/components/sections/catalog/package-catalog";
+import PaymentCatalog from "@/components/sections/catalog/payment-catalog";
+import PromoCatalog from "@/components/sections/catalog/promo-catalog";
 
 export const metadata: Metadata = {
   title: "Katalog Layanan Digital | Mohamad Fadli",

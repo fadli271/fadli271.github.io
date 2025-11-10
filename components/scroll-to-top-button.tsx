@@ -13,6 +13,7 @@ export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
   const [isDesktop, setIsDesktop] = useState(() => getIsDesktop());
   const [isFloatingNavVisible, setIsFloatingNavVisible] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +35,10 @@ export default function ScrollToTopButton() {
     mediaQuery.addEventListener("change", handleChange);
 
     return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  useEffect(() => {
+    setHasMounted(true);
   }, []);
 
   useEffect(() => {
@@ -59,8 +64,9 @@ export default function ScrollToTopButton() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const bottomOffset = isDesktop ? "1.25rem" : "3.5rem";
-  const shouldShowButton = isVisible && !isFloatingNavVisible;
+  const resolvedIsDesktop = hasMounted ? isDesktop : false;
+  const bottomOffset = resolvedIsDesktop ? "1.25rem" : "3.5rem";
+  const shouldShowButton = hasMounted && isVisible && !isFloatingNavVisible;
 
   return (
     <motion.button

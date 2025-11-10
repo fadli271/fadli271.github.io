@@ -5,51 +5,10 @@ import { Accordion, AccordionItem, Card, CardBody } from "@heroui/react";
 import { HelpCircle, ChevronDownCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const faqContent = {
-  title: "Pertanyaan Umum (FAQ)",
-  description:
-    "Jawaban atas pertanyaan yang sering diajukan sebelum proyek dimulai.",
-  items: [
-    {
-      q: "Apakah harga sudah termasuk domain & hosting?",
-      a: "Belum. Klien akan membayar langsung ke penyedia layanan (misalnya: Niagahoster, Hostinger). Saya akan bantu setup domain dan hosting secara gratis, agar kepemilikan penuh tetap di tangan Anda.",
-    },
-    {
-      q: "Siapa yang menyiapkan konten website?",
-      a: "Konten dasar seperti teks dan gambar disediakan oleh klien. Tapi saya bantu dengan template konten siap pakai dan saran copywriting ringan agar lebih marketable.",
-    },
-    {
-      q: "Berapa kali revisi yang bisa saya lakukan?",
-      a: "Anda mendapatkan 2x revisi minor (teks, warna, gambar). Revisi dilakukan saat tahap desain, sebelum website dipublikasikan.",
-    },
-    {
-      q: "Apakah saya bisa update konten sendiri?",
-      a: "Bisa! Anda akan dapat panduan video singkat dan akses login ke dashboard. Atau, bisa pakai langganan “Tenang Aja” agar saya yang urus update rutin.",
-    },
-    {
-      q: "Apakah ada garansi setelah website selesai?",
-      a: "Tentu, ada garansi teknis 1 bulan untuk perbaikan bug atau error teknis (bukan konten).",
-    },
-    {
-      q: "Bisa minta desain sesuai brand?",
-      a: "Tentu! Khusus di Paket “Tumbuh Profesional”, saya akan sesuaikan warna, tone, dan nuansa brand Anda.",
-    },
-    {
-      q: "Apakah bisa integrasi WhatsApp atau Instagram?",
-      a: "Bisa, bahkan saya bantu pasang CTA WhatsApp floating, embed Instagram Feed, dan tombol sosial media lainnya.",
-    },
-    {
-      q: "Apakah bisa cicilan atau pembayaran bertahap?",
-      a: "Ya, bisa. Kita bisa diskusikan skema pembayaran yang sesuai dan tidak memberatkan.",
-    },
-    {
-      q: "Bisa redesign website lama?",
-      a: "Tentu, saya bisa bantu evaluasi dan mendesain ulang agar tampil lebih modern dan fungsional.",
-    },
-  ],
-};
+import { catalogContent } from "@/data/catalog-content";
 
 export default function FAQCatalog() {
+  const faqContent = catalogContent.faq;
   const faqSchema = useMemo(
     () =>
       JSON.stringify({

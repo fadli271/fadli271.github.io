@@ -5,7 +5,7 @@ import { ChevronDown, Menu } from "lucide-react";
 import clsx from "clsx";
 import { LucideIcon } from "lucide-react";
 
-import { Language } from "@/lib/content";
+import { Language } from "@/data/portfolio-content";
 
 const MOBILE_SHOW_THRESHOLD = 60;
 

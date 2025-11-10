@@ -19,7 +19,7 @@ import {
 } from "@heroui/react";
 import NextImage from "next/image";
 
-import { experienceData } from "@/lib/content";
+import { experienceData } from "@/data/portfolio-content";
 
 // ======================
 // Types

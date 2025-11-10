@@ -18,7 +18,7 @@ import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import { Rocket } from "lucide-react";
 
-import ImageCarousel from "../Image-carousel";
+import ImageCarousel from "@/components/common/image-carousel";
 
 interface ProjectsSectionProps {
   content: {

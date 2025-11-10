@@ -3,13 +3,13 @@
 import { useCallback, useEffect, useState } from "react";
 
 import FloatingNavbar from "@/components/floating-navbar";
-import { content } from "@/lib/content";
-import { HeroSection } from "@/components/portfolio/hero-section";
-import { ExperienceSection } from "@/components/portfolio/experience-section";
-import SkillsSection from "@/components/portfolio/skills-section";
-import ProjectsSection from "@/components/portfolio/project-section";
-import ContactSection from "@/components/portfolio/contact-section";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
+import { ExperienceSection } from "@/components/sections/portfolio/experience-section";
+import ContactSection from "@/components/sections/portfolio/contact-section";
+import { HeroSection } from "@/components/sections/portfolio/hero-section";
+import ProjectsSection from "@/components/sections/portfolio/project-section";
+import SkillsSection from "@/components/sections/portfolio/skills-section";
+import { content } from "@/data/portfolio-content";
 
 type Language = keyof typeof content;
 type ContentType = (typeof content)[Language];

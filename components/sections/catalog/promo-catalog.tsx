@@ -6,25 +6,7 @@ import { circOut, motion } from "framer-motion";
 import { FiCheckCircle, FiArrowRight, FiGift, FiClock } from "react-icons/fi";
 
 import { buildWhatsAppLink } from "@/lib/contact-info";
-
-// Data konten (bisa dipisah ke file lain)
-const promo = {
-  title: "Bangun Website Profesional untuk UMKM",
-  subtitle:
-    "Tampil lebih kredibel, tingkatkan omzet, dan jangkau lebih banyak pelanggan dengan website modern siap pakai.",
-  benefits: [
-    "Desain Mobile Friendly & Estetik",
-    "Gratis Domain + Hosting 1 Tahun",
-    "Fitur Katalog Produk & Checkout",
-    "Integrasi WhatsApp & Sosial Media",
-    "Dukungan Teknis & Panduan Admin",
-  ],
-  cta_text: "Klaim Sekarang",
-  image_url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-  promo_tagline: "Promo Khusus Bulan Ini 🎉",
-  extra_note: "Bonus E-Course & Maintenance untuk 5 Pendaftar Pertama!",
-  expiration: "Berlaku hingga 31 Juli 2025",
-};
+import { catalogContent } from "@/data/catalog-content";
 
 // Varian animasi untuk container utama
 const containerVariants = {
@@ -57,6 +39,8 @@ const listItemVariants = {
 };
 
 export default function PromoCatalog() {
+  const promo = catalogContent.promo;
+
   return (
     <section className="bg-white" id="promo">
       <div className="container mx-auto px-6 py-24">
@@ -82,7 +66,7 @@ export default function PromoCatalog() {
                   <Image
                     alt="Promo Website UMKM"
                     className="w-full h-full object-cover"
-                    src={promo.image_url}
+                    src={promo.imageUrl}
                   />
                 </motion.div>
                 <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
@@ -92,7 +76,7 @@ export default function PromoCatalog() {
                     color="warning"
                     variant="shadow"
                   >
-                    {promo.promo_tagline}
+                    {promo.promoTagline}
                   </Chip>
                 </div>
               </motion.div>
@@ -106,7 +90,7 @@ export default function PromoCatalog() {
                 >
                   <FiGift className="text-yellow-600" />
                   <p className="text-sm text-yellow-700 font-medium">
-                    {promo.extra_note}
+                    {promo.extraNote}
                   </p>
                 </motion.div>
 
@@ -168,7 +152,7 @@ export default function PromoCatalog() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    {promo.cta_text}
+                    {promo.ctaText}
                   </Button>
                 </motion.div>
               </CardBody>

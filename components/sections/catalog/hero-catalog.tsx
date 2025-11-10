@@ -1,5 +1,7 @@
 "use client";
 
+import type { ComponentType } from "react";
+
 import { motion } from "framer-motion";
 import { Button, Card, CardBody } from "@heroui/react";
 import {
@@ -15,24 +17,23 @@ import {
 } from "react-icons/fi";
 
 import { buildWhatsAppLink } from "@/lib/contact-info";
+import { HeroFeatureIcon, catalogContent } from "@/data/catalog-content";
 
-const hero = {
-  greeting: "👋 Halo, saya Fadli  - Software Engineer",
-  tagline: "Katalog Layanan Digital yang Dirancang untuk Tumbuh Bersama Anda",
-  philosophy:
-    "Saya seorang Software Engineer yang fokus membantu UMKM dan profesional membangun kehadiran digital yang berdampak. Melalui desain yang elegan dan performa yang optimal, saya percaya setiap website bisa menjadi aset bisnis yang sesungguhnya.",
+const featureIconMap: Record<
+  HeroFeatureIcon,
+  ComponentType<{ size?: number }>
+> = {
+  shield: FiShield,
+  zap: FiZap,
+  smartphone: FiSmartphone,
+  thumbsUp: FiThumbsUp,
+  users: FiUsers,
+  award: FiAward,
 };
 
-const features = [
-  { icon: <FiShield size={22} />, text: "Jaminan Keamanan Data Sistem Anda" },
-  { icon: <FiZap size={22} />, text: "Performa & Kecepatan Optimal" },
-  { icon: <FiSmartphone size={22} />, text: "Responsif di Semua Perangkat" },
-  { icon: <FiThumbsUp size={22} />, text: "100% Puas atau Uang Kembali" },
-  { icon: <FiUsers size={22} />, text: "Dipercaya oleh Klien Terverifikasi" },
-  { icon: <FiAward size={22} />, text: "Tim Profesional & Berpengalaman" },
-];
-
 export default function HeroCatalog() {
+  const hero = catalogContent.hero;
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -120,21 +121,27 @@ export default function HeroCatalog() {
             className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6"
             variants={itemVariants}
           >
-            {features.map((feature, index) => (
-              <Card
-                key={index}
-                className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition"
-              >
-                <CardBody className="p-5">
-                  <div className="flex items-center gap-3 justify-center sm:justify-start">
-                    <span className="text-sky-500">{feature.icon}</span>
-                    <span className="text-sm sm:text-base text-gray-800 font-medium">
-                      {feature.text}
-                    </span>
-                  </div>
-                </CardBody>
-              </Card>
-            ))}
+            {hero.features.map((feature, index) => {
+              const Icon = featureIconMap[feature.icon];
+
+              return (
+                <Card
+                  key={index}
+                  className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition"
+                >
+                  <CardBody className="p-5">
+                    <div className="flex items-center gap-3 justify-center sm:justify-start">
+                      <span className="text-sky-500">
+                        <Icon size={22} />
+                      </span>
+                      <span className="text-sm sm:text-base text-gray-800 font-medium">
+                        {feature.text}
+                      </span>
+                    </div>
+                  </CardBody>
+                </Card>
+              );
+            })}
           </motion.div>
         </motion.div>
       </div>
