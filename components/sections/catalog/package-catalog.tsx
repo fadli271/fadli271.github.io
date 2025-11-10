@@ -27,6 +27,9 @@ const fadeInUp = {
   },
 };
 
+/**
+ * Pricing packages section with feature lists and CTAs.
+ */
 export default function PackageCatalogue() {
   const packages = catalogContent.packages;
 

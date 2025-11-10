@@ -45,6 +45,9 @@ interface ProjectsSectionProps {
   }[];
 }
 
+/**
+ * Portfolio grid with modal-based project detail view.
+ */
 export default function ProjectsSection({
   content,
   projectsData,

@@ -4,16 +4,17 @@ import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 import { motion } from "framer-motion";
 
-const getIsDesktop = () =>
-  typeof window === "undefined"
-    ? false
-    : window.matchMedia("(min-width: 640px)").matches;
+import { useMediaQuery } from "@/hooks/use-media-query";
 
+/**
+ * Quick shortcut button to return to the top after scrolling down.
+ * Hidden automatically while the floating navbar is visible to avoid overlap.
+ */
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(() => getIsDesktop());
   const [isFloatingNavVisible, setIsFloatingNavVisible] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 640px)", false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,18 +24,6 @@ export default function ScrollToTopButton() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 640px)");
-    const handleChange = (event: MediaQueryListEvent) =>
-      setIsDesktop(event.matches);
-
-    setIsDesktop(mediaQuery.matches);
-
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   useEffect(() => {

@@ -29,6 +29,9 @@ const fadeUpVariant = {
   show: { opacity: 1, y: 0 },
 };
 
+/**
+ * Displays the primary hero introduction, supporting animated text and scroll CTA.
+ */
 export const HeroSection = ({ content }: HeroSectionProps) => {
   return (
     <section

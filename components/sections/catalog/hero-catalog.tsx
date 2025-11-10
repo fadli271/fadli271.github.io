@@ -31,6 +31,9 @@ const featureIconMap: Record<
   award: FiAward,
 };
 
+/**
+ * Catalog landing hero describing USP and CTA links.
+ */
 export default function HeroCatalog() {
   const hero = catalogContent.hero;
 

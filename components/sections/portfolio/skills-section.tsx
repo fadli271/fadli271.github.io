@@ -16,6 +16,9 @@ interface SkillsSectionProps {
   };
 }
 
+/**
+ * Skill categories grid with expandable lists per category.
+ */
 export default function SkillsSection({ content }: SkillsSectionProps) {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 

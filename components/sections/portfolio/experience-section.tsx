@@ -76,6 +76,9 @@ const MetricCard = ({
 // ======================
 // Main Section
 // ======================
+/**
+ * Career experience block with timeline, metrics, and CTA.
+ */
 export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
   const [showMore, setShowMore] = useState(false);
   const latestJob = experienceData[0];

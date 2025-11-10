@@ -6,13 +6,9 @@ import clsx from "clsx";
 import { LucideIcon } from "lucide-react";
 
 import { Language } from "@/data/portfolio-content";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 const MOBILE_SHOW_THRESHOLD = 60;
-
-const getIsDesktop = () =>
-  typeof window === "undefined"
-    ? false
-    : window.matchMedia("(min-width: 640px)").matches;
 
 interface FloatingNavbarProps {
   content: {
@@ -25,6 +21,10 @@ interface FloatingNavbarProps {
   currentLang: Language;
 }
 
+/**
+ * Floating navbar with language switch and quick section menu.
+ * Appears when scrolling up or on desktop viewports.
+ */
 export default function FloatingNavbar({
   content,
   onLangChange,
@@ -32,9 +32,9 @@ export default function FloatingNavbar({
 }: FloatingNavbarProps) {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showNav, setShowNav] = useState(() => getIsDesktop());
+  const isDesktop = useMediaQuery("(min-width: 640px)", false);
+  const [showNav, setShowNav] = useState(false);
   const [hasScrolledPastInitial, setHasScrolledPastInitial] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(() => getIsDesktop());
   const lastScrollY = useRef(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -45,17 +45,6 @@ export default function FloatingNavbar({
     onLangChange(lang);
     setIsLangOpen(false);
   };
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 640px)");
-    const handleChange = (event: MediaQueryListEvent) =>
-      setIsDesktop(event.matches);
-
-    setIsDesktop(mediaQuery.matches);
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

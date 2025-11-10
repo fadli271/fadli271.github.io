@@ -41,6 +41,9 @@ const paymentIconColor: Partial<Record<PaymentIcon, string>> = {
   mail: "text-sky-500",
 };
 
+/**
+ * Payment scheme explanation plus quick contact section.
+ */
 export default function FinalSection() {
   const payment = catalogContent.payment;
   const cta = catalogContent.contactCTA;

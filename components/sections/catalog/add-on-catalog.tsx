@@ -56,6 +56,9 @@ const customIconMap: Record<
   palette: Palette,
 };
 
+/**
+ * Add-on subscription cards plus custom solution CTA grid.
+ */
 export default function AddonsCustomSection() {
   const addons = catalogContent.addons;
   const custom = catalogContent.custom;

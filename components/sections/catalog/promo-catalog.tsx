@@ -38,6 +38,9 @@ const listItemVariants = {
   visible: { opacity: 1, x: 0 },
 };
 
+/**
+ * Promotional section highlighting benefits and WhatsApp CTA.
+ */
 export default function PromoCatalog() {
   const promo = catalogContent.promo;
 

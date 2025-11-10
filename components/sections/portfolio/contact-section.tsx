@@ -20,6 +20,9 @@ interface ContactSectionProps {
   };
 }
 
+/**
+ * Contact block including email CTA and social buttons.
+ */
 export default function ContactSection({ content }: ContactSectionProps) {
   return (
     <section

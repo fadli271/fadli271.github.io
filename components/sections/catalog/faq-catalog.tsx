@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 
 import { catalogContent } from "@/data/catalog-content";
 
+/**
+ * FAQ accordion with schema markup for richer SEO.
+ */
 export default function FAQCatalog() {
   const faqContent = catalogContent.faq;
   const faqSchema = useMemo(
