@@ -7,6 +7,13 @@ import { LucideIcon } from "lucide-react";
 
 import { Language } from "@/lib/content";
 
+const MOBILE_SHOW_THRESHOLD = 60;
+
+const getIsDesktop = () =>
+  typeof window === "undefined"
+    ? false
+    : window.matchMedia("(min-width: 640px)").matches;
+
 interface FloatingNavbarProps {
   content: {
     [key: string]: {
@@ -25,7 +32,9 @@ export default function FloatingNavbar({
 }: FloatingNavbarProps) {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(() => getIsDesktop());
+  const [hasScrolledPastInitial, setHasScrolledPastInitial] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(() => getIsDesktop());
   const lastScrollY = useRef(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -38,12 +47,29 @@ export default function FloatingNavbar({
   };
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 640px)");
+    const handleChange = (event: MediaQueryListEvent) =>
+      setIsDesktop(event.matches);
+
+    setIsDesktop(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       const current = window.scrollY;
       const isAtTop = current < 80;
       const isScrollingUp = current < lastScrollY.current;
 
-      setShowNav(isAtTop || isScrollingUp);
+      if (!hasScrolledPastInitial && current > MOBILE_SHOW_THRESHOLD) {
+        setHasScrolledPastInitial(true);
+      }
+
+      const allowAutoShow = isDesktop || hasScrolledPastInitial;
+
+      setShowNav(allowAutoShow && (isAtTop || isScrollingUp));
       lastScrollY.current = current;
     };
 
@@ -51,7 +77,7 @@ export default function FloatingNavbar({
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [hasScrolledPastInitial, isDesktop]);
 
   useEffect(() => {
     if (isLangOpen || isMenuOpen) {
@@ -76,6 +102,19 @@ export default function FloatingNavbar({
   }, []);
 
   const languageLabel = currentLang === "id" ? "Indonesia" : "English";
+  const allowReveal =
+    isDesktop || hasScrolledPastInitial || isLangOpen || isMenuOpen;
+  const isNavVisible = allowReveal && showNav;
+
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+
+    document.body.dataset.floatingNavVisible = isNavVisible ? "true" : "false";
+
+    return () => {
+      document.body.dataset.floatingNavVisible = "false";
+    };
+  }, [isNavVisible]);
 
   return (
     <div
@@ -83,7 +122,7 @@ export default function FloatingNavbar({
       className={clsx(
         "fixed z-50 w-[calc(100%-2rem)] max-w-md left-1/2 -translate-x-1/2 bottom-5 sm:w-auto sm:max-w-none sm:left-auto sm:translate-x-0 sm:top-6 sm:right-6",
         "transition-all duration-300",
-        showNav
+        isNavVisible
           ? "opacity-100 translate-y-0 pointer-events-auto"
           : "opacity-0 translate-y-4 pointer-events-none",
       )}
