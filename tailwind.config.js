@@ -10,8 +10,29 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
+        sans: [
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "\"Segoe UI\"",
+          "Roboto",
+          "\"Helvetica Neue\"",
+          "Arial",
+          "sans-serif",
+        ],
+        mono: [
+          "\"Fira Code\"",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "\"Liberation Mono\"",
+          "\"Courier New\"",
+          "monospace",
+        ],
       },
        keyframes: {
         "fade-in-up": {

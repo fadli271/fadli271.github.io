@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { Link, Mail } from "lucide-react";
 import { Card, CardBody, Button, Tooltip } from "@heroui/react";
+import NextLink from "next/link";
 
 interface ContactSectionProps {
   content: {
@@ -16,6 +17,10 @@ interface ContactSectionProps {
       github: string;
       linkedin: string;
       whatsapp: string;
+    };
+    cta?: {
+      label: string;
+      href: string;
     };
   };
 }
@@ -119,6 +124,17 @@ export default function ContactSection({ content }: ContactSectionProps) {
                 </Tooltip>
               </div>
             </div>
+
+            {content.cta ? (
+              <div className="pt-4">
+                <NextLink
+                  className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-slate-700 transition hover:border-slate-500"
+                  href={content.cta.href}
+                >
+                  {content.cta.label}
+                </NextLink>
+              </div>
+            ) : null}
           </CardBody>
         </Card>
       </motion.div>

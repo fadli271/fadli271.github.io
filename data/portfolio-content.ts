@@ -115,6 +115,10 @@ export const content = {
       socialLinks: buildSocialLinks(
         "Halo Fadli, saya tertarik dengan portofoliomu!",
       ),
+      cta: {
+        label: "Lihat Paket Jasa",
+        href: "/services",
+      },
     },
     footer: { credit: "Dibuat dengan Semangat di Palu, Sulawesi Tengah." },
     projectsData: [
@@ -385,6 +389,10 @@ export const content = {
       socialLinks: buildSocialLinks(
         "Hi Fadli, I'm interested in your portfolio!",
       ),
+      cta: {
+        label: "View Services",
+        href: "/services",
+      },
     },
     footer: {
       credit: "Made with love in Palu, Indonesia.",

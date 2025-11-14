@@ -5,7 +5,6 @@ import { ArrowDown } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-
 interface HeroSectionProps {
   content: {
     line1: string;
@@ -77,7 +76,7 @@ export const HeroSection = ({ content }: HeroSectionProps) => {
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
         <ScrollLink
-          className="animate-bounce flex flex-col items-center text-gray-500 hover:text-sky-500 transition-colors cursor-pointer"
+          className="animate-bounce flex flex-col items-center text-gray-500 hover:c transition-colors cursor-pointer"
           duration={800}
           offset={-50}
           smooth={true}

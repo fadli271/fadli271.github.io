@@ -6,7 +6,6 @@ import React from "react";
 
 import { Providers } from "./providers";
 
-import { fontSans } from "@/config/fonts";
 import { CONTACT_INFO } from "@/lib/contact-info";
 
 const SITE_URL = "https://fadli.github.io";
@@ -99,19 +98,14 @@ export default function RootLayout({
       name: "Mohamad Fadli – Software Engineer",
       inLanguage: "id",
       description:
-        "Portfolio, project showcase, and service catalogue by Mohamad Fadli.",
+        "Portfolio, project showcase, and web services by Mohamad Fadli.",
     },
   ];
 
   return (
     <html suppressHydrationWarning lang="id">
       <head />
-      <body
-        className={clsx(
-          "min-h-screen font-sans antialiased",
-          fontSans.variable,
-        )}
-      >
+      <body className={clsx("min-h-screen font-sans antialiased")}>
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ? (
           <>
             <Script

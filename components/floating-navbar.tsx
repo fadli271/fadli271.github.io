@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu } from "lucide-react";
+import { ChevronDown, Menu, Sparkles } from "lucide-react";
 import clsx from "clsx";
 import { LucideIcon } from "lucide-react";
 
@@ -20,6 +20,10 @@ interface FloatingNavbarProps {
   onLangChange: (lang: Language) => void;
   currentLang: Language;
 }
+
+const EXTRA_MENU_ITEMS = [
+  { label: "Jasa Dev", href: "/services", icon: Sparkles },
+];
 
 /**
  * Floating navbar with language switch and quick section menu.
@@ -183,6 +187,18 @@ export default function FloatingNavbar({
                     <a
                       className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"
                       href={`#${key}`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Icon className="h-4 w-4 text-sky-500" />
+                      {label}
+                    </a>
+                  </li>
+                ))}
+                {EXTRA_MENU_ITEMS.map(({ label, href, icon: Icon }) => (
+                  <li key={href}>
+                    <a
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"
+                      href={href}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <Icon className="h-4 w-4 text-sky-500" />
