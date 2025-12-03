@@ -1,4 +1,5 @@
-User-agent: *
+User-Agent: *
 Allow: /
 
+Host: https://fadli.github.io
 Sitemap: https://fadli.github.io/sitemap.xml
