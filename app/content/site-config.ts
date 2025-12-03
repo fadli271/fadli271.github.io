@@ -1,7 +1,8 @@
 import { Metadata, Viewport } from "next";
+
 import { CONTACT_INFO } from "@/lib/contact-info";
 
-export const SITE_URL = "https://fadli.github.io";
+export const SITE_URL = "https://fadli271.github.io";
 
 export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -11,7 +12,7 @@ export const siteMetadata: Metadata = {
   },
   description:
     "Portfolio & Projects of Mohamad Fadli — software engineer with experience in modern web and AI integration.",
-  authors: [{ name: "Mohamad Fadli", url: "https://fadli.github.io" }],
+  authors: [{ name: "Mohamad Fadli", url: "https://fadli271.github.io" }],
   keywords: ["Fadli", "Software Engineer", "Web Developer", "AI", "Portfolio"],
   alternates: {
     canonical: SITE_URL,
@@ -21,7 +22,7 @@ export const siteMetadata: Metadata = {
     title: "Mohamad Fadli – Software Engineer",
     description:
       "Showcasing work in AI, logistics tech, and modern web development.",
-    url: "https://fadli.github.io",
+    url: "https://fadli271.github.io",
     siteName: "Mohamad Fadli",
     images: [
       {
@@ -80,7 +81,7 @@ export const structuredData = [
     jobTitle: "Software Engineer",
     worksFor: {
       "@type": "Organization",
-      name: "Paerte Code",
+      name: "Fadli Dev Studio",
     },
   },
   {
