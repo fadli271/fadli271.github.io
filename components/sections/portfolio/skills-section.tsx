@@ -6,7 +6,7 @@ import { Card, CardBody, Button, Divider } from "@heroui/react";
 import Link from "next/link";
 import { Package, ChevronDown, ChevronUp } from "lucide-react";
 
-import { fullSkillsData } from "@/data/portfolio-content";
+import { fullSkillsData } from "@/app/content/portfolio";
 
 interface SkillsSectionProps {
   content: {

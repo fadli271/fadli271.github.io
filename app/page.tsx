@@ -9,7 +9,7 @@ import ContactSection from "@/components/sections/portfolio/contact-section";
 import { HeroSection } from "@/components/sections/portfolio/hero-section";
 import ProjectsSection from "@/components/sections/portfolio/project-section";
 import SkillsSection from "@/components/sections/portfolio/skills-section";
-import { content } from "@/data/portfolio-content";
+import { content } from "@/app/content/portfolio";
 
 type Language = keyof typeof content;
 type ContentType = (typeof content)[Language];

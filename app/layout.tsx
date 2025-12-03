@@ -6,102 +6,22 @@ import React from "react";
 
 import { Providers } from "./providers";
 
-import { CONTACT_INFO } from "@/lib/contact-info";
+import {
+  siteMetadata,
+  siteViewport,
+  footerConfig,
+  structuredData,
+} from "@/app/content/site-config";
 
-const SITE_URL = "https://fadli.github.io";
+export const metadata: Metadata = siteMetadata;
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: {
-    default: "Mohamad Fadli – Software Engineer",
-    template: "%s | Mohamad Fadli",
-  },
-  description:
-    "Portfolio & Projects of Mohamad Fadli — software engineer with experience in modern web and AI integration.",
-  authors: [{ name: "Mohamad Fadli", url: "https://fadli.github.io" }],
-  keywords: ["Fadli", "Software Engineer", "Web Developer", "AI", "Portfolio"],
-  alternates: {
-    canonical: SITE_URL,
-  },
-  category: "technology",
-  openGraph: {
-    title: "Mohamad Fadli – Software Engineer",
-    description:
-      "Showcasing work in AI, logistics tech, and modern web development.",
-    url: "https://fadli.github.io",
-    siteName: "Mohamad Fadli",
-    images: [
-      {
-        url: "/myProfile.png",
-        width: 1200,
-        height: 630,
-        alt: "Mohamad Fadli Portfolio Preview",
-      },
-    ],
-    locale: "id_ID",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
-    },
-  },
-  icons: {
-    icon: [{ rel: "icon", url: "/favicon.png", type: "image/png" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    creator: "@fadli_dev",
-    title: "Mohamad Fadli – Software Engineer",
-    description:
-      "Discover Mohamad Fadli’s work in AI, logistics tech, and modern web development.",
-    images: ["/myProfile.png"],
-  },
-  manifest: "/site.webmanifest",
-};
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-};
+export const viewport: Viewport = siteViewport;
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Mohamad Fadli",
-      url: SITE_URL,
-      sameAs: [CONTACT_INFO.social.github, CONTACT_INFO.social.linkedin],
-      jobTitle: "Software Engineer",
-      worksFor: {
-        "@type": "Organization",
-        name: "Paerte Code",
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      url: SITE_URL,
-      name: "Mohamad Fadli – Software Engineer",
-      inLanguage: "id",
-      description:
-        "Portfolio, project showcase, and web services by Mohamad Fadli.",
-    },
-  ];
-
   return (
     <html suppressHydrationWarning lang="id">
       <head />
@@ -164,7 +84,7 @@ export default function RootLayout({
               {children}
             </main>
             <footer className="w-full flex items-center justify-center py-4 text-sm text-black bg-white">
-              <p>© 2025 Mohamad Fadli. All rights reserved.</p>
+              <p>{footerConfig.copyright}</p>
             </footer>
           </div>
         </Providers>

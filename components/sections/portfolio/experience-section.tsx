@@ -19,7 +19,7 @@ import {
 } from "@heroui/react";
 import NextImage from "next/image";
 
-import { experienceData } from "@/data/portfolio-content";
+import { experienceData } from "@/app/content/portfolio";
 
 // ======================
 // Types
@@ -262,7 +262,7 @@ export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
                 title={item.title}
                 value={idx === 0 ? 8 : idx === 1 ? 15 : 10}
               />
-            ),
+            )
           )}
         </div>
       </div>

@@ -5,7 +5,7 @@ import { ChevronDown, Menu, Sparkles } from "lucide-react";
 import clsx from "clsx";
 import { LucideIcon } from "lucide-react";
 
-import { Language } from "@/data/portfolio-content";
+import { type Language } from "@/app/content/portfolio";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 const MOBILE_SHOW_THRESHOLD = 60;
@@ -117,7 +117,7 @@ export default function FloatingNavbar({
         "transition-all duration-300",
         isNavVisible
           ? "opacity-100 translate-y-0 pointer-events-auto"
-          : "opacity-0 translate-y-4 pointer-events-none",
+          : "opacity-0 translate-y-4 pointer-events-none"
       )}
     >
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -133,7 +133,7 @@ export default function FloatingNavbar({
             <ChevronDown
               className={clsx(
                 "h-4 w-4 transition-transform",
-                isLangOpen && "rotate-180",
+                isLangOpen && "rotate-180"
               )}
             />
           </button>
@@ -141,7 +141,7 @@ export default function FloatingNavbar({
             <div
               className={clsx(
                 "absolute inset-x-0 bottom-full mb-2 w-full rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl",
-                "sm:inset-auto sm:right-0 sm:top-full sm:mb-0 sm:mt-2 sm:w-48",
+                "sm:inset-auto sm:right-0 sm:top-full sm:mb-0 sm:mt-2 sm:w-48"
               )}
             >
               {(["id", "en"] as Language[]).map((lang) => (
@@ -151,7 +151,7 @@ export default function FloatingNavbar({
                     "w-full rounded-xl px-4 py-2 text-left text-sm transition-colors",
                     lang === currentLang
                       ? "bg-sky-50 text-sky-600 font-semibold"
-                      : "text-gray-600 hover:bg-gray-100",
+                      : "text-gray-600 hover:bg-gray-100"
                   )}
                   onClick={() => handleLangChange(lang)}
                 >
@@ -178,7 +178,7 @@ export default function FloatingNavbar({
               className={clsx(
                 "absolute inset-x-0 bottom-full mb-2 w-full rounded-3xl border border-gray-100 bg-white shadow-2xl",
                 "sm:inset-auto sm:right-0 sm:top-full sm:mb-0 sm:mt-2 sm:w-56",
-                "max-h-[60vh] overflow-y-auto",
+                "max-h-[60vh] overflow-y-auto"
               )}
             >
               <ul className="divide-y divide-gray-100 text-sm text-gray-700">
