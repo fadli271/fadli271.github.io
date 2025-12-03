@@ -15,7 +15,7 @@ import {
 import { buildWhatsAppLink } from "@/lib/contact-info";
 
 export const whatsappCta = buildWhatsAppLink(
-  "Halo Fadli, saya tertarik memesan landing page / web."
+  "Halo Fadli, saya tertarik memesan landing page / web.",
 );
 
 export const whyMePoints = [
@@ -113,7 +113,7 @@ export const processSteps = [
 export const packages = [
   {
     label: "Starter Launch",
-    price: "Mulai 3,5 Juta",
+    price: "Mulai 1 Juta",
     fit: "Landing page 1 section panjang atau microsite promosi.",
     includes: [
       "Riset ringan + wireframe",
@@ -124,7 +124,7 @@ export const packages = [
   },
   {
     label: "Growth Presence",
-    price: "Mulai 6,5 Juta",
+    price: "Mulai 3 Juta",
     fit: "Company profile 3–5 section + katalog layanan/produk.",
     includes: [
       "Copywriting kolaboratif",
@@ -136,7 +136,7 @@ export const packages = [
   },
   {
     label: "Product Sprint",
-    price: "Mulai 12 Juta",
+    price: "Mulai 10 Juta",
     fit: "MVP mini app atau dashboard internal.",
     includes: [
       "Desain alur + prototipe",
