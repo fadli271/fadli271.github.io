@@ -26,7 +26,7 @@ export const siteMetadata: Metadata = {
     siteName: "Mohamad Fadli",
     images: [
       {
-        url: "/myProfile.png",
+        url: "/my-profile.JPG",
         width: 1200,
         height: 630,
         alt: "Mohamad Fadli Portfolio Preview",
@@ -55,7 +55,7 @@ export const siteMetadata: Metadata = {
     title: "Mohamad Fadli – Software Engineer",
     description:
       "Discover Mohamad Fadli’s work in AI, logistics tech, and modern web development.",
-    images: ["/myProfile.png"],
+    images: ["/my-profile.JPG"],
   },
   manifest: "/site.webmanifest",
 };

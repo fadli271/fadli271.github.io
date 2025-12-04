@@ -122,7 +122,7 @@ export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
                     alt="Foto Profil Mohamad Fadli"
                     className="object-cover w-48 h-48 md:w-40 md:h-65"
                     height={240}
-                    src="/myProfile.png"
+                    src="/my-profile.JPG"
                     width={240}
                   />
                   <Button
