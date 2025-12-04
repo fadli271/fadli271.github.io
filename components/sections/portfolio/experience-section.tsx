@@ -120,7 +120,7 @@ export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
                 <div className="flex flex-col items-center gap-6 md:col-span-1">
                   <NextImage
                     alt="Foto Profil Mohamad Fadli"
-                    className="object-cover w-48 h-48 md:w-40 md:h-65"
+                    className="object-cover w-48 h-48 md:w-40 md:h-65 rounded-2xl shadow-xl"
                     height={240}
                     src="/my-profile.JPG"
                     width={240}
