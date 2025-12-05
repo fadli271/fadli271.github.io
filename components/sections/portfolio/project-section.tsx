@@ -223,7 +223,7 @@ export default function ProjectsSection({
                         <FiTrendingUp className="w-5 h-5" />
                         {content.modal.impact}
                       </div>
-                      <p className="text-sm text-gray-700 leading-snug">
+                      <p className="text-base font-bold text-gray-900 leading-relaxed">
                         {selectedProject.caseStudy.impact}
                       </p>
                     </div>

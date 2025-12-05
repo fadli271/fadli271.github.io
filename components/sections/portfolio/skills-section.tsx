@@ -62,14 +62,14 @@ export default function SkillsSection({ content }: SkillsSectionProps) {
           return (
             <motion.div
               key={category.category}
-              className="h-full"
+              className=""
               initial={{ opacity: 0, y: 20 }}
               layout="position"
               transition={{ duration: 0.5, delay: catIndex * 0.2 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <Card className="w-full h-full bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
+              <Card className="w-full bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardBody className="flex flex-col gap-4 p-6">
                   {/* Category Title */}
                   <h2 className="text-xl font-bold text-center gradient-text">

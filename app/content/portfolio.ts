@@ -54,13 +54,13 @@ export const content = {
       about: {
         title: "Pengalaman",
         content:
-          "Sejak 2016, aku nggak cuma nulis kode—tapi bikin sistem yang bantu selesaikan masalah nyata. Dengan mindset produk dan jiwa engineer, aku bantu bisnis berkembang lewat solusi digital yang scalable dan gampang dirawat.",
+          "Sejak 2016, saya membantu bisnis bertransformasi lewat teknologi. Saya mengerti betapa pusingnya mengurus stok manual, kehilangan pelanggan karena website lemot, atau data kantor yang berantakan. Fokus saya adalah memberi solusi yang bikin bisnis Anda lebih efisien dan profitable.",
         link: "Lihat kisah lengkap",
       },
       experience: { title: "Pengalaman", subtitle: "Tahun di dunia tech" },
       projects: {
-        title: "Proyek Diselesaikan",
-        subtitle: "Dari berbagai industri",
+        title: "Solusi yang Terbukti Berhasil",
+        subtitle: "Bukti nyata bagaimana kode saya membantu bisnis berkembang.",
       },
       partner: {
         title: "Pernah Kerja Sama Dengan",
@@ -85,17 +85,17 @@ export const content = {
       },
     },
     projects: {
-      title: "Galeri Proyek",
+      title: "Bukti Nyata Membantu Bisnis",
       subtitle:
-        "Intip gimana aku menyelesaikan masalah lewat kode. Scroll aja.",
+        "Bukan sekadar galeri, tapi kumpulan solusi untuk masalah operasional dan penjualan.",
       viewDetailButton: "Lihat Detail",
       modal: {
         noProjectSelected: "Tidak ada project yang dipilih.",
         previewTitle: "Preview Aplikasi",
-        problem: "Problem",
-        solution: "Solution",
-        impact: "Impact",
-        techStack: "Tech Stack",
+        problem: "Masalah Bisnis",
+        solution: "Solusi Teknis",
+        impact: "Dampak (Hasil)",
+        techStack: "Teknologi",
       },
     },
     about: {
@@ -113,7 +113,7 @@ export const content = {
       socialPrompt: "Atau temukan aku di sini:",
       email: CONTACT_INFO.email,
       socialLinks: buildSocialLinks(
-        "Halo Fadli, saya tertarik dengan portofoliomu!",
+        "Halo Fadli, saya tertarik dengan portofoliomu!"
       ),
       cta: {
         label: "Lihat Paket Jasa",
@@ -387,7 +387,7 @@ export const content = {
       socialPrompt: "Or find me on:",
       email: CONTACT_INFO.email,
       socialLinks: buildSocialLinks(
-        "Hi Fadli, I'm interested in your portfolio!",
+        "Hi Fadli, I'm interested in your portfolio!"
       ),
       cta: {
         label: "View Services",

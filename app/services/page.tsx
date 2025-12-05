@@ -108,8 +108,9 @@ export default function ServiceLandingPage() {
                     Bikin website & sistem langsung jadi, ga pake ribet.
                   </h1>
                   <p className="text-base text-slate-600">
-                    Fokus ke storytelling, integrasi, dan experience industrial,
-                    biar klien kamu ngerasa pegang produk startup tier-A.
+                    Fokus ke solusi bisnis, bukan cuma kode. Saya bantu Anda
+                    punya website yang profesional dan sistem yang bikin kerjaan
+                    lebih enteng.
                   </p>
                   <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-start">
                     <a
@@ -130,8 +131,8 @@ export default function ServiceLandingPage() {
                 </div>
                 <div className="space-y-4 rounded-3xl border border-white/70 bg-white/80 p-6 text-left text-slate-700 shadow-2xl backdrop-blur">
                   <p className="text-base font-semibold text-slate-800">
-                    Support pasca rilis bikin tim kamu tinggal lanjut eksekusi
-                    tanpa mikirin teknis.
+                    Dukungan penuh setelah website jadi. Tim Anda tinggal pakai,
+                    gak perlu pusing urusan teknis.
                   </p>
                   <div className="space-y-3 text-sm sm:text-base">
                     {heroHooks.map((item, idx) => (
@@ -163,15 +164,15 @@ export default function ServiceLandingPage() {
           <div className={containerClass}>
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
-                Apa yang bisa dibangun
+                Solusi Digital
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Dari landing ringan sampai sistem internal—semuanya
-                mobile-first.
+                Dari website sederhana sampai sistem kantor yang kompleks.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Fokusku bukan cuma tampilannya, tapi alur bisnisnya: konten,
-                data, sampai cara tim kamu memeliharanya.
+                Saya bantu bangun fondasi digital bisnis Anda. Bukan cuma soal
+                tampilan, tapi gimana caranya bisnis jadi lebih efisien dan
+                untung.
               </p>
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -202,14 +203,14 @@ export default function ServiceLandingPage() {
           <div className={containerClass}>
             <div className="mx-auto max-w-5xl text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
-                Layanan utama
+                Pilihan Layanan
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Semua paket fokus ke storytelling, kecepatan, dan hasil terukur.
+                Paket lengkap, terima beres, dan bergaransi.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Framework Next.js + Tailwind + best practice SEO untuk performa
-                tinggi dan mudah di-scale.
+                Dibangun dengan teknologi modern (Next.js) biar website Anda
+                cepat, aman, dan mudah ditemukan di Google (SEO Friendly).
               </p>
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -247,10 +248,10 @@ export default function ServiceLandingPage() {
           <div className={containerClass}>
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
-                Cara kerja
+                Cara Kerja
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Kolaborasi rapih, transparan, dan bergerak cepat.
+                Simpel, transparan, dan gak pake ribet.
               </h2>
             </div>
             <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -269,7 +270,7 @@ export default function ServiceLandingPage() {
                     </span>
                     <step.icon className="h-5 w-5 text-sky-500" />
                     <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-                      Tahap {index + 1}
+                      Langkah {index + 1}
                     </p>
                   </div>
                   <h3 className="mt-4 text-xl font-semibold text-slate-900">
@@ -288,14 +289,14 @@ export default function ServiceLandingPage() {
           <div className={containerClass}>
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
-                Paket & estimasi
+                Investasi
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Investasi fleksibel sesuai kebutuhan.
+                Harga transparan, sesuaikan dengan budget.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Semua paket sudah termasuk deployment (Vercel/Cloud), optimasi
-                performa, dan dukungan pasca rilis 7 hari.
+                Semua paket sudah termasuk hosting, domain, dan garansi support.
+                Gak ada biaya tersembunyi.
               </p>
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -316,7 +317,7 @@ export default function ServiceLandingPage() {
                   {pkg.highlighted && (
                     <span className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700">
                       <Sparkles className="h-3.5 w-3.5" />
-                      Terpopuler
+                      Paling Laris
                     </span>
                   )}
                   <h3 className="mt-3 text-2xl font-semibold text-slate-900">
@@ -340,7 +341,7 @@ export default function ServiceLandingPage() {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Diskusi paket ini
+                    Pilih Paket Ini
                   </a>
                 </motion.div>
               ))}
@@ -352,14 +353,13 @@ export default function ServiceLandingPage() {
           <div className={`${containerClass} max-w-5xl`}>
             <div className="text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
-                FAQ
+                Tanya Jawab
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Pertanyaan yang paling sering muncul.
+                Hal yang sering ditanyakan.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Kalau masih ada yang kurang jelas, tinggal hubungi lewat WA atau
-                email—aku jawab maksimal 24 jam.
+                Masih bingung? Langsung chat WA aja, saya balas secepatnya.
               </p>
             </div>
             <div className="mt-10 space-y-4">
@@ -382,11 +382,10 @@ export default function ServiceLandingPage() {
           <div className={`${containerClass} grid gap-10 md:grid-cols-2`}>
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-500">
-                Kenapa partner?
+                Kenapa Saya?
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Bukan sekadar coder—aku bantu pikirin strategi konten &
-                konversi.
+                Partner Digital yang Mengerti Bisnis Anda.
               </h2>
               <ul className="mt-6 space-y-4 text-sm text-slate-600">
                 {whyMePoints.map((point, idx) => (
@@ -429,15 +428,14 @@ export default function ServiceLandingPage() {
               whileInView={{ opacity: 1, y: 0 }}
             >
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-300">
-                Siap beraksi
+                Mulai Sekarang
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Kirim ide, dapatkan blueprint + estimasi dalam 24 jam.
+                Konsultasi Gratis, Tanpa Risiko.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Hubungi langsung via WA/Email. Ceritakan tujuan, deadline, dan
-                link referensi jika ada. Aku balas maksimal sehari dengan opsi
-                solusi + timeline.
+                Ceritakan kebutuhan bisnis Anda lewat WhatsApp. Saya akan
+                berikan solusi dan estimasi biaya dalam 24 jam.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
                 <a
@@ -446,13 +444,13 @@ export default function ServiceLandingPage() {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Konsultasi via WhatsApp
+                  Chat WhatsApp Sekarang
                 </a>
                 <a
                   className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:border-slate-500"
                   href={`mailto:${CONTACT_INFO.email}`}
                 >
-                  Kirim Brief via Email
+                  Kirim Email
                 </a>
               </div>
             </motion.div>

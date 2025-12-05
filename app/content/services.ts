@@ -15,198 +15,198 @@ import {
 import { buildWhatsAppLink } from "@/lib/contact-info";
 
 export const whatsappCta = buildWhatsAppLink(
-  "Halo Fadli, saya tertarik memesan landing page / web.",
+  "Halo Fadli, saya mau konsultasi pembuatan website/sistem untuk bisnis saya."
 );
 
 export const whyMePoints = [
   {
     icon: ShieldCheck,
-    text: "Pengalaman bantu UMKM, SaaS, hingga tim marketing—paham kebutuhan go-to-market dan keterbatasan resource.",
+    text: "Bahasa Manusia, Bukan Robot. Saya jelaskan teknis dengan bahasa bisnis yang mudah dimengerti awam.",
   },
   {
     icon: LaptopMinimal,
-    text: "Stack modern (Next.js, Tailwind, HeroUI) dengan pipeline deploy otomatis, sehingga iterasi jadi cepat.",
+    text: "Solusi Hemat Waktu. Anda fokus urus bisnis, urusan website & sistem biar saya yang bereskan sampai tuntas.",
   },
   {
     icon: LineChart,
-    text: "Obses terhadap metrik: CTR, leads, engagement. Setiap proyek disertai setup analytics dasar.",
+    text: "Fokus Hasil (Cuan). Website bukan cuma pajangan, tapi alat bantu jualan dan operasional yang terukur.",
   },
   {
     icon: Clock4,
-    text: "Timeline transparan via Notion/WhatsApp dengan update minimal 2x seminggu.",
+    text: "Update Rutin & Transparan. Gak ada istilah 'developer ngilang'. Progres dilaporkan rutin via WhatsApp.",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Landing page kampanye kita kelar 6 hari dan langsung bawa 300+ leads. Copywriting-nya relate, dev-nya rapi.",
-    author: "Nadya, Growth Lead komunitas edukasi",
+      "Awalnya bingung mau bikin web kayak gimana. Mas Fadli bantu arahin dari nol, sekarang leads masuk terus dari web.",
+    author: "Nadya, Owner Bisnis Edukasi",
   },
   {
     quote:
-      "Fadli bantu translate ide bisnis jadi prototipe dashboard buat investor. Presentasi jadi jauh lebih meyakinkan.",
-    author: "Raka, Founder logistik B2B",
+      "Sistem pencatatan stok yang dibikin simpel banget, karyawan gudang langsung ngerti cara pakenya. Sangat membantu!",
+    author: "Raka, Distributor Logistik",
   },
 ];
 
 export const services = [
   {
-    title: "Sistem & Dashboard Operasional",
+    title: "Sistem Operasional Kantor",
     description:
-      "Web app kustom untuk katalog internal, modul approval, atau dashboard monitoring yang terhubung ke API/DB existing.",
+      "Aplikasi untuk merapikan data kantor. Mulai dari stok barang, absen karyawan, sampai laporan keuangan sederhana.",
     deliverables: [
-      "Rancangan arsitektur modul & roles",
-      "Integrasi API / DB (REST, Supabase, Sheet, dsb.)",
-      "Monitoring + dokumentasi hand-off",
+      "Mudah dipakai (User Friendly)",
+      "Bisa diakses dari HP & Laptop",
+      "Data aman & ter-backup otomatis",
     ],
   },
   {
-    title: "Mobile Web / PWA Product",
+    title: "Website Toko Online / Katalog",
     description:
-      "Mobile-first experience (PWA) untuk validasi ide, booking, atau customer portal tanpa harus bikin native app dulu.",
+      "Bikin pelanggan mudah lihat produk dan pesan langsung lewat WhatsApp tanpa ribet install aplikasi.",
     deliverables: [
-      "Flow mobile, state, dan offline caching ringan",
-      "Notifikasi email/WA + tracking event",
-      "Optimasi lighthouse & deploy ke store web",
+      "Tampil bagus di HP (Mobile First)",
+      "Tombol 'Pesan via WA' otomatis",
+      "Loading cepat, gak bikin kabur",
     ],
   },
   {
-    title: "Landing Page Konversi",
+    title: "Landing Page Penjualan",
     description:
-      "Halaman kampanye/produk yang diselaraskan dengan funnel marketing dan siap tracking.",
+      "Satu halaman khusus untuk promosi produk/jasa. Fokus meyakinkan pengunjung buat beli atau kontak Anda.",
     deliverables: [
-      "Riset singkat persona & USP",
-      "Desain responsif + komponen reusable",
-      "Integrasi formulir/CRM/WhatsApp + analytics",
+      "Copywriting yang menjual",
+      "Desain profesional & terpercaya",
+      "Siap untuk Iklan (FB/IG/Google Ads)",
     ],
   },
 ];
 
 export const processSteps = [
   {
-    title: "Discovery Call",
+    title: "Ngobrol Santai (Gratis)",
     description:
-      "Bahas tujuan bisnis, target user, dan konten yang sudah tersedia. 30–45 menit via Zoom/WA Call.",
+      "Ceritakan masalah bisnis Anda. Kita cari solusi bareng-bareng. Gak harus langsung deal, tanya-tanya dulu boleh.",
     icon: MessagesSquare,
   },
   {
-    title: "Blueprint & Copy",
+    title: "Perencanaan",
     description:
-      "Susun struktur halaman + copy primer agar pesan jelas. Kamu review sebelum eksekusi.",
+      "Saya buatkan gambaran kasar (wireframe) dan kata-katanya. Anda tinggal koreksi kalau ada yang kurang pas.",
     icon: PenSquare,
   },
   {
-    title: "Design & Build",
+    title: "Pembuatan",
     description:
-      "Proses desain langsung diterjemahkan ke kode (Next.js + Tailwind). Update progress 2x seminggu.",
+      "Setelah oke, saya mulai kerjakan. Anda bisa pantau progresnya kapan saja. Revisi minor aman.",
     icon: Code2,
   },
   {
-    title: "Launch & Hand-off",
+    title: "Serah Terima & Ajari",
     description:
-      "Optimasi kecepatan, setup domain, analytics, lalu serah terima + video walkthrough.",
+      "Website jadi, saya ajari cara pakainya sampai bisa. Garansi support jika ada kendala teknis.",
     icon: Rocket,
   },
 ];
 
 export const packages = [
   {
-    label: "Starter Launch",
+    label: "Paket Hemat (Starter)",
     price: "Mulai 1 Juta",
-    fit: "Landing page 1 section panjang atau microsite promosi.",
+    fit: "Cocok untuk UMKM yang baru mau go-online.",
     includes: [
-      "Riset ringan + wireframe",
-      "1 halaman responsif",
-      "Integrasi CTA (WhatsApp/Form)",
-      "Go-live 5–7 hari kerja",
+      "Landing page simpel (1 Halaman)",
+      "Gratis Hosting Dasar",
+      "Tombol Chat WhatsApp",
+      "Pengerjaan Cepat (3-5 Hari)",
     ],
   },
   {
-    label: "Growth Presence",
+    label: "Paket Bisnis (Growth)",
     price: "Mulai 3 Juta",
-    fit: "Company profile 3–5 section + katalog layanan/produk.",
+    fit: "Untuk bisnis yang butuh citra lebih profesional.",
     includes: [
-      "Copywriting kolaboratif",
-      "3–5 section dinamis",
-      "Integrasi CMS ringan / data JSON",
-      "Optimasi SEO dasar",
+      "Web Profil Lengkap (3-5 Halaman)",
+      "Desain Premium & Kustom",
+      "Bantuan Penulisan Konten",
+      "Optimasi agar mudah dicari Google",
     ],
     highlighted: true,
   },
   {
-    label: "Product Sprint",
-    price: "Mulai 10 Juta",
-    fit: "MVP mini app atau dashboard internal.",
+    label: "Sistem Custom",
+    price: "Diskusi Dulu",
+    fit: "Solusi khusus untuk masalah operasional yang unik.",
     includes: [
-      "Desain alur + prototipe",
-      "Fitur autentikasi dasar",
-      "Integrasi API/DB ringan",
-      "Support pasca launch 2 minggu",
+      "Sesuai alur kerja bisnis Anda",
+      "Fitur Login & Hak Akses",
+      "Database & Laporan",
+      "Training penggunaan sistem",
     ],
   },
 ];
 
 export const capabilities = [
   {
-    title: "Sistem web operasional",
+    title: "Aplikasi Kantor",
     description:
-      "Dashboard internal, katalog, portal karyawan, hingga workflow approval yang aman berbasis Next.js/Laravel.",
+      "Gantikan Excel yang ribet dengan aplikasi yang rapi. Cek stok, input data, semua jadi mudah.",
     icon: ServerCog,
   },
   {
-    title: "Mobile responsive / PWA",
+    title: "Website di HP",
     description:
-      "Pengalaman mobile-first atau PWA ringan untuk validasi ide, booking, maupun customer portal tanpa native app.",
+      "Pastikan website Anda enak dibuka di HP. Karena 90% pelanggan Anda buka dari HP.",
     icon: Smartphone,
   },
   {
-    title: "Landing marketing & kampanye",
+    title: "Halaman Promo",
     description:
-      "Sales page, waitlist, dan pre-order dengan copywriting, CTA, serta integrasi tracking yang nyambung ke sistem.",
+      "Halaman khusus buat promosi yang bikin orang 'gatal' pengen beli produk Anda.",
     icon: LayoutTemplate,
   },
 ];
 
 export const faqs = [
   {
-    question: "Berapa lama pengerjaan sistem atau landing page?",
+    question: "Berapa lama bikinnya?",
     answer:
-      "Landing page biasanya 5–7 hari kerja. Sistem internal / mobile web ringan rata-rata 2–4 minggu tergantung jumlah modul. Timeline lengkap akan dibagikan setelah sesi discovery.",
+      "Untuk Landing Page biasanya 3-7 hari. Kalau Sistem Custom tergantung kerumitannya, nanti kita estimasi di awal biar jelas.",
   },
   {
-    question: "Teknologi apa yang digunakan?",
+    question: "Saya gaptek, nanti diajarin gak?",
     answer:
-      "Stack utama: Next.js/Tailwind untuk frontend, Node/Laravel untuk backend, database Supabase/Postgres/MySQL sesuai kebutuhan. Integrasi ke API yang sudah ada atau sheet juga bisa.",
+      "Pasti! Saya buatkan video panduan dan saya ajari langsung sampai bisa. Bahasanya gak pake istilah teknis yang njelimet.",
   },
   {
-    question: "Apakah dapat bantuan maintenance setelah go-live?",
+    question: "Kalau ada error gimana?",
     answer:
-      "Setiap paket sudah termasuk support pasca rilis (7–14 hari). Untuk maintenance lanjutan bisa dibuat retainer atau paket jam kerja sesuai kebutuhan tim kamu.",
+      "Tenang, ada garansi support. Kalau ada error teknis dari saya, saya perbaiki gratis. Saya juga siap bantu maintenance jangka panjang.",
   },
   {
-    question: "Bagaimana jika konten/copy belum siap?",
+    question: "Konten/Foto dari siapa?",
     answer:
-      "Saya akan bantu menyusun struktur copy dasar (headline, USP, CTA). Kamu cukup memberi poin penting, sisanya akan saya rapikan dan minta persetujuan sebelum implementasi.",
+      "Sebaiknya dari Anda biar otentik. Tapi kalau bingung nulisnya, saya bantu rapikan kata-katanya biar lebih menjual.",
   },
   {
-    question: "Metode pembayaran dan kontrak seperti apa?",
+    question: "Bayarnya gimana?",
     answer:
-      "Umumnya 50% DP, 50% setelah hand-off. Untuk proyek perusahaan bisa menggunakan PO/invoice resmi dengan termin sesuai kebijakanmu.",
+      "DP 50% di awal untuk tanda jadi, sisanya 50% setelah website selesai dan Anda puas. Aman dan fair.",
   },
 ];
 
 export const heroHooks = [
-  "Blueprint + copy rapih < 48 jam, jadi tim marketing langsung punya bahan buat gas funnel.",
-  "Next.js/Tailwind build + integrasi API/DB bikin modul operasional & landing funnel tinggal plug ke stack kamu.",
-  "Deploy, monitoring, dan support pasca launch di-handle, kamu fokus ke closing leads.",
+  "Konsultasi gratis, gak maksa beli. Kita cari solusi terbaik buat bisnis Anda.",
+  "Desain modern & terpercaya, bikin calon pembeli makin yakin transfer.",
+  "Terima beres. Teknis, server, domain, semua saya yang urus.",
 ];
 
 export const serviceNavLinks = [
-  { label: "Fokus", href: "#hero" },
-  { label: "Capability", href: "#capabilities" },
+  { label: "Intro", href: "#hero" },
+  { label: "Keahlian", href: "#capabilities" },
   { label: "Layanan", href: "#services" },
   { label: "Proses", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Harga", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];
