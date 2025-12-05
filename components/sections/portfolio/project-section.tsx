@@ -124,8 +124,8 @@ export default function ProjectsSection({
           <motion.div
             key={project.title}
             initial={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-50px" }}
             whileInView={{ opacity: 1, y: 0 }}
           >
             <Card className="group relative overflow-hidden shadow-md rounded-2xl">

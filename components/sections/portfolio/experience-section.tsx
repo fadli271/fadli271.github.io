@@ -57,8 +57,8 @@ const MetricCard = ({
   <motion.div
     className="w-full h-full"
     initial={{ opacity: 0, y: 30 }}
-    transition={{ duration: 0.6, delay }}
-    viewport={{ once: true, amount: 0.6 }}
+    transition={{ duration: 0.6, delay, ease: "easeOut" }}
+    viewport={{ once: true, margin: "-50px" }}
     whileInView={{ opacity: 1, y: 0 }}
   >
     <Card className="w-full h-full flex flex-col justify-between bg-white shadow-md hover:shadow-xl transition-shadow duration-300">
@@ -260,7 +260,7 @@ export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
                 delay={idx * 0.2}
                 subtitle={item.subtitle}
                 title={item.title}
-                value={idx === 0 ? 8 : idx === 1 ? 15 : 10}
+                value={idx === 0 ? 8 : idx === 1 ? 15 : 10},
               />
             )
           )}

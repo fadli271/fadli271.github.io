@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import FloatingNavbar from "@/components/floating-navbar";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
@@ -56,7 +57,11 @@ export default function HomePage() {
   const currentContent: ContentType = content[lang];
 
   return (
-    <>
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <FloatingNavbar
         content={currentContent.nav}
         currentLang={lang}
@@ -71,6 +76,6 @@ export default function HomePage() {
       />
       <ContactSection content={currentContent.contact} />
       <ScrollToTopButton />
-    </>
+    </motion.div>
   );
 }

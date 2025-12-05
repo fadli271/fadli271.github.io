@@ -94,8 +94,9 @@ export default function SkillsSection({ content }: SkillsSectionProps) {
                           transition={{
                             duration: 0.4,
                             delay: skillIndex * 0.05,
+                            ease: "easeOut",
                           }}
-                          viewport={{ once: true, amount: 0.5 }}
+                          viewport={{ once: true, margin: "-50px" }}
                           whileInView={{ opacity: 1, y: 0 }}
                         >
                           <skill.icon

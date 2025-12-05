@@ -38,7 +38,8 @@ export default function ContactSection({ content }: ContactSectionProps) {
       <motion.h1
         className="text-3xl md:text-3xl font-bold gradient-text mb-4 flex justify-center items-center gap-3"
         initial={{ opacity: 0, y: 20 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-50px" }}
         whileInView={{ opacity: 1, y: 0 }}
       >
         <Link className="w-10 h-10 text-sky-500 gradient-text" />
