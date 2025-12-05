@@ -260,7 +260,7 @@ export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
                 delay={idx * 0.2}
                 subtitle={item.subtitle}
                 title={item.title}
-                value={idx === 0 ? 8 : idx === 1 ? 15 : 10},
+                value={idx === 0 ? 8 : idx === 1 ? 15 : 10}
               />
             )
           )}
