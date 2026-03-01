@@ -7,8 +7,8 @@ export const SITE_URL = "https://fadli271.github.io";
 export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Mohamad Fadli – Software Engineer",
-    template: "%s | Mohamad Fadli",
+    default: "Fadli Dev Studio",
+    template: "%s | Fadli Dev Studio",
   },
   description:
     "Portfolio & Projects of Mohamad Fadli — software engineer with experience in modern web and AI integration.",
@@ -19,11 +19,11 @@ export const siteMetadata: Metadata = {
   },
   category: "technology",
   openGraph: {
-    title: "Mohamad Fadli – Software Engineer",
+    title: "Fadli Dev Studio",
     description:
       "Showcasing work in AI, logistics tech, and modern web development.",
     url: "https://fadli271.github.io",
-    siteName: "Mohamad Fadli",
+    siteName: "Fadli Dev Studio",
     images: [
       {
         url: "/my-profile.JPG",
@@ -47,12 +47,14 @@ export const siteMetadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ rel: "icon", url: "/favicon.png", type: "image/png" }],
+    icon: [{ rel: "icon", url: "/brand.png", type: "image/png" }],
+    shortcut: [{ url: "/brand.png", type: "image/png" }],
+    apple: [{ url: "/brand.png", type: "image/png" }],
   },
   twitter: {
     card: "summary_large_image",
     creator: "@fadli_dev",
-    title: "Mohamad Fadli – Software Engineer",
+    title: "Fadli Dev Studio",
     description:
       "Discover Mohamad Fadli’s work in AI, logistics tech, and modern web development.",
     images: ["/my-profile.JPG"],

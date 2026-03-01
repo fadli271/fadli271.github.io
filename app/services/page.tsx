@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -16,6 +17,9 @@ import {
   serviceNavLinks,
   whyMePoints,
   testimonials,
+  appSystemEstimate,
+  consultationForm,
+  scopeTerms,
 } from "@/app/content/services";
 import { CONTACT_INFO } from "@/lib/contact-info";
 
@@ -31,8 +35,19 @@ export default function ServiceLandingPage() {
         <div
           className={`${containerClass} flex items-center justify-between py-4`}
         >
-          <Link className="text-lg font-semibold text-slate-900" href="/">
-            Fadli Dev Studio
+          <Link className="flex items-center gap-2" href="/">
+            <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg shadow-md">
+              <Image
+                alt="Fadli Dev Studio"
+                className="object-contain"
+                fill
+                priority
+                src="/brand.png"
+              />
+            </div>
+            <span className="text-lg font-semibold text-slate-900">
+              Fadli Dev Studio
+            </span>
           </Link>
           <div className="hidden items-center gap-2 text-sm font-semibold text-slate-600 md:flex">
             {serviceNavLinks.map((link) => (
@@ -105,12 +120,14 @@ export default function ServiceLandingPage() {
               <div className="grid items-start gap-10 lg:grid-cols-[1.1fr,0.9fr]">
                 <div className="space-y-6 text-left text-slate-900">
                   <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
-                    Bikin website & sistem langsung jadi, ga pake ribet.
+                    Website, sistem aplikasi, dan mobile app yang siap bantu
+                    bisnis dapat lebih banyak chat, lead, dan booking.
                   </h1>
                   <p className="text-base text-slate-600">
-                    Fokus ke solusi bisnis, bukan cuma kode. Saya bantu Anda
-                    punya website yang profesional dan sistem yang bikin kerjaan
-                    lebih enteng.
+                    Fokusnya bukan sekadar desain, tapi alur sederhana yang
+                    memudahkan calon pelanggan untuk chat, tanya, atau booking,
+                    termasuk bila Anda butuh sistem aplikasi atau mobile app
+                    sederhana untuk operasional.
                   </p>
                   <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-start">
                     <a
@@ -119,7 +136,7 @@ export default function ServiceLandingPage() {
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Konsultasi via WhatsApp
+                      Konsultasi WhatsApp (Gratis)
                     </a>
                     <Link
                       className="w-full rounded-full border border-slate-300 px-6 py-3 text-center text-sm font-semibold text-slate-700 transition hover:border-slate-500 sm:w-auto"
@@ -131,8 +148,9 @@ export default function ServiceLandingPage() {
                 </div>
                 <div className="space-y-4 rounded-3xl border border-white/70 bg-white/80 p-6 text-left text-slate-700 shadow-2xl backdrop-blur">
                   <p className="text-base font-semibold text-slate-800">
-                    Dukungan penuh setelah website jadi. Tim Anda tinggal pakai,
-                    gak perlu pusing urusan teknis.
+                    Struktur biaya dan proses dibuat jelas dari awal supaya
+                    proyek cepat jalan, revisi terkontrol, dan semua pihak tahu
+                    apa yang dikerjakan.
                   </p>
                   <div className="space-y-3 text-sm sm:text-base">
                     {heroHooks.map((item, idx) => (
@@ -160,6 +178,62 @@ export default function ServiceLandingPage() {
             </motion.div>
           </div>
         </section>
+
+        <section className="page-section bg-white" id="scope-terms">
+          <div className={containerClass}>
+            <div className="mx-auto max-w-5xl">
+              <div className="text-center">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
+                  Ketentuan
+                </p>
+                <h2 className="mt-4 text-3xl font-bold text-slate-900">
+                  {scopeTerms.heading}
+                </h2>
+                <p className="mt-4 text-base text-slate-600">
+                  {scopeTerms.subheading}
+                </p>
+              </div>
+
+              <div className="mt-10 grid gap-6 md:grid-cols-2">
+                <article className="rounded-3xl border border-slate-200 bg-slate-50/60 p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    Yang termasuk / tidak termasuk
+                  </h3>
+                  <ul className="mt-4 space-y-2 text-sm text-slate-700">
+                    {scopeTerms.includedBullets.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul className="mt-5 space-y-2 text-sm text-slate-600">
+                    {scopeTerms.excludedBullets.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-400" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+
+                <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    Skema pembayaran
+                  </h3>
+                  <ul className="mt-4 space-y-2 text-sm text-slate-700">
+                    {scopeTerms.paymentBullets.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-500" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="page-section" id="capabilities">
           <div className={containerClass}>
             <div className="mx-auto max-w-4xl text-center">
@@ -167,12 +241,12 @@ export default function ServiceLandingPage() {
                 Solusi Digital
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Dari website sederhana sampai sistem kantor yang kompleks.
+                Paket layanan website, plus opsi sistem aplikasi & mobile app.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Saya bantu bangun fondasi digital bisnis Anda. Bukan cuma soal
-                tampilan, tapi gimana caranya bisnis jadi lebih efisien dan
-                untung.
+                Mulai dari website yang cepat live sampai mini-site siap scale.
+                Untuk sistem aplikasi atau mobile app, kita mulai dari sesi
+                discovery dulu sebelum menyusun estimasi yang sesuai budget.
               </p>
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -206,11 +280,11 @@ export default function ServiceLandingPage() {
                 Pilihan Layanan
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Paket lengkap, terima beres, dan bergaransi.
+                Scope jelas, timeline jelas, dan bisa dieksekusi cepat.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Dibangun dengan teknologi modern (Next.js) biar website Anda
-                cepat, aman, dan mudah ditemukan di Google (SEO Friendly).
+                Cocok untuk UMKM yang ingin hasil nyata tanpa pusing urusan
+                teknis. Semua paket sudah dipetakan sesuai kebutuhan bisnis.
               </p>
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -292,20 +366,38 @@ export default function ServiceLandingPage() {
                 Investasi
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Harga transparan, sesuaikan dengan budget.
+                Harga transparan, khusus disusun untuk UMKM.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Semua paket sudah termasuk hosting, domain, dan garansi support.
-                Gak ada biaya tersembunyi.
+                Untuk website, biaya dibagi 3: Setup (sekali bayar), Infra
+                tahunan (domain + hosting), dan maintenance opsional. Untuk
+                sistem aplikasi atau mobile app, estimasi dibuat terpisah
+                setelah sesi discovery singkat.
               </p>
+              <div className="mt-6 rounded-2xl border border-sky-100 bg-sky-50/80 p-5 text-left text-sm text-slate-700 sm:text-base">
+                <ul className="space-y-2">
+                  <li>
+                    <strong>Setup Website:</strong> perencanaan, desain, dan
+                    implementasi sampai siap online (sekali bayar).
+                  </li>
+                  <li>
+                    <strong>Infra Tahunan (Domain + Hosting):</strong> biaya
+                    operasional tahunan agar website tetap aktif dan stabil.
+                  </li>
+                  <li>
+                    <strong>Support & Maintenance:</strong> bantuan teknis awal;
+                    maintenance rutin bersifat opsional sesuai kebutuhan.
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {packages.map((pkg, idx) => (
                 <motion.div
                   key={pkg.label}
-                  className={`flex h-full flex-col rounded-3xl border p-5 shadow-xl sm:p-6 ${
+                  className={`relative flex h-full flex-col rounded-3xl border p-5 shadow-xl sm:p-6 transition ${
                     pkg.highlighted
-                      ? "border-sky-400 bg-white"
+                      ? "border-sky-500 bg-white shadow-2xl ring-2 ring-sky-100"
                       : "border-slate-200 bg-white"
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -315,9 +407,9 @@ export default function ServiceLandingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                 >
                   {pkg.highlighted && (
-                    <span className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700">
+                    <span className="absolute -top-3 left-1/2 inline-flex -translate-x-1/2 items-center gap-1 rounded-full bg-sky-600/90 px-3 py-1 text-xs font-semibold text-white shadow-sm">
                       <Sparkles className="h-3.5 w-3.5" />
-                      Paling Laris
+                      Rekomendasi
                     </span>
                   )}
                   <h3 className="mt-3 text-2xl font-semibold text-slate-900">
@@ -330,13 +422,17 @@ export default function ServiceLandingPage() {
                   <ul className="mt-6 flex-1 space-y-2 text-sm text-slate-600">
                     {pkg.includes.map((item) => (
                       <li key={item} className="flex items-start gap-2">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 text-sky-500" />
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-500" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <a
-                    className="mt-8 inline-flex w-full items-center justify-center rounded-full border border-slate-900 px-4 py-2 font-semibold text-slate-900 transition hover:bg-slate-900 hover:text-white"
+                    className={`mt-8 inline-flex w-full items-center justify-center rounded-full px-4 py-2 text-sm font-semibold transition ${
+                      pkg.highlighted
+                        ? "bg-sky-600 text-white shadow-lg hover:bg-sky-700"
+                        : "border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white"
+                    }`}
                     href={whatsappCta}
                     rel="noopener noreferrer"
                     target="_blank"
@@ -345,6 +441,80 @@ export default function ServiceLandingPage() {
                   </a>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="page-section bg-white" id="app-system-estimate">
+          <div className={containerClass}>
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
+                {appSystemEstimate.title}
+              </p>
+              <h2 className="mt-4 text-3xl font-bold text-slate-900">
+                Sistem aplikasi dan mobile app dihitung sesuai kebutuhan.
+              </h2>
+              <p className="mt-4 text-base text-slate-600">
+                {appSystemEstimate.subtitle}
+              </p>
+            </div>
+            <div className="mx-auto mt-8 max-w-3xl rounded-3xl border border-slate-200 bg-slate-50/70 p-6 shadow-sm">
+              <ul className="space-y-3 text-sm text-slate-700 sm:text-base">
+                {appSystemEstimate.points.map((point) => (
+                  <li key={point} className="flex items-start gap-2">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-500" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 text-sm text-slate-600">
+                {appSystemEstimate.note}
+              </p>
+              <a
+                className="mt-6 inline-flex rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800"
+                href={whatsappCta}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Konsultasi App/System
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="page-section" id="consultation-form">
+          <div className={containerClass}>
+            <div className="mx-auto max-w-4xl rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
+                Registrasi Konsultasi
+              </p>
+              <h2 className="mt-4 text-3xl font-bold text-slate-900">
+                {consultationForm.title}
+              </h2>
+              <p className="mt-3 text-sm text-slate-600 sm:text-base">
+                {consultationForm.subtitle}
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  className="inline-flex items-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+                  href={consultationForm.actionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {consultationForm.submitLabel}
+                </a>
+                <a
+                  className="inline-flex items-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-500"
+                  href={whatsappCta}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Tanya Cepat via WhatsApp
+                </a>
+              </div>
+              <p className="mt-4 text-xs text-slate-500">
+                {consultationForm.hint}
+              </p>
             </div>
           </div>
         </section>
@@ -359,7 +529,8 @@ export default function ServiceLandingPage() {
                 Hal yang sering ditanyakan.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Masih bingung? Langsung chat WA aja, saya balas secepatnya.
+                Masih bingung? Langsung chat WhatsApp saja, saya balas
+                secepatnya di jam kerja.
               </p>
             </div>
             <div className="mt-10 space-y-4">
@@ -431,11 +602,11 @@ export default function ServiceLandingPage() {
                 Mulai Sekarang
               </p>
               <h2 className="mt-4 text-3xl font-bold text-slate-900">
-                Konsultasi Gratis, Tanpa Risiko.
+                Pilih paket yang paling pas, lalu kita mulai.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Ceritakan kebutuhan bisnis Anda lewat WhatsApp. Saya akan
-                berikan solusi dan estimasi biaya dalam 24 jam.
+                Kirim kebutuhan Anda via WhatsApp, saya bantu pilih paket
+                Starter/Growth/Scale dan estimasi pengerjaan yang realistis.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
                 <a
