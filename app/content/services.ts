@@ -482,3 +482,864 @@ export const faqs = [
       "DP 50% di awal untuk memulai pengerjaan. Pelunasan 50% sisanya dilakukan setelah website jadi dan Anda puas dengan hasilnya, sebelum serah terima akses penuh.",
   },
 ];
+
+export const translations = {
+  id: {
+    // Nav
+    navIntro: "Intro",
+    navWhyUs: "Kenapa Kami?",
+    navServices: "Layanan",
+    navPortfolio: "Portofolio",
+    navClients: "Klien",
+    navPricing: "Harga",
+    navFaq: "FAQ",
+    navChat: "Chat WA",
+
+    // Hero
+    heroBadge: "Digital Partner Terpercaya untuk UMKM",
+    heroTitle1: "Grow Your Business",
+    heroTitle2: "Go Digital Today.",
+    heroSubtitle:
+      "Bikin website & sistem operasional tanpa ribet. Kami bangun fondasi digital yang kuat agar bisnis Anda siap melesat.",
+    heroCta: "Konsultasi via WhatsApp",
+    heroFormCta: "Lihat Portofolio",
+
+    // Trust badges
+    trustBadge1: "Garansi Support",
+    trustBadge2: "Transparan",
+    trustBadge3: "Terpercaya",
+
+    // Why Choose Us
+    whyUsLabel: "Why Choose Us",
+    whyUsTitle: "Lebih dari Sekadar Vendor Website",
+    whyUsSubtitle: "Kami hadir sebagai partner strategis untuk pertumbuhan bisnis SME Anda.",
+    whyChooseUsItems: [
+      {
+        title: "Partner Bisnis",
+        description:
+          "Bukan cuma vendor lepas. Kami fokus pada konsultasi jangka panjang untuk pertumbuhan bisnis Anda.",
+      },
+      {
+        title: "Bebas Ribet Teknis",
+        description:
+          "Kami urus semua teknis (server, domain, error). Anda cukup fokus jualan dan urus pelanggan.",
+      },
+      {
+        title: "Desain Menjual",
+        description:
+          "Website didesain psikologis untuk mengubah pengunjung menjadi pembeli (High Conversion).",
+      },
+      {
+        title: "Support Prioritas",
+        description:
+          "Dukungan WhatsApp fast response. Ada kendala? Langsung chat, langsung kami bantu.",
+      },
+    ],
+
+    // Process Steps
+    processLabel: "Proses Cepat",
+    processTitle: "3 Langkah Mudah Punya Website",
+    processSubtitle:
+      "Gak perlu pusing teknis. Kami buat prosesnya sesimpel mungkin agar Anda bisa fokus bisnis.",
+    processFormCta: "Isi Formulir Konsultasi",
+    processSteps: [
+      {
+        title: "Konsultasi & Pesan",
+        description:
+          "Cukup cerita target bisnis Anda dan pilih paket yang pas. Gak perlu paham coding, kami yang terjemahkan ide Anda.",
+      },
+      {
+        title: "Proses Desain & Dev",
+        description:
+          "Duduk manis sementara kami kerjakan teknisnya. Anda akan dapat update berkala dan revisi sampai cocok.",
+      },
+      {
+        title: "Launch & Training",
+        description:
+          "Website live! Kami gak cuma lepas tangan, tapi ajari Anda cara pakainya sampai bisa kelola sendiri.",
+      },
+    ],
+
+    // Promo Banner
+    promoBadge: "Penawaran Terbatas untuk UMKM!",
+    promoHeadline: "Gratis Maintenance 3 Bulan!",
+    promoSubtext:
+      "Kami tidak hanya membuatkan website, kami menjaganya tetap aman dan up-to-date sehingga Anda bisa fokus jualan.",
+    promoCta: "Ambil Promo Sekarang",
+    promoUrgency: "Hanya untuk 5 pendaftar pertama bulan ini",
+
+    // Services
+    servicesLabel: "Pilihan Layanan",
+    servicesTitle: "Paket Lengkap untuk Kebutuhan Anda",
+    servicesSubtitle: "Teknologi modern (Next.js) yang cepat, aman, dan SEO Friendly.",
+    popularBadge: "Popular",
+    servicesList: [
+      {
+        title: "Sistem Operasional",
+        description:
+          "Aplikasi untuk merapikan data kantor. Stok barang, absen karyawan, laporan keuangan.",
+        features: ["User Friendly", "Akses HP & Laptop"],
+        isPopular: false,
+      },
+      {
+        title: "Landing Page",
+        description:
+          "Satu halaman khusus promosi. Fokus meyakinkan pengunjung untuk membeli atau menghubungi Anda.",
+        features: ["Copywriting Menjual", "Siap Iklan (Ads)", "High Conversion"],
+        isPopular: true,
+      },
+      {
+        title: "Toko Online / Katalog",
+        description:
+          "Pelanggan lihat produk dan pesan via WhatsApp otomatis tanpa install aplikasi.",
+        features: ["Mobile First Design", "Tombol 'Pesan WA'"],
+        isPopular: false,
+      },
+    ],
+
+    // Portfolio
+    portfolioLabel: "Studi Kasus",
+    portfolioTitle: "Karya Kami yang Telah Membantu UMKM",
+    portfolioSubtitle:
+      "Lihat bagaimana kami membantu bisnis seperti Anda tumbuh digital.",
+    portfolioDemoLabel: "Lihat Demo",
+    portfolioItems: [
+      {
+        category: "Jasa",
+        title: "Bengkel Mobil Sejahtera",
+        description:
+          "Landing page servis mobil dengan booking via WhatsApp & info layanan lengkap.",
+        stat: "Trust Meningkat",
+        statSub: "Booking WA Otomatis",
+      },
+      {
+        category: "Kuliner",
+        title: "Kopi Senja Nusantara",
+        description:
+          "Website kafe dengan menu digital, galeri, dan order via WhatsApp.",
+        stat: "+40% Order Online",
+        statSub: "150+ Pesanan / Bulan",
+      },
+      {
+        category: "Fashion",
+        title: "Butik Elegan Fashion",
+        description:
+          "Katalog digital premium dengan checkout WhatsApp & sinkronisasi stok.",
+        stat: "Penjualan +120%",
+        statSub: "Branding Premium",
+      },
+      {
+        category: "Jasa",
+        title: "Bengkel Maju Jaya",
+        description:
+          "Sistem booking online, galeri before-after, & review pelanggan.",
+        stat: "Tampil Profesional",
+        statSub: "Reservasi Online Aktif",
+      },
+      {
+        category: "Jasa",
+        title: "JagoCompro",
+        description:
+          "Studio desain company profile profesional dengan pengerjaan express 1 hari.",
+        stat: "Desain Premium",
+        statSub: "Express 1 Hari Jadi",
+      },
+      {
+        category: "Retail",
+        title: "Toko Kelontong Berkah",
+        description:
+          "Landing page POS modern dengan digitalisasi stok & kasir otomatis.",
+        stat: "Hemat 5 Jam/Minggu",
+        statSub: "Kasir & Stok Digital",
+      },
+    ],
+    portfolioCategories: ["Semua", "Kuliner", "Fashion", "Jasa", "Retail"],
+
+    // Testimonials
+    testimonialsLabel: "Kisah Sukses",
+    testimonialsTitle: "Dipercaya Berbagai UMKM",
+    testimonialsList: [
+      {
+        businessType: "F&B / Kuliner",
+        quote:
+          "Omzet naik 30% karena pelanggan bisa lihat foto menu yang menggugah selera lewat QR code.",
+        authorRole: "Owner",
+      },
+      {
+        businessType: "Fashion Retail",
+        quote:
+          "Jualan di IG makin gampang. Customer tinggal klik link di bio, pilih, dan bayar.",
+        authorRole: "Founder",
+      },
+      {
+        businessType: "Jasa Otomotif",
+        quote:
+          "Website bikin bengkel kami kelihatan profesional. Klien korporat jadi percaya.",
+        authorRole: "Kepala Mekanik",
+      },
+      {
+        businessType: "Katering & Event",
+        quote:
+          "Sistem booking katering online sangat membantu atur jadwal. Gak ada lagi drama salah catat.",
+        authorRole: "Pemilik",
+      },
+      {
+        businessType: "Toko Bangunan",
+        quote:
+          "Sistem inventaris baru bikin saya tahu persis stok semen dan keramik, gak pernah kelebihan order lagi.",
+        authorRole: "Pemilik",
+      },
+      {
+        businessType: "Salon Kecantikan",
+        quote:
+          "Booking online bikin jadwal treatment rapi, gak ada lagi pelanggan bolos karena lupa catat.",
+        authorRole: "Owner",
+      },
+      {
+        businessType: "Apotek",
+        quote:
+          "Katalog digital bantu pelanggan cek obat tersedia duluan, jadi gak banyak telepon bolak-balik.",
+        authorRole: "Apoteker",
+      },
+      {
+        businessType: "Percetakan & Desain",
+        quote:
+          "Landing page baru menarik klien korporat karena mereka bisa lihat portofolio dan request cetak banyak langsung online.",
+        authorRole: "Manager",
+      },
+    ],
+
+    // Pricing
+    pricingLabel: "Investasi",
+    pricingTitle: "Pilihan Paket Sesuai Kebutuhan Anda",
+    pricingSubtitle:
+      "Harga transparan untuk landing page. Untuk layanan lain, mari diskusi kebutuhan Anda terlebih dahulu.",
+    landingPageTitle: "Landing Page",
+    landingPageDescription:
+      "Setup sekali bayar + Infra tahunan (server, domain, tools)",
+    setupLabel: "Setup (sekali bayar)",
+    infraLabel: "Infra: ",
+    packageButton: "Pesan Paket Ini",
+    packagesList: [
+      {
+        label: "Paket Hemat",
+        fit:
+          "Butuh tampil online cepat dengan budget minimal? Ini jawabannya.",
+        includes: [
+          "Landing Page 1 Halaman",
+          "Desain Responsive (Mobile Friendly)",
+          "Integrasi WhatsApp",
+          "Selesai dalam 5 Hari",
+        ],
+      },
+      {
+        label: "Starter",
+        fit:
+          "Cocok untuk UMKM / personal brand yang butuh landing page rapi & profesional.",
+        includes: [
+          "Website 1–2 Halaman Utama",
+          "Domain & Hosting (1 tahun)",
+          "Desain Mobile-Friendly",
+          "Integrasi WhatsApp",
+          "Selesai dalam 1–2 Minggu",
+        ],
+      },
+      {
+        label: "Growth",
+        fit:
+          "Untuk bisnis yang mulai serius scale dan butuh lebih banyak fitur.",
+        includes: [
+          "Semua Fitur Starter",
+          "Multi Halaman & Section Lengkap",
+          "Form Lead Capture",
+          "Optimalisasi SEO Dasar",
+          "Galeri Produk/Jasa",
+          "Prioritas Support",
+          "Selesai dalam 2–3 Minggu",
+        ],
+      },
+      {
+        label: "Scale",
+        fit:
+          "Brand yang butuh fleksibilitas tinggi, siap scale & eksperimen.",
+        includes: [
+          "Semua Fitur Growth",
+          "Layout Kompleks & Custom",
+          "Integrasi Advance",
+          "Siap Campaign Berulang",
+          "Analytics & Tracking",
+          "Keamanan Extra",
+          "Selesai dalam 3–4 Minggu",
+        ],
+      },
+    ],
+    otherServicesHeading: "Layanan Lainnya",
+    otherServicesSubtitle:
+      "Harga disesuaikan dengan fitur & kompleksitas kebutuhan Anda",
+    otherServicesList: [
+      {
+        title: "Toko Online / Katalog",
+        description:
+          "Pelanggan lihat produk dan pesan via WhatsApp. Harga tergantung jumlah produk, fitur filter, dan integrasi pembayaran.",
+        features: [
+          "Katalog produk dengan kategori",
+          "Checkout via WhatsApp",
+          "Mobile-first responsive",
+          "Fitur custom sesuai kebutuhan",
+        ],
+        cta: "Konsultasi Gratis",
+      },
+      {
+        title: "Sistem Operasional",
+        description:
+          "Aplikasi untuk merapikan data kantor. Harga tergantung modul yang dibutuhkan dan jumlah pengguna.",
+        features: [
+          "Manajemen stok & inventaris",
+          "Absensi & data karyawan",
+          "Laporan keuangan otomatis",
+          "Modul custom sesuai bisnis",
+        ],
+        cta: "Konsultasi Gratis",
+      },
+      {
+        title: "Mobile Apps",
+        description:
+          "Aplikasi mobile untuk bisnis Anda. Harga tergantung platform (Android/iOS), fitur, dan kompleksitas.",
+        features: [
+          "Android & iOS (Cross-platform)",
+          "Push notification",
+          "Offline mode support",
+          "Fitur custom sesuai kebutuhan",
+        ],
+        cta: "Konsultasi Gratis",
+      },
+    ],
+    pricingInfoSetup:
+      "Setup = biaya pembuatan awal (sekali bayar). Infra = server, domain & tools (tahunan).",
+    pricingInfoMaintenance:
+      "Maintenance rutin bersifat opsional, bisa ditambah kapan saja sesuai kebutuhan.",
+
+    // Standard Features
+    standardFeaturesLabel: "Value Added",
+    standardFeaturesTitle: "Fitur Standar di Semua Paket",
+    standardFeaturesSubtitle:
+      "Tidak perlu bayar lebih. Fitur penting ini sudah otomatis Anda dapatkan.",
+    standardFeaturesList: [
+      {
+        title: "Sertifikat SSL (Gembok Hijau)",
+        description:
+          "Website aman dan dipercaya Google. Data pelanggan Anda terlindungi sepenuhnya.",
+      },
+      {
+        title: "Hosting & Domain Gratis",
+        description:
+          "Sudah termasuk biaya sewa server dan alamat website untuk 1 tahun pertama.",
+      },
+      {
+        title: "Backup Data Rutin",
+        description:
+          "Tidak perlu takut data hilang. Kami melakukan backup otomatis secara berkala.",
+      },
+      {
+        title: "Mobile Responsive",
+        description:
+          "Website tampil sempurna di HP, Tablet, maupun Laptop pelanggan Anda.",
+      },
+      {
+        title: "Keamanan Anti-Hacker",
+        description:
+          "Proteksi berlapis untuk menjaga website Anda dari serangan pihak tidak bertanggung jawab.",
+      },
+      {
+        title: "Integrasi Media Sosial",
+        description:
+          "Hubungkan website langsung ke WhatsApp, Instagram, dan Facebook Anda.",
+      },
+    ],
+
+    // FAQ
+    faqLabel: "Tanya Jawab",
+    faqTitle: "Paling Sering Ditanyakan",
+    faqSubtitle:
+      "Informasi lengkap seputar layanan, harga, dan purna jual.",
+    faqList: [
+      {
+        question: "Berapa lama proses pembuatannya?",
+        answer:
+          "Rata-rata 7-14 hari kerja tergantung kompleksitas fitur yang Anda butuhkan. Untuk landing page sederhana bisa selesai dalam 3-5 hari.",
+      },
+      {
+        question: "Berapa biaya perpanjangan domain & hosting?",
+        answer:
+          "Sangat terjangkau. Mulai dari Rp 500rb/tahun, sudah termasuk dukungan teknis ringan dan pembaruan keamanan (Security Updates).",
+      },
+      {
+        question: "Apakah saya pemilik sah website saya?",
+        answer:
+          "Ya, 100%. Data, domain, dan konten sepenuhnya milik Anda. Kami hanya membantu mengelolanya secara teknis. Anda akan mendapatkan akses penuh jika diinginkan.",
+      },
+      {
+        question: "Bagaimana jika saya ingin mengubah isi website?",
+        answer:
+          "Kami menyediakan video tutorial mudah (tanpa perlu coding) sehingga Anda bisa edit sendiri. Atau jika sibuk, Anda bisa menggunakan jasa update konten kami.",
+      },
+      {
+        question: "Kalau ada error teknis gimana?",
+        answer:
+          "Tenang, semua paket sudah termasuk garansi maintenance. Jika website down atau error sistem, kami perbaiki gratis selama masa garansi/langganan aktif.",
+      },
+      {
+        question: "Pembayarannya bagaimana?",
+        answer:
+          "DP 50% di awal untuk memulai pengerjaan. Pelunasan 50% sisanya dilakukan setelah website jadi dan Anda puas dengan hasilnya, sebelum serah terima akses penuh.",
+      },
+    ],
+
+    // Final CTA
+    finalCtaLabel: "Mulai Sekarang",
+    finalCtaTitleLine1: "Konsultasi Gratis,",
+    finalCtaTitleLine2: "Tanpa Risiko.",
+    finalCtaSubtitle:
+      "Ceritakan kebutuhan bisnis Anda lewat WhatsApp. Kami akan berikan solusi strategi digital dan estimasi biaya dalam 24 jam.",
+    finalCtaPrimary: "Chat WhatsApp Sekarang",
+    finalCtaSecondary: "Isi Form Briefing",
+
+    // Footer
+    footerParagraph:
+      "Mitra digital terpercaya yang membantu UMKM tumbuh pesat di era digital dengan solusi website profesional dan terjangkau.",
+    footerProfileRole:
+      "Software engineer sejak 2016. Fokus membantu UMKM bertransformasi digital dengan solusi yang efisien dan scalable.",
+    footerContactTitle: "Kontak Kami",
+    footerFollowTitle: "Ikuti Kami",
+    footerRights: "© Fadli Dev Studio. All rights reserved.",
+  },
+  en: {
+    // Nav
+    navIntro: "Intro",
+    navWhyUs: "Why Us?",
+    navServices: "Services",
+    navPortfolio: "Portfolio",
+    navClients: "Clients",
+    navPricing: "Pricing",
+    navFaq: "FAQ",
+    navChat: "Chat on WhatsApp",
+
+    // Hero
+    heroBadge: "Trusted Digital Partner for SMEs",
+    heroTitle1: "Grow Your Business",
+    heroTitle2: "Go Digital Today.",
+    heroSubtitle:
+      "Build a website & operations system without the hassle. We create a strong digital foundation so your business is ready to accelerate.",
+    heroCta: "Consult via WhatsApp",
+    heroFormCta: "View Our Portfolio",
+
+    // Trust badges
+    trustBadge1: "Support Guarantee",
+    trustBadge2: "Transparent",
+    trustBadge3: "Trustworthy",
+
+    // Why Choose Us
+    whyUsLabel: "Why Choose Us",
+    whyUsTitle: "More Than a Website Vendor",
+    whyUsSubtitle:
+      "We appear as a strategic partner for your SME's growth trajectory.",
+    whyChooseUsItems: [
+      {
+        title: "Business Partner",
+        description:
+          "More than a freelance vendor. We focus on long-term consultation to support your business growth.",
+      },
+      {
+        title: "No Technical Hassle",
+        description:
+          "We handle all technical aspects (servers, domains, errors). You just focus on selling and supporting customers.",
+      },
+      {
+        title: "Sales-Driven Design",
+        description:
+          "Websites are designed with psychology in mind to turn visitors into buyers (High Conversion).",
+      },
+      {
+        title: "Priority Support",
+        description:
+          "Fast-response WhatsApp support. Have an issue? Chat us and we will help immediately.",
+      },
+    ],
+
+    // Process Steps
+    processLabel: "Quick Process",
+    processTitle: "3 Easy Steps to Own a Website",
+    processSubtitle:
+      "No need to stress over the tech. We keep the process as simple as possible so you can focus on running your business.",
+    processFormCta: "Fill the Consultation Form",
+    processSteps: [
+      {
+        title: "Consult & Order",
+        description:
+          "Just tell us your business goals and choose the right package. No coding knowledge needed; we translate your ideas.",
+      },
+      {
+        title: "Design & Dev",
+        description:
+          "Sit back while we handle the technical work. You will receive regular updates and revisions until it's perfect.",
+      },
+      {
+        title: "Launch & Training",
+        description:
+          "Website goes live! We don’t just hand it over; we teach you how to use it until you feel confident managing it yourself.",
+      },
+    ],
+
+    // Promo Banner
+    promoBadge: "Limited Offer for SMEs!",
+    promoHeadline: "Free Maintenance for 3 Months!",
+    promoSubtext:
+      "We not only build your website but keep it secure and up-to-date so you can focus on selling.",
+    promoCta: "Claim This Offer Now",
+    promoUrgency: "Only for the first 5 signups this month",
+
+    // Services
+    servicesLabel: "Service Options",
+    servicesTitle: "Complete Packages for Your Needs",
+    servicesSubtitle: "Modern tech (Next.js) that is fast, secure, and SEO friendly.",
+    popularBadge: "Popular",
+    servicesList: [
+      {
+        title: "Operational System",
+        description:
+          "Apps that tidy up office data. Stock items, employee attendance, financial reports.",
+        features: ["User Friendly", "Access from Mobile & Laptop"],
+        isPopular: false,
+      },
+      {
+        title: "Landing Page",
+        description:
+          "A single promotional page focused on convincing visitors to buy or contact you.",
+        features: ["Persuasive Copywriting", "Ad-ready", "High Conversion"],
+        isPopular: true,
+      },
+      {
+        title: "Online Store / Catalog",
+        description:
+          "Customers browse products and order via automated WhatsApp without installing apps.",
+        features: ["Mobile-First Design", "Auto 'Order via WA' Button"],
+        isPopular: false,
+      },
+    ],
+
+    // Portfolio
+    portfolioLabel: "Case Studies",
+    portfolioTitle: "Our Work That Helps SMEs Grow",
+    portfolioSubtitle:
+      "See how we help businesses like yours thrive in the digital space.",
+    portfolioDemoLabel: "View Demo",
+    portfolioItems: [
+      {
+        category: "Services",
+        title: "Bengkel Mobil Sejahtera",
+        description:
+          "Auto shop landing page with WhatsApp booking & full service information.",
+        stat: "Trust Increased",
+        statSub: "Automated WhatsApp Bookings",
+      },
+      {
+        category: "Culinary",
+        title: "Kopi Senja Nusantara",
+        description:
+          "Cafe website featuring a digital menu, gallery, and WhatsApp ordering.",
+        stat: "+40% Online Orders",
+        statSub: "150+ Orders / Month",
+      },
+      {
+        category: "Fashion",
+        title: "Butik Elegan Fashion",
+        description:
+          "Premium digital catalog with WhatsApp checkout & stock synchronization.",
+        stat: "Sales +120%",
+        statSub: "Premium Branding",
+      },
+      {
+        category: "Services",
+        title: "Bengkel Maju Jaya",
+        description:
+          "Online booking system, before-after gallery, & customer reviews.",
+        stat: "Professional Image",
+        statSub: "Active Online Reservations",
+      },
+      {
+        category: "Services",
+        title: "JagoCompro",
+        description:
+          "Professional company profile design studio with express 1-day delivery.",
+        stat: "Premium Design",
+        statSub: "Express 1-Day Delivery",
+      },
+      {
+        category: "Retail",
+        title: "Toko Kelontong Berkah",
+        description:
+          "Modern POS landing page with digital inventory & automated cashier.",
+        stat: "Save 5 Hours/Week",
+        statSub: "Digital Cashier & Stock",
+      },
+    ],
+    portfolioCategories: ["All", "Culinary", "Fashion", "Services", "Retail"],
+
+    // Testimonials
+    testimonialsLabel: "Success Stories",
+    testimonialsTitle: "Trusted by Various SMEs",
+    testimonialsList: [
+      {
+        businessType: "F&B / Culinary",
+        quote:
+          "Revenue rose 30% because customers can view mouthwatering menu photos via QR code.",
+        authorRole: "Owner",
+      },
+      {
+        businessType: "Fashion Retail",
+        quote:
+          "Selling on IG became easier. Customers just tap the link in the bio, choose, and pay.",
+        authorRole: "Founder",
+      },
+      {
+        businessType: "Automotive Services",
+        quote:
+          "The website made our shop look professional. Corporate clients now trust us.",
+        authorRole: "Head Mechanic",
+      },
+      {
+        businessType: "Catering & Events",
+        quote:
+          "The online catering booking system keeps schedules organized. No more mistakes from missed notes.",
+        authorRole: "Owner",
+      },
+      {
+        businessType: "Building Materials Store",
+        quote:
+          "The new inventory system lets me know exactly how much cement and tile we have, so we stop over-ordering.",
+        authorRole: "Owner",
+      },
+      {
+        businessType: "Beauty Salon",
+        quote:
+          "Online booking keeps treatment schedules tidy, no more no-shows from forgotten appointments.",
+        authorRole: "Owner",
+      },
+      {
+        businessType: "Pharmacy",
+        quote:
+          "The digital catalog lets customers check medicine availability first, so there are fewer back-and-forth calls.",
+        authorRole: "Pharmacist",
+      },
+      {
+        businessType: "Printing & Design",
+        quote:
+          "The new landing page attracts corporate clients because they can review the portfolio and request large print jobs entirely online.",
+        authorRole: "Manager",
+      },
+    ],
+
+    // Pricing
+    pricingLabel: "Investment",
+    pricingTitle: "Package Options that Match Your Needs",
+    pricingSubtitle:
+      "Transparent pricing for landing pages. For other services, let’s talk about your requirements first.",
+    landingPageTitle: "Landing Page",
+    landingPageDescription: "One-time setup + annual infrastructure (server, domain, tools)",
+    setupLabel: "Setup (one-time payment)",
+    infraLabel: "Infra: ",
+    packageButton: "Order This Package",
+    packagesList: [
+      {
+        label: "Economy Package",
+        fit:
+          "Need to go online fast with a minimal budget? This is the answer.",
+        includes: [
+          "1-page Landing Page",
+          "Responsive Design (Mobile Friendly)",
+          "WhatsApp Integration",
+          "Delivered in 5 Days",
+        ],
+      },
+      {
+        label: "Starter",
+        fit:
+          "Ideal for SMEs or personal brands that need a neat and professional landing page.",
+        includes: [
+          "1–2 Main Pages Website",
+          "Domain & Hosting (1 year)",
+          "Mobile-Friendly Design",
+          "WhatsApp Integration",
+          "Delivered in 1–2 Weeks",
+        ],
+      },
+      {
+        label: "Growth",
+        fit:
+          "For businesses getting serious about scaling and needing more features.",
+        includes: [
+          "All Starter Features",
+          "Multi Pages & Complete Sections",
+          "Lead Capture Form",
+          "Basic SEO Optimization",
+          "Product/Service Gallery",
+          "Priority Support",
+          "Delivered in 2–3 Weeks",
+        ],
+      },
+      {
+        label: "Scale",
+        fit:
+          "Brands that need high flexibility, ready to scale and experiment.",
+        includes: [
+          "All Growth Features",
+          "Complex & Custom Layouts",
+          "Advanced Integrations",
+          "Ready for Recurring Campaigns",
+          "Analytics & Tracking",
+          "Enhanced Security",
+          "Delivered in 3–4 Weeks",
+        ],
+      },
+    ],
+    otherServicesHeading: "Additional Services",
+    otherServicesSubtitle:
+      "Pricing adjusted based on features and your complexity needs",
+    otherServicesList: [
+      {
+        title: "Online Store / Catalog",
+        description:
+          "Customers browse products and order via WhatsApp. Pricing depends on the number of products, filtering features, and payment integrations.",
+        features: [
+          "Categorized product catalog",
+          "WhatsApp checkout",
+          "Mobile-first responsive",
+          "Custom features tailored to your needs",
+        ],
+        cta: "Free Consultation",
+      },
+      {
+        title: "Operational Systems",
+        description:
+          "Apps to organize office data. Pricing depends on required modules and user count.",
+        features: [
+          "Stock & inventory management",
+          "Attendance & employee data",
+          "Automated financial reports",
+          "Custom modules per business",
+        ],
+        cta: "Free Consultation",
+      },
+      {
+        title: "Mobile Apps",
+        description:
+          "Mobile apps for your business. Pricing varies by platform (Android/iOS), features, and complexity.",
+        features: [
+          "Android & iOS (Cross-platform)",
+          "Push notifications",
+          "Offline mode support",
+          "Custom features tailored to your needs",
+        ],
+        cta: "Free Consultation",
+      },
+    ],
+    pricingInfoSetup:
+      "Setup = initial build cost (one-time payment). Infra = server, domain & tools (annual).",
+    pricingInfoMaintenance:
+      "Routine maintenance is optional and can be added anytime based on your needs.",
+
+    // Standard Features
+    standardFeaturesLabel: "Value Added",
+    standardFeaturesTitle: "Standard Features in All Packages",
+    standardFeaturesSubtitle:
+      "No need to pay extra. These essential features are automatically included.",
+    standardFeaturesList: [
+      {
+        title: "SSL Certificate (Secure Lock)",
+        description:
+          "Secure website trusted by Google. Your customer data stays fully protected.",
+      },
+      {
+        title: "Free Hosting & Domain",
+        description:
+          "Includes server rental and web address for the first year",
+      },
+      {
+        title: "Routine Data Backups",
+        description:
+          "No need to fear data loss. We perform automatic backups regularly.",
+      },
+      {
+        title: "Mobile Responsive",
+        description:
+          "Website looks perfect on phones, tablets, and laptops.",
+      },
+      {
+        title: "Anti-Hacker Security",
+        description:
+          "Multi-layer protection to guard your site from irresponsible attacks.",
+      },
+      {
+        title: "Social Media Integration",
+        description:
+          "Connect your website directly to WhatsApp, Instagram, and Facebook.",
+      },
+    ],
+
+    // FAQ
+    faqLabel: "FAQ",
+    faqTitle: "Frequently Asked Questions",
+    faqSubtitle:
+      "Complete information about our services, pricing, and aftersales support.",
+    faqList: [
+      {
+        question: "How long does the build process take?",
+        answer:
+          "Typically 7-14 business days depending on feature complexity. Simple landing pages can finish in 3-5 days.",
+      },
+      {
+        question: "How much is the domain & hosting renewal?",
+        answer:
+          "Very affordable. Starts from Rp 500k/year, including light technical support and security updates.",
+      },
+      {
+        question: "Will I fully own my website?",
+        answer:
+          "Yes, 100%. Data, domain, and content belong entirely to you. We only manage it technically. Full access is available if desired.",
+      },
+      {
+        question: "What if I want to change the website content?",
+        answer:
+          "We provide easy video tutorials (no coding) so you can edit yourself. Or if you're busy, take advantage of our content update service.",
+      },
+      {
+        question: "What happens if there's a technical error?",
+        answer:
+          "Relax, all packages include maintenance warranty. If your site goes down or has errors, we fix it for free while the warranty/subscription is active.",
+      },
+      {
+        question: "How does payment work?",
+        answer:
+          "50% down payment to start the work. The remaining 50% is paid once you're happy with the result and before handing over full access.",
+      },
+    ],
+
+    // Final CTA
+    finalCtaLabel: "Get Started",
+    finalCtaTitleLine1: "Free Consultation,",
+    finalCtaTitleLine2: "Risk-Free.",
+    finalCtaSubtitle:
+      "Share your business needs via WhatsApp. We’ll provide a digital strategy and cost estimate within 24 hours.",
+    finalCtaPrimary: "Chat on WhatsApp Now",
+    finalCtaSecondary: "Fill the Briefing Form",
+
+    // Footer
+    footerParagraph:
+      "A trusted digital partner helping SMEs grow rapidly in the digital era with professional and affordable website solutions.",
+    footerProfileRole:
+      "Software engineer since 2016. Focused on helping SMEs transform digitally with efficient and scalable solutions.",
+    footerContactTitle: "Contact Us",
+    footerFollowTitle: "Follow Us",
+    footerRights: "© Fadli Dev Studio. All rights reserved.",
+  },
+};
