@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kopi Senja Nusantara - Portofolio Studio Web</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ec9213",
+              "primary-dark": "#b06c0d",
+              "background-light": "#fcfaf8",
+              "background-dark": "#1b160d",
+              "coffee-light": "#f3eee7",
+              "coffee-medium": "#e7ddcf",
+              "coffee-dark": "#9a794c",
+              "text-main": "#1b160d",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom styles just to ensure gradients work smoothly */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .dark .glass-panel {
+            background: rgba(27, 22, 13, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-gray-100 antialiased selection:bg-primary selection:text-white">
+<div class="flex flex-col min-h-screen">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-coffee-light dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="flex items-center justify-center text-primary">
+<span class="material-symbols-outlined filled" style="font-size: 32px; font-variation-settings: 'FILL' 1;">
+                                code_blocks
+                            </span>
+</div>
+<span class="text-xl font-bold tracking-tight text-text-main dark:text-white">Studio Web</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors" href="#">Beranda</a>
+<a class="text-sm font-medium text-primary dark:text-primary transition-colors" href="#">Portofolio</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors" href="#">Layanan</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors" href="#">Kontak</a>
+</nav>
+<button class="bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2 px-5 rounded-lg transition-colors duration-200 shadow-lg shadow-primary/20">
+                        Hubungi Kami
+                    </button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Breadcrumbs -->
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+<nav class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+<a class="hover:text-primary transition-colors" href="#">Beranda</a>
+<span class="mx-2 text-gray-300 dark:text-gray-600">/</span>
+<a class="hover:text-primary transition-colors" href="#">Portofolio</a>
+<span class="mx-2 text-gray-300 dark:text-gray-600">/</span>
+<span class="text-primary font-medium">Kopi Senja</span>
+</nav>
+</div>
+<!-- Hero Section -->
+<section class="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+<div class="rounded-3xl bg-gradient-to-br from-coffee-light to-white dark:from-[#2a2218] dark:to-background-dark p-8 md:p-12 lg:p-16 border border-coffee-medium dark:border-white/5 relative overflow-hidden">
+<!-- Background accent -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+<div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+                                Web Development Case Study
+                            </div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-text-main dark:text-white leading-[1.1] tracking-tight">
+                                Kopi Senja Nusantara:<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-700">Digitalisasi Kedai Kopi Lokal</span>
+</h1>
+<p class="text-lg text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">
+                                Membantu bisnis lokal bertransformasi digital. Meningkatkan pesanan online sebesar <span class="font-bold text-primary">40%</span> dalam 3 bulan pertama peluncuran.
+                            </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-primary hover:bg-primary-dark transition-all duration-200 shadow-lg shadow-primary/25" href="#">
+                                    Lihat Live Demo
+                                    <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span>
+</a>
+<div class="flex items-center gap-2 px-4 py-3 bg-white dark:bg-white/5 rounded-lg border border-coffee-medium dark:border-white/10">
+<span class="material-symbols-outlined text-green-600">trending_up</span>
+<span class="text-sm font-bold text-gray-800 dark:text-gray-200">Traffic +120%</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<!-- Mockup Container -->
+<div class="relative z-10 rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border-4 border-white dark:border-gray-800 bg-gray-100">
+<img alt="Website mockup on desktop showing coffee shop homepage with warm tones" class="w-full h-auto object-cover aspect-[16/10]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrjHvvCJ5ZprH6cvv40YchzSkfkycoGlz3H_oyIOyWP2wylTfUy16tMDkpySvaIg0GOKDQcZdnqRtVDLdg0gAnX-4TFQMQpTcM_-zhED7xjrWN9G1-C7QpIZR7aGJwnsD9GK86jM4Kz6RAdsNTt24HL3BBZTgOosJIVnxFLtXISFpQH7Hw1NHicmK0xyD1uY0jLXZgpSsemlrAwPb9ZbjJJfFdL9vgFuvBbJkF_6AVomvrMLcc_bRHZMcCy63lg3cNyOF3GbozDBlJ"/>
+</div>
+<!-- Mobile Mockup Overlay -->
+<div class="absolute -bottom-6 -right-4 w-1/3 rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white dark:border-gray-800 bg-gray-900 z-20">
+<img alt="Mobile version of the coffee shop menu page" class="w-full h-auto object-cover aspect-[9/19]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrgPOgf74whivSWXRm94SxuMx-j4jPX1ayekpd93Rv-HouwcIYj6OrZG-epGDos5ahC0J0gm_CBGIr6-xmVfwGPDuE2FnrKQ0M1-596GT3DYSBmBdHjsZxjcDdcYC8WtF-GbdEzZBLk0_CrPR8ByqB17bq9y9D83xfGGmPsRKHzmXvAZdmANm10mkdBGpIpNk6jyCKWz0u4Fy8u9-xsXU13AWE_Zt49o-97a2zdNIGM6hdsj-Kyn-h6SUzOJvHOhttbqLE-StcO4IE"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Overview -->
+<section class="py-16 bg-white dark:bg-background-dark border-y border-coffee-light dark:border-white/5">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto">
+<div class="mb-12 text-center">
+<h2 class="text-3xl font-bold text-text-main dark:text-white mb-4">Tinjauan Proyek</h2>
+<div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-10">
+<!-- Challenges -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<h3 class="text-xl font-bold text-text-main dark:text-white">Tantangan Bisnis</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-red-400 mt-1 text-lg">close</span>
+<span>Proses pemesanan manual yang lambat menyebabkan antrian panjang saat jam sibuk.</span>
+</li>
+<li class="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-red-400 mt-1 text-lg">close</span>
+<span>Visibilitas online yang rendah sehingga sulit menjangkau pelanggan baru di luar area sekitar.</span>
+</li>
+<li class="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-red-400 mt-1 text-lg">close</span>
+<span>Kesulitan mengelola update menu harian yang sering berubah.</span>
+</li>
+</ul>
+</div>
+<!-- Solutions -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<h3 class="text-xl font-bold text-text-main dark:text-white">Solusi Kami</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-green-500 mt-1 text-lg">check</span>
+<span>Sistem menu digital interaktif yang terintegrasi langsung dengan WhatsApp Business.</span>
+</li>
+<li class="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-green-500 mt-1 text-lg">check</span>
+<span>Landing page SEO-friendly dengan optimasi kata kunci lokal ("Kopi Enak Jakarta Selatan").</span>
+</li>
+<li class="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-green-500 mt-1 text-lg">check</span>
+<span>CMS sederhana yang memungkinkan staff mengubah item menu dalam hitungan detik.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Features Grid -->
+<section class="py-16 container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<span class="text-primary font-bold tracking-wide uppercase text-sm">Fitur Utama</span>
+<h2 class="text-3xl md:text-4xl font-bold text-text-main dark:text-white mt-2">Teknologi Yang Kami Terapkan</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-coffee-light dark:border-white/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors mb-4">
+<span class="material-symbols-outlined">restaurant_menu</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Digital Menu</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">Tampilan menu responsif dengan kategori yang mudah dinavigasi dan foto produk HD.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-coffee-light dark:border-white/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors mb-4">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2">WhatsApp Order</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">Checkout otomatis mengirim format pesan rapi ke WhatsApp barista tanpa perlu install aplikasi lain.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-coffee-light dark:border-white/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors mb-4">
+<span class="material-symbols-outlined">photo_library</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Dynamic Gallery</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">Showcase suasana kedai yang terhubung dengan feed Instagram terbaru.</p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-coffee-light dark:border-white/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors mb-4">
+<span class="material-symbols-outlined">map</span>
+</div>
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Smart Location</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">Integrasi Google Maps API untuk estimasi jarak dan rute tercepat bagi pelanggan.</p>
+</div>
+</div>
+</section>
+<!-- Impact Stats -->
+<section class="py-12 bg-primary text-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/20">
+<div class="p-2">
+<div class="text-4xl lg:text-5xl font-black mb-2">40%</div>
+<div class="text-sm lg:text-base font-medium opacity-90">Kenaikan Pesanan Online</div>
+</div>
+<div class="p-2">
+<div class="text-4xl lg:text-5xl font-black mb-2">150+</div>
+<div class="text-sm lg:text-base font-medium opacity-90">Pesanan Bulanan</div>
+</div>
+<div class="p-2">
+<div class="text-4xl lg:text-5xl font-black mb-2">4.9</div>
+<div class="text-sm lg:text-base font-medium opacity-90">Rating Google Maps</div>
+</div>
+<div class="p-2">
+<div class="text-4xl lg:text-5xl font-black mb-2">3x</div>
+<div class="text-sm lg:text-base font-medium opacity-90">Liputan Media Lokal</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Full Page Previews -->
+<section class="py-16 bg-coffee-light dark:bg-[#221a10]">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-text-main dark:text-white">Visual Showcase</h2>
+<p class="text-gray-600 dark:text-gray-400 mt-2">Desain antarmuka yang bersih, hangat, dan fungsional.</p>
+</div>
+<div class="grid gap-12">
+<!-- Preview 1 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
+<img alt="Detailed screenshot of the coffee bean selection page with earthy tones" class="w-full h-auto object-cover" data-alt="Detailed screenshot of the coffee bean selection page with earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ-smOWfbDWgwm7GpOR4fyPxBtpjCjS88ZLCzaxHmPTKhDQzKliroqqUyPuyslpoS9J4iu8BgIktPA-yzYDT56mUpE4Rp0Fy3J_v38_Zm1kWkzuP9nQLQbDUzhAv8398-VE5u9Lt9i81LCo7gkIwD7NOxcmkG1bAR8FBr8KZChUp9Sa1AN2JbJ590O_McJHRth-2Ao0mdrkoXoywZuqMYnP7sZ-ona-JxGutZ2Bq5sUf6zmbfKj2H1Ph_5YQuDfzomFeAr7BgYtad6"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-20">
+<h4 class="text-xl font-bold">Halaman Menu &amp; Produk</h4>
+<p class="text-sm opacity-90">Menampilkan detail origin kopi dengan storytelling visual.</p>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Preview 2 -->
+<div class="rounded-2xl overflow-hidden shadow-lg border border-coffee-medium dark:border-white/10">
+<img alt="Contact page design with map and warm lighting aesthetic" class="w-full h-full object-cover aspect-[4/3]" data-alt="Contact page design with map and warm lighting aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyXhVsMJFiY0TPneXKyrR6s4-MlSxASBc-5lbohj7tNABI3fo0TZ02Fy8GcLQ2_iwM3tva6mX2afFBZHCDA_n-mTt1BYkxHP9FftML065zCopF8TQUO84eBNlxjruqKUMFs8B9Sy4MLTNewGIkdfePkoVhItNCEc8wpuB1V2oDZt1XvsyC373NEKHa1Eu43J4Vx543umh6Zu0z6-d2M9TCF9ltKVChqW0clSb_1Bzk7M7F3xDf9heU33ahKm9dfvkOl9VYYiAbjy6Y"/>
+</div>
+<!-- Preview 3 -->
+<div class="rounded-2xl overflow-hidden shadow-lg border border-coffee-medium dark:border-white/10">
+<img alt="About Us page focusing on the barista and brewing process" class="w-full h-full object-cover aspect-[4/3]" data-alt="About Us page focusing on the barista and brewing process" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9TznfKEaVjBg8kjvGtXzpNbOwQ54KxujyqXPnKcc-gU3msAoIf9oYqh4nQ2WfNhVYdGf419zS52FgnyyuflcxZBhI52PrXolD3IVtyupm9zzF-uDIUomnA3PkzI-V5LrTiE9dhS0E5N6SygWSZJM682wSzXUrwrafiR6Kixgd70hIkzexwUxMFSikNQwx0FwPqXwhhKgxNU4VFzsPJqMZCp8yT64o7zEo6TcjofYQq6IJcqJ8dhpMRwF0nJSFCbUc1cqybL2FB3N2"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial -->
+<section class="py-20 bg-white dark:bg-background-dark relative overflow-hidden">
+<div class="absolute top-0 left-0 text-coffee-light dark:text-white/5 font-serif text-[12rem] leading-none -translate-y-1/2 translate-x-10 select-none">"</div>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="max-w-3xl mx-auto text-center">
+<div class="mb-8">
+<img alt="Portrait of Andi, owner of Kopi Senja Nusantara" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-primary shadow-lg" data-alt="Portrait of Andi, owner of Kopi Senja Nusantara" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Hpq5OorSIA0JXgyTDaNC7rMGihW4wCOxXncTgRRljp2iV5vJ19CnnaJuwjF-x09w8kO7Itq_bJ5IDZHAmHh3XRYcnEI4VAU15bFZvxW-8BChG6qn5nLgiEjH6m8aaGqqOBwqFoy1Q8UzoVmVfNHiyYqivHlxKv2jic6QjItgmvGJBYnv8T8P3HuCQBtmuQjHospmaoeeyDDR2vZQKA-eFxAisM3uGVL1xiMdwpdejbVp4ZygT6UhoJoWkq4tsFpMJWPaBmlLdSFf"/>
+</div>
+<blockquote class="text-2xl md:text-3xl font-medium text-text-main dark:text-white leading-relaxed mb-8">
+                            "Studio Web benar-benar mengerti apa yang kami butuhkan. Tidak hanya desainnya yang estetik dan sesuai dengan vibe kedai kami, tapi sistem pemesanannya benar-benar <span class="text-primary font-bold">mengubah cara kami beroperasi</span> menjadi jauh lebih efisien."
+                        </blockquote>
+<div class="flex flex-col items-center">
+<cite class="not-italic font-bold text-lg text-text-main dark:text-white">Andi Pratama</cite>
+<span class="text-sm text-gray-500 uppercase tracking-wide mt-1">Owner, Kopi Senja Nusantara</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation -->
+<section class="border-t border-coffee-light dark:border-white/10 py-10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center">
+<a class="group flex items-center gap-3 text-gray-500 hover:text-text-main dark:hover:text-white transition-colors" href="#">
+<div class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center group-hover:border-primary group-hover:text-primary transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<span class="text-sm font-medium hidden sm:inline-block">Project Sebelumnya</span>
+</a>
+<a class="inline-flex items-center gap-2 px-4 py-2 bg-coffee-light dark:bg-white/5 rounded-lg text-text-main dark:text-white hover:bg-coffee-medium dark:hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">grid_view</span>
+<span class="text-sm font-bold">Semua Portofolio</span>
+</a>
+<a class="group flex items-center gap-3 text-gray-500 hover:text-text-main dark:hover:text-white transition-colors" href="#">
+<span class="text-sm font-medium hidden sm:inline-block">Project Berikutnya</span>
+<div class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center group-hover:border-primary group-hover:text-primary transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- CTA Footer -->
+<section class="bg-background-dark text-white py-16 relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-8 bg-white/5 rounded-2xl p-8 lg:p-12 border border-white/10 backdrop-blur-sm">
+<div class="max-w-2xl">
+<h2 class="text-3xl font-bold mb-3">Ingin Website Seperti Ini?</h2>
+<p class="text-gray-300 text-lg">Tingkatkan kredibilitas bisnis Anda dengan website profesional yang didesain khusus untuk konversi.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+<button class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3.5 rounded-lg font-bold transition-all shadow-lg w-full sm:w-auto">
+<span class="text-xl leading-none" style="font-family: sans-serif;">✆</span>
+                                Chat WhatsApp
+                            </button>
+<button class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3.5 rounded-lg font-bold transition-all shadow-lg shadow-primary/20 w-full sm:w-auto">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+                                Jadwalkan Konsultasi
+                            </button>
+</div>
+</div>
+<!-- Simple Footer Links -->
+<div class="mt-16 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+<p>© 2023 Studio Web. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

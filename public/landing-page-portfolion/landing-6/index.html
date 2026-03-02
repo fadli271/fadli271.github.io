@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-50 px-6 md:px-20 py-3">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">storefront</span>
+</div>
+<h2 class="text-slate-900 text-lg font-bold leading-tight tracking-[-0.015em]">Studio Design</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-700 hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-primary text-sm font-bold" href="#">Portfolio</a>
+<a class="text-slate-700 hover:text-primary text-sm font-medium transition-colors" href="#">Services</a>
+<a class="text-slate-700 hover:text-primary text-sm font-medium transition-colors" href="#">Contact</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold transition-transform hover:scale-105 active:scale-95">
+                    Hire Us
+                </button>
+</div>
+</header>
+<main class="flex-1">
+<div class="max-w-[1200px] mx-auto px-4 md:px-10 py-10">
+<!-- Hero Section -->
+<div class="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
+<div class="flex-1 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
+                            Case Study: Retail Digitization
+                        </div>
+<h1 class="text-slate-900 text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl lg:text-6xl">
+                            Toko Kelontong Berkah: Digitalisasi Stok &amp; Kasir Modern
+                        </h1>
+<p class="text-slate-600 text-lg leading-relaxed">
+                            Transformasi toko kelontong tradisional menjadi modern dengan sistem POS berbasis tablet yang efisien, akurat, dan mudah digunakan oleh siapa saja.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="flex h-12 items-center justify-center rounded-lg px-6 bg-primary text-white font-bold transition-all hover:shadow-lg hover:shadow-primary/30">
+                                Lihat Demo
+                            </button>
+<button class="flex h-12 items-center justify-center rounded-lg px-6 border border-slate-300 text-slate-700 font-bold hover:bg-slate-50">
+                                Unduh Case Study
+                            </button>
+</div>
+</div>
+<div class="flex-1">
+<div class="w-full aspect-[4/3] bg-slate-200 rounded-2xl overflow-hidden shadow-2xl relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Tablet POS interface in a modern grocery store" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAL638uaRNqmClZ8nCT1UgKM884SQvhVl0VPZ6F9z_a3isbHCQZUfk_6afjfwSzKb4JwTXEbJZC_id5PBtNcOxWHFVJgftvIiWlMv1vuL_27erTO4ZUkMlDezHnzi2CLOGt8kjWCSYzJtpQqOyCHoqV5rgoGKbKqjwKDQAZp5q4Qm51AM6Sxr76FrVXZDGLT01we0Vz8UVf5FJgeA9G_Af9x6xbopSkvC9pJVAalm6yLR_AzqOWPxC3UI2QVuob3VQNq0cvgZIbtNff');"></div>
+</div>
+</div>
+</div>
+<!-- Masalah Bisnis Section -->
+<section class="mt-24">
+<div class="flex flex-col items-center text-center mb-12">
+<h2 class="text-slate-900 text-3xl font-bold tracking-tight">Masalah Bisnis</h2>
+<div class="h-1 w-20 bg-primary mt-4 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-4 p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+<div class="size-12 rounded-xl bg-red-50 text-red-500 flex items-center justify-center">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<h3 class="text-slate-900 text-xl font-bold">Kesalahan Pencatatan</h3>
+<p class="text-slate-600 leading-relaxed">Pencatatan manual di buku seringkali menyebabkan selisih perhitungan laba rugi yang signifikan setiap bulannya.</p>
+</div>
+<div class="flex flex-col gap-4 p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+<div class="size-12 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<h3 class="text-slate-900 text-xl font-bold">Stok Tidak Terpantau</h3>
+<p class="text-slate-600 leading-relaxed">Sulit mengetahui stok barang yang menipis secara real-time, mengakibatkan hilangnya potensi penjualan.</p>
+</div>
+<div class="flex flex-col gap-4 p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+<div class="size-12 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center">
+<span class="material-symbols-outlined">timer</span>
+</div>
+<h3 class="text-slate-900 text-xl font-bold">Antrean Panjang</h3>
+<p class="text-slate-600 leading-relaxed">Proses penghitungan manual yang lambat saat jam sibuk membuat pelanggan tidak nyaman dan antrean mengular.</p>
+</div>
+</div>
+</section>
+<!-- Solusi Digital Section -->
+<section class="mt-24 py-16 px-8 rounded-3xl bg-slate-900 text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full -mr-32 -mt-32"></div>
+<div class="relative z-10">
+<div class="flex flex-col items-center text-center mb-16">
+<h2 class="text-3xl font-bold tracking-tight">Solusi Digital Kami</h2>
+<p class="mt-4 text-slate-400 max-w-2xl">Fitur utama yang kami kembangkan untuk memodernisasi operasional Toko Berkah.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center gap-4">
+<div class="size-16 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-3xl">touch_app</span>
+</div>
+<h3 class="text-xl font-bold">Input Barang Sekali Klik</h3>
+<p class="text-slate-400">Sistem scan barcode cepat yang memudahkan input ribuan item ke dalam sistem dalam waktu singkat.</p>
+</div>
+<div class="flex flex-col items-center text-center gap-4">
+<div class="size-16 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-3xl">analytics</span>
+</div>
+<h3 class="text-xl font-bold">Laporan Otomatis</h3>
+<p class="text-slate-400">Laporan penjualan, modal, dan laba bersih dihasilkan secara otomatis setiap hari tanpa perlu kalkulasi manual.</p>
+</div>
+<div class="flex flex-col items-center text-center gap-4">
+<div class="size-16 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-3xl">notifications_active</span>
+</div>
+<h3 class="text-xl font-bold">Peringatan Stok Tipis</h3>
+<p class="text-slate-400">Notifikasi otomatis saat stok barang mencapai batas minimum, memudahkan proses re-stock ke supplier.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Hasil Nyata Metrics -->
+<section class="mt-24">
+<div class="bg-primary/5 rounded-3xl p-10 md:p-16 border border-primary/10">
+<h2 class="text-slate-900 text-center text-3xl font-bold mb-12">Hasil Nyata Setelah Implementasi</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl text-center shadow-sm">
+<div class="text-primary text-5xl font-black mb-2">50%</div>
+<div class="text-slate-600 font-semibold">Lebih Cepat</div>
+<p class="text-slate-500 text-sm mt-2">Waktu transaksi kasir berkurang drastis</p>
+</div>
+<div class="bg-white p-8 rounded-2xl text-center shadow-sm">
+<div class="text-primary text-5xl font-black mb-2">0</div>
+<div class="text-slate-600 font-semibold">Selisih Stok</div>
+<p class="text-slate-500 text-sm mt-2">Akurasi stok barang mencapai 100%</p>
+</div>
+<div class="bg-white p-8 rounded-2xl text-center shadow-sm">
+<div class="text-primary text-5xl font-black mb-2">100%</div>
+<div class="text-slate-600 font-semibold">Transparan</div>
+<p class="text-slate-500 text-sm mt-2">Pendapatan harian terpantau real-time</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="mt-24 max-w-4xl mx-auto">
+<div class="relative p-8 md:p-12 bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
+<span class="material-symbols-outlined absolute top-4 left-4 text-8xl text-primary/5 select-none">format_quote</span>
+<div class="relative z-10 flex flex-col items-center text-center">
+<p class="text-slate-700 text-xl md:text-2xl italic leading-relaxed mb-8 font-medium">
+                                "Semenjak pakai sistem ini, saya tidak perlu lagi begadang cuma buat hitung buku. Sekarang saya bisa pantau untung rugi toko langsung dari HP sambil di rumah. Luar biasa membantu!"
+                            </p>
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-full bg-cover bg-center border-2 border-primary" data-alt="Portrait of Ibu Siti, the shop owner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxoKsyZp3wZIh_bbFcUnkMK0sRccYm7DS5lXfOTjdVY59cZ23A_X91DEnxYfm_5k2uC2rzx5jVJDJV98dIfs2svsIZtPwtoxFjpPDxJxkmPcbvXjxVylsSrAJbnGPlLNk906mtfViC-rpMB0u9oZDv9dHO-TLMe2WE6ufMVaiqW4Z-p_5yv8baSTrriBt3oLU7q707Cs7vScMcBghv_MQQtjvzbkOM0i1WyprCNUeVz_rHiWeu3svn4Y-QCpmBXkZAPDxNMGWYg8Mz');"></div>
+<div class="text-left">
+<div class="text-slate-900 font-bold text-lg">Ibu Siti</div>
+<div class="text-primary font-medium text-sm">Pemilik Toko Kelontong Berkah</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 pt-20 pb-10">
+<div class="max-w-[1200px] mx-auto px-6 md:px-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+<div class="flex items-center gap-3 text-white">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg">
+<span class="material-symbols-outlined text-white">storefront</span>
+</div>
+<h2 class="text-xl font-bold">Studio Design</h2>
+</div>
+<p class="text-sm leading-relaxed">
+                            Membantu UMKM Indonesia melangkah ke era digital dengan solusi teknologi yang tepat guna dan terjangkau.
+                        </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="size-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Quick Links</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Portfolio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Contact Info</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<span>Jl. Melati No. 123, Jakarta Selatan, Indonesia</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+<span>+62 812 3456 7890</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-sm">schedule</span>
+<span>Mon - Fri: 09:00 - 18:00</span>
+</li>
+</ul>
+</div>
+<div class="rounded-xl overflow-hidden h-48 border border-slate-700">
+<div class="w-full h-full bg-slate-800 relative">
+<div class="absolute inset-0 bg-cover bg-center grayscale opacity-50" data-alt="Map location of the studio in Jakarta" data-location="Jakarta" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAoJAG-jTU8WMeMRcoKmQ0NUXNT8SrTEiNXKEcIRp3CqqTCJsf0WZSS4QIphtIR5Dj6JO4pi6VkI4QPuLKHR-RlxGCC0kDiWHb0UMxZACLeLOflrhqOECJI1Q2CCUFkvNRE3IRxcVsbAgPEfXyamROGq2OIEealcp2ZXzG0UtAnktOzuZDVEi0OeBsmOVIUHt4pHFZS7pCzvK1ezZ25zLTThtCR3TAnUDLHmGGdUf-XAg2D_RV2YLuDvo2tusN484Fg06UVIe_edAX_');"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">location_on</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs tracking-wider uppercase font-medium">
+<p>© 2024 STUDIO DESIGN. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-6 right-6 z-[100] group" href="https://wa.me/6281234567890" target="_blank">
+<div class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110 active:scale-90">
+<svg class="size-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .004 5.412.002 12.048c0 2.12.54 4.189 1.564 6.027L0 24l6.124-1.605a11.822 11.822 0 005.925 1.577h.004c6.636 0 12.046-5.411 12.048-12.047a11.816 11.816 0 00-3.564-8.423"></path>
+</svg>
+<div class="absolute right-full mr-4 bg-slate-900 text-white px-3 py-1 rounded text-sm font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    Konsultasi Gratis
+                </div>
+</div>
+</a>
+</div>
+</body></html>

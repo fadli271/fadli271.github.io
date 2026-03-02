@@ -6,12 +6,8 @@ import React from "react";
 
 import { Providers } from "./providers";
 
-import {
-  siteMetadata,
-  siteViewport,
-  footerConfig,
-  structuredData,
-} from "@/app/content/site-config";
+import { siteMetadata, siteViewport, structuredData } from "@/app/content/site-config";
+import LayoutShell from "@/components/layout-shell";
 
 export const metadata: Metadata = siteMetadata;
 
@@ -24,7 +20,18 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="id">
-      <head />
+      <head>
+        {/* Google Material Symbols for services page icons */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+          rel="stylesheet"
+        />
+        {/* Inter font */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className={clsx("min-h-screen font-sans antialiased")}>
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ? (
           <>
@@ -78,15 +85,7 @@ export default function RootLayout({
         />
 
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="relative flex flex-col min-h-screen">
-            <div className="aurora-background" />
-            <main className="mx-auto w-full flex-grow bg-slate-50">
-              {children}
-            </main>
-            <footer className="w-full flex items-center justify-center py-4 text-sm text-black bg-white">
-              <p>{footerConfig.copyright}</p>
-            </footer>
-          </div>
+          <LayoutShell>{children}</LayoutShell>
         </Providers>
       </body>
     </html>

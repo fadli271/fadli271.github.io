@@ -1,300 +1,484 @@
-import {
-  Rocket,
-  PenSquare,
-  Code2,
-  LineChart,
-  ShieldCheck,
-  Clock4,
-  LaptopMinimal,
-  MessagesSquare,
-  Smartphone,
-  ServerCog,
-  LayoutTemplate,
-} from "lucide-react";
-
 import { buildWhatsAppLink } from "@/lib/contact-info";
 
-export const whatsappCta = buildWhatsAppLink(
-  "Halo Fadli, saya mau konsultasi kebutuhan website (Starter/Growth/Scale) dan kemungkinan sistem aplikasi atau mobile app untuk bisnis saya.",
-);
+// Context-specific WhatsApp prefill messages
+export const waLinks = {
+  navbar: buildWhatsAppLink(
+    "Halo Fadli, saya baru lihat website FadliDevStudio dan tertarik untuk konsultasi.",
+  ),
+  hero: buildWhatsAppLink(
+    "Halo Fadli, saya ingin konsultasi gratis soal kebutuhan website untuk bisnis saya.",
+  ),
+  promo: buildWhatsAppLink(
+    "Halo Fadli, saya tertarik dengan promo Gratis Maintenance 3 Bulan. Bisa info lebih lanjut?",
+  ),
+  paketHemat: buildWhatsAppLink(
+    "Halo Fadli, saya tertarik dengan Paket Hemat (Rp 895.000). Bisa jelaskan detailnya?",
+  ),
+  paketStarter: buildWhatsAppLink(
+    "Halo Fadli, saya mau tanya soal Paket Starter (Rp 1.490.000) untuk bisnis saya.",
+  ),
+  paketGrowth: buildWhatsAppLink(
+    "Halo Fadli, saya tertarik Paket Growth (Rp 3.900.000). Bisa diskusi kebutuhan saya?",
+  ),
+  paketScale: buildWhatsAppLink(
+    "Halo Fadli, saya butuh Paket Scale (Rp 7.900.000) untuk proyek saya. Kapan bisa mulai?",
+  ),
+  tokoOnline: buildWhatsAppLink(
+    "Halo Fadli, saya butuh website toko online / katalog produk. Bisa konsultasi dulu?",
+  ),
+  sistemOperasional: buildWhatsAppLink(
+    "Halo Fadli, saya butuh sistem operasional untuk bisnis saya (stok, absensi, dll). Bisa diskusi?",
+  ),
+  mobileApps: buildWhatsAppLink(
+    "Halo Fadli, saya tertarik bikin aplikasi mobile untuk bisnis saya. Bisa konsultasi?",
+  ),
+  ctaFinal: buildWhatsAppLink(
+    "Halo Fadli, saya sudah lihat layanan FadliDevStudio dan ingin mulai project. Kapan bisa diskusi?",
+  ),
+  floating: buildWhatsAppLink(
+    "Halo Fadli, saya mau tanya-tanya dulu soal jasa pembuatan website.",
+  ),
+};
 
-export const whyMePoints = [
-  {
-    icon: ShieldCheck,
-    text: "Pakai bahasa awam, bukan istilah teknis. Setiap keputusan dijelaskan dengan dampak ke bisnis: chat, order, dan efisiensi kerja.",
-  },
-  {
-    icon: LaptopMinimal,
-    text: "Scope jelas sejak awal. Ada batas revisi, alur kerja rapi, dan update progres rutin biar proyek tidak molor.",
-  },
-  {
-    icon: LineChart,
-    text: "Fokus hasil, bukan hanya tampilan. Website disusun untuk mempermudah calon pelanggan chat/booking.",
-  },
-  {
-    icon: Clock4,
-    text: "Model biaya transparan: Setup (sekali), Infra tahunan, Maintenance opsional. Tidak ada biaya tersembunyi.",
-  },
+// Keep backward compat
+export const whatsappCta = waLinks.hero;
+
+export const serviceNavLinks = [
+  { label: "Intro", href: "#intro" },
+  { label: "Kenapa Kami?", href: "#keunggulan" },
+  { label: "Layanan", href: "#layanan" },
+  { label: "Portofolio", href: "#portfolio" },
+  { label: "Klien", href: "#testimoni" },
+  { label: "Harga", href: "#harga" },
+  { label: "FAQ", href: "#faq-section" },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "Awalnya bingung mulai dari mana. Setelah dibikinin landing page yang jelas, chat WA jadi lebih terarah dan closing lebih cepat.",
-    author: "Nadya, Owner Bisnis Edukasi",
-  },
-  {
-    quote:
-      "Yang paling membantu itu prosesnya rapi dan gak ribet. Tim kami tinggal pakai, tanpa pusing urusan teknis.",
-    author: "Raka, Distributor Logistik",
-  },
-  {
-    quote:
-      "Biaya dijelasin dari awal: mana setup, mana biaya tahunan. Jadi enak buat ngatur cashflow usaha.",
-    author: "Dina, Owner UMKM Kuliner",
-  },
+export const trustBadges = [
+  "Garansi Support",
+  "Transparan",
+  "Terpercaya",
 ];
 
-export const services = [
+export const whyChooseUs = [
   {
-    title: "Landing Page Penjualan",
+    iconName: "handshake",
+    iconBgClass: "bg-blue-100",
+    iconHoverBgClass: "group-hover:bg-primary group-hover:text-white",
+    iconTextClass: "text-primary",
+    title: "Partner Bisnis",
     description:
-      "Satu halaman penjualan yang fokus mendorong calon pelanggan chat/booking dengan alur jelas dari atas sampai bawah.",
-    deliverables: [
-      "Struktur konten yang mudah dipahami",
-      "CTA WhatsApp/Form yang jelas",
-      "Mobile-first dan loading cepat",
-    ],
+      "Bukan cuma vendor lepas. Kami fokus pada konsultasi jangka panjang untuk pertumbuhan bisnis Anda.",
   },
   {
-    title: "Website Profil Bisnis",
+    iconName: "settings_suggest",
+    iconBgClass: "bg-purple-100",
+    iconHoverBgClass: "group-hover:bg-purple-600 group-hover:text-white",
+    iconTextClass: "text-purple-600",
+    title: "Bebas Ribet Teknis",
     description:
-      "Website profil yang rapi untuk membangun kepercayaan, menjelaskan layanan, dan memudahkan pelanggan menemukan serta menghubungi bisnis Anda.",
-    deliverables: [
-      "Halaman profil, layanan, FAQ, kontak",
-      "Siap dibuka nyaman di HP",
-      "Siap jadi aset jangka panjang",
-    ],
+      "Kami urus semua teknis (server, domain, error). Anda cukup fokus jualan dan urus pelanggan.",
   },
   {
-    title: "Sistem Aplikasi & Mobile App",
+    iconName: "trending_up",
+    iconBgClass: "bg-orange-100",
+    iconHoverBgClass: "group-hover:bg-orange-500 group-hover:text-white",
+    iconTextClass: "text-orange-600",
+    title: "Desain Menjual",
     description:
-      "Pengembangan sistem aplikasi sederhana (web atau mobile) untuk operasional internal atau interaksi pelanggan, disesuaikan dengan alur kerja bisnis Anda.",
-    deliverables: [
-      "Sesi discovery untuk memetakan kebutuhan dan alur kerja",
-      "Rancangan modul/fungsi prioritas yang realistis",
-      "Estimasi biaya dan timeline terpisah sebelum eksekusi pembangunan",
-    ],
+      "Website didesain psikologis untuk mengubah pengunjung menjadi pembeli (High Conversion).",
+  },
+  {
+    iconName: "support_agent",
+    iconBgClass: "bg-green-100",
+    iconHoverBgClass: "group-hover:bg-green-600 group-hover:text-white",
+    iconTextClass: "text-green-600",
+    title: "Support Prioritas",
+    description:
+      "Dukungan WhatsApp fast response. Ada kendala? Langsung chat, langsung kami bantu.",
   },
 ];
 
 export const processSteps = [
   {
-    title: "Kualifikasi Kebutuhan",
+    iconName: "chat_bubble",
+    iconColor: "text-primary",
+    numberBg: "bg-primary",
+    blurBg: "bg-blue-100",
+    title: "Konsultasi & Pesan",
     description:
-      "Kita petakan target bisnis, budget, dan timeline. Tujuannya biar paket yang dipilih benar-benar pas.",
-    icon: MessagesSquare,
+      "Cukup cerita target bisnis Anda dan pilih paket yang pas. Gak perlu paham coding, kami yang terjemahkan ide Anda.",
   },
   {
-    title: "Perencanaan & Scope Lock",
+    iconName: "design_services",
+    iconColor: "text-purple-600",
+    numberBg: "bg-purple-600",
+    blurBg: "bg-purple-100",
+    title: "Proses Desain & Dev",
     description:
-      "Setelah kebutuhan jelas, saya kirim outline kerja + deliverables + jadwal. Scope dikunci agar pengerjaan efisien.",
-    icon: PenSquare,
+      "Duduk manis sementara kami kerjakan teknisnya. Anda akan dapat update berkala dan revisi sampai cocok.",
   },
   {
-    title: "Pembuatan",
+    iconName: "rocket_launch",
+    iconColor: "text-green-500",
+    numberBg: "bg-green-500",
+    blurBg: "bg-green-100",
+    title: "Launch & Training",
     description:
-      "Implementasi dilakukan sesuai paket. Update progres rutin via WhatsApp, revisi mengikuti ketentuan paket.",
-    icon: Code2,
+      "Website live! Kami gak cuma lepas tangan, tapi ajari Anda cara pakainya sampai bisa kelola sendiri.",
+  },
+];
+
+export const promoBanner = {
+  badge: "Penawaran Terbatas untuk UMKM!",
+  headline: "Gratis Maintenance 3 Bulan!",
+  subtext:
+    "Kami tidak hanya membuatkan website, kami menjaganya tetap aman dan up-to-date sehingga Anda bisa fokus jualan.",
+  ctaText: "Ambil Promo Sekarang",
+  urgencyText: "Hanya untuk 5 pendaftar pertama bulan ini",
+};
+
+export const services = [
+  {
+    iconName: "inventory_2",
+    iconBgClass: "bg-blue-50",
+    title: "Sistem Operasional",
+    description:
+      "Aplikasi untuk merapikan data kantor. Stok barang, absen karyawan, laporan keuangan.",
+    features: ["User Friendly", "Akses HP & Laptop"],
+    isPopular: false,
   },
   {
-    title: "Go-live & Support",
+    iconName: "web",
+    iconBgClass: "bg-primary/10",
+    title: "Landing Page",
     description:
-      "Setelah live, Anda dapat panduan pakai dan support sesuai paket. Maintenance bulanan bisa ditambahkan bila diperlukan.",
-    icon: Rocket,
+      "Satu halaman khusus promosi. Fokus meyakinkan pengunjung untuk membeli atau menghubungi Anda.",
+    features: ["Copywriting Menjual", "Siap Iklan (Ads)", "High Conversion"],
+    isPopular: true,
+  },
+  {
+    iconName: "shopping_cart",
+    iconBgClass: "bg-blue-50",
+    title: "Toko Online / Katalog",
+    description:
+      "Pelanggan lihat produk dan pesan via WhatsApp otomatis tanpa install aplikasi.",
+    features: ["Mobile First Design", "Tombol 'Pesan WA'"],
+    isPopular: false,
+  },
+];
+
+export const portfolioItems = [
+  {
+    category: "Jasa",
+    categoryColor: "text-blue-500",
+    categoryBg: "bg-blue-50",
+    title: "Bengkel Mobil Sejahtera",
+    description: "Landing page servis mobil dengan booking via WhatsApp & info layanan lengkap.",
+    stat: "Trust Meningkat",
+    statSub: "Booking WA Otomatis",
+    image: "/landing-page-portfolion/landing-1/image.png",
+    link: "/landing-page-portfolion/landing-1/index.html",
+  },
+  {
+    category: "Kuliner",
+    categoryColor: "text-orange-500",
+    categoryBg: "bg-orange-50",
+    title: "Kopi Senja Nusantara",
+    description: "Website kafe dengan menu digital, galeri, dan order via WhatsApp.",
+    stat: "+40% Order Online",
+    statSub: "150+ Pesanan / Bulan",
+    image: "/landing-page-portfolion/landing-2/image.png",
+    link: "/landing-page-portfolion/landing-2/index.html",
+  },
+  {
+    category: "Fashion",
+    categoryColor: "text-pink-500",
+    categoryBg: "bg-pink-50",
+    title: "Butik Elegan Fashion",
+    description: "Katalog digital premium dengan checkout WhatsApp & sinkronisasi stok.",
+    stat: "Penjualan +120%",
+    statSub: "Branding Premium",
+    image: "/landing-page-portfolion/landing-3/image.png",
+    link: "/landing-page-portfolion/landing-3/index.html",
+  },
+  {
+    category: "Jasa",
+    categoryColor: "text-purple-500",
+    categoryBg: "bg-purple-50",
+    title: "Bengkel Maju Jaya",
+    description: "Sistem booking online, galeri before-after, & review pelanggan.",
+    stat: "Tampil Profesional",
+    statSub: "Reservasi Online Aktif",
+    image: "/landing-page-portfolion/landing-4/image.png",
+    link: "/landing-page-portfolion/landing-4/index.html",
+  },
+  {
+    category: "Jasa",
+    categoryColor: "text-cyan-500",
+    categoryBg: "bg-cyan-50",
+    title: "JagoCompro",
+    description: "Studio desain company profile profesional dengan pengerjaan express 1 hari.",
+    stat: "Desain Premium",
+    statSub: "Express 1 Hari Jadi",
+    image: "/portfolio/project-jago-compro-1.png",
+    link: "https://jagocompro.id",
+  },
+  {
+    category: "Retail",
+    categoryColor: "text-green-500",
+    categoryBg: "bg-green-50",
+    title: "Toko Kelontong Berkah",
+    description: "Landing page POS modern dengan digitalisasi stok & kasir otomatis.",
+    stat: "Hemat 5 Jam/Minggu",
+    statSub: "Kasir & Stok Digital",
+    image: "/landing-page-portfolion/landing-6/image.png",
+    link: "/landing-page-portfolion/landing-6/index.html",
+  },
+];
+
+export const portfolioCategories = ["Semua", "Kuliner", "Fashion", "Jasa", "Retail"];
+
+export const testimonials = [
+  {
+    iconName: "restaurant",
+    iconBgClass: "bg-orange-100",
+    iconColorClass: "text-orange-600",
+    businessName: "Kedai Kopi Nusantara",
+    businessType: "F&B / Kuliner",
+    rating: 5,
+    quote:
+      "Omzet naik 30% karena pelanggan bisa lihat foto menu yang menggugah selera lewat QR code.",
+    authorName: "Budi Santoso",
+    authorRole: "Owner",
+    authorInitials: "BS",
+  },
+  {
+    iconName: "checkroom",
+    iconBgClass: "bg-pink-100",
+    iconColorClass: "text-pink-600",
+    businessName: "Butik Elegan",
+    businessType: "Fashion Retail",
+    rating: 5,
+    quote:
+      "Jualan di IG makin gampang. Customer tinggal klik link di bio, pilih, dan bayar.",
+    authorName: "Siti Aminah",
+    authorRole: "Founder",
+    authorInitials: "SA",
+  },
+  {
+    iconName: "build",
+    iconBgClass: "bg-blue-100",
+    iconColorClass: "text-blue-600",
+    businessName: "Bengkel Maju Jaya",
+    businessType: "Jasa Otomotif",
+    rating: 4.5,
+    quote:
+      "Website bikin bengkel kami kelihatan profesional. Klien korporat jadi percaya.",
+    authorName: "Hendro Wijaya",
+    authorRole: "Kepala Mekanik",
+    authorInitials: "HW",
+  },
+  {
+    iconName: "soup_kitchen",
+    iconBgClass: "bg-green-100",
+    iconColorClass: "text-green-600",
+    businessName: "Dapur Mama",
+    businessType: "Katering & Event",
+    rating: 5,
+    quote:
+      "Sistem booking katering online sangat membantu atur jadwal. Gak ada lagi drama salah catat.",
+    authorName: "Ibu Ratna",
+    authorRole: "Pemilik",
+    authorInitials: "IR",
+  },
+  {
+    iconName: "hardware",
+    iconBgClass: "bg-purple-100",
+    iconColorClass: "text-purple-600",
+    businessName: "Toko Bangunan Berkah",
+    businessType: "Toko Bangunan",
+    rating: 5,
+    quote:
+      "Sistem inventaris baru bikin saya tahu persis stok semen dan keramik, gak pernah kelebihan order lagi.",
+    authorName: "Pak Darmawan",
+    authorRole: "Pemilik",
+    authorInitials: "PD",
+  },
+  {
+    iconName: "spa",
+    iconBgClass: "bg-rose-100",
+    iconColorClass: "text-rose-600",
+    businessName: "Salon Cantik Ayu",
+    businessType: "Salon Kecantikan",
+    rating: 5,
+    quote:
+      "Booking online bikin jadwal treatment rapi, gak ada lagi pelanggan bolos karena lupa catat.",
+    authorName: "Maya Putri",
+    authorRole: "Owner",
+    authorInitials: "MP",
+  },
+  {
+    iconName: "local_pharmacy",
+    iconBgClass: "bg-teal-100",
+    iconColorClass: "text-teal-600",
+    businessName: "Apotek Sehat Selalu",
+    businessType: "Apotek",
+    rating: 4.5,
+    quote:
+      "Katalog digital bantu pelanggan cek obat tersedia duluan, jadi gak banyak telepon bolak-balik.",
+    authorName: "Dr. Andi",
+    authorRole: "Apoteker",
+    authorInitials: "DA",
+  },
+  {
+    iconName: "print",
+    iconBgClass: "bg-indigo-100",
+    iconColorClass: "text-indigo-600",
+    businessName: "Percetakan Jaya Print",
+    businessType: "Percetakan & Desain",
+    rating: 5,
+    quote:
+      "Landing page baru menarik klien korporat karena mereka bisa lihat portofolio dan request cetak banyak langsung online.",
+    authorName: "Rizky Pratama",
+    authorRole: "Manager",
+    authorInitials: "RP",
   },
 ];
 
 export const packages = [
   {
-    label: "Hemat UMKM",
-    price: "Rp899.000 (Setup)",
-    fit: "Untuk usaha baru/rumahan yang budget-nya sangat ketat, tapi ingin punya landing page rapi dan bisa dipakai iklan.",
+    label: "Paket Hemat",
+    price: "Rp 895.000",
+    infra: "Rp 300.000 / tahun",
+    fit: "Butuh tampil online cepat dengan budget minimal? Ini jawabannya.",
+    isPopular: false,
+    waLink: waLinks.paketHemat,
     includes: [
-      "1 landing page template (maks. 5 section)",
-      "Copywriting dasar dari materi yang Anda kirim",
-      "Revisi 1x (minor: teks & gambar)",
-      "Estimasi selesai 3–5 hari kerja",
-      "Infra tahunan (domain + hosting): Rp1.200.000/tahun",
+      { iconName: "web", text: "Landing Page 1 Halaman" },
+      { iconName: "smartphone", text: "Desain Responsive (Mobile Friendly)" },
+      { iconName: "chat", text: "Integrasi WhatsApp" },
+      { iconName: "timer", text: "Selesai dalam 5 Hari" },
     ],
   },
   {
     label: "Starter",
-    price: "Rp1.490.000 (Setup)",
-    fit: "Untuk UMKM yang mau mulai cepat dengan scope jelas dan tampilan lebih custom.",
+    price: "Rp 1.490.000",
+    infra: "Rp 1.200.000 / tahun",
+    fit: "Cocok untuk UMKM / personal brand yang butuh landing page rapi & profesional.",
+    isPopular: false,
+    waLink: waLinks.paketStarter,
     includes: [
-      "1 landing page custom (maks. 5 section)",
-      "Struktur konten disusun ulang supaya alur baca lebih jelas",
-      "Revisi 1x (layout & konten)",
-      "Estimasi selesai 2–4 hari kerja",
-      "Infra tahunan (domain + hosting): Rp1.200.000/tahun",
+      { iconName: "web", text: "Website 1–2 Halaman Utama" },
+      { iconName: "dns", text: "Domain & Hosting (1 tahun)" },
+      { iconName: "smartphone", text: "Desain Mobile-Friendly" },
+      { iconName: "chat", text: "Integrasi WhatsApp" },
+      { iconName: "timer", text: "Selesai dalam 1–2 Minggu" },
     ],
   },
   {
     label: "Growth",
-    price: "Rp3.900.000 (Setup)",
-    fit: "Untuk bisnis yang ingin dorong konversi lebih serius dan butuh presentasi brand yang lebih kuat.",
+    price: "Rp 3.900.000",
+    infra: "Rp 2.000.000 / tahun",
+    fit: "Untuk bisnis yang mulai serius scale dan butuh lebih banyak fitur.",
+    isPopular: true,
+    waLink: waLinks.paketGrowth,
     includes: [
-      "1 landing page komprehensif (maks. 9 section)",
-      "Copywriting dioptimasi bersama (focus: manfaat & CTA)",
-      "1 integrasi sederhana (mis. form WhatsApp, formulir online, atau tool lain yang sejenis)",
-      "Revisi 2x (layout, teks, dan komponen)",
-      "Estimasi selesai 5–8 hari kerja",
-      "Infra tahunan (domain + hosting): Rp2.000.000/tahun",
+      { iconName: "check_circle", text: "Semua Fitur Starter" },
+      { iconName: "layers", text: "Multi Halaman & Section Lengkap" },
+      { iconName: "contact_mail", text: "Form Lead Capture" },
+      { iconName: "search", text: "Optimalisasi SEO Dasar" },
+      { iconName: "photo_library", text: "Galeri Produk/Jasa" },
+      { iconName: "support_agent", text: "Prioritas Support" },
+      { iconName: "timer", text: "Selesai dalam 2–3 Minggu" },
     ],
-    highlighted: true,
   },
   {
     label: "Scale",
-    price: "Rp7.900.000 (Setup)",
-    fit: "Untuk bisnis yang butuh mini-site (beberapa halaman) dan integrasi lebih advance.",
+    price: "Rp 7.900.000",
+    infra: "Rp 3.000.000 / tahun",
+    fit: "Brand yang butuh fleksibilitas tinggi, siap scale & eksperimen.",
+    isPopular: false,
+    waLink: waLinks.paketScale,
     includes: [
-      "Mini website hingga 5 halaman (mis. Home, Tentang, Layanan, Testimoni, Kontak)",
-      "Hingga 2 integrasi sederhana sesuai kebutuhan (mis. WA, formulir, atau embed kalender/booking)",
-      "Revisi 3x (layout, konten, dan penyesuaian kecil fitur)",
-      "Estimasi selesai 10–15 hari kerja",
-      "Infra tahunan (domain + hosting): Rp3.000.000/tahun",
+      { iconName: "check_circle", text: "Semua Fitur Growth" },
+      { iconName: "dashboard", text: "Layout Kompleks & Custom" },
+      { iconName: "integration_instructions", text: "Integrasi Advance" },
+      { iconName: "campaign", text: "Siap Campaign Berulang" },
+      { iconName: "analytics", text: "Analytics & Tracking" },
+      { iconName: "security", text: "Keamanan Extra" },
+      { iconName: "timer", text: "Selesai dalam 3–4 Minggu" },
     ],
   },
 ];
 
-export const capabilities = [
+export const standardFeatures = [
   {
-    title: "Fokus Konversi",
+    iconName: "lock",
+    title: "Sertifikat SSL (Gembok Hijau)",
     description:
-      "Setiap halaman disusun untuk mendorong action yang jelas: chat, booking, atau inquiry.",
-    icon: ServerCog,
+      "Website aman dan dipercaya Google. Data pelanggan Anda terlindungi sepenuhnya.",
   },
   {
-    title: "Mobile-First",
+    iconName: "dns",
+    title: "Hosting & Domain Gratis",
     description:
-      "Mayoritas pengunjung datang dari HP, jadi performa mobile jadi prioritas utama.",
-    icon: Smartphone,
+      "Sudah termasuk biaya sewa server dan alamat website untuk 1 tahun pertama.",
   },
   {
-    title: "Siap Dikembangkan",
+    iconName: "cloud_sync",
+    title: "Backup Data Rutin",
     description:
-      "Struktur dibuat rapi supaya website, sistem aplikasi, atau mobile app mudah ditambah fitur saat bisnis tumbuh.",
-    icon: LayoutTemplate,
+      "Tidak perlu takut data hilang. Kami melakukan backup otomatis secara berkala.",
+  },
+  {
+    iconName: "devices",
+    title: "Mobile Responsive",
+    description:
+      "Website tampil sempurna di HP, Tablet, maupun Laptop pelanggan Anda.",
+  },
+  {
+    iconName: "security",
+    title: "Keamanan Anti-Hacker",
+    description:
+      "Proteksi berlapis untuk menjaga website Anda dari serangan pihak tidak bertanggung jawab.",
+  },
+  {
+    iconName: "share",
+    title: "Integrasi Media Sosial",
+    description:
+      "Hubungkan website langsung ke WhatsApp, Instagram, dan Facebook Anda.",
   },
 ];
 
 export const faqs = [
   {
-    question:
-      "Kenapa biayanya dipisah jadi setup, infra tahunan, dan maintenance?",
+    question: "Berapa lama proses pembuatannya?",
     answer:
-      "Supaya transparan dan mudah dipahami. Setup adalah biaya pembuatan awal (sekali bayar), infra tahunan adalah biaya operasional website tetap online, maintenance sifatnya opsional.",
+      "Rata-rata 7-14 hari kerja tergantung kompleksitas fitur yang Anda butuhkan. Untuk landing page sederhana bisa selesai dalam 3-5 hari.",
   },
   {
-    question: "Berapa lama pengerjaan tiap paket?",
+    question: "Berapa biaya perpanjangan domain & hosting?",
     answer:
-      "Starter 2–4 hari kerja, Growth 5–8 hari kerja, Scale 10–15 hari kerja. Timeline mulai dihitung setelah DP masuk dan materi inti lengkap.",
+      "Sangat terjangkau. Mulai dari Rp 500rb/tahun, sudah termasuk dukungan teknis ringan dan pembaruan keamanan (Security Updates).",
   },
   {
-    question: "Apakah saya harus bayar maintenance bulanan?",
+    question: "Apakah saya pemilik sah website saya?",
     answer:
-      "Tidak wajib. Maintenance bulanan bersifat opsional jika Anda ingin update rutin dan support operasional lebih cepat.",
+      "Ya, 100%. Data, domain, dan konten sepenuhnya milik Anda. Kami hanya membantu mengelolanya secara teknis. Anda akan mendapatkan akses penuh jika diinginkan.",
   },
   {
-    question: "Kalau minta perubahan tambahan di luar paket gimana?",
+    question: "Bagaimana jika saya ingin mengubah isi website?",
     answer:
-      "Perubahan di luar paket akan dicatat sebagai permintaan tambahan. Saya kirim estimasi biaya dan waktu dulu, dan hanya dikerjakan setelah disetujui.",
+      "Kami menyediakan video tutorial mudah (tanpa perlu coding) sehingga Anda bisa edit sendiri. Atau jika sibuk, Anda bisa menggunakan jasa update konten kami.",
   },
   {
-    question: "Skema pembayarannya seperti apa?",
+    question: "Kalau ada error teknis gimana?",
     answer:
-      "Starter/Growth: DP 50% lalu pelunasan 50% sebelum handover final. Scale: 40% awal, 40% saat progres utama, 20% sebelum handover.",
+      "Tenang, semua paket sudah termasuk garansi maintenance. Jika website down atau error sistem, kami perbaiki gratis selama masa garansi/langganan aktif.",
   },
   {
-    question: "Kalau budget saya terbatas, mulai dari mana?",
+    question: "Pembayarannya bagaimana?",
     answer:
-      "Mulai dari paket Starter dulu agar website cepat live dengan biaya terkontrol. Setelah hasilnya terlihat, bisa upgrade ke Growth/Scale.",
-  },
-  {
-    question:
-      "Apakah Anda juga bisa bantu buat sistem aplikasi atau mobile app?",
-    answer:
-      "Bisa. Untuk sistem aplikasi atau mobile app, kita mulai dari sesi discovery singkat dulu untuk memetakan kebutuhan dan alur kerja. Setelah itu saya kirim estimasi biaya dan timeline terpisah di luar paket website.",
+      "DP 50% di awal untuk memulai pengerjaan. Pelunasan 50% sisanya dilakukan setelah website jadi dan Anda puas dengan hasilnya, sebelum serah terima akses penuh.",
   },
 ];
-
-export const heroHooks = [
-  "Chat awal via WhatsApp gratis, tanpa paksaan deal.",
-  "Untuk website: harga transparan (setup, infra tahunan, maintenance opsional). Untuk sistem aplikasi/mobile app: estimasi dibuat terpisah setelah sesi discovery.",
-  "Fokus hasil bisnis: website, sistem aplikasi, dan mobile app yang bantu tambah chat, lead, dan efisiensi kerja.",
-];
-
-export const serviceNavLinks = [
-  { label: "Intro", href: "#hero" },
-  { label: "Keahlian", href: "#capabilities" },
-  { label: "Layanan", href: "#services" },
-  { label: "Proses", href: "#process" },
-  { label: "Harga", href: "#pricing" },
-  { label: "App/System", href: "#app-system-estimate" },
-  { label: "FAQ", href: "#faq" },
-];
-
-export const appSystemEstimate = {
-  title: "Estimasi Proyek App/System",
-  subtitle:
-    "Untuk sistem aplikasi dan mobile app, estimasi dibuat terpisah setelah sesi discovery.",
-  points: [
-    "Sesi discovery 30–60 menit untuk mapping kebutuhan dan alur kerja",
-    "Output berupa rekomendasi scope MVP + estimasi timeline",
-    "Estimasi biaya disesuaikan kompleksitas fitur dan integrasi",
-  ],
-  note: "Agar aman budget, proyek app/system disarankan dimulai dari MVP lalu dikembangkan bertahap.",
-};
-
-export const consultationForm = {
-  title: "Daftar Konsultasi Website UMKM",
-  subtitle:
-    "Langsung lanjut ke Google Form untuk kirim detail kebutuhan website atau sistem Anda.",
-  labels: {
-    name: "Nama lengkap",
-    business: "Nama usaha / brand",
-    whatsapp: "No. WhatsApp aktif",
-    status: "Status website saat ini",
-    notes: "Catatan kebutuhan (opsional)",
-  },
-  submitLabel: "Lanjut ke Google Form Konsultasi",
-  actionUrl: "https://forms.gle/ZcqYfozG3c3chtsZA",
-  hint: "Siapkan informasi singkat (nama usaha, kontak, kebutuhan) lalu klik tombol untuk membuka Google Form. Semua respons terkirim langsung ke saya.",
-};
-
-export const scopeTerms = {
-  heading: "Scope & Ketentuan",
-  subheading: "Biar ekspektasi jelas dari awal, tanpa kejutan di belakang.",
-  includedBullets: [
-    "Desain & pengembangan website sesuai paket: Hemat UMKM, Starter, Growth, Scale.",
-    "Jumlah revisi sesuai paket: 1x/1x/2x/3x pada desain & konten utama.",
-    "Implementasi layout responsif (mobile & desktop) dan struktur SEO dasar.",
-    "Integrasi formulir kontak dasar & koneksi ke WhatsApp atau email bisnis.",
-    "Onboarding singkat: panduan penggunaan dasar dan serah-terima aset digital.",
-  ],
-  excludedBullets: [
-    "Biaya domain, hosting, dan infrastruktur website tahunan (ditagih terpisah).",
-    "Pengembangan aplikasi/sistem kustom (estimasi & kontrak terpisah).",
-    "Manajemen konten berkelanjutan: update rutin, upload produk, dan admin harian.",
-    "Jasa iklan berbayar (Ads) dan pengelolaan media sosial.",
-    "Produksi konten khusus seperti foto/video profesional di luar materi yang Anda sediakan.",
-  ],
-  paymentBullets: [
-    "Pekerjaan dimulai setelah DP diterima (umumnya 50%), sisanya saat project selesai.",
-    "Biaya domain/hosting & infrastruktur website ditagih tahunan sebelum masa aktif berakhir.",
-    "Estimasi dan pembayaran untuk app/sistem kustom dibuat pada perjanjian terpisah.",
-    "Perubahan di luar scope & jatah revisi dibuatkan penawaran tambahan terlebih dahulu.",
-    "Pembayaran melalui transfer bank/QRIS resmi atas nama perusahaan.",
-  ],
-};
