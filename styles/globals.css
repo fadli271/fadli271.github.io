@@ -167,3 +167,37 @@ details[open] summary ~ * {
     transform: translateX(-50%);
   }
 }
+
+/* Splash screen animations */
+@keyframes splash-logo {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes splash-bar {
+  0%,
+  100% {
+    width: 3rem;
+    opacity: 0.5;
+  }
+  50% {
+    width: 5rem;
+    opacity: 1;
+  }
+}
