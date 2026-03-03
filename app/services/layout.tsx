@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     siteName: "Fadli Dev Studio",
     images: [
       {
-        url: "/brand.png",
-        width: 512,
-        height: 512,
+        url: "/services/opengraph-image",
+        width: 1200,
+        height: 630,
         alt: "Fadli Dev Studio — Jasa Pembuatan Website UMKM",
       },
     ],
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Jasa Pembuatan Website UMKM — Mulai Rp 895rb",
     description:
       "Landing page, toko online, sistem operasional. Next.js, SEO friendly, gratis maintenance 3 bulan.",
-    images: ["/brand.png"],
+    images: ["/services/opengraph-image"],
   },
   robots: {
     index: true,
@@ -86,7 +86,7 @@ const localBusiness = {
     "Jasa pembuatan website profesional untuk UMKM. Landing page, toko online, sistem operasional dengan teknologi modern.",
   url: SERVICES_URL,
   logo: `${SITE_URL}/brand.png`,
-  image: `${SITE_URL}/brand.png`,
+  image: `${SITE_URL}/services/opengraph-image`,
   telephone: "+6282189642027",
   email: "fadli.dev.studio27@gmail.com",
   founder: {

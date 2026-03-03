@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 export const revalidate = false;
 
-const SITE_URL = "https://fadli271.github.io";
+const SITE_URL = "https://fadlidevstudio.my.id";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
