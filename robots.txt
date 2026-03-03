@@ -1,5 +1,5 @@
 User-Agent: *
 Allow: /
 
-Host: https://fadli271.github.io
-Sitemap: https://fadli271.github.io/sitemap.xml
+Host: https://fadlidevstudio.my.id
+Sitemap: https://fadlidevstudio.my.id/sitemap.xml
