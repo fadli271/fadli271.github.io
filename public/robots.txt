@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fadli.github.io/sitemap.xml
+Sitemap: https://fadli271.github.io/sitemap.xml

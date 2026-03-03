@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 export const revalidate = false;
 
-const SITE_URL = "https://fadli.github.io";
+const SITE_URL = "https://fadli271.github.io";
 
 export default function robots(): MetadataRoute.Robots {
   return {

@@ -3,16 +3,23 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 export const revalidate = false;
 
-const SITE_URL = "https://fadli.github.io";
+const SITE_URL = "https://fadli271.github.io";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseEntries = ["", "/services"];
-  const lastModified = new Date();
+  const now = new Date();
 
-  return baseEntries.map((path) => ({
-    url: `${SITE_URL}${path}`,
-    lastModified,
-    changeFrequency: "monthly",
-    priority: path === "" ? 1 : 0.8,
-  }));
+  return [
+    {
+      url: SITE_URL,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${SITE_URL}/services`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+  ];
 }

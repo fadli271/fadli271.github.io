@@ -281,7 +281,7 @@ export default function ServiceLandingPage() {
         </div>
       )}
       {/* ── Navbar ── */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-lg shadow-black/[0.04] transition-all duration-300 dark:bg-gray-900/95 dark:border-gray-800">
+      <nav aria-label="Main navigation" className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-lg shadow-black/[0.04] transition-all duration-300 dark:bg-gray-900/95 dark:border-gray-800">
         {/* Scroll Progress Bar */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 origin-left z-50"
@@ -405,6 +405,7 @@ export default function ServiceLandingPage() {
         )}
       </nav>
 
+      <main aria-label="Layanan Fadli Dev Studio">
       {/* ── Hero / Intro ── */}
       <section
         className="relative pt-20 pb-32 overflow-hidden bg-pattern dark:bg-gray-950"
@@ -1313,9 +1314,10 @@ export default function ServiceLandingPage() {
           </ScaleIn>
         </div>
       </section>
+      </main>
 
       {/* ── Footer ── */}
-      <footer className="bg-slate-900 text-white pt-20 pb-10 border-t border-slate-800 relative overflow-hidden">
+      <footer aria-label="Footer" className="bg-slate-900 text-white pt-20 pb-10 border-t border-slate-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none" />
         <div className={`${containerClass} relative z-10`}>
