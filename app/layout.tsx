@@ -6,7 +6,11 @@ import React from "react";
 
 import { Providers } from "./providers";
 
-import { siteMetadata, siteViewport, structuredData } from "@/app/content/site-config";
+import {
+  siteMetadata,
+  siteViewport,
+  structuredData,
+} from "@/app/content/site-config";
 import LayoutShell from "@/components/layout-shell";
 
 export const metadata: Metadata = siteMetadata;

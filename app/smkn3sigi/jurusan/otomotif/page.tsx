@@ -8,7 +8,7 @@ export default function OtomotifPage() {
       {/* Navbar (Simplified) */}
       <nav className="fixed w-full z-50 bg-smk-primary/95 backdrop-blur-sm text-white shadow-lg h-20">
         <div className="container mx-auto px-6 h-full flex justify-between items-center">
-          <Link href="/smkn3sigi" className="flex items-center gap-3 group">
+          <Link className="flex items-center gap-3 group" href="/smkn3sigi">
             <FaArrowLeft className="text-xl group-hover:-translate-x-1 transition-transform" />
             <span className="font-bold">Kembali ke Beranda</span>
           </Link>
@@ -29,7 +29,7 @@ export default function OtomotifPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-smk-primary text-white pt-20">
         <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('/smkn3/hero-bg.png')] bg-cover bg-center mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-[url('/smkn3/hero-bg.png')] bg-cover bg-center mix-blend-overlay" />
         </div>
         <div className="relative z-10 container mx-auto px-6 text-center">
           <div className="w-32 h-32 mx-auto mb-6 relative animate-bounce-slow">
@@ -111,10 +111,10 @@ export default function OtomotifPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative h-32 rounded-lg overflow-hidden bg-slate-100">
                     <Image
-                      src="/smkn3/gallery/auto.png"
                       fill
                       alt="Bengkel Otomotif"
                       className="object-cover"
+                      src="/smkn3/gallery/auto.png"
                     />
                   </div>
                   <div className="relative h-32 rounded-lg overflow-hidden bg-slate-100">

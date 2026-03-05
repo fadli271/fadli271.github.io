@@ -7,7 +7,8 @@ import { SITE_URL } from "@/app/content/site-config";
 const SERVICES_URL = `${SITE_URL}/services`;
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Website UMKM — Landing Page, Toko Online & Sistem Operasional",
+  title:
+    "Jasa Pembuatan Website UMKM — Landing Page, Toko Online & Sistem Operasional",
   description:
     "Jasa pembuatan website profesional untuk UMKM. Landing page, toko online, sistem operasional mulai Rp 895rb. Teknologi Next.js, SEO friendly, gratis maintenance 3 bulan. Konsultasi gratis via WhatsApp.",
   keywords: [

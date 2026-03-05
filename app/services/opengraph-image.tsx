@@ -259,33 +259,35 @@ export default function OpenGraphImage() {
                 fontSize: 18,
               }}
             >
-              {["SEO Friendly", "Dibangun dengan Next.js", "Gratis maintenance 3 bulan"].map(
-                (item) => (
+              {[
+                "SEO Friendly",
+                "Dibangun dengan Next.js",
+                "Gratis maintenance 3 bulan",
+              ].map((item) => (
+                <div
+                  key={item}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 8,
+                    padding: "8px 14px",
+                    borderRadius: 999,
+                    background: "rgba(15,23,42,0.85)",
+                    border: "1px solid rgba(51,65,85,0.9)",
+                  }}
+                >
                   <div
-                    key={item}
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 8,
-                      padding: "8px 14px",
+                      width: 7,
+                      height: 7,
                       borderRadius: 999,
-                      background: "rgba(15,23,42,0.85)",
-                      border: "1px solid rgba(51,65,85,0.9)",
+                      background:
+                        "radial-gradient(circle at 30% 30%, #f9fafb, #22c55e)",
                     }}
-                  >
-                    <div
-                      style={{
-                        width: 7,
-                        height: 7,
-                        borderRadius: 999,
-                        background:
-                          "radial-gradient(circle at 30% 30%, #f9fafb, #22c55e)",
-                      }}
-                    />
-                    <span>{item}</span>
-                  </div>
-                ),
-              )}
+                  />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 

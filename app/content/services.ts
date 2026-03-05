@@ -50,14 +50,11 @@ export const serviceNavLinks = [
   { label: "Portofolio", href: "#portfolio" },
   { label: "Klien", href: "#testimoni" },
   { label: "Harga", href: "#harga" },
+  { label: "Kalkulator", href: "/services/calculator" },
   { label: "FAQ", href: "#faq-section" },
 ];
 
-export const trustBadges = [
-  "Garansi Support",
-  "Transparan",
-  "Terpercaya",
-];
+export const trustBadges = ["Garansi Support", "Transparan", "Terpercaya"];
 
 export const whyChooseUs = [
   {
@@ -173,7 +170,8 @@ export const portfolioItems = [
     categoryColor: "text-blue-500",
     categoryBg: "bg-blue-50",
     title: "Bengkel Mobil Sejahtera",
-    description: "Landing page servis mobil dengan booking via WhatsApp & info layanan lengkap.",
+    description:
+      "Landing page servis mobil dengan booking via WhatsApp & info layanan lengkap.",
     stat: "Trust Meningkat",
     statSub: "Booking WA Otomatis",
     image: "/landing-page-portfolion/landing-1/image.png",
@@ -184,7 +182,8 @@ export const portfolioItems = [
     categoryColor: "text-orange-500",
     categoryBg: "bg-orange-50",
     title: "Kopi Senja Nusantara",
-    description: "Website kafe dengan menu digital, galeri, dan order via WhatsApp.",
+    description:
+      "Website kafe dengan menu digital, galeri, dan order via WhatsApp.",
     stat: "+40% Order Online",
     statSub: "150+ Pesanan / Bulan",
     image: "/landing-page-portfolion/landing-2/image.png",
@@ -195,7 +194,8 @@ export const portfolioItems = [
     categoryColor: "text-pink-500",
     categoryBg: "bg-pink-50",
     title: "Butik Elegan Fashion",
-    description: "Katalog digital premium dengan checkout WhatsApp & sinkronisasi stok.",
+    description:
+      "Katalog digital premium dengan checkout WhatsApp & sinkronisasi stok.",
     stat: "Penjualan +120%",
     statSub: "Branding Premium",
     image: "/landing-page-portfolion/landing-3/image.png",
@@ -206,7 +206,8 @@ export const portfolioItems = [
     categoryColor: "text-purple-500",
     categoryBg: "bg-purple-50",
     title: "Bengkel Maju Jaya",
-    description: "Sistem booking online, galeri before-after, & review pelanggan.",
+    description:
+      "Sistem booking online, galeri before-after, & review pelanggan.",
     stat: "Tampil Profesional",
     statSub: "Reservasi Online Aktif",
     image: "/landing-page-portfolion/landing-4/image.png",
@@ -217,7 +218,8 @@ export const portfolioItems = [
     categoryColor: "text-cyan-500",
     categoryBg: "bg-cyan-50",
     title: "JagoCompro",
-    description: "Studio desain company profile profesional dengan pengerjaan express 1 hari.",
+    description:
+      "Studio desain company profile profesional dengan pengerjaan express 1 hari.",
     stat: "Desain Premium",
     statSub: "Express 1 Hari Jadi",
     image: "/portfolio/project-jago-compro-1.png",
@@ -228,7 +230,8 @@ export const portfolioItems = [
     categoryColor: "text-green-500",
     categoryBg: "bg-green-50",
     title: "Toko Kelontong Berkah",
-    description: "Landing page POS modern dengan digitalisasi stok & kasir otomatis.",
+    description:
+      "Landing page POS modern dengan digitalisasi stok & kasir otomatis.",
     stat: "Hemat 5 Jam/Minggu",
     statSub: "Kasir & Stok Digital",
     image: "/landing-page-portfolion/landing-6/image.png",
@@ -236,7 +239,13 @@ export const portfolioItems = [
   },
 ];
 
-export const portfolioCategories = ["Semua", "Kuliner", "Fashion", "Jasa", "Retail"];
+export const portfolioCategories = [
+  "Semua",
+  "Kuliner",
+  "Fashion",
+  "Jasa",
+  "Retail",
+];
 
 export const testimonials = [
   {
@@ -355,7 +364,10 @@ export const packages = [
     waLink: waLinks.paketHemat,
     includes: [
       { iconName: "web", text: "Halaman fokus jualan & CTA WhatsApp" },
-      { iconName: "smartphone", text: "Tampil meyakinkan di HP (mobile-first)" },
+      {
+        iconName: "smartphone",
+        text: "Tampil meyakinkan di HP (mobile-first)",
+      },
       { iconName: "chat", text: "Lead langsung masuk ke WhatsApp" },
       { iconName: "timer", text: "Go-live cepat dalam 5 hari" },
     ],
@@ -384,11 +396,23 @@ export const packages = [
     waLink: waLinks.paketGrowth,
     includes: [
       { iconName: "check_circle", text: "Semua fondasi Starter" },
-      { iconName: "layers", text: "Multi halaman untuk funnel yang lebih lengkap" },
-      { iconName: "contact_mail", text: "Lead capture untuk follow-up lebih terukur" },
+      {
+        iconName: "layers",
+        text: "Multi halaman untuk funnel yang lebih lengkap",
+      },
+      {
+        iconName: "contact_mail",
+        text: "Lead capture untuk follow-up lebih terukur",
+      },
       { iconName: "search", text: "SEO dasar untuk jangkauan organik" },
-      { iconName: "photo_library", text: "Showcase produk/jasa agar trust naik" },
-      { iconName: "support_agent", text: "Prioritas support saat campaign berjalan" },
+      {
+        iconName: "photo_library",
+        text: "Showcase produk/jasa agar trust naik",
+      },
+      {
+        iconName: "support_agent",
+        text: "Prioritas support saat campaign berjalan",
+      },
       { iconName: "timer", text: "Go-live 2–3 minggu" },
     ],
   },
@@ -401,10 +425,19 @@ export const packages = [
     waLink: waLinks.paketScale,
     includes: [
       { iconName: "check_circle", text: "Semua fondasi Growth" },
-      { iconName: "dashboard", text: "Layout kompleks untuk kebutuhan multi funnel" },
-      { iconName: "integration_instructions", text: "Integrasi lanjutan sesuai workflow bisnis" },
+      {
+        iconName: "dashboard",
+        text: "Layout kompleks untuk kebutuhan multi funnel",
+      },
+      {
+        iconName: "integration_instructions",
+        text: "Integrasi lanjutan sesuai workflow bisnis",
+      },
       { iconName: "campaign", text: "Siap campaign berulang lintas channel" },
-      { iconName: "analytics", text: "Tracking performa untuk keputusan cepat" },
+      {
+        iconName: "analytics",
+        text: "Tracking performa untuk keputusan cepat",
+      },
       { iconName: "security", text: "Lapisan keamanan ekstra" },
       { iconName: "timer", text: "Go-live 3–4 minggu" },
     ],
@@ -512,7 +545,8 @@ export const translations = {
     // Why Choose Us
     whyUsLabel: "Why Choose Us",
     whyUsTitle: "Lebih dari Sekadar Vendor Website",
-    whyUsSubtitle: "Kami hadir sebagai partner strategis untuk pertumbuhan bisnis SME Anda.",
+    whyUsSubtitle:
+      "Kami hadir sebagai partner strategis untuk pertumbuhan bisnis SME Anda.",
     whyChooseUsItems: [
       {
         title: "Partner Bisnis",
@@ -571,7 +605,8 @@ export const translations = {
     // Services
     servicesLabel: "Pilihan Layanan",
     servicesTitle: "Paket Lengkap untuk Kebutuhan Anda",
-    servicesSubtitle: "Teknologi modern (Next.js) yang cepat, aman, dan SEO Friendly.",
+    servicesSubtitle:
+      "Teknologi modern (Next.js) yang cepat, aman, dan SEO Friendly.",
     popularBadge: "Popular",
     servicesList: [
       {
@@ -585,7 +620,11 @@ export const translations = {
         title: "Landing Page",
         description:
           "Satu halaman khusus promosi. Fokus meyakinkan pengunjung untuk membeli atau menghubungi Anda.",
-        features: ["Copywriting Menjual", "Siap Iklan (Ads)", "High Conversion"],
+        features: [
+          "Copywriting Menjual",
+          "Siap Iklan (Ads)",
+          "High Conversion",
+        ],
         isPopular: true,
       },
       {
@@ -604,21 +643,27 @@ export const translations = {
       "Lihat bagaimana kami membantu bisnis seperti Anda tumbuh digital.",
     miniCaseStudiesLabel: "Mini Case Study",
     miniCaseStudiesTitle: "Sebelum & Sesudah Go Digital",
-    miniCaseStudiesSubtitle: "Ringkas, langsung ke dampak bisnis yang paling terasa.",
+    miniCaseStudiesSubtitle:
+      "Ringkas, langsung ke dampak bisnis yang paling terasa.",
     miniCaseStudies: [
       {
-        problem: "Calon pelanggan sering tanya hal yang sama di chat, respon jadi lambat.",
-        solution: "Buat landing page dengan struktur FAQ + CTA WhatsApp yang jelas.",
+        problem:
+          "Calon pelanggan sering tanya hal yang sama di chat, respon jadi lambat.",
+        solution:
+          "Buat landing page dengan struktur FAQ + CTA WhatsApp yang jelas.",
         result: "Chat lebih terarah, closing lebih cepat.",
       },
       {
-        problem: "Katalog produk masih manual, sering salah kirim info harga/stok.",
-        solution: "Bangun katalog digital mobile-first dengan kategori & CTA pesan langsung.",
+        problem:
+          "Katalog produk masih manual, sering salah kirim info harga/stok.",
+        solution:
+          "Bangun katalog digital mobile-first dengan kategori & CTA pesan langsung.",
         result: "Waktu admin lebih hemat, order online lebih konsisten.",
       },
       {
         problem: "Lead dari iklan masuk tapi sulit ditrack sumbernya.",
-        solution: "Tambahkan form lead capture + tracking event dasar untuk kampanye.",
+        solution:
+          "Tambahkan form lead capture + tracking event dasar untuk kampanye.",
         result: "Follow-up lebih terukur, keputusan marketing lebih cepat.",
       },
     ],
@@ -743,8 +788,7 @@ export const translations = {
     packagesList: [
       {
         label: "Paket Hemat",
-        fit:
-          "Cocok untuk mulai dapat lead/chat WhatsApp harian dengan biaya paling efisien.",
+        fit: "Cocok untuk mulai dapat lead/chat WhatsApp harian dengan biaya paling efisien.",
         includes: [
           "Halaman fokus jualan & CTA WhatsApp",
           "Tampil meyakinkan di HP (mobile-first)",
@@ -754,8 +798,7 @@ export const translations = {
       },
       {
         label: "Starter",
-        fit:
-          "Untuk UMKM/personal brand yang ingin trust naik dan konversi lebih stabil.",
+        fit: "Untuk UMKM/personal brand yang ingin trust naik dan konversi lebih stabil.",
         includes: [
           "Struktur 1–2 halaman untuk edukasi + closing",
           "Domain & hosting siap pakai 1 tahun",
@@ -766,8 +809,7 @@ export const translations = {
       },
       {
         label: "Growth",
-        fit:
-          "Untuk bisnis yang mau scale iklan/channels dengan sistem lead yang lebih rapi.",
+        fit: "Untuk bisnis yang mau scale iklan/channels dengan sistem lead yang lebih rapi.",
         includes: [
           "Semua fondasi Starter",
           "Multi halaman untuk funnel yang lebih lengkap",
@@ -780,8 +822,7 @@ export const translations = {
       },
       {
         label: "Scale",
-        fit:
-          "Untuk brand yang butuh fleksibilitas tinggi, automasi, dan eksperimen growth berulang.",
+        fit: "Untuk brand yang butuh fleksibilitas tinggi, automasi, dan eksperimen growth berulang.",
         includes: [
           "Semua fondasi Growth",
           "Layout kompleks untuk kebutuhan multi funnel",
@@ -880,8 +921,7 @@ export const translations = {
     // FAQ
     faqLabel: "Tanya Jawab",
     faqTitle: "Paling Sering Ditanyakan",
-    faqSubtitle:
-      "Informasi lengkap seputar layanan, harga, dan purna jual.",
+    faqSubtitle: "Informasi lengkap seputar layanan, harga, dan purna jual.",
     faqList: [
       {
         question: "Berapa lama proses pembuatannya?",
@@ -1021,7 +1061,8 @@ export const translations = {
     // Services
     servicesLabel: "Service Options",
     servicesTitle: "Complete Packages for Your Needs",
-    servicesSubtitle: "Modern tech (Next.js) that is fast, secure, and SEO friendly.",
+    servicesSubtitle:
+      "Modern tech (Next.js) that is fast, secure, and SEO friendly.",
     popularBadge: "Popular",
     servicesList: [
       {
@@ -1057,13 +1098,17 @@ export const translations = {
     miniCaseStudiesSubtitle: "Short and practical—focused on business impact.",
     miniCaseStudies: [
       {
-        problem: "Prospects kept asking the same questions in chat, slowing response time.",
-        solution: "Built a landing page with clear FAQ structure and WhatsApp CTA.",
+        problem:
+          "Prospects kept asking the same questions in chat, slowing response time.",
+        solution:
+          "Built a landing page with clear FAQ structure and WhatsApp CTA.",
         result: "More focused chats and faster closing.",
       },
       {
-        problem: "Product catalog was still manual, causing price/stock miscommunication.",
-        solution: "Created a mobile-first digital catalog with categories and direct order CTA.",
+        problem:
+          "Product catalog was still manual, causing price/stock miscommunication.",
+        solution:
+          "Created a mobile-first digital catalog with categories and direct order CTA.",
         result: "Less admin time and more consistent online orders.",
       },
       {
@@ -1185,15 +1230,15 @@ export const translations = {
     pricingSubtitle:
       "Transparent pricing for landing pages. For other services, let’s talk about your requirements first.",
     landingPageTitle: "Landing Page",
-    landingPageDescription: "One-time setup + annual infrastructure (server, domain, tools)",
+    landingPageDescription:
+      "One-time setup + annual infrastructure (server, domain, tools)",
     setupLabel: "Setup (one-time payment)",
     infraLabel: "Infra: ",
     packageButton: "Order This Package",
     packagesList: [
       {
         label: "Economy Package",
-        fit:
-          "Best for getting daily WhatsApp leads quickly with the most efficient budget.",
+        fit: "Best for getting daily WhatsApp leads quickly with the most efficient budget.",
         includes: [
           "Conversion-focused page with WhatsApp CTA",
           "Mobile-first, trustworthy presentation",
@@ -1203,8 +1248,7 @@ export const translations = {
       },
       {
         label: "Starter",
-        fit:
-          "For SMEs/personal brands that want stronger trust and steadier conversion.",
+        fit: "For SMEs/personal brands that want stronger trust and steadier conversion.",
         includes: [
           "1–2 page structure for education + closing",
           "Ready-to-use domain & hosting (1 year)",
@@ -1215,8 +1259,7 @@ export const translations = {
       },
       {
         label: "Growth",
-        fit:
-          "For businesses scaling ads/channels with a cleaner lead system.",
+        fit: "For businesses scaling ads/channels with a cleaner lead system.",
         includes: [
           "All Starter foundations",
           "Multi-page flow for fuller funnel journeys",
@@ -1229,8 +1272,7 @@ export const translations = {
       },
       {
         label: "Scale",
-        fit:
-          "For brands needing high flexibility, automation, and repeatable growth experiments.",
+        fit: "For brands needing high flexibility, automation, and repeatable growth experiments.",
         includes: [
           "All Growth foundations",
           "Complex layouts for multi-funnel needs",
@@ -1311,8 +1353,7 @@ export const translations = {
       },
       {
         title: "Mobile Responsive",
-        description:
-          "Website looks perfect on phones, tablets, and laptops.",
+        description: "Website looks perfect on phones, tablets, and laptops.",
       },
       {
         title: "Anti-Hacker Security",

@@ -117,7 +117,7 @@ export default function FloatingNavbar({
           ref={containerRef}
           animate={{ opacity: 1, y: 0 }}
           className={clsx(
-            "fixed z-50 w-[calc(100%-2rem)] max-w-md left-1/2 -translate-x-1/2 bottom-5 sm:w-auto sm:max-w-none sm:left-auto sm:translate-x-0 sm:top-6 sm:right-6"
+            "fixed z-50 w-[calc(100%-2rem)] max-w-md left-1/2 -translate-x-1/2 bottom-5 sm:w-auto sm:max-w-none sm:left-auto sm:translate-x-0 sm:top-6 sm:right-6",
           )}
           exit={{ opacity: 0, y: 20 }}
           initial={{ opacity: 0, y: 20 }}
@@ -136,7 +136,7 @@ export default function FloatingNavbar({
                 <ChevronDown
                   className={clsx(
                     "h-4 w-4 transition-transform",
-                    isLangOpen && "rotate-180"
+                    isLangOpen && "rotate-180",
                   )}
                 />
               </button>
@@ -144,7 +144,7 @@ export default function FloatingNavbar({
                 <div
                   className={clsx(
                     "absolute inset-x-0 bottom-full mb-2 w-full rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl",
-                    "sm:inset-auto sm:right-0 sm:top-full sm:mb-0 sm:mt-2 sm:w-48"
+                    "sm:inset-auto sm:right-0 sm:top-full sm:mb-0 sm:mt-2 sm:w-48",
                   )}
                 >
                   {(["id", "en"] as Language[]).map((lang) => (
@@ -154,7 +154,7 @@ export default function FloatingNavbar({
                         "w-full rounded-xl px-4 py-2 text-left text-sm transition-colors",
                         lang === currentLang
                           ? "bg-sky-50 text-sky-600 font-semibold"
-                          : "text-gray-600 hover:bg-gray-100"
+                          : "text-gray-600 hover:bg-gray-100",
                       )}
                       onClick={() => handleLangChange(lang)}
                     >
@@ -181,7 +181,7 @@ export default function FloatingNavbar({
                   className={clsx(
                     "absolute inset-x-0 bottom-full mb-2 w-full rounded-3xl border border-gray-100 bg-white shadow-2xl",
                     "sm:inset-auto sm:right-0 sm:top-full sm:mb-0 sm:mt-2 sm:w-56",
-                    "max-h-[60vh] overflow-y-auto"
+                    "max-h-[60vh] overflow-y-auto",
                   )}
                 >
                   <ul className="divide-y divide-gray-100 text-sm text-gray-700">
@@ -197,7 +197,7 @@ export default function FloatingNavbar({
                             {label}
                           </a>
                         </li>
-                      )
+                      ),
                     )}
                     {EXTRA_MENU_ITEMS.map(({ label, href, icon: Icon }) => (
                       <li key={href}>

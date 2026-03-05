@@ -384,25 +384,25 @@ export default function SMKN3SigiPage() {
                 Mewujudkan generasi muda yang kompeten, berakhlak mulia, dan
                 siap bersaing di dunia kerja global.
               </p>
-              <div className="flex gap-4">
-                <a
+            <div className="flex gap-4">
+                <Link
                   className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-smk-secondary transition-colors"
                   href="/"
                 >
                   <FaFacebook />
-                </a>
-                <a
+                </Link>
+                <Link
                   className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-smk-secondary transition-colors"
                   href="/"
                 >
                   <FaInstagram />
-                </a>
-                <a
+                </Link>
+                <Link
                   className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-smk-secondary transition-colors"
                   href="/"
                 >
                   <FaYoutube />
-                </a>
+                </Link>
               </div>
             </div>
 

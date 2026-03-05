@@ -113,7 +113,7 @@ export const content = {
       socialPrompt: "Atau temukan aku di sini:",
       email: CONTACT_INFO.email,
       socialLinks: buildSocialLinks(
-        "Halo Fadli, saya tertarik dengan portofoliomu!"
+        "Halo Fadli, saya tertarik dengan portofoliomu!",
       ),
       cta: {
         label: "Lihat Paket Jasa",
@@ -387,7 +387,7 @@ export const content = {
       socialPrompt: "Or find me on:",
       email: CONTACT_INFO.email,
       socialLinks: buildSocialLinks(
-        "Hi Fadli, I'm interested in your portfolio!"
+        "Hi Fadli, I'm interested in your portfolio!",
       ),
       cta: {
         label: "View Services",

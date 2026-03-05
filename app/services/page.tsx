@@ -123,6 +123,7 @@ export default function ServiceLandingPage() {
     "#portfolio": t.navPortfolio ?? "Portofolio",
     "#testimoni": t.navClients ?? "Klien",
     "#harga": t.navPricing ?? "Harga",
+    "/services/calculator": "Kalkulator",
     "#faq-section": t.navFaq ?? "FAQ",
   };
 
@@ -170,27 +171,6 @@ export default function ServiceLandingPage() {
       includes,
     };
   });
-
-  const otherServiceCards = [
-    {
-      iconName: "shopping_cart",
-      iconBg: "bg-blue-50",
-      translation: otherServicesTranslations[0],
-      waLink: waLinks.tokoOnline,
-    },
-    {
-      iconName: "inventory_2",
-      iconBg: "bg-purple-50",
-      translation: otherServicesTranslations[1],
-      waLink: waLinks.sistemOperasional,
-    },
-    {
-      iconName: "phone_android",
-      iconBg: "bg-green-50",
-      translation: otherServicesTranslations[2],
-      waLink: waLinks.mobileApps,
-    },
-  ];
 
   const footerRightsText = (
     t.footerRights ?? "Fadli Dev Studio. All rights reserved."
@@ -1052,9 +1032,9 @@ export default function ServiceLandingPage() {
               ].map((item, idx) => (
                 <FadeUp key={`roi-${idx}`} delay={idx * 0.15}>
                   <div className="group relative bg-white dark:bg-gray-900 rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-2xl hover:shadow-sky-500/10 hover:-translate-y-1 transition-all duration-500">
-                    <div className="grid md:grid-cols-12 gap-0 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-0 relative z-10">
                       {/* Left: Problem (Before) */}
-                      <div className="md:col-span-4 p-8 bg-gray-50/50 dark:bg-gray-800/20 border-r border-gray-100 dark:border-gray-800 relative overflow-hidden flex flex-col justify-center">
+                      <div className="md:col-span-4 p-6 sm:p-8 bg-gray-50/50 dark:bg-gray-800/20 border-b md:border-b-0 md:border-r border-gray-100 dark:border-gray-800 relative overflow-hidden flex flex-col justify-center">
                         <div className="absolute -top-10 -right-10 opacity-[0.03] transform group-hover:-rotate-12 transition-transform duration-700">
                           <MaterialIcon
                             className="text-9xl text-gray-900 dark:text-white"
@@ -1131,6 +1111,15 @@ export default function ServiceLandingPage() {
                 {t.pricingSubtitle ??
                   "Harga transparan untuk landing page. Untuk layanan lain, mari diskusi kebutuhan Anda terlebih dahulu."}
               </p>
+              <div className="mt-6">
+                <Link
+                  className="inline-flex items-center gap-2 bg-white border-2 border-sky-500 text-sky-500 hover:bg-sky-500 hover:text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-sky-500/10"
+                  href="/services/calculator"
+                >
+                  <MaterialIcon className="text-lg" name="calculate" />
+                  Hitung Estimasi Custom
+                </Link>
+              </div>
             </SlideLeft>
 
             {/* Landing Page Packages */}

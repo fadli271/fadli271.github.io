@@ -262,7 +262,7 @@ export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
                 title={item.title}
                 value={idx === 0 ? 8 : idx === 1 ? 15 : 10}
               />
-            )
+            ),
           )}
         </div>
       </div>
