@@ -433,23 +433,24 @@ export default function ServiceLandingPage() {
                     "Bikin website & sistem operasional tanpa ribet. Kami bangun fondasi digital yang kuat agar bisnis Anda siap melesat."}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <a
+                  <Link
                     className="bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-sky-500/20 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group"
+                    href="/services/calculator"
+                  >
+                    <MaterialIcon
+                      className="text-lg group-hover:rotate-12 transition-transform"
+                      name="calculate"
+                    />
+                    {lang === "id" ? "Hitung Estimasi Biaya" : "Calculate My Project"}
+                  </Link>
+                  <a
+                    className="bg-white border border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-sm hover:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800 flex items-center justify-center gap-2"
                     href={waLinks.hero}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
+                    <MaterialIcon name="chat" className="text-lg text-green-500" />
                     {t.heroCta ?? "Konsultasi via WhatsApp"}
-                    <MaterialIcon
-                      className="text-lg group-hover:translate-x-1 transition-transform"
-                      name="arrow_forward"
-                    />
-                  </a>
-                  <a
-                    className="bg-white border border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-sm hover:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800"
-                    href="#portfolio"
-                  >
-                    {t.heroFormCta ?? "Lihat Portofolio"}
                   </a>
                 </div>
                 <div className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-gray-500 text-sm dark:text-gray-400">

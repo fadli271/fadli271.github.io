@@ -17,7 +17,7 @@ import Link from "next/link";
 
 import { packages } from "@/app/content/services";
 
-// --- Design System Components (Replicated for Consistency) ---
+// --- Design System Components ---
 function MaterialIcon({
   name,
   className = "",
@@ -86,10 +86,11 @@ const ADD_ONS = [
     icon: "language",
   },
   {
-    id: "maintenance_extra",
-    name: "+6 Bulan Maintenance",
-    price: 1200000,
+    id: "maintenance_pro",
+    name: "Maintenance Pro (Monitoring + Update)",
+    price: 500000,
     icon: "verified_user",
+    isMonthly: true,
   },
 ];
 
@@ -105,13 +106,20 @@ export default function PricingCalculator() {
     const pkg = packages.find((p) => p.label === selectedPackageLabel);
     const basePrice = parsePrice(pkg?.price || "0");
     const extraPagesPrice = extraPages * 350000;
-    const addOnsPrice = selectedAddOns.reduce((acc, id) => {
-      const item = ADD_ONS.find((a) => a.id === id);
+    
+    let oneTimeAddOns = 0;
+    let monthlyAddOns = 0;
+    
+    selectedAddOns.forEach(id => {
+      const item = ADD_ONS.find(a => a.id === id);
+      if (item?.isMonthly) {
+        monthlyAddOns += item.price;
+      } else {
+        oneTimeAddOns += (item?.price || 0);
+      }
+    });
 
-      return acc + (item?.price || 0);
-    }, 0);
-
-    const subtotal = basePrice + extraPagesPrice + addOnsPrice;
+    const subtotal = basePrice + extraPagesPrice + oneTimeAddOns;
     const expressFee = isExpress ? subtotal * 0.25 : 0;
     const total = subtotal + expressFee;
 
@@ -119,7 +127,8 @@ export default function PricingCalculator() {
       packageName: pkg?.label,
       basePrice,
       extraPagesPrice,
-      addOnsPrice,
+      addOnsPrice: oneTimeAddOns,
+      monthlyMaintenance: monthlyAddOns,
       expressFee,
       total,
       infra: pkg?.infra,
@@ -136,7 +145,6 @@ export default function PricingCalculator() {
 
   return (
     <div className="bg-[#f8fafc] text-[#334155] min-h-screen dark:bg-gray-950 dark:text-gray-300">
-      {/* Navbar Minimalist for Calculator */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-lg shadow-black/[0.04] dark:bg-gray-900/95 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <Link className="flex items-center gap-3 group" href="/">
@@ -148,15 +156,13 @@ export default function PricingCalculator() {
             className="text-sm font-medium text-sky-500 flex items-center gap-1"
             href="/#harga"
           >
-            <MaterialIcon className="text-lg" name="arrow_back" /> Kembali ke
-            Harga
+            <MaterialIcon className="text-lg" name="arrow_back" /> Kembali ke Harga
           </Link>
         </div>
       </nav>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
-          {/* Left Side: Configuration */}
           <div className="lg:col-span-8 space-y-12">
             <header>
               <span className="text-sky-500 font-bold tracking-wider text-xs uppercase mb-2 block">
@@ -170,7 +176,7 @@ export default function PricingCalculator() {
               </p>
             </header>
 
-            {/* Step 1: Base Package */}
+            {/* Step 1 */}
             <FadeUp delay={0.1}>
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
@@ -215,7 +221,7 @@ export default function PricingCalculator() {
               </div>
             </FadeUp>
 
-            {/* Step 2: Content Scaling */}
+            {/* Step 2 */}
             <FadeUp delay={0.2}>
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
@@ -229,10 +235,7 @@ export default function PricingCalculator() {
                 <Card className="p-8 border-gray-100 dark:border-gray-800 shadow-lg shadow-black/[0.02] dark:bg-gray-900 rounded-3xl">
                   <CardBody>
                     <Slider
-                      classNames={{
-                        label:
-                          "font-bold text-gray-700 dark:text-gray-300 mb-4",
-                      }}
+                      classNames={{ label: "font-bold text-gray-700 dark:text-gray-300 mb-4" }}
                       color="primary"
                       label="Tambahan Halaman Konten"
                       maxValue={20}
@@ -243,15 +246,9 @@ export default function PricingCalculator() {
                       onChange={(v) => setExtraPages(v as number)}
                     />
                     <div className="mt-8 flex items-start gap-3 p-4 bg-slate-50 dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700">
-                      <MaterialIcon
-                        className="text-sky-500 text-lg"
-                        name="info"
-                      />
+                      <MaterialIcon className="text-sky-500 text-lg" name="info" />
                       <p className="text-xs text-gray-500 leading-relaxed">
-                        Setiap paket sudah memiliki kuota halaman dasar.
-                        Tambahkan jika Anda butuh halaman Produk, Layanan, atau
-                        Edukasi lebih banyak. (Estimasi{" "}
-                        <strong>Rp 350.000</strong> / halaman).
+                        Estimasi <strong>Rp 350.000</strong> / halaman tambahan.
                       </p>
                     </div>
                   </CardBody>
@@ -259,7 +256,7 @@ export default function PricingCalculator() {
               </div>
             </FadeUp>
 
-            {/* Step 3: Add-ons */}
+            {/* Step 3 */}
             <FadeUp delay={0.3}>
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
@@ -267,7 +264,7 @@ export default function PricingCalculator() {
                     <MaterialIcon name="add_circle" />
                   </div>
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-                    3. Fitur Strategis
+                    3. Fitur & Maintenance
                   </h2>
                 </div>
                 <CheckboxGroup
@@ -283,16 +280,13 @@ export default function PricingCalculator() {
                         value={item.id}
                       >
                         <div className="flex items-center gap-4">
-                          <MaterialIcon
-                            className="text-gray-400"
-                            name={item.icon}
-                          />
+                          <MaterialIcon className="text-gray-400" name={item.icon} />
                           <div className="flex flex-col">
                             <span className="text-sm font-bold text-gray-900 dark:text-white">
                               {item.name}
                             </span>
                             <span className="text-xs text-sky-500 font-bold">
-                              +{formatPrice(item.price)}
+                              +{formatPrice(item.price)}{item.isMonthly ? "/bln" : ""}
                             </span>
                           </div>
                         </div>
@@ -303,76 +297,56 @@ export default function PricingCalculator() {
               </div>
             </FadeUp>
 
-            {/* Step 4: Express */}
+            {/* Step 4 */}
             <FadeUp delay={0.4}>
               <div className="p-8 bg-gradient-to-r from-slate-900 to-blue-900 rounded-[2rem] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
                 <div className="flex items-center gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
-                    <MaterialIcon
-                      className="text-amber-400 text-3xl"
-                      name="rocket_launch"
-                    />
+                    <MaterialIcon className="text-amber-400 text-3xl" name="rocket_launch" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">
-                      Layanan Ekspres (Prioritas)
-                    </h3>
-                    <p className="text-sm text-blue-200 opacity-80">
-                      Selesaikan project dalam 3-5 hari kerja saja.
-                    </p>
+                    <h3 className="text-lg font-bold">Layanan Ekspres (Prioritas)</h3>
+                    <p className="text-sm text-blue-200 opacity-80">Selesaikan dalam 3-5 hari kerja.</p>
                   </div>
                 </div>
-                <Switch
-                  color="warning"
-                  isSelected={isExpress}
-                  size="lg"
-                  onValueChange={setIsExpress}
-                />
+                <Switch color="warning" isSelected={isExpress} size="lg" onValueChange={setIsExpress} />
               </div>
             </FadeUp>
           </div>
 
-          {/* Right Side: Summary Sticky */}
+          {/* Right Side */}
           <div className="lg:col-span-4 lg:sticky lg:top-32">
             <FadeUp delay={0.5}>
               <div className="bg-white dark:bg-gray-900 rounded-[2.5rem] border border-gray-100 dark:border-gray-800 shadow-2xl overflow-hidden">
                 <div className="p-8 pb-0">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                    Proyek Anda
-                  </h3>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Proyek Anda</h3>
                   <div className="space-y-5">
                     <div className="flex justify-between items-center text-sm">
-                      <span className="text-gray-500">
-                        Dasar: {calculation.packageName}
-                      </span>
-                      <span className="font-bold">
-                        {formatPrice(calculation.basePrice)}
-                      </span>
+                      <span className="text-gray-500">Dasar: {calculation.packageName}</span>
+                      <span className="font-bold">{formatPrice(calculation.basePrice)}</span>
                     </div>
                     {extraPages > 0 && (
                       <div className="flex justify-between items-center text-sm">
-                        <span className="text-gray-500">
-                          Halaman Ekstra ({extraPages}x)
-                        </span>
-                        <span className="font-bold text-sky-500">
-                          +{formatPrice(calculation.extraPagesPrice)}
-                        </span>
+                        <span>Halaman Ekstra ({extraPages}x)</span>
+                        <span className="font-bold text-sky-500">+{formatPrice(calculation.extraPagesPrice)}</span>
                       </div>
                     )}
-                    {selectedAddOns.length > 0 && (
-                      <div className="flex justify-between items-center text-sm text-sky-500">
-                        <span>Total Fitur</span>
-                        <span className="font-bold">
-                          +{formatPrice(calculation.addOnsPrice)}
-                        </span>
+                    {calculation.addOnsPrice > 0 && (
+                      <div className="flex justify-between items-center text-sm">
+                        <span>Fitur Tambahan</span>
+                        <span className="font-bold text-sky-500">+{formatPrice(calculation.addOnsPrice)}</span>
                       </div>
                     )}
                     {isExpress && (
-                      <div className="flex justify-between items-center text-sm text-amber-500">
-                        <span>Layanan Ekspres (25%)</span>
-                        <span className="font-bold">
-                          +{formatPrice(calculation.expressFee)}
-                        </span>
+                      <div className="flex justify-between items-center text-sm text-amber-400">
+                        <span>Express Fee (25%)</span>
+                        <span className="font-bold">+{formatPrice(calculation.expressFee)}</span>
+                      </div>
+                    )}
+                    {calculation.monthlyMaintenance > 0 && (
+                      <div className="flex justify-between items-center text-sm text-green-500">
+                        <span>Maintenance (Bulanan)</span>
+                        <span className="font-bold">{formatPrice(calculation.monthlyMaintenance)}/bln</span>
                       </div>
                     )}
                   </div>
@@ -380,47 +354,25 @@ export default function PricingCalculator() {
 
                 <div className="p-8 mt-8 bg-gray-50 dark:bg-gray-800/50">
                   <div className="flex flex-col items-center text-center">
-                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">
-                      Estimasi Total Investasi
-                    </span>
-                    <div className="text-4xl font-black text-gray-900 dark:text-white mb-2">
-                      {formatPrice(calculation.total)}
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-green-500 font-bold mb-8">
-                      <MaterialIcon
-                        filled
-                        className="text-sm"
-                        name="verified"
-                      />
-                      Infra Tahun ke-1 Gratis
+                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Total Investasi Awal</span>
+                    <div className="text-4xl font-black text-gray-900 dark:text-white mb-2">{formatPrice(calculation.total)}</div>
+                    <div className="flex flex-col items-center gap-1 mb-8">
+                      <div className="flex items-center gap-1 text-xs text-green-500 font-bold">
+                        <MaterialIcon name="verified" className="text-sm" filled /> Infra Tahun ke-1 Gratis
+                      </div>
+                      {calculation.monthlyMaintenance > 0 && (
+                        <span className="text-[10px] text-green-400 font-bold">+ Maintenance {formatPrice(calculation.monthlyMaintenance)}/bulan</span>
+                      )}
                     </div>
 
-                    <Button
+                    <Button 
                       as="a"
                       className="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold h-16 rounded-2xl shadow-xl shadow-sky-500/30 text-lg flex items-center justify-center gap-3 transition-transform hover:scale-[1.02]"
-                      href={`https://wa.me/6282189642027?text=Halo Fadli! Saya tertarik meng-custom paket website.%0A%0A*Detail Paket:*%0A- Paket Dasar: ${calculation.packageName}%0A- Tambahan Halaman: ${extraPages}%0A- Layanan Ekspres: ${isExpress ? "Ya" : "Tidak"}%0A%0A*Estimasi Total:* ${formatPrice(calculation.total)}`}
+                      href={`https://wa.me/6282189642027?text=Halo Fadli! Saya tertarik meng-custom paket website.%0A%0A*Detail Paket:*%0A- Paket Dasar: ${calculation.packageName}%0A- Tambahan Halaman: ${extraPages}%0A- Layanan Ekspres: ${isExpress ? "Ya" : "Tidak"}%0A- Maintenance Bulanan: ${calculation.monthlyMaintenance > 0 ? formatPrice(calculation.monthlyMaintenance) : "Tidak"}%0A%0A*Estimasi Total Setup:* ${formatPrice(calculation.total)}`}
                       target="_blank"
                     >
-                      <MaterialIcon name="chat" />
-                      Kirim Rincian ke WA
+                      <MaterialIcon name="chat" /> Kirim ke WhatsApp
                     </Button>
-                  </div>
-
-                  <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 grid grid-cols-2 gap-4">
-                    <div className="flex items-center gap-2 text-[10px] text-gray-400">
-                      <MaterialIcon
-                        className="text-green-500 text-sm"
-                        name="check_circle"
-                      />
-                      Garansi Support
-                    </div>
-                    <div className="flex items-center gap-2 text-[10px] text-gray-400">
-                      <MaterialIcon
-                        className="text-green-500 text-sm"
-                        name="check_circle"
-                      />
-                      Security SSL
-                    </div>
                   </div>
                 </div>
               </div>
