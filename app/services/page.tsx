@@ -3,6 +3,7 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { useState, useEffect, useCallback } from "react";
 
 import {
@@ -183,6 +184,47 @@ export default function ServiceLandingPage() {
     restDelta: 0.001,
   });
 
+  // FAQ & Review Schema for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Fadli Dev Studio",
+        "image": "https://fadlidevstudio.my.id/brand.png",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": testimonials.length.toString()
+        },
+        "review": testimonials.slice(0, 5).map((t) => ({
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": t.authorName
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": t.rating.toString(),
+            "bestRating": "5"
+          },
+          "reviewBody": t.quote
+        }))
+      }
+    ]
+  };
+
   // Scroll spy: track which section is in view
   useEffect(() => {
     const sectionIds = serviceNavLinks.map((l) => l.href.replace("#", ""));
@@ -215,60 +257,13 @@ export default function ServiceLandingPage() {
     });
   }, []);
 
-  // Splash screen
-  const [showSplash, setShowSplash] = useState(true);
-  const [splashFading, setSplashFading] = useState(false);
-  const [typedText, setTypedText] = useState("");
-  const splashBrandName = "Fadli Dev Studio";
-
-  useEffect(() => {
-    if (!showSplash) return;
-    let i = 0;
-    const typeTimer = setInterval(() => {
-      i++;
-      setTypedText(splashBrandName.slice(0, i));
-      if (i >= splashBrandName.length) {
-        clearInterval(typeTimer);
-        setTimeout(() => setSplashFading(true), 600);
-        setTimeout(() => setShowSplash(false), 1200);
-      }
-    }, 80);
-
-    return () => clearInterval(typeTimer);
-  }, [showSplash]);
-
   return (
     <div className="bg-[#f8fafc] text-[#334155] relative dark:bg-gray-950 dark:text-gray-300">
-      {/* ── Splash Screen ── */}
-      {showSplash && (
-        <div
-          className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-gray-900 to-blue-950 transition-all duration-600 ${
-            splashFading ? "opacity-0 scale-105" : "opacity-100 scale-100"
-          }`}
-        >
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
-          </div>
-          <div className="relative z-10 flex flex-col items-center">
-            <Image
-              priority
-              alt="Fadli Dev Studio"
-              className="w-20 h-20 rounded-2xl shadow-2xl shadow-sky-500/20 ring-1 ring-white/10 animate-[splash-logo_0.6s_ease-out_both]"
-              height={80}
-              src="/brand.png"
-              width={80}
-            />
-            <div className="mt-6 h-8 flex items-center">
-              <span className="text-2xl font-bold text-white tracking-tight">
-                {typedText}
-              </span>
-              <span className="w-[2px] h-6 bg-sky-400 ml-0.5 animate-[cursor-blink_0.8s_steps(1)_infinite]" />
-            </div>
-            <div className="mt-4 w-12 h-0.5 rounded-full bg-sky-500/50 animate-[splash-bar_1.5s_ease-in-out_infinite]" />
-          </div>
-        </div>
-      )}
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* ── Navbar ── */}
       <nav
         aria-label="Main navigation"
