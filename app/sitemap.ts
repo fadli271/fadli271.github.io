@@ -7,7 +7,7 @@ const SITE_URL = "https://fadlidevstudio.my.id";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  
+
   const routes = [
     {
       url: SITE_URL,

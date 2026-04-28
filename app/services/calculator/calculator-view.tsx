@@ -107,16 +107,17 @@ export default function CalculatorView() {
     const pkg = packages.find((p) => p.label === selectedPackageLabel);
     const basePrice = parsePrice(pkg?.price || "0");
     const extraPagesPrice = extraPages * 350000;
-    
+
     let oneTimeAddOns = 0;
     let monthlyAddOns = 0;
-    
-    selectedAddOns.forEach(id => {
-      const item = ADD_ONS.find(a => a.id === id);
+
+    selectedAddOns.forEach((id) => {
+      const item = ADD_ONS.find((a) => a.id === id);
+
       if (item?.isMonthly) {
         monthlyAddOns += item.price;
       } else {
-        oneTimeAddOns += (item?.price || 0);
+        oneTimeAddOns += item?.price || 0;
       }
     });
 
@@ -164,7 +165,11 @@ export default function CalculatorView() {
             className="text-sm font-medium text-sky-500 flex items-center gap-1 group"
             href="/services"
           >
-            <MaterialIcon className="text-lg group-hover:-translate-x-1 transition-transform" name="arrow_back" /> Kembali ke Harga
+            <MaterialIcon
+              className="text-lg group-hover:-translate-x-1 transition-transform"
+              name="arrow_back"
+            />{" "}
+            Kembali ke Harga
           </Link>
         </div>
       </nav>
@@ -191,9 +196,15 @@ export default function CalculatorView() {
                   <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-sky-900/20 flex items-center justify-center text-sky-500">
                     <MaterialIcon name="inventory_2" />
                   </div>
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">1. Pilih Fondasi Paket</h2>
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                    1. Pilih Fondasi Paket
+                  </h2>
                 </div>
-                <RadioGroup className="gap-4" value={selectedPackageLabel} onValueChange={setSelectedPackageLabel}>
+                <RadioGroup
+                  className="gap-4"
+                  value={selectedPackageLabel}
+                  onValueChange={setSelectedPackageLabel}
+                >
                   <div className="grid md:grid-cols-2 gap-4">
                     {packages.map((pkg) => (
                       <Radio
@@ -206,9 +217,15 @@ export default function CalculatorView() {
                         value={pkg.label}
                       >
                         <div className="flex flex-col">
-                          <span className="font-bold text-gray-900 dark:text-white">{pkg.label}</span>
-                          <span className="text-sky-500 font-bold text-sm mt-1">{pkg.price}</span>
-                          <p className="text-xs text-gray-500 mt-2 line-clamp-2">{pkg.fit}</p>
+                          <span className="font-bold text-gray-900 dark:text-white">
+                            {pkg.label}
+                          </span>
+                          <span className="text-sky-500 font-bold text-sm mt-1">
+                            {pkg.price}
+                          </span>
+                          <p className="text-xs text-gray-500 mt-2 line-clamp-2">
+                            {pkg.fit}
+                          </p>
                         </div>
                       </Radio>
                     ))}
@@ -224,12 +241,17 @@ export default function CalculatorView() {
                   <div className="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600">
                     <MaterialIcon name="layers" />
                   </div>
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">2. Skalabilitas Halaman</h2>
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                    2. Skalabilitas Halaman
+                  </h2>
                 </div>
                 <Card className="p-8 border-gray-100 dark:border-gray-800 shadow-lg shadow-black/[0.02] dark:bg-gray-900 rounded-3xl">
                   <CardBody>
                     <Slider
-                      classNames={{ label: "font-bold text-gray-700 dark:text-gray-300 mb-4" }}
+                      classNames={{
+                        label:
+                          "font-bold text-gray-700 dark:text-gray-300 mb-4",
+                      }}
                       color="primary"
                       label="Tambahan Halaman Konten"
                       maxValue={20}
@@ -239,7 +261,10 @@ export default function CalculatorView() {
                       onChange={(v) => setExtraPages(v as number)}
                     />
                     <div className="mt-8 flex items-start gap-3 p-4 bg-slate-50 dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700">
-                      <MaterialIcon className="text-sky-500 text-lg" name="info" />
+                      <MaterialIcon
+                        className="text-sky-500 text-lg"
+                        name="info"
+                      />
                       <p className="text-xs text-gray-500 leading-relaxed">
                         Estimasi <strong>Rp 350.000</strong> / halaman tambahan.
                       </p>
@@ -256,9 +281,15 @@ export default function CalculatorView() {
                   <div className="w-10 h-10 rounded-xl bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-orange-600">
                     <MaterialIcon name="add_circle" />
                   </div>
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">3. Fitur & Maintenance</h2>
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                    3. Fitur & Maintenance
+                  </h2>
                 </div>
-                <CheckboxGroup className="gap-4" value={selectedAddOns} onValueChange={setSelectedAddOns}>
+                <CheckboxGroup
+                  className="gap-4"
+                  value={selectedAddOns}
+                  onValueChange={setSelectedAddOns}
+                >
                   <div className="grid md:grid-cols-2 gap-4">
                     {ADD_ONS.map((item) => (
                       <Checkbox
@@ -267,11 +298,17 @@ export default function CalculatorView() {
                         value={item.id}
                       >
                         <div className="flex items-center gap-4">
-                          <MaterialIcon className="text-gray-400" name={item.icon} />
+                          <MaterialIcon
+                            className="text-gray-400"
+                            name={item.icon}
+                          />
                           <div className="flex flex-col">
-                            <span className="text-sm font-bold text-gray-900 dark:text-white">{item.name}</span>
+                            <span className="text-sm font-bold text-gray-900 dark:text-white">
+                              {item.name}
+                            </span>
                             <span className="text-xs text-sky-500 font-bold">
-                              +{formatPrice(item.price)}{item.isMonthly ? "/bln" : ""}
+                              +{formatPrice(item.price)}
+                              {item.isMonthly ? "/bln" : ""}
                             </span>
                           </div>
                         </div>
@@ -287,14 +324,26 @@ export default function CalculatorView() {
               <div className="p-8 bg-gradient-to-r from-slate-900 to-blue-900 rounded-[2rem] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
                 <div className="flex items-center gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
-                    <MaterialIcon className="text-amber-400 text-3xl" name="rocket_launch" />
+                    <MaterialIcon
+                      className="text-amber-400 text-3xl"
+                      name="rocket_launch"
+                    />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">Layanan Ekspres (Prioritas)</h3>
-                    <p className="text-sm text-blue-200 opacity-80">Selesaikan dalam 3-5 hari kerja.</p>
+                    <h3 className="text-lg font-bold">
+                      Layanan Ekspres (Prioritas)
+                    </h3>
+                    <p className="text-sm text-blue-200 opacity-80">
+                      Selesaikan dalam 3-5 hari kerja.
+                    </p>
                   </div>
                 </div>
-                <Switch color="warning" isSelected={isExpress} size="lg" onValueChange={setIsExpress} />
+                <Switch
+                  color="warning"
+                  isSelected={isExpress}
+                  size="lg"
+                  onValueChange={setIsExpress}
+                />
               </div>
             </FadeUp>
           </div>
@@ -304,34 +353,48 @@ export default function CalculatorView() {
             <FadeUp delay={0.5}>
               <div className="bg-white dark:bg-gray-900 rounded-[2.5rem] border border-gray-100 dark:border-gray-800 shadow-2xl overflow-hidden">
                 <div className="p-8 pb-0">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Proyek Anda</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                    Proyek Anda
+                  </h3>
                   <div className="space-y-5">
                     <div className="flex justify-between items-center text-sm">
-                      <span className="text-gray-500">Dasar: {calculation.packageName}</span>
-                      <span className="font-bold">{formatPrice(calculation.basePrice)}</span>
+                      <span className="text-gray-500">
+                        Dasar: {calculation.packageName}
+                      </span>
+                      <span className="font-bold">
+                        {formatPrice(calculation.basePrice)}
+                      </span>
                     </div>
                     {extraPages > 0 && (
                       <div className="flex justify-between items-center text-sm">
                         <span>Halaman Ekstra ({extraPages}x)</span>
-                        <span className="font-bold text-sky-500">+{formatPrice(calculation.extraPagesPrice)}</span>
+                        <span className="font-bold text-sky-500">
+                          +{formatPrice(calculation.extraPagesPrice)}
+                        </span>
                       </div>
                     )}
                     {calculation.addOnsPrice > 0 && (
                       <div className="flex justify-between items-center text-sm">
                         <span>Fitur Tambahan</span>
-                        <span className="font-bold text-sky-500">+{formatPrice(calculation.addOnsPrice)}</span>
+                        <span className="font-bold text-sky-500">
+                          +{formatPrice(calculation.addOnsPrice)}
+                        </span>
                       </div>
                     )}
                     {isExpress && (
                       <div className="flex justify-between items-center text-sm text-amber-400">
                         <span>Express Fee (25%)</span>
-                        <span className="font-bold">+{formatPrice(calculation.expressFee)}</span>
+                        <span className="font-bold">
+                          +{formatPrice(calculation.expressFee)}
+                        </span>
                       </div>
                     )}
                     {calculation.monthlyMaintenance > 0 && (
                       <div className="flex justify-between items-center text-sm text-green-500">
                         <span>Maintenance (Bulanan)</span>
-                        <span className="font-bold">{formatPrice(calculation.monthlyMaintenance)}/bln</span>
+                        <span className="font-bold">
+                          {formatPrice(calculation.monthlyMaintenance)}/bln
+                        </span>
                       </div>
                     )}
                   </div>
@@ -339,18 +402,30 @@ export default function CalculatorView() {
 
                 <div className="p-8 mt-8 bg-gray-50 dark:bg-gray-800/50">
                   <div className="flex flex-col items-center text-center">
-                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Total Investasi Awal</span>
-                    <div className="text-4xl font-black text-gray-900 dark:text-white mb-2">{formatPrice(calculation.total)}</div>
+                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">
+                      Total Investasi Awal
+                    </span>
+                    <div className="text-4xl font-black text-gray-900 dark:text-white mb-2">
+                      {formatPrice(calculation.total)}
+                    </div>
                     <div className="flex flex-col items-center gap-1 mb-8">
                       <div className="flex items-center gap-1 text-xs text-green-500 font-bold">
-                        <MaterialIcon name="verified" className="text-sm" filled /> Infra Tahun ke-1 Gratis
+                        <MaterialIcon
+                          filled
+                          className="text-sm"
+                          name="verified"
+                        />{" "}
+                        Infra Tahun ke-1 Gratis
                       </div>
                       {calculation.monthlyMaintenance > 0 && (
-                        <span className="text-[10px] text-green-400 font-bold">+ Maintenance {formatPrice(calculation.monthlyMaintenance)}/bulan</span>
+                        <span className="text-[10px] text-green-400 font-bold">
+                          + Maintenance{" "}
+                          {formatPrice(calculation.monthlyMaintenance)}/bulan
+                        </span>
                       )}
                     </div>
 
-                    <Button 
+                    <Button
                       as="a"
                       className="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold h-16 rounded-2xl shadow-xl shadow-sky-500/30 text-lg flex items-center justify-center gap-3 transition-transform hover:scale-[1.02]"
                       href={`https://wa.me/6282189642027?text=Halo Fadli! Saya tertarik meng-custom paket website.%0A%0A*Detail Paket:*%0A- Paket Dasar: ${calculation.packageName}%0A- Tambahan Halaman: ${extraPages}%0A- Layanan Ekspres: ${isExpress ? "Ya" : "Tidak"}%0A- Maintenance Bulanan: ${calculation.monthlyMaintenance > 0 ? formatPrice(calculation.monthlyMaintenance) : "Tidak"}%0A%0A*Estimasi Total Setup:* ${formatPrice(calculation.total)}`}

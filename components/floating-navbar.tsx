@@ -126,99 +126,104 @@ export default function FloatingNavbar({
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             {/* Logo/Brand (Optional addition for top navbar) */}
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-sky-500 flex items-center justify-center text-white font-bold">F</div>
-              <span className="font-bold text-slate-800 hidden sm:block">Fadli Dev</span>
+              <div className="h-8 w-8 rounded-full bg-sky-500 flex items-center justify-center text-white font-bold">
+                F
+              </div>
+              <span className="font-bold text-slate-800 hidden sm:block">
+                Fadli Dev
+              </span>
             </div>
 
             <div className="flex items-center gap-3">
-            {/* Language Switcher */}
-            <div className="relative flex-1 sm:flex-none">
-              <button
-                aria-expanded={isLangOpen}
-                aria-haspopup="listbox"
-                className="content-card flex w-full items-center justify-between rounded-full px-4 py-3 text-sm font-medium text-gray-700 hover:bg-white"
-                onClick={toggleLang}
-              >
-                <span>{languageLabel}</span>
-                <ChevronDown
-                  className={clsx(
-                    "h-4 w-4 transition-transform",
-                    isLangOpen && "rotate-180",
-                  )}
-                />
-              </button>
-              {isLangOpen && (
-                <div
-                  className={clsx(
-                    "absolute right-0 top-full mt-2 w-48 rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl",
-                  )}
+              {/* Language Switcher */}
+              <div className="relative flex-1 sm:flex-none">
+                <button
+                  aria-expanded={isLangOpen}
+                  aria-haspopup="listbox"
+                  className="content-card flex w-full items-center justify-between rounded-full px-4 py-3 text-sm font-medium text-gray-700 hover:bg-white"
+                  onClick={toggleLang}
                 >
-                  {(["id", "en"] as Language[]).map((lang) => (
-                    <button
-                      key={lang}
-                      className={clsx(
-                        "w-full rounded-xl px-4 py-2 text-left text-sm transition-colors",
-                        lang === currentLang
-                          ? "bg-sky-50 text-sky-600 font-semibold"
-                          : "text-gray-600 hover:bg-gray-100",
-                      )}
-                      onClick={() => handleLangChange(lang)}
-                    >
-                      {lang === "id" ? "Indonesia" : "English"}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+                  <span>{languageLabel}</span>
+                  <ChevronDown
+                    className={clsx(
+                      "h-4 w-4 transition-transform",
+                      isLangOpen && "rotate-180",
+                    )}
+                  />
+                </button>
+                {isLangOpen && (
+                  <div
+                    className={clsx(
+                      "absolute right-0 top-full mt-2 w-48 rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl",
+                    )}
+                  >
+                    {(["id", "en"] as Language[]).map((lang) => (
+                      <button
+                        key={lang}
+                        className={clsx(
+                          "w-full rounded-xl px-4 py-2 text-left text-sm transition-colors",
+                          lang === currentLang
+                            ? "bg-sky-50 text-sky-600 font-semibold"
+                            : "text-gray-600 hover:bg-gray-100",
+                        )}
+                        onClick={() => handleLangChange(lang)}
+                      >
+                        {lang === "id" ? "Indonesia" : "English"}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
 
-            {/* Menu Button */}
-            <div className="relative flex-1 sm:flex-none">
-              <button
-                aria-expanded={isMenuOpen}
-                aria-haspopup="true"
-                className="content-card flex w-full items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-white sm:min-w-[56px]"
-                onClick={toggleMenu}
-              >
-                <Menu className="h-5 w-5 text-sky-600" />
-                <span className="sm:hidden">Menu</span>
-              </button>
-              {isMenuOpen && (
-                <nav
-                  className={clsx(
-                    "absolute right-0 top-full mt-2 w-56 rounded-3xl border border-gray-100 bg-white shadow-2xl",
-                    "max-h-[80vh] overflow-y-auto",
-                  )}
+              {/* Menu Button */}
+              <div className="relative flex-1 sm:flex-none">
+                <button
+                  aria-expanded={isMenuOpen}
+                  aria-haspopup="true"
+                  className="content-card flex w-full items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-white sm:min-w-[56px]"
+                  onClick={toggleMenu}
                 >
-                  <ul className="divide-y divide-gray-100 text-sm text-gray-700">
-                    {Object.entries(content).map(
-                      ([key, { label, icon: Icon }]) => (
-                        <li key={key}>
+                  <Menu className="h-5 w-5 text-sky-600" />
+                  <span className="sm:hidden">Menu</span>
+                </button>
+                {isMenuOpen && (
+                  <nav
+                    className={clsx(
+                      "absolute right-0 top-full mt-2 w-56 rounded-3xl border border-gray-100 bg-white shadow-2xl",
+                      "max-h-[80vh] overflow-y-auto",
+                    )}
+                  >
+                    <ul className="divide-y divide-gray-100 text-sm text-gray-700">
+                      {Object.entries(content).map(
+                        ([key, { label, icon: Icon }]) => (
+                          <li key={key}>
+                            <a
+                              className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"
+                              href={`#${key}`}
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              <Icon className="h-4 w-4 text-sky-500" />
+                              {label}
+                            </a>
+                          </li>
+                        ),
+                      )}
+                      {EXTRA_MENU_ITEMS.map(({ label, href, icon: Icon }) => (
+                        <li key={href}>
                           <a
                             className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"
-                            href={`#${key}`}
+                            href={href}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             <Icon className="h-4 w-4 text-sky-500" />
                             {label}
                           </a>
                         </li>
-                      ),
-                    )}
-                    {EXTRA_MENU_ITEMS.map(({ label, href, icon: Icon }) => (
-                      <li key={href}>
-                        <a
-                          className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"
-                          href={href}
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <Icon className="h-4 w-4 text-sky-500" />
-                          {label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              )}
+                      ))}
+                    </ul>
+                  </nav>
+                )}
+              </div>
             </div>
           </div>
         </motion.div>

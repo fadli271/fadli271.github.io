@@ -190,39 +190,39 @@ export default function ServiceLandingPage() {
     "@graph": [
       {
         "@type": "FAQPage",
-        "mainEntity": faqs.map((faq) => ({
+        mainEntity: faqs.map((faq) => ({
           "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
+          name: faq.question,
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
+            text: faq.answer,
+          },
+        })),
       },
       {
         "@type": "ProfessionalService",
-        "name": "Fadli Dev Studio",
-        "image": "https://fadlidevstudio.my.id/brand.png",
-        "aggregateRating": {
+        name: "Fadli Dev Studio",
+        image: "https://fadlidevstudio.my.id/brand.png",
+        aggregateRating: {
           "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": testimonials.length.toString()
+          ratingValue: "4.9",
+          reviewCount: testimonials.length.toString(),
         },
-        "review": testimonials.slice(0, 5).map((t) => ({
+        review: testimonials.slice(0, 5).map((t) => ({
           "@type": "Review",
-          "author": {
+          author: {
             "@type": "Person",
-            "name": t.authorName
+            name: t.authorName,
           },
-          "reviewRating": {
+          reviewRating: {
             "@type": "Rating",
-            "ratingValue": t.rating.toString(),
-            "bestRating": "5"
+            ratingValue: t.rating.toString(),
+            bestRating: "5",
           },
-          "reviewBody": t.quote
-        }))
-      }
-    ]
+          reviewBody: t.quote,
+        })),
+      },
+    ],
   };
 
   // Scroll spy: track which section is in view
@@ -260,9 +260,9 @@ export default function ServiceLandingPage() {
   return (
     <div className="bg-[#f8fafc] text-[#334155] relative dark:bg-gray-950 dark:text-gray-300">
       <Script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         id="structured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       {/* ── Navbar ── */}
       <nav
@@ -436,7 +436,9 @@ export default function ServiceLandingPage() {
                       className="text-lg group-hover:rotate-12 transition-transform"
                       name="calculate"
                     />
-                    {lang === "id" ? "Hitung Estimasi Biaya" : "Calculate My Project"}
+                    {lang === "id"
+                      ? "Hitung Estimasi Biaya"
+                      : "Calculate My Project"}
                   </Link>
                   <a
                     className="bg-white border border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-sm hover:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800 flex items-center justify-center gap-2"
@@ -444,7 +446,10 @@ export default function ServiceLandingPage() {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <MaterialIcon name="chat" className="text-lg text-green-500" />
+                    <MaterialIcon
+                      className="text-lg text-green-500"
+                      name="chat"
+                    />
                     {t.heroCta ?? "Konsultasi via WhatsApp"}
                   </a>
                 </div>

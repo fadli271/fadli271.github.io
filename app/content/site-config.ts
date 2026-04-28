@@ -1,4 +1,5 @@
 import { Metadata, Viewport } from "next";
+
 import { CONTACT_INFO } from "@/lib/contact-info";
 
 export const SITE_URL = "https://fadlidevstudio.my.id";
@@ -84,48 +85,40 @@ export const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Fadli Dev Studio",
-    "image": `${SITE_URL}/brand.png`,
+    name: "Fadli Dev Studio",
+    image: `${SITE_URL}/brand.png`,
     "@id": `${SITE_URL}/#business`,
-    "url": SITE_URL,
-    "telephone": "+6282189642027",
-    "priceRange": "Rp895.000 - Rp7.900.000",
-    "address": {
+    url: SITE_URL,
+    telephone: "+6282189642027",
+    priceRange: "Rp895.000 - Rp7.900.000",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "Sigi, Sulawesi Tengah",
-      "addressLocality": "Sigi",
-      "addressRegion": "Sulawesi Tengah",
-      "postalCode": "94364",
-      "addressCountry": "ID"
+      streetAddress: "Sigi, Sulawesi Tengah",
+      addressLocality: "Sigi",
+      addressRegion: "Sulawesi Tengah",
+      postalCode: "94364",
+      addressCountry: "ID",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": -1.0333,
-      "longitude": 119.9333
+      latitude: -1.0333,
+      longitude: 119.9333,
     },
-    "openingHoursSpecification": {
+    openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "08:00",
-      "closes": "21:00"
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "21:00",
     },
-    "sameAs": [
-      CONTACT_INFO.social.github,
-      CONTACT_INFO.social.linkedin
-    ]
+    sameAs: [CONTACT_INFO.social.github, CONTACT_INFO.social.linkedin],
   },
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "url": SITE_URL,
-    "name": "Fadli Dev Studio – Jasa Pembuatan Website UMKM",
-    "inLanguage": "id",
-    "description": "Portfolio, project showcase, and web services by Mohamad Fadli."
-  }
+    url: SITE_URL,
+    name: "Fadli Dev Studio – Jasa Pembuatan Website UMKM",
+    inLanguage: "id",
+    description:
+      "Portfolio, project showcase, and web services by Mohamad Fadli.",
+  },
 ];
