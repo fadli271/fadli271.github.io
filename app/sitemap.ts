@@ -1,14 +1,14 @@
 import { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
-export const revalidate = false;
+export const revalidate = 86400; // Update daily
 
 const SITE_URL = "https://fadlidevstudio.my.id";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-
-  return [
+  
+  const routes = [
     {
       url: SITE_URL,
       lastModified: now,
@@ -27,5 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-  ];
+  ] as MetadataRoute.Sitemap;
+
+  return routes;
 }
