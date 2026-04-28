@@ -16,7 +16,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-import { packages } from "@/app/content/services";
+import { packages } from "@/app/services/services-data";
 
 // --- Design System Components ---
 function MaterialIcon({

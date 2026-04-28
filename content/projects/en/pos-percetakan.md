@@ -4,9 +4,9 @@ category: "Sistem Manajemen Bisnis & Industri"
 description: "Sistem Point-of-Sale lengkap dengan manajemen gudang, kasir, dan modul akunting terintegrasi."
 tags: ["Laravel", "JavaScript", "MySQL"]
 images: [
-  "/portfolio/project-pos-2.png",
-  "/portfolio/project-pos-1.png",
-  "/portfolio/project-pos-3.png"
+  "/images/projects/project-pos-2.png",
+  "/images/projects/project-pos-1.png",
+  "/images/projects/project-pos-3.png"
 ]
 caseStudy:
   problem: "Manajemen inventaris dan keuangan di percetakan dilakukan manual, menyebabkan stok tidak sesuai dan pelaporan lambat tiap bulannya."

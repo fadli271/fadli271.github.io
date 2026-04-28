@@ -1,18 +1,15 @@
 import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
-import clsx from "clsx";
-import Script from "next/script";
+
 import React from "react";
+import { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import Script from "next/script";
+import clsx from "clsx";
 
 import { Providers } from "./providers";
 
-import {
-  siteMetadata,
-  siteViewport,
-  structuredData,
-} from "@/app/content/site-config";
 import LayoutShell from "@/components/layout-shell";
-import { Inter } from "next/font/google";
+import { siteMetadata, siteViewport, structuredData } from "@/lib/site-config";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,13 +28,6 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning className={inter.variable} lang="id">
-      <head>
-        {/* Google Material Symbols for services page icons */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className={clsx("min-h-screen font-sans antialiased")}>
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ? (
           <>

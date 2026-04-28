@@ -5,9 +5,12 @@ import { ChevronDown, Menu, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import { LucideIcon } from "lucide-react";
+import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
 
-import { type Language } from "@/app/content/portfolio";
 import { useMediaQuery } from "@/hooks/use-media-query";
+
+export type Language = "id" | "en";
 
 const MOBILE_SHOW_THRESHOLD = 60;
 
@@ -18,7 +21,6 @@ interface FloatingNavbarProps {
       icon: LucideIcon;
     };
   };
-  onLangChange: (lang: Language) => void;
   currentLang: Language;
 }
 
@@ -32,12 +34,13 @@ const EXTRA_MENU_ITEMS = [
  */
 export default function FloatingNavbar({
   content,
-  onLangChange,
   currentLang,
 }: FloatingNavbarProps) {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 640px)", false);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [showNav, setShowNav] = useState(false);
   const [hasScrolledPastInitial, setHasScrolledPastInitial] = useState(false);
   const lastScrollY = useRef(0);
@@ -45,11 +48,6 @@ export default function FloatingNavbar({
 
   const toggleLang = () => setIsLangOpen((prev) => !prev);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
-
-  const handleLangChange = (lang: Language) => {
-    onLangChange(lang);
-    setIsLangOpen(false);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,6 +97,20 @@ export default function FloatingNavbar({
   const allowReveal =
     isDesktop || hasScrolledPastInitial || isLangOpen || isMenuOpen;
   const isNavVisible = allowReveal && showNav;
+
+  const getLangPath = (lang: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    if (lang === "id") {
+      params.delete("lang");
+    } else {
+      params.set("lang", lang);
+    }
+
+    const queryString = params.toString();
+
+    return `${pathname}${queryString ? `?${queryString}` : ""}`;
+  };
 
   useEffect(() => {
     if (typeof document === "undefined") return;
@@ -158,18 +170,19 @@ export default function FloatingNavbar({
                     )}
                   >
                     {(["id", "en"] as Language[]).map((lang) => (
-                      <button
+                      <Link
                         key={lang}
                         className={clsx(
-                          "w-full rounded-xl px-4 py-2 text-left text-sm transition-colors",
+                          "block w-full rounded-xl px-4 py-2 text-left text-sm transition-colors",
                           lang === currentLang
                             ? "bg-sky-50 text-sky-600 font-semibold"
                             : "text-gray-600 hover:bg-gray-100",
                         )}
-                        onClick={() => handleLangChange(lang)}
+                        href={getLangPath(lang)}
+                        onClick={() => setIsLangOpen(false)}
                       >
                         {lang === "id" ? "Indonesia" : "English"}
-                      </button>
+                      </Link>
                     ))}
                   </div>
                 )}

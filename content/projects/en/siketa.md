@@ -4,9 +4,9 @@ category: "Sistem Informasi Akademik & Kepegawaian"
 description: "Sistem informasi manajemen proses dan bimbingan tugas akhir mahasiswa."
 tags: ["Laravel", "JavaScript", "MySQL"]
 images: [
-  "/portfolio/project-siketa-2.png",
-  "/portfolio/project-siketa-3.png",
-  "/portfolio/project-siketa-1.png"
+  "/images/projects/project-siketa-2.png",
+  "/images/projects/project-siketa-3.png",
+  "/images/projects/project-siketa-1.png"
 ]
 caseStudy:
   problem: "Proses administrasi tugas akhir yang lambat dan tidak transparan."

@@ -4,9 +4,9 @@ category: "Sistem Manajemen Bisnis & Industri"
 description: "Sistem pelacakan pengiriman kelapa sawit dari perkebunan hingga pabrik."
 tags: ["Laravel", "JavaScript", "MySQL", "Leaflet.js"]
 images: [
-  "/portfolio/project-tracking-3.png",
-  "/portfolio/project-tracking-1.png",
-  "/portfolio/project-tracking-2.png"
+  "/images/projects/project-tracking-3.png",
+  "/images/projects/project-tracking-1.png",
+  "/images/projects/project-tracking-2.png"
 ]
 caseStudy:
   problem: "Kurangnya transparansi dan data real-time dalam rantai pasok kelapa sawit. Serta kesulitan dalam melaporkan posisi truk dan berat muatan."

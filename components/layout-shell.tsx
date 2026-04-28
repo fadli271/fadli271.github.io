@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import React from "react";
 
-import { footerConfig } from "@/app/content/site-config";
+import { footerConfig } from "@/lib/site-config";
 
 export default function LayoutShell({
   children,

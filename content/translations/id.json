@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "experience": "Pengalaman",
+    "projects": "Proyek",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "line1": "Mohamad Fadli",
+    "line2": "Software Engineer",
+    "tagline": "Hey, Let's talk about tech and make some magic for your business",
+    "scroll": "Scroll ke bawah"
+  },
+  "experienceSection": {
+    "about": {
+      "title": "Pengalaman",
+      "content": "Sejak 2016, saya membantu bisnis bertransformasi lewat teknologi. Saya mengerti betapa pusingnya mengurus stok manual, kehilangan pelanggan karena website lemot, atau data kantor yang berantakan. Fokus saya adalah memberi solusi yang bikin bisnis Anda lebih efisien dan profitable.",
+      "link": "Lihat kisah lengkap"
+    },
+    "experience": { "title": "Pengalaman", "subtitle": "Tahun di dunia tech" },
+    "projects": {
+      "title": "Solusi yang Terbukti Berhasil",
+      "subtitle": "Bukti nyata bagaimana kode saya membantu bisnis berkembang."
+    },
+    "partner": {
+      "title": "Pernah Kerja Sama Dengan",
+      "subtitle": "Brand & Perusahaan"
+    },
+    "stack": { "title": "Stack Andalan" },
+    "cta": { "title": "Punya ide proyek seru?", "button": "Diskusi bareng !" },
+    "download": { "cv": "Unduh CV", "link": "/cv-mohamad-fadli.pdf" },
+    "ui": {
+      "careerTitle": "Perjalanan karir",
+      "showMore": "Lihat Selengkapnya",
+      "showLess": "Sembunyikan Riwayat"
+    }
+  },
+  "skills": {
+    "title": "Keahlian & Teknologi",
+    "subtitle": "Teknologi yang sering kupakai buat bangun sistem — dari backend, frontend, sampai ke production.",
+    "ui": {
+      "seeAll": "Lihat Semua",
+      "seeLess": "Sembunyikan"
+    }
+  },
+  "projects": {
+    "title": "Bukti Nyata Membantu Bisnis",
+    "subtitle": "Bukan sekadar galeri, tapi kumpulan solusi untuk masalah operasional dan penjualan.",
+    "viewDetailButton": "Lihat Detail",
+    "modal": {
+      "noProjectSelected": "Tidak ada project yang dipilih.",
+      "previewTitle": "Preview Aplikasi",
+      "problem": "Masalah Bisnis",
+      "solution": "Solusi Teknis",
+      "impact": "Dampak (Hasil)",
+      "techStack": "Teknologi"
+    }
+  },
+  "contact": {
+    "title": "Mari Terhubung!",
+    "subtitle": "Selalu terbuka buat ngobrol—baik soal proyek, kolaborasi, atau sekadar bahas teknologi.",
+    "emailPrompt": "Bisa kirim email ke:",
+    "socialPrompt": "Atau temukan aku di sini:",
+    "cta": {
+      "label": "Lihat Paket Jasa",
+      "href": "/services"
+    }
+  },
+  "footer": { "credit": "Dibuat dengan Semangat di Palu, Sulawesi Tengah." }
+}

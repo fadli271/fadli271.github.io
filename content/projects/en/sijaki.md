@@ -4,9 +4,9 @@ category: "Sistem Informasi Akademik & Kepegawaian"
 description: "Sistem informasi untuk penjadwalan dan pelaporan kinerja dosen."
 tags: ["Django", "JavaScript", "MySQL"]
 images: [
-  "/portfolio/project-sijaki-2.png",
-  "/portfolio/project-sijaki-3.png",
-  "/portfolio/project-sijaki-1.png"
+  "/images/projects/project-sijaki-2.png",
+  "/images/projects/project-sijaki-3.png",
+  "/images/projects/project-sijaki-1.png"
 ]
 caseStudy:
   problem: "Data kinerja dosen tersebar dan sulit dievaluasi."

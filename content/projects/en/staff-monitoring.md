@@ -4,9 +4,9 @@ category: "Sistem Informasi Akademik & Kepegawaian"
 description: "Aplikasi untuk memonitor status staf dan rekapitulasi jam kerja."
 tags: ["Django", "JavaScript", "MySQL"]
 images: [
-  "/portfolio/project-monitoring-staf-1.png",
-  "/portfolio/project-monitoring-staf-2.png",
-  "/portfolio/project-monitoring-staf-3.png"
+  "/images/projects/project-monitoring-staf-1.png",
+  "/images/projects/project-monitoring-staf-2.png",
+  "/images/projects/project-monitoring-staf-3.png"
 ]
 caseStudy:
   problem: "Pelacakan kehadiran staf manual dan rentan kesalahan. Manager ingin solusi yang lebih efisien dengan melihat siapa staf yang siap dideligasi tugas"

@@ -4,9 +4,9 @@ category: "Sistem Informasi Akademik & Kepegawaian"
 description: "Sistem informasi untuk pendaftaran dan seleksi beasiswa mahasiswa."
 tags: ["Laravel", "JavaScript", "MySQL"]
 images: [
-  "/portfolio/project-sibema-1.png",
-  "/portfolio/project-sibema-2.png",
-  "/portfolio/project-sibema-3.png"
+  "/images/projects/project-sibema-1.png",
+  "/images/projects/project-sibema-2.png",
+  "/images/projects/project-sibema-3.png"
 ]
 caseStudy:
   problem: "Informasi beasiswa tersebar dan proses manual."

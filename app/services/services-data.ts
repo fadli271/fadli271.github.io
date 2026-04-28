@@ -174,7 +174,7 @@ export const portfolioItems = [
       "Landing page servis mobil dengan booking via WhatsApp & info layanan lengkap.",
     stat: "Trust Meningkat",
     statSub: "Booking WA Otomatis",
-    image: "/landing-page-portfolion/landing-1/image.png",
+    image: "/images/projects/project-sibema-1.png",
     link: "/landing-page-portfolion/landing-1/index.html",
   },
   {
@@ -186,7 +186,7 @@ export const portfolioItems = [
       "Website kafe dengan menu digital, galeri, dan order via WhatsApp.",
     stat: "+40% Order Online",
     statSub: "150+ Pesanan / Bulan",
-    image: "/landing-page-portfolion/landing-2/image.png",
+    image: "/images/projects/project-sijaki-1.png",
     link: "/landing-page-portfolion/landing-2/index.html",
   },
   {
@@ -198,7 +198,7 @@ export const portfolioItems = [
       "Katalog digital premium dengan checkout WhatsApp & sinkronisasi stok.",
     stat: "Penjualan +120%",
     statSub: "Branding Premium",
-    image: "/landing-page-portfolion/landing-3/image.png",
+    image: "/images/projects/project-pos-1.png",
     link: "/landing-page-portfolion/landing-3/index.html",
   },
   {
@@ -210,7 +210,7 @@ export const portfolioItems = [
       "Sistem booking online, galeri before-after, & review pelanggan.",
     stat: "Tampil Profesional",
     statSub: "Reservasi Online Aktif",
-    image: "/landing-page-portfolion/landing-4/image.png",
+    image: "/images/projects/project-siketa-1.png",
     link: "/landing-page-portfolion/landing-4/index.html",
   },
   {
@@ -222,7 +222,7 @@ export const portfolioItems = [
       "Studio desain company profile profesional dengan pengerjaan express 1 hari.",
     stat: "Desain Premium",
     statSub: "Express 1 Hari Jadi",
-    image: "/portfolio/project-jago-compro-1.png",
+    image: "/images/projects/project-jago-compro-1.png",
     link: "https://jagocompro.id",
   },
   {
@@ -234,7 +234,7 @@ export const portfolioItems = [
       "Landing page POS modern dengan digitalisasi stok & kasir otomatis.",
     stat: "Hemat 5 Jam/Minggu",
     statSub: "Kasir & Stok Digital",
-    image: "/landing-page-portfolion/landing-6/image.png",
+    image: "/images/projects/project-monitoring-staf-1.png",
     link: "/landing-page-portfolion/landing-6/index.html",
   },
 ];

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 import React from "react";
 
-import { SITE_URL } from "@/app/content/site-config";
+import { SITE_URL } from "@/lib/site-config";
 
 const SERVICES_URL = `${SITE_URL}/services`;
 

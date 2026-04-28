@@ -4,9 +4,9 @@ category: "Sistem Informasi Akademik & Kepegawaian"
 description: "Sistem penomoran surat otomatis dan arsip digital yang mudah diakses."
 tags: ["Django", "JavaScript", "MySQL"]
 images: [
-  "/portfolio/project-siporat-2.png",
-  "/portfolio/project-siporat-3.png",
-  "/portfolio/project-siporat-1.png"
+  "/images/projects/project-siporat-2.png",
+  "/images/projects/project-siporat-3.png",
+  "/images/projects/project-siporat-1.png"
 ]
 caseStudy:
   problem: "Nomor surat tidak konsisten dan proses lambat. Manager ingin solusi yang lebih efisien."

@@ -19,11 +19,6 @@ import {
 } from "@heroui/react";
 import NextImage from "next/image";
 
-import { experienceData } from "@/app/content/portfolio";
-
-// ======================
-// Types
-// ======================
 interface ExperienceSectionProps {
   content: {
     about: { title: string; content: string; link: string };
@@ -33,7 +28,13 @@ interface ExperienceSectionProps {
     stack: { title: string };
     cta: { title: string; button: string };
     download: { cv: string; link: string };
+    ui: { careerTitle: string; showMore: string; showLess: string };
   };
+  experienceData: {
+    role: string;
+    company: string;
+    period: string;
+  }[];
 }
 
 interface MetricCardProps {
@@ -79,7 +80,10 @@ const MetricCard = ({
 /**
  * Career experience block with timeline, metrics, and CTA.
  */
-export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
+export const ExperienceSection = ({
+  content,
+  experienceData,
+}: ExperienceSectionProps) => {
   const [showMore, setShowMore] = useState(false);
   const latestJob = experienceData[0];
   const previousJobs = experienceData.slice(1);
@@ -122,26 +126,26 @@ export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
                     alt="Foto Profil Mohamad Fadli"
                     className="object-cover w-48 h-48 md:w-40 md:h-65 rounded-2xl shadow-xl"
                     height={240}
-                    src="/my-profile.JPG"
+                    src="/images/profile/my-profile.JPG"
                     width={240}
                   />
                   <Button
                     as="a"
                     className="text-sm py-3 inline-flex items-center gap-2 px-6 font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-500 rounded-full shadow-md hover:scale-105 transition-transform duration-300"
                     endContent={<FileText className="w-4 h-4" />}
-                    href={content.download.link}
+                    href="/docs/cv-mohamad-fadli.pdf"
                     rel="noopener noreferrer"
                     target="_blank"
                     variant="shadow"
                   >
-                    Lihat CV
+                    {content.download.cv}
                   </Button>
                 </div>
 
                 {/* --- Experience Timeline --- */}
                 <div className="md:col-span-2 space-y-6">
                   <h3 className="text-xl font-bold text-gray-900">
-                    Perjalanan karir
+                    {content.ui.careerTitle}
                   </h3>
 
                   <motion.div
@@ -188,12 +192,12 @@ export const ExperienceSection = ({ content }: ExperienceSectionProps) => {
                               {showMore ? (
                                 <>
                                   <ChevronUp className="w-4 h-4" />
-                                  Sembunyikan Riwayat
+                                  {content.ui.showLess}
                                 </>
                               ) : (
                                 <>
                                   <ChevronDown className="w-4 h-4" />
-                                  Lihat Selengkapnya
+                                  {content.ui.showMore}
                                 </>
                               )}
                             </div>

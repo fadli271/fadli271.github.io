@@ -4,9 +4,9 @@ category: "Aplikasi Web & Profil"
 description: "Website profil untuk Penyedia jasa pembuatan company profile express dan profesional."
 tags: ["Next.js", "Tailwind CSS", "JavaScript"]
 images: [
-  "/portfolio/project-jago-compro-1.png",
-  "/portfolio/project-jago-compro-2.png",
-  "/portfolio/project-jago-compro-3.png"
+  "/images/projects/project-jago-compro-1.png",
+  "/images/projects/project-jago-compro-2.png",
+  "/images/projects/project-jago-compro-3.png"
 ]
 caseStudy:
   problem: "Tidak memiliki representasi digital yang menarik untuk menarik pelanggan baru."

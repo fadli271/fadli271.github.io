@@ -21,7 +21,7 @@ import {
   standardFeatures,
   faqs,
   translations,
-} from "@/app/content/services";
+} from "@/app/services/services-data";
 import FloatingWaButton from "@/components/floating-wa-button";
 
 const containerClass = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8";

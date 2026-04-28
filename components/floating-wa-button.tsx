@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
 
-import { waLinks } from "@/app/content/services";
+import { waLinks } from "@/app/services/services-data";
 
 const waLink = waLinks.floating;
 

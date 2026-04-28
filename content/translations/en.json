@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "line1": "Mohamad Fadli",
+    "line2": "Software Engineer",
+    "tagline": "Let's talk tech and build awesome stuff that actually works!",
+    "scroll": "Scroll down"
+  },
+  "experienceSection": {
+    "about": {
+      "title": "Experience",
+      "content": "Since 2016, I’ve been building systems—not just writing code. With a product mindset and engineering soul, I help businesses grow with scalable and maintainable digital solutions.",
+      "link": "See full story"
+    },
+    "experience": { "title": "Experience", "subtitle": "Years in tech" },
+    "projects": { "title": "Projects Done", "subtitle": "Across industries" },
+    "partner": { "title": "Worked With", "subtitle": "Brands & Companies" },
+    "stack": { "title": "Tech Stack" },
+    "cta": {
+      "title": "Got a cool project idea?",
+      "button": "Let’s collaborate!"
+    },
+    "download": {
+      "cv": "Download CV",
+      "link": "/cv-mohamad-fadli.pdf"
+    },
+    "ui": {
+      "careerTitle": "Career Timeline",
+      "showMore": "Show More",
+      "showLess": "Show Less"
+    }
+  },
+  "skills": {
+    "title": "Skills & Tech",
+    "subtitle": "Technologies I frequently use to build systems — from backend and frontend to production.",
+    "ui": {
+      "seeAll": "See All",
+      "seeLess": "Show Less"
+    }
+  },
+  "projects": {
+    "title": "Project Gallery",
+    "subtitle": "Here’s how I solve real-world problems with code. Take a scroll and explore.",
+    "viewDetailButton": "View Details",
+    "modal": {
+      "noProjectSelected": "No project selected.",
+      "previewTitle": "App Preview",
+      "problem": "Problem",
+      "solution": "Solution",
+      "impact": "Impact",
+      "techStack": "Tech Stack"
+    }
+  },
+  "contact": {
+    "title": "Let’s Connect!",
+    "subtitle": "Always open for a chat—whether it’s about a project, collaboration, or just talking tech.",
+    "emailPrompt": "You can email me at:",
+    "socialPrompt": "Or find me on:",
+    "cta": {
+      "label": "View Services",
+      "href": "/services"
+    }
+  },
+  "footer": {
+    "credit": "Made with love in Palu, Indonesia."
+  }
+}

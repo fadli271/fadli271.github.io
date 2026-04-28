@@ -6,7 +6,8 @@ import { Card, CardBody, Button, Divider } from "@heroui/react";
 import Link from "next/link";
 import { Package, ChevronDown, ChevronUp } from "lucide-react";
 
-import { fullSkillsData } from "@/app/content/portfolio";
+import * as FaIcons from "react-icons/fa";
+import * as SiIcons from "react-icons/si";
 
 interface SkillsSectionProps {
   content: {
@@ -14,12 +15,25 @@ interface SkillsSectionProps {
     subtitle: string;
     ui: { seeAll: string; seeLess: string };
   };
+  skillsData: {
+    category: string;
+    skills: { name: string; url: string; icon: string }[];
+  }[];
 }
+
+const getIcon = (iconName: string) => {
+  const Icon = (FaIcons as any)[iconName] || (SiIcons as any)[iconName];
+
+  return Icon || Package;
+};
 
 /**
  * Skill categories grid with expandable lists per category.
  */
-export default function SkillsSection({ content }: SkillsSectionProps) {
+export default function SkillsSection({
+  content,
+  skillsData,
+}: SkillsSectionProps) {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const toggleCategory = (category: string) => {
@@ -40,6 +54,7 @@ export default function SkillsSection({ content }: SkillsSectionProps) {
           <Package className="w-10 h-10 text-sky-500 gradient-text" />
           {content.title}
         </motion.h1>
+
         <motion.p
           className="text-base text-gray-600 mt-2 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +68,7 @@ export default function SkillsSection({ content }: SkillsSectionProps) {
 
       {/* Skill Categories */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-        {fullSkillsData.map((category, catIndex) => {
+        {skillsData.map((category, catIndex) => {
           const isExpanded = expandedCategory === category.category;
           const skillsToShow = isExpanded
             ? category.skills
@@ -81,40 +96,46 @@ export default function SkillsSection({ content }: SkillsSectionProps) {
                     className="grid grid-cols-2 gap-4"
                     layout="position"
                   >
-                    {skillsToShow.map((skill, skillIndex) => (
-                      <Link
-                        key={skill.name}
-                        href={skill.url}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <motion.div
-                          className="group flex flex-col items-center text-center gap-2 p-3 rounded-md transition-all duration-300 hover:bg-sky-50 hover:scale-105"
-                          initial={{ opacity: 0, y: 10 }}
-                          transition={{
-                            duration: 0.4,
-                            delay: skillIndex * 0.05,
-                            ease: "easeOut",
-                          }}
-                          viewport={{ once: true, margin: "-50px" }}
-                          whileInView={{ opacity: 1, y: 0 }}
+                    {skillsToShow.map((skill, skillIndex) => {
+                      const Icon = getIcon(skill.icon);
+
+                      return (
+                        <Link
+                          key={skill.name}
+                          href={skill.url}
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                          <skill.icon
-                            className="text-gray-500 group-hover:text-sky-600 transition-colors duration-300"
-                            size={64}
-                          />
-                          <span className="text-sm font-medium text-gray-600 group-hover:text-sky-700 transition-colors duration-300">
-                            {skill.name}
-                          </span>
-                        </motion.div>
-                      </Link>
-                    ))}
+                          <motion.div
+                            className="group flex flex-col items-center text-center gap-2 p-3 rounded-md transition-all duration-300 hover:bg-sky-50 hover:scale-105"
+                            initial={{ opacity: 0, y: 10 }}
+                            transition={{
+                              duration: 0.4,
+                              delay: skillIndex * 0.05,
+                              ease: "easeOut",
+                            }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                          >
+                            <Icon
+                              className="text-gray-500 group-hover:text-sky-600 transition-colors duration-300"
+                              size={64}
+                            />
+
+                            <span className="text-sm font-medium text-gray-600 group-hover:text-sky-700 transition-colors duration-300">
+                              {skill.name}
+                            </span>
+                          </motion.div>
+                        </Link>
+                      );
+                    })}
                   </motion.div>
 
                   {/* Toggle Button */}
                   {category.skills.length > 4 && (
                     <>
                       <Divider />
+
                       <Button
                         className="self-center text-sky-500 font-medium bg-white flex items-center gap-1 hover:bg-sky-50 transition-all duration-300"
                         size="sm"
