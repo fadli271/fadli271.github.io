@@ -1,0 +1,38 @@
+[
+  {
+    "category": "Backend",
+    "skills": [
+      { "name": "Go", "url": "https://golang.org/", "icon": "SiGoland" },
+      { "name": "PHP", "url": "https://www.php.net/", "icon": "FaPhp" },
+      { "name": "Laravel", "url": "https://laravel.com/", "icon": "FaLaravel" },
+      { "name": "Python", "url": "https://www.python.org/", "icon": "FaPython" },
+      { "name": "Django", "url": "https://www.djangoproject.com/", "icon": "SiDjango" },
+      { "name": "Node.js", "url": "https://nodejs.org/", "icon": "FaNodeJs" },
+      { "name": "NestJS", "url": "https://nestjs.com/", "icon": "SiNestjs" },
+      { "name": "Ruby", "url": "https://www.ruby-lang.org/", "icon": "SiRuby" },
+      { "name": "Ruby On Rails", "url": "https://rubyonrails.org/", "icon": "SiRubyonrails" }
+    ]
+  },
+  {
+    "category": "Frontend",
+    "skills": [
+      { "name": "JavaScript", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "icon": "FaJs" },
+      { "name": "TypeScript", "url": "https://www.typescriptlang.org/", "icon": "SiTypescript" },
+      { "name": "React", "url": "https://react.dev/", "icon": "FaReact" },
+      { "name": "Next.js", "url": "https://nextjs.org/", "icon": "SiNextdotjs" },
+      { "name": "Tailwind CSS", "url": "https://tailwindcss.com/", "icon": "SiTailwindcss" }
+    ]
+  },
+  {
+    "category": "Database & Lainnya",
+    "skills": [
+      { "name": "MySQL", "url": "https://www.mysql.com/", "icon": "SiMysql" },
+      { "name": "PostgreSQL", "url": "https://www.postgresql.org/", "icon": "SiPostgresql" },
+      { "name": "Redis", "url": "https://redis.io/", "icon": "SiRedis" },
+      { "name": "Docker", "url": "https://www.docker.com/", "icon": "FaDocker" },
+      { "name": "AWS", "url": "https://aws.amazon.com/", "icon": "FaAws" },
+      { "name": "GCP", "url": "https://cloud.google.com/", "icon": "SiGooglecloud" },
+      { "name": "Git", "url": "https://git-scm.com/", "icon": "FaGitAlt" }
+    ]
+  }
+]
