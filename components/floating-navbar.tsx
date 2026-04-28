@@ -117,13 +117,20 @@ export default function FloatingNavbar({
           ref={containerRef}
           animate={{ opacity: 1, y: 0 }}
           className={clsx(
-            "fixed z-50 w-[calc(100%-2rem)] max-w-md left-1/2 -translate-x-1/2 bottom-5 sm:w-auto sm:max-w-none sm:left-auto sm:translate-x-0 sm:top-6 sm:right-6",
+            "fixed z-50 w-full left-0 top-0 border-b border-white/20 bg-white/70 backdrop-blur-md px-4 py-2",
           )}
-          exit={{ opacity: 0, y: 20 }}
-          initial={{ opacity: 0, y: 20 }}
+          exit={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="max-w-7xl mx-auto flex items-center justify-between">
+            {/* Logo/Brand (Optional addition for top navbar) */}
+            <div className="flex items-center gap-2">
+              <div className="h-8 w-8 rounded-full bg-sky-500 flex items-center justify-center text-white font-bold">F</div>
+              <span className="font-bold text-slate-800 hidden sm:block">Fadli Dev</span>
+            </div>
+
+            <div className="flex items-center gap-3">
             {/* Language Switcher */}
             <div className="relative flex-1 sm:flex-none">
               <button
@@ -143,8 +150,7 @@ export default function FloatingNavbar({
               {isLangOpen && (
                 <div
                   className={clsx(
-                    "absolute inset-x-0 bottom-full mb-2 w-full rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl",
-                    "sm:inset-auto sm:right-0 sm:top-full sm:mb-0 sm:mt-2 sm:w-48",
+                    "absolute right-0 top-full mt-2 w-48 rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl",
                   )}
                 >
                   {(["id", "en"] as Language[]).map((lang) => (
@@ -179,9 +185,8 @@ export default function FloatingNavbar({
               {isMenuOpen && (
                 <nav
                   className={clsx(
-                    "absolute inset-x-0 bottom-full mb-2 w-full rounded-3xl border border-gray-100 bg-white shadow-2xl",
-                    "sm:inset-auto sm:right-0 sm:top-full sm:mb-0 sm:mt-2 sm:w-56",
-                    "max-h-[60vh] overflow-y-auto",
+                    "absolute right-0 top-full mt-2 w-56 rounded-3xl border border-gray-100 bg-white shadow-2xl",
+                    "max-h-[80vh] overflow-y-auto",
                   )}
                 >
                   <ul className="divide-y divide-gray-100 text-sm text-gray-700">
