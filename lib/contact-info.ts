@@ -1,4 +1,4 @@
-import contactInfo from "@/config/contact-info.json";
+import contactInfo from "@/content/contact-info.json";
 
 export type ContactInfo = typeof contactInfo;
 

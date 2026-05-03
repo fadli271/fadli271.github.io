@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import CalculatorView from "./calculator-view";
+import { CalculatorView } from "@/features/services/components/CalculatorView";
 
 export const metadata: Metadata = {
   title: "Kalkulator Estimasi Biaya Website & Landing Page",
@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   },
 };
 
+import { getServicesData } from "@/lib/data-loader";
+
 export default function PricingCalculatorPage() {
-  return <CalculatorView />;
+  const t = getServicesData("id");
+  const packages = t?.pricing?.packages || [];
+
+  return <CalculatorView packages={packages} />;
 }

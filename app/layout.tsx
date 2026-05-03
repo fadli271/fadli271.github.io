@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 import { Providers } from "./providers";
 
-import LayoutShell from "@/components/layout-shell";
+import LayoutShell from "@/components/layout/layout-shell";
 import { siteMetadata, siteViewport, structuredData } from "@/lib/site-config";
 
 const inter = Inter({

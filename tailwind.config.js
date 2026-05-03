@@ -4,6 +4,7 @@ import { heroui } from "@heroui/theme";
 const config = {
   content: [
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./features/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
@@ -48,16 +49,6 @@ const config = {
       },
       transitionDelay: {
         300: "300ms",
-      },
-      colors: {
-        smk: {
-          primary: "#0F172A", // Navy Blue
-          secondary: "#D97706", // Gold
-          accent: "#16A34A", // Green
-          neutral: "#F8FAFC", // White/Light Gray
-          tkj: "#DC2626", // Red
-          otomotif: "#2563EB", // Blue
-        },
       },
     },
   },

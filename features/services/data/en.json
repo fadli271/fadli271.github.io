@@ -1,0 +1,646 @@
+{
+  "nav": {
+    "navIntro": "Intro",
+    "navWhyUs": "Why Us?",
+    "navServices": "Services",
+    "navPortfolio": "Portfolio",
+    "navClients": "Clients",
+    "navPricing": "Pricing",
+    "navFaq": "FAQ",
+    "navChat": "Chat on WhatsApp"
+  },
+  "hero": {
+    "heroBadge": "Trusted Digital Partner for SMEs",
+    "heroTitle1": "Grow Your Business",
+    "heroTitle2": "Go Digital Today.",
+    "heroSubtitle": "Build a website & operations system without the hassle. We create a strong digital foundation so your business is ready to accelerate.",
+    "heroCta": "Consult via WhatsApp",
+    "heroFormCta": "View Our Portfolio",
+    "waMessage": "Hello Fadli, I would like to consult about building a website for my business."
+  },
+  "trustBadges": [
+    "Support Guarantee",
+    "Transparent",
+    "Trustworthy"
+  ],
+  "whyUs": {
+    "label": "Why Choose Us",
+    "title": "More Than a Website Vendor",
+    "subtitle": "We appear as a strategic partner for your SME's growth trajectory.",
+    "items": [
+      {
+        "title": "Business Partner",
+        "description": "More than a freelance vendor. We focus on long-term consultation to support your business growth.",
+        "iconName": "handshake",
+        "iconBgClass": "bg-blue-100",
+        "iconHoverBgClass": "group-hover:bg-primary group-hover:text-white",
+        "iconTextClass": "text-primary"
+      },
+      {
+        "title": "No Technical Hassle",
+        "description": "We handle all technical aspects (servers, domains, errors). You just focus on selling and supporting customers.",
+        "iconName": "settings_suggest",
+        "iconBgClass": "bg-purple-100",
+        "iconHoverBgClass": "group-hover:bg-purple-600 group-hover:text-white",
+        "iconTextClass": "text-purple-600"
+      },
+      {
+        "title": "Sales-Driven Design",
+        "description": "Websites are designed with psychology in mind to turn visitors into buyers (High Conversion).",
+        "iconName": "trending_up",
+        "iconBgClass": "bg-orange-100",
+        "iconHoverBgClass": "group-hover:bg-orange-500 group-hover:text-white",
+        "iconTextClass": "text-orange-600"
+      },
+      {
+        "title": "Priority Support",
+        "description": "Fast-response WhatsApp support. Have an issue? Chat us and we will help immediately.",
+        "iconName": "support_agent",
+        "iconBgClass": "bg-green-100",
+        "iconHoverBgClass": "group-hover:bg-green-600 group-hover:text-white",
+        "iconTextClass": "text-green-600"
+      }
+    ]
+  },
+  "promo": {
+    "badge": "Limited Offer for SMEs!",
+    "headline": "Free Maintenance for 3 Months!",
+    "subtext": "We not only build your website but keep it secure and up-to-date so you can focus on selling.",
+    "cta": "Claim This Offer Now",
+    "urgency": "Only for the first 5 signups this month"
+  },
+  "services": {
+    "label": "Service Options",
+    "title": "Complete Packages for Your Needs",
+    "subtitle": "Modern tech (Next.js) that is fast, secure, and SEO friendly.",
+    "popularBadge": "Popular",
+    "items": [
+      {
+        "title": "Operational System",
+        "description": "Apps that tidy up office data. Stock items, employee attendance, financial reports.",
+        "features": [
+          "User Friendly",
+          "Access from Mobile & Laptop"
+        ],
+        "isPopular": false,
+        "iconName": "inventory_2",
+        "iconBgClass": "bg-blue-50"
+      },
+      {
+        "title": "Landing Page",
+        "description": "A single promotional page focused on convincing visitors to buy or contact you.",
+        "features": [
+          "Persuasive Copywriting",
+          "Ad-ready",
+          "High Conversion"
+        ],
+        "isPopular": true,
+        "iconName": "web",
+        "iconBgClass": "bg-primary/10"
+      },
+      {
+        "title": "Online Store / Catalog",
+        "description": "Customers browse products and order via automated WhatsApp without installing apps.",
+        "features": [
+          "Mobile-First Design",
+          "Auto 'Order via WA' Button"
+        ],
+        "isPopular": false,
+        "iconName": "shopping_cart",
+        "iconBgClass": "bg-blue-50"
+      }
+    ]
+  },
+  "portfolio": {
+    "label": "Case Studies",
+    "title": "Our Work That Helps SMEs Grow",
+    "subtitle": "See how we help businesses like yours thrive in the digital space.",
+    "miniCaseStudiesLabel": "Mini Case Study",
+    "miniCaseStudiesTitle": "Before & After Going Digital",
+    "miniCaseStudiesSubtitle": "Short and practical—focused on business impact.",
+    "miniCaseStudies": [
+      {
+        "problem": "Prospects kept asking the same questions in chat, slowing response time.",
+        "solution": "Built a landing page with clear FAQ structure and WhatsApp CTA.",
+        "result": "More focused chats and faster closing."
+      },
+      {
+        "problem": "Product catalog was still manual, causing price/stock miscommunication.",
+        "solution": "Created a mobile-first digital catalog with categories and direct order CTA.",
+        "result": "Less admin time and more consistent online orders."
+      },
+      {
+        "problem": "Ad leads were coming in but source tracking was unclear.",
+        "solution": "Added lead capture form and basic campaign event tracking.",
+        "result": "More measurable follow-up and faster marketing decisions."
+      }
+    ],
+    "demoLabel": "View Demo",
+    "categories": [
+      "All",
+      "Landing Page",
+      "Company Profile",
+      "Custom Systems"
+    ],
+    "items": [
+      {
+        "title": "Staff Monitoring System",
+        "category": "Custom Systems",
+        "description": "Real-time staff performance & status management.",
+        "stat": "24/7",
+        "statSub": "Monitoring",
+        "image": "/images/projects/project-monitoring-staf-1.png",
+        "link": "#"
+      },
+      {
+        "title": "POS Bakti Nusantara",
+        "category": "Custom Systems",
+        "description": "Integrated Point-of-Sale with Warehouse & Accounting.",
+        "stat": "+95%",
+        "statSub": "Stock Accuracy",
+        "image": "/images/projects/project-pos-2.png",
+        "link": "#"
+      },
+      {
+        "title": "Mutiara Cantik",
+        "category": "Landing Page",
+        "description": "Mobile-first digital catalog for beauty store.",
+        "stat": "24/7",
+        "statSub": "Digital Showcase",
+        "image": "/images/projects/project-mutiara-4.png",
+        "link": "#"
+      }
+    ]
+  },
+  "testimonials": {
+    "label": "Success Stories",
+    "title": "Trusted by Various SMEs",
+    "items": [
+      {
+        "businessType": "F&B / Culinary",
+        "quote": "Revenue rose 30% because customers can view mouthwatering menu photos via QR code.",
+        "authorRole": "Owner",
+        "authorName": "Budi Santoso",
+        "authorInitials": "BS",
+        "iconName": "restaurant",
+        "iconBgClass": "bg-orange-100",
+        "iconColorClass": "text-orange-600",
+        "businessName": "Kedai Kopi Nusantara",
+        "rating": 5
+      },
+      {
+        "businessType": "Fashion Retail",
+        "quote": "Selling on IG became easier. Customers just tap the link in the bio, choose, and pay.",
+        "authorRole": "Founder",
+        "authorName": "Siti Aminah",
+        "authorInitials": "SA",
+        "iconName": "checkroom",
+        "iconBgClass": "bg-pink-100",
+        "iconColorClass": "text-pink-600",
+        "businessName": "Butik Elegan",
+        "rating": 5
+      },
+      {
+        "businessType": "Automotive Services",
+        "quote": "The website made our shop look professional. Corporate clients now trust us.",
+        "authorRole": "Head Mechanic",
+        "authorName": "Hendro Wijaya",
+        "authorInitials": "HW",
+        "iconName": "build",
+        "iconBgClass": "bg-blue-100",
+        "iconColorClass": "text-blue-600",
+        "businessName": "Bengkel Maju Jaya",
+        "rating": 4.5
+      },
+      {
+        "businessType": "Catering & Events",
+        "quote": "The online catering booking system keeps schedules organized. No more mistakes from missed notes.",
+        "authorRole": "Owner",
+        "authorName": "Ibu Ratna",
+        "authorInitials": "IR",
+        "iconName": "soup_kitchen",
+        "iconBgClass": "bg-green-100",
+        "iconColorClass": "text-green-600",
+        "businessName": "Dapur Mama",
+        "rating": 5
+      },
+      {
+        "businessType": "Building Materials Store",
+        "quote": "The new inventory system lets me know exactly how much cement and tile we have, so we stop over-ordering.",
+        "authorRole": "Owner",
+        "authorName": "Pak Darmawan",
+        "authorInitials": "PD",
+        "iconName": "hardware",
+        "iconBgClass": "bg-purple-100",
+        "iconColorClass": "text-purple-600",
+        "businessName": "Toko Bangunan Berkah",
+        "rating": 5
+      },
+      {
+        "businessType": "Beauty Salon",
+        "quote": "Online booking keeps treatment schedules tidy, no more no-shows from forgotten appointments.",
+        "authorRole": "Owner",
+        "authorName": "Maya Putri",
+        "authorInitials": "MP",
+        "iconName": "spa",
+        "iconBgClass": "bg-rose-100",
+        "iconColorClass": "text-rose-600",
+        "businessName": "Salon Cantik Ayu",
+        "rating": 5
+      },
+      {
+        "businessType": "Pharmacy",
+        "quote": "The digital catalog lets customers check medicine availability first, so there are fewer back-and-forth calls.",
+        "authorRole": "Pharmacist",
+        "authorName": "Dr. Andi",
+        "authorInitials": "DA",
+        "iconName": "local_pharmacy",
+        "iconBgClass": "bg-teal-100",
+        "iconColorClass": "text-teal-600",
+        "businessName": "Apotek Sehat Selalu",
+        "rating": 4.5
+      },
+      {
+        "businessType": "Printing & Design",
+        "quote": "The new landing page attracts corporate clients because they can review the portfolio and request large print jobs entirely online.",
+        "authorRole": "Manager",
+        "authorName": "Rizky Pratama",
+        "authorInitials": "RP",
+        "iconName": "print",
+        "iconBgClass": "bg-indigo-100",
+        "iconColorClass": "text-indigo-600",
+        "businessName": "Percetakan Jaya Print",
+        "rating": 5
+      }
+    ]
+  },
+  "pricing": {
+    "label": "Investment",
+    "title": "Package Options that Match Your Needs",
+    "subtitle": "Transparent pricing for landing pages. For other services, let’s talk about your requirements first.",
+    "landingPageTitle": "Landing Page",
+    "landingPageDescription": "One-time setup + annual infrastructure (server, domain, tools)",
+    "setupLabel": "Setup (one-time payment)",
+    "infraLabel": "Infra: ",
+    "packageButton": "Order This Package",
+    "packages": [
+      {
+        "label": "Economy Package",
+        "price": "Rp 895.000",
+        "infra": "Rp 300.000 / year",
+        "fit": "Best for getting daily WhatsApp leads quickly with the most efficient budget.",
+        "waMessage": "Halo Fadli, saya tertarik dengan Paket Hemat (Rp 895.000). Bisa jelaskan detailnya?",
+        "includes": [
+          {
+            "iconName": "web",
+            "text": "Conversion-focused page with WhatsApp CTA"
+          },
+          {
+            "iconName": "smartphone",
+            "text": "Mobile-first, trustworthy presentation"
+          },
+          {
+            "iconName": "chat",
+            "text": "Leads flow directly to WhatsApp"
+          },
+          {
+            "iconName": "timer",
+            "text": "Go live in 5 days"
+          }
+        ],
+        "isPopular": false
+      },
+      {
+        "label": "Starter",
+        "price": "Rp 1.490.000",
+        "infra": "Rp 1.200.000 / year",
+        "fit": "For SMEs/personal brands that want stronger trust and steadier conversion.",
+        "waMessage": "Halo Fadli, saya mau tanya soal Paket Starter (Rp 1.490.000) untuk bisnis saya.",
+        "includes": [
+          {
+            "iconName": "web",
+            "text": "1–2 page structure for education + closing"
+          },
+          {
+            "iconName": "dns",
+            "text": "Ready-to-use domain & hosting (1 year)"
+          },
+          {
+            "iconName": "smartphone",
+            "text": "Fast and polished mobile experience"
+          },
+          {
+            "iconName": "chat",
+            "text": "Clear WhatsApp CTA flow"
+          },
+          {
+            "iconName": "timer",
+            "text": "Go live in 1–2 weeks"
+          }
+        ],
+        "isPopular": false
+      },
+      {
+        "label": "Growth",
+        "price": "Rp 3.900.000",
+        "infra": "Rp 2.000.000 / year",
+        "fit": "For businesses scaling ads/channels with a cleaner lead system.",
+        "waMessage": "Halo Fadli, saya tertarik Paket Growth (Rp 3.900.000). Bisa diskusi kebutuhan saya?",
+        "includes": [
+          {
+            "iconName": "check_circle",
+            "text": "All Starter foundations"
+          },
+          {
+            "iconName": "layers",
+            "text": "Multi-page flow for fuller funnel journeys"
+          },
+          {
+            "iconName": "contact_mail",
+            "text": "Lead capture for measurable follow-up"
+          },
+          {
+            "iconName": "search",
+            "text": "Basic SEO for organic reach"
+          },
+          {
+            "iconName": "photo_library",
+            "text": "Showcase product/service to boost trust"
+          },
+          {
+            "iconName": "support_agent",
+            "text": "Priority support during campaigns"
+          },
+          {
+            "iconName": "timer",
+            "text": "Go live in 2–3 weeks"
+          }
+        ],
+        "isPopular": true
+      },
+      {
+        "label": "Scale",
+        "price": "Rp 7.900.000",
+        "infra": "Rp 3.000.000 / year",
+        "fit": "For brands needing high flexibility, automation, and repeatable growth experiments.",
+        "waMessage": "Halo Fadli, saya butuh Paket Scale (Rp 7.900.000) untuk proyek saya. Kapan bisa mulai?",
+        "includes": [
+          {
+            "iconName": "check_circle",
+            "text": "All Growth foundations"
+          },
+          {
+            "iconName": "dashboard",
+            "text": "Complex layouts for multi-funnel needs"
+          },
+          {
+            "iconName": "integration_instructions",
+            "text": "Advanced integrations for business workflows"
+          },
+          {
+            "iconName": "campaign",
+            "text": "Recurring campaign-ready setup"
+          },
+          {
+            "iconName": "analytics",
+            "text": "Performance tracking for faster decisions"
+          },
+          {
+            "iconName": "security",
+            "text": "Enhanced security layers"
+          },
+          {
+            "iconName": "timer",
+            "text": "Go live in 3–4 weeks"
+          }
+        ],
+        "isPopular": false
+      }
+    ],
+    "otherServicesHeading": "Additional Services",
+    "otherServicesSubtitle": "Pricing adjusted based on features and your complexity needs",
+    "otherServices": [
+      {
+        "title": "Online Store / Catalog",
+        "description": "Customers browse products and order via WhatsApp. Pricing depends on the number of products, filtering features, and payment integrations.",
+        "features": [
+          "Categorized product catalog",
+          "WhatsApp checkout",
+          "Mobile-first responsive",
+          "Custom features tailored to your needs"
+        ],
+        "cta": "Free Consultation",
+        "icon": "shopping_cart",
+        "color": "blue",
+        "waMessage": "Halo Fadli, saya butuh website toko online / katalog produk. Bisa konsultasi dulu?"
+      },
+      {
+        "title": "Operational Systems",
+        "description": "Apps to organize office data. Pricing depends on required modules and user count.",
+        "features": [
+          "Stock & inventory management",
+          "Attendance & employee data",
+          "Automated financial reports",
+          "Custom modules per business"
+        ],
+        "cta": "Free Consultation",
+        "icon": "inventory_2",
+        "color": "purple",
+        "waMessage": "Halo Fadli, saya butuh sistem operasional untuk bisnis saya (stok, absensi, dll). Bisa diskusi?"
+      },
+      {
+        "title": "Mobile Apps",
+        "description": "Mobile apps for your business. Pricing varies by platform (Android/iOS), features, and complexity.",
+        "features": [
+          "Android & iOS (Cross-platform)",
+          "Push notification",
+          "Offline mode support",
+          "Custom features tailored to your needs"
+        ],
+        "cta": "Free Consultation",
+        "icon": "phone_android",
+        "color": "green",
+        "waMessage": "Halo Fadli, saya tertarik bikin aplikasi mobile untuk bisnis saya. Bisa konsultasi?"
+      }
+    ],
+    "infoSetup": "Setup = initial creation fee (one-time payment). Infra = server, domain & tools (annual).",
+    "infoMaintenance": "Routine maintenance is optional and can be added anytime as needed."
+  },
+  "valueAdded": {
+    "label": "Value Added",
+    "title": "Standard Features in All Packages",
+    "subtitle": "No need to pay extra. You automatically get these essential features.",
+    "items": [
+      {
+        "title": "SSL Certificate (Green Padlock)",
+        "description": "Secure website trusted by Google. Your customer data is fully protected.",
+        "iconName": "lock"
+      },
+      {
+        "title": "Free Hosting & Domain",
+        "description": "Includes server rental and website address for the first year.",
+        "iconName": "dns"
+      },
+      {
+        "title": "Routine Data Backup",
+        "description": "No need to fear data loss. We perform automatic backups periodically.",
+        "iconName": "cloud_sync"
+      },
+      {
+        "title": "Mobile Responsive",
+        "description": "Website looks perfect on mobile, tablet, and laptop.",
+        "iconName": "devices"
+      },
+      {
+        "title": "Anti-Hacker Security",
+        "description": "Layered protection to keep your website safe from malicious attacks.",
+        "iconName": "security"
+      },
+      {
+        "title": "Social Media Integration",
+        "description": "Connect your website directly to your WhatsApp, Instagram, and Facebook.",
+        "iconName": "share"
+      }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Full information on services, pricing, and after-sales.",
+    "items": [
+      {
+        "question": "How long does the creation process take?",
+        "answer": "Average 7-14 working days depending on complexity. Simple landing pages can be done in 3-5 days."
+      },
+      {
+        "question": "How much for domain & hosting renewal?",
+        "answer": "Very affordable. Starting from Rp 500k/year, includes light technical support and security updates."
+      },
+      {
+        "question": "Am I the legal owner of my website?",
+        "answer": "Yes, 100%. Data, domain, and content belong entirely to you. We only help manage it technically."
+      },
+      {
+        "question": "What if I want to change the content?",
+        "answer": "We provide easy video tutorials (no coding needed) so you can edit it yourself. Or we can do it for you."
+      },
+      {
+        "question": "What if there's a technical error?",
+        "answer": "Don't worry, all packages include maintenance warranty. We fix system errors for free during active subscription."
+      },
+      {
+        "question": "How about the payment?",
+        "answer": "50% DP to start. Remaining 50% after the website is finished and you are satisfied, before full access handover."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Start Now",
+    "titleLine1": "Free Consultation,",
+    "titleLine2": "Risk-Free.",
+    "subtitle": "Tell us your business needs via WhatsApp. We will provide a digital strategy solution and cost estimate within 24 hours.",
+    "primary": "Chat via WhatsApp Now",
+    "secondary": "Fill Briefing Form"
+  },
+  "footer": {
+    "paragraph": "Trusted digital partner helping SMEs grow rapidly with professional and affordable website solutions.",
+    "profileRole": "Software engineer since 2016. Focused on helping SMEs transform digitally with efficient and scalable solutions.",
+    "contactTitle": "Contact Us",
+    "followTitle": "Follow Us",
+    "rights": "© Fadli Dev Studio. All rights reserved."
+  },
+  "whyChooseUs": {
+    "label": "Our Advantages",
+    "title": "Why Choose Us?",
+    "subtitle": "We don't just build websites, we build selling digital identities.",
+    "items": [
+      {
+        "iconName": "speed",
+        "iconBgClass": "bg-blue-50",
+        "iconHoverBgClass": "group-hover:bg-blue-500",
+        "iconTextClass": "text-blue-500",
+        "title": "High Performance",
+        "description": "Fast websites using the latest Next.js technology for the best user experience."
+      },
+      {
+        "iconName": "search",
+        "iconBgClass": "bg-purple-50",
+        "iconHoverBgClass": "group-hover:bg-purple-500",
+        "iconTextClass": "text-purple-500",
+        "title": "SEO Optimized",
+        "description": "Search engine friendly code structure so your business is easily found."
+      },
+      {
+        "iconName": "security",
+        "iconBgClass": "bg-green-50",
+        "iconHoverBgClass": "group-hover:bg-green-500",
+        "iconTextClass": "text-green-500",
+        "title": "Secure & Reliable",
+        "description": "SSL certificates and layered protection to keep your business data safe."
+      },
+      {
+        "iconName": "devices",
+        "iconBgClass": "bg-orange-50",
+        "iconHoverBgClass": "group-hover:bg-orange-500",
+        "iconTextClass": "text-orange-500",
+        "title": "Responsive Design",
+        "description": "Perfect display on all screen sizes, from mobile to desktop."
+      }
+    ]
+  },
+  "processSteps": {
+    "label": "Quick Process",
+    "title": "3 Easy Steps to Own a Website",
+    "subtitle": "No need to stress over the tech. We keep the process as simple as possible so you can focus on running your business.",
+    "formCta": "Fill the Consultation Form",
+    "steps": [
+      {
+        "title": "Consult & Order",
+        "description": "Just tell us your business goals and choose the right package. No coding knowledge needed; we translate your ideas.",
+        "iconName": "chat_bubble",
+        "iconColor": "text-primary",
+        "numberBg": "bg-primary",
+        "blurBg": "bg-blue-100"
+      },
+      {
+        "title": "Design & Dev",
+        "description": "Sit back while we handle the technical work. You will receive regular updates and revisions until it's perfect.",
+        "iconName": "design_services",
+        "iconColor": "text-purple-600",
+        "numberBg": "bg-purple-600",
+        "blurBg": "bg-purple-100"
+      },
+      {
+        "title": "Launch & Training",
+        "description": "Website goes live! We don’t just hand it over; we teach you how to use it until you feel confident managing it yourself.",
+        "iconName": "rocket_launch",
+        "iconColor": "text-green-500",
+        "numberBg": "bg-green-500",
+        "blurBg": "bg-green-100"
+      }
+    ]
+  },
+  "impactROI": {
+    "label": "Real Impact",
+    "title": "Measurable Digital Transformation",
+    "subtitle": "High-end clients aren't just looking for aesthetics; they demand results. Here is how our digital strategies deliver immediate ROI.",
+    "items": [
+      {
+        "klien": "Retail & B2B Corp",
+        "sebelum": "Manual catalogs, pricing miscommunication, and orders stuck in chat queues.",
+        "sesudah": "Mobile-first digital catalog integrated directly with automated order management.",
+        "roi": "+300%",
+        "roiLabel": "Order Speed",
+        "icon": "storefront"
+      },
+      {
+        "klien": "Clinics & Professionals",
+        "sebelum": "Staff schedules often conflict due to paper-based guestbooks and phone calls.",
+        "sesudah": "Real-time online booking system with automated WhatsApp reminder notifications.",
+        "roi": "0%",
+        "roiLabel": "Double Booking",
+        "icon": "event_available"
+      }
+    ]
+  }
+}

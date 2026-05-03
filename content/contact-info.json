@@ -1,0 +1,18 @@
+{
+  "whatsapp": {
+    "number": "6282189642027",
+    "defaultMessage": "Halo Fadli, saya ingin bertanya tentang jasa pembuatan website."
+  },
+  "social": {
+    "github": "https://github.com/fadli271",
+    "linkedin": "https://linkedin.com/in/fadli271",
+    "instagram": "https://instagram.com/fadli_dev"
+  },
+  "email": "fadli271@gmail.com",
+  "address": {
+    "locality": "Sigi",
+    "region": "Sulawesi Tengah",
+    "country": "ID",
+    "postalCode": "94364"
+  }
+}
