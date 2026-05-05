@@ -22,9 +22,7 @@ export function FAQSection({ t }: FAQSectionProps) {
           <h2 className="text-3xl font-bold text-gray-900 mb-4 dark:text-white">
             {t.faq.title}
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            {t.faq.subtitle}
-          </p>
+          <p className="text-gray-600 dark:text-gray-400">{t.faq.subtitle}</p>
         </SlideLeft>
         <div className="space-y-4">
           {items.map((faq: any, idx: number) => {

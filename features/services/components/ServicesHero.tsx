@@ -3,10 +3,11 @@
 import Link from "next/link";
 import React from "react";
 
+import { ServicesContent } from "../types";
+
 import { MaterialIcon } from "./animations";
 
 import { Language } from "@/types";
-import { ServicesContent } from "../types";
 interface ServicesHeroProps {
   lang: Language;
   t: ServicesContent;

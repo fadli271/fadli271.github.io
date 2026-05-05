@@ -2,11 +2,11 @@
 
 import React from "react";
 
+import { ServicesContent } from "../types";
+
 import { MaterialIcon, ScaleIn } from "./animations";
 
 import { buildWhatsAppLink } from "@/lib/contact-info";
-
-import { ServicesContent } from "../types";
 
 interface FinalCTAProps {
   t: ServicesContent;

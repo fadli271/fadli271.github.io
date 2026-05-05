@@ -3,9 +3,10 @@
 import React from "react";
 
 import { ServicesContent } from "../types";
-import { Language } from "@/types";
 
 import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
+
+import { Language } from "@/types";
 
 interface ImpactROIProps {
   t: ServicesContent;
