@@ -93,16 +93,16 @@ export const structuredData = [
     priceRange: "Rp895.000 - Rp7.900.000",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Sigi, Sulawesi Tengah",
-      addressLocality: "Sigi",
-      addressRegion: "Sulawesi Tengah",
-      postalCode: "94364",
+      streetAddress: "Jakarta Barat, Jakarta",
+      addressLocality: "Jakarta Barat",
+      addressRegion: "Jakarta",
+      postalCode: "11610",
       addressCountry: "ID",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -1.0333,
-      longitude: 119.9333,
+      latitude: -6.1683,
+      longitude: 106.7583,
     },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",

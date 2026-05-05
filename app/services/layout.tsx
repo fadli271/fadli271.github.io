@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     "Fadli Dev Studio",
     "Next.js developer",
     "website bisnis",
-    "pembuatan website Sulawesi",
-    "jasa web Palu",
+    "pembuatan website Jakarta",
+    "jasa web Jakarta",
     "website company profile",
   ],
   alternates: {

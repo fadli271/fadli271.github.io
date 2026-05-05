@@ -8,10 +8,25 @@ import { MaterialIcon } from "./animations";
 
 import { ServicesContent } from "../types";
 
+import { Facebook, Instagram, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
+
 interface ServicesFooterProps {
   footerRightsText: string;
   t: ServicesContent;
 }
+
+const SOCIAL_LINKS = [
+  {
+    icon: Facebook,
+    link: "https://www.facebook.com/fadli.dev.studio/",
+  },
+  {
+    icon: Instagram,
+    link: "https://www.instagram.com/fadli.dev.studio/",
+  },
+  { icon: Linkedin, link: "https://linkedin.com/in/mfadli27a" },
+  { icon: Github, link: "https://github.com/fadli271" },
+];
 
 export function ServicesFooter({ footerRightsText, t }: ServicesFooterProps) {
   return (
@@ -40,30 +55,20 @@ export function ServicesFooter({ footerRightsText, t }: ServicesFooterProps) {
               {t.footer.paragraph}
             </p>
             <div className="flex gap-4">
-              {[
-                {
-                  icon: "facebook",
-                  link: "https://www.facebook.com/fadli.dev.studio/",
-                },
-                {
-                  icon: "instagram",
-                  link: "https://www.instagram.com/fadli.dev.studio/",
-                },
-                { icon: "linkedin", link: "https://linkedin.com/in/mfadli27a" },
-                { icon: "github", link: "https://github.com/fadli271" },
-              ].map((social) => (
-                <a
-                  key={social.icon}
-                  className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-sky-500 transition-all group"
-                  href={social.link}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className={`fab fa-${social.icon} text-slate-400 group-hover:text-white`}
-                  />
-                </a>
-              ))}
+              {SOCIAL_LINKS.map((social, idx) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={idx}
+                    className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-sky-500 transition-all group"
+                    href={social.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <Icon className="w-5 h-5 text-slate-400 group-hover:text-white" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -159,7 +164,7 @@ export function ServicesFooter({ footerRightsText, t }: ServicesFooterProps) {
               </li>
               <li className="flex gap-3">
                 <MaterialIcon className="text-sky-500" name="location_on" />
-                <span>Palu, Sulawesi Tengah, Indonesia</span>
+                <span>Jakarta Barat, Jakarta, Indonesia</span>
               </li>
             </ul>
           </div>
@@ -169,17 +174,6 @@ export function ServicesFooter({ footerRightsText, t }: ServicesFooterProps) {
           <p>
             © {new Date().getFullYear()} {footerRightsText}
           </p>
-          <div className="flex gap-6">
-            <Link
-              className="hover:text-white transition-colors"
-              href="/privacy"
-            >
-              Privacy Policy
-            </Link>
-            <Link className="hover:text-white transition-colors" href="/terms">
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
