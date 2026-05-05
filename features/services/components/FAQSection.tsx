@@ -2,9 +2,11 @@
 
 import React from "react";
 
+import { ServicesContent } from "../types";
+
 import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
 interface FAQSectionProps {
-  t: any;
+  t: ServicesContent;
 }
 
 export function FAQSection({ t }: FAQSectionProps) {
@@ -15,14 +17,13 @@ export function FAQSection({ t }: FAQSectionProps) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SlideLeft className="text-center mb-16">
           <span className="text-sky-500 font-bold tracking-wider text-xs uppercase mb-2 block">
-            {t.faqLabel ?? "Tanya Jawab"}
+            {t.faq.label}
           </span>
           <h2 className="text-3xl font-bold text-gray-900 mb-4 dark:text-white">
-            {t.faqTitle ?? "Paling Sering Ditanyakan"}
+            {t.faq.title}
           </h2>
           <p className="text-gray-600 dark:text-gray-400">
-            {t.faqSubtitle ??
-              "Informasi lengkap seputar layanan, harga, dan purna jual."}
+            {t.faq.subtitle}
           </p>
         </SlideLeft>
         <div className="space-y-4">

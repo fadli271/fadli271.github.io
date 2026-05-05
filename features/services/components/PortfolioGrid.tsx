@@ -3,12 +3,12 @@
 import Image from "next/image";
 import React from "react";
 
-import { PortfolioItem } from "../types";
+import { PortfolioItem, ServicesContent } from "../types";
 
 import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
 
 interface PortfolioGridProps {
-  t: any;
+  t: ServicesContent;
   portfolioCategoryOptions: { value: string; label: string }[];
   activeCategory: string;
   setActiveCategory: (cat: string) => void;
@@ -30,14 +30,13 @@ export function PortfolioGrid({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SlideLeft className="text-center mb-12 max-w-3xl mx-auto">
           <span className="text-sky-500 font-bold tracking-wider text-xs uppercase mb-2 block">
-            {t.portfolioLabel ?? "Studi Kasus"}
+            {t.portfolio.label}
           </span>
           <h2 className="text-3xl font-bold text-gray-900 mb-4 dark:text-white">
-            {t.portfolioTitle ?? "Karya Kami yang Telah Membantu UMKM"}
+            {t.portfolio.title}
           </h2>
           <p className="text-gray-600 dark:text-gray-400">
-            {t.portfolioSubtitle ??
-              "Lihat bagaimana kami membantu bisnis seperti Anda tumbuh digital."}
+            {t.portfolio.subtitle}
           </p>
         </SlideLeft>
 
@@ -83,7 +82,7 @@ export function PortfolioGrid({
                       </p>
                       {project.link && (
                         <span className="bg-sky-500 hover:bg-sky-400 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors">
-                          {t.portfolioDemoLabel ?? "Lihat Demo"}
+                          {t.portfolio.demoLabel}
                         </span>
                       )}
                     </div>

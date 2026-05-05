@@ -2,11 +2,11 @@
 
 import React from "react";
 
-import { ServiceItem } from "../types";
+import { ServiceItem, ServicesContent } from "../types";
 
 import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
 interface ServicesListProps {
-  t: any;
+  t: ServicesContent;
   items: ServiceItem[];
 }
 
@@ -16,14 +16,13 @@ export function ServicesList({ t, items }: ServicesListProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SlideLeft className="text-center mb-16 max-w-3xl mx-auto">
           <span className="text-sky-500 font-bold tracking-wider text-xs uppercase mb-2 block">
-            {t.servicesLabel ?? "Pilihan Layanan"}
+            {t.services.label}
           </span>
           <h2 className="text-3xl font-bold text-gray-900 mb-4 dark:text-white">
-            {t.servicesTitle ?? "Paket Lengkap untuk Kebutuhan Anda"}
+            {t.services.title}
           </h2>
           <p className="text-gray-600 dark:text-gray-400">
-            {t.servicesSubtitle ??
-              "Teknologi modern (Next.js) yang cepat, aman, dan SEO Friendly."}
+            {t.services.subtitle}
           </p>
         </SlideLeft>
         <div className="grid md:grid-cols-3 gap-8">
@@ -38,7 +37,7 @@ export function ServicesList({ t, items }: ServicesListProps) {
               >
                 {service.isPopular && (
                   <div className="absolute top-0 right-0 bg-sky-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl">
-                    {t.popularBadge ?? "Popular"}
+                    {t.services.popularBadge}
                   </div>
                 )}
                 <div

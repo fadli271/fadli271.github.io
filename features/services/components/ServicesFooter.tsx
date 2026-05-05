@@ -6,9 +6,11 @@ import React from "react";
 
 import { MaterialIcon } from "./animations";
 
+import { ServicesContent } from "../types";
+
 interface ServicesFooterProps {
   footerRightsText: string;
-  t: any;
+  t: ServicesContent;
 }
 
 export function ServicesFooter({ footerRightsText, t }: ServicesFooterProps) {

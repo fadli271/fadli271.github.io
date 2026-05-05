@@ -1,19 +1,11 @@
 "use client";
 
-import { useScroll, useSpring } from "framer-motion";
 import Script from "next/script";
-import { useState, useEffect, useCallback } from "react";
-
-interface ServicesViewProps {
-  initialData: {
-    id: any;
-    en: any;
-  };
-}
-
-// Shared Components
 
 // Feature Components
+import { ServicesContent } from "../types";
+import { useServicesState } from "../hooks/use-services-state";
+
 import { ServicesNavbar } from "./ServicesNavbar";
 import { ServicesHero } from "./ServicesHero";
 import { WhyChooseUs } from "./WhyChooseUs";
@@ -30,65 +22,26 @@ import { FinalCTA } from "./FinalCTA";
 import { ServicesFooter } from "./ServicesFooter";
 
 import FloatingWaButton from "@/components/shared/floating-wa-button";
-import { Language } from "@/types";
+
+interface ServicesViewProps {
+  initialData: {
+    id: ServicesContent;
+    en: ServicesContent;
+  };
+}
 
 export function ServicesView({ initialData }: ServicesViewProps) {
-  // --- States ---
-  const [activeCategory, setActiveCategory] = useState("Semua");
-  const [activeSection, setActiveSection] = useState("");
-  const [darkMode, setDarkMode] = useState(false);
-  const [lang, setLang] = useState<Language>("id");
-
-  // --- Scroll Progress ---
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
-  // --- Effects ---
-  useEffect(() => {
-    const navLinks = [
-      { href: "#intro" },
-      { href: "#keunggulan" },
-      { href: "#layanan" },
-      { href: "#portfolio" },
-      { href: "#testimoni" },
-      { href: "#harga" },
-      { href: "#faq-section" },
-    ];
-    const sectionIds = navLinks.map((l) => l.href.replace("#", ""));
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(`#${entry.target.id}`);
-          }
-        });
-      },
-      { rootMargin: "-20% 0px -70% 0px" },
-    );
-
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  const toggleDarkMode = useCallback(() => {
-    setDarkMode((v) => {
-      document.documentElement.classList.toggle("dark", !v);
-
-      return !v;
-    });
-  }, []);
-
-  // --- Calculations & Translations ---
-  const t = initialData[lang] || {};
+  const {
+    activeCategory,
+    setActiveCategory,
+    activeSection,
+    darkMode,
+    lang,
+    setLang,
+    scaleX,
+    toggleDarkMode,
+    t,
+  } = useServicesState(initialData);
 
   const navLabels: Record<string, string> = {
     "#intro": t.nav.navIntro ?? "Intro",
@@ -103,24 +56,23 @@ export function ServicesView({ initialData }: ServicesViewProps) {
 
   const heroTrustBadgesList = (t.trustBadges || []).slice(0, 3);
 
-  const portfolioCategoryOptions = (t.portfolio?.categories || []).map(
-    (cat: string) => ({
-      value: cat,
-      label: cat,
+  const portfolioCategoryOptions = Object.values(t.portfolio.categories).map(
+    (label: string) => ({
+      value: label,
+      label: label,
     }),
   );
 
-  const portfolioWithIndex = (t.portfolio?.items || []).map(
-    (project: any, idx: number) => ({
-      project,
-      idx,
-    }),
-  );
+  const portfolioWithIndex = (t.portfolio?.items || []).map((project, idx) => ({
+    project,
+    idx,
+  }));
+
   const filteredPortfolio =
-    activeCategory === "Semua"
+    activeCategory === t.portfolio.categories.all
       ? portfolioWithIndex
       : portfolioWithIndex.filter(
-          ({ project }: any) => project.category === activeCategory,
+          ({ project }) => project.category === activeCategory,
         );
 
   const footerRightsText = (
@@ -133,7 +85,7 @@ export function ServicesView({ initialData }: ServicesViewProps) {
     "@graph": [
       {
         "@type": "FAQPage",
-        mainEntity: (t.faq?.items || []).map((faq: any) => ({
+        mainEntity: (t.faq?.items || []).map((faq) => ({
           "@type": "Question",
           name: faq.question,
           acceptedAnswer: {
@@ -151,7 +103,7 @@ export function ServicesView({ initialData }: ServicesViewProps) {
           ratingValue: "4.9",
           reviewCount: (t.testimonials?.items || []).length.toString(),
         },
-        review: (t.testimonials?.items || []).slice(0, 5).map((testi: any) => ({
+        review: (t.testimonials?.items || []).slice(0, 5).map((testi) => ({
           "@type": "Review",
           author: {
             "@type": "Person",
@@ -203,8 +155,8 @@ export function ServicesView({ initialData }: ServicesViewProps) {
           t={t}
           waLink={`https://wa.me/6282189642027?text=${encodeURIComponent(t.hero?.waMessage || "")}`}
         />
-        <WhyChooseUs items={t.whyChooseUs?.items || []} t={t} />
-        <ProcessSteps items={t.processSteps?.items || []} t={t} />
+        <WhyChooseUs items={t.whyUs.items} t={t} />
+        <ProcessSteps items={t.processSteps.steps} t={t} />
         <PromoBanner t={t} />
         <ServicesList items={t.services?.items || []} t={t} />
         <PortfolioGrid
@@ -215,7 +167,7 @@ export function ServicesView({ initialData }: ServicesViewProps) {
           t={t}
         />
         <TestimonialsMarquee t={t} />
-        <ImpactROI t={t} />
+        <ImpactROI lang={lang} t={t} />
         <PricingTable t={t} />
         <StandardFeatures t={t} />
         <FAQSection t={t} />

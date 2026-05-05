@@ -23,7 +23,12 @@ export const metadata: Metadata = {
 
 export default function PricingCalculatorPage() {
   const t = getServicesData("id");
-  const packages = t?.pricing?.packages || [];
+
+  if (!t) {
+    throw new Error("Required services data not found");
+  }
+
+  const packages = t.pricing.packages;
 
   return <CalculatorView packages={packages} />;
 }

@@ -15,20 +15,19 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
+import { Package } from "../types";
+
+import { parsePrice, formatPrice } from "@/lib/utils";
 import {
   MaterialIcon,
   FadeUp,
 } from "@/features/services/components/animations";
 
 interface CalculatorViewProps {
-  packages: any[];
+  packages: Package[];
 }
 
 // --- Logic & Config ---
-const parsePrice = (priceStr: string) => {
-  return parseInt(priceStr.replace(/[^0-9]/g, "")) || 0;
-};
-
 const ADD_ONS = [
   {
     id: "seo_pro",
@@ -106,14 +105,6 @@ export function CalculatorView({ packages }: CalculatorViewProps) {
       infra: pkg?.infra,
     };
   }, [selectedPackageLabel, extraPages, selectedAddOns, isExpress]);
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat("id-ID", {
-      style: "currency",
-      currency: "IDR",
-      maximumFractionDigits: 0,
-    }).format(price);
-  };
 
   return (
     <div className="bg-[#f8fafc] text-[#334155] min-h-screen dark:bg-gray-950 dark:text-gray-300">

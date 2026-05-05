@@ -2,13 +2,17 @@
 
 import React from "react";
 
+import { ServicesContent } from "../types";
+import { Language } from "@/types";
+
 import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
 
 interface ImpactROIProps {
-  t: any;
+  t: ServicesContent;
+  lang: Language;
 }
 
-export function ImpactROI({ t }: ImpactROIProps) {
+export function ImpactROI({ t, lang }: ImpactROIProps) {
   const items = t.impactROI.items;
 
   return (
@@ -48,7 +52,7 @@ export function ImpactROI({ t }: ImpactROIProps) {
                       </div>
                       <h4 className="text-[11px] font-bold tracking-widest text-red-500 uppercase">
                         {t.impactROI.labelProblem ??
-                          (t.lang === "id" ? "Masalah" : "The Problem")}
+                          (lang === "id" ? "Masalah" : "The Problem")}
                       </h4>
                     </div>
                     <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed relative z-10">
@@ -63,7 +67,7 @@ export function ImpactROI({ t }: ImpactROIProps) {
                     <div className="flex-1">
                       <h4 className="flex items-center gap-2 text-[11px] font-bold tracking-widest text-sky-500 uppercase mb-3">
                         {t.impactROI.labelSolution ??
-                          (t.lang === "id" ? "Solusi Kami" : "Our Solution")}
+                          (lang === "id" ? "Solusi Kami" : "Our Solution")}
                         <MaterialIcon
                           className="text-xs"
                           name="arrow_forward"

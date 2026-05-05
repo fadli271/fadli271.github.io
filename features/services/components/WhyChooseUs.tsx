@@ -4,9 +4,11 @@ import React from "react";
 
 import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
 
+import { ServicesContent, WhyChooseUsItem } from "../types";
+
 interface WhyChooseUsProps {
-  t: any;
-  items: any[];
+  t: ServicesContent;
+  items: WhyChooseUsItem[];
 }
 
 export function WhyChooseUs({ t, items }: WhyChooseUsProps) {
@@ -19,14 +21,13 @@ export function WhyChooseUs({ t, items }: WhyChooseUsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SlideLeft className="text-center mb-16 max-w-3xl mx-auto">
           <span className="text-sky-500 font-bold tracking-wider text-xs uppercase mb-2 block">
-            {t.whyUsLabel ?? "Why Choose Us"}
+            {t.whyUs.label}
           </span>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 dark:text-white">
-            {t.whyUsTitle ?? "Lebih dari Sekadar Vendor Website"}
+            {t.whyUs.title}
           </h2>
           <p className="text-gray-600 text-lg dark:text-gray-400">
-            {t.whyUsSubtitle ??
-              "Kami hadir sebagai partner strategis untuk pertumbuhan bisnis SME Anda."}
+            {t.whyUs.subtitle}
           </p>
         </SlideLeft>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

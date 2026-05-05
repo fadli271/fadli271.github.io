@@ -3,8 +3,9 @@
 import React from "react";
 
 import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
+import { ServicesContent } from "../types";
 interface StandardFeaturesProps {
-  t: any;
+  t: ServicesContent;
 }
 
 export function StandardFeatures({ t }: StandardFeaturesProps) {
@@ -15,14 +16,13 @@ export function StandardFeatures({ t }: StandardFeaturesProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SlideLeft className="text-center mb-12">
           <span className="text-sky-500 font-bold tracking-wider text-xs uppercase mb-2 block">
-            {t.standardFeaturesLabel ?? "Value Added"}
+            {t.valueAdded.label}
           </span>
           <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
-            {t.standardFeaturesTitle ?? "Fitur Standar di Semua Paket"}
+            {t.valueAdded.title}
           </h2>
           <p className="text-gray-600 mt-2 text-sm dark:text-gray-400">
-            {t.standardFeaturesSubtitle ??
-              "Tidak perlu bayar lebih. Fitur penting ini sudah otomatis Anda dapatkan."}
+            {t.valueAdded.subtitle}
           </p>
         </SlideLeft>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

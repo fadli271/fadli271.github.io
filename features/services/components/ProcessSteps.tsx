@@ -3,9 +3,10 @@
 import React from "react";
 
 import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
+import { ServicesContent, ProcessStep } from "../types";
 interface ProcessStepsProps {
-  t: any;
-  items: any[];
+  t: ServicesContent;
+  items: ProcessStep[];
 }
 
 export function ProcessSteps({ t, items }: ProcessStepsProps) {
@@ -17,14 +18,13 @@ export function ProcessSteps({ t, items }: ProcessStepsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SlideLeft className="text-center mb-20 max-w-3xl mx-auto">
           <span className="text-sky-500 font-bold tracking-wider text-xs uppercase mb-2 block">
-            {t.processLabel ?? "Proses Cepat"}
+            {t.processSteps.label}
           </span>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 dark:text-white">
-            {t.processTitle ?? "3 Langkah Mudah Punya Website"}
+            {t.processSteps.title}
           </h2>
           <p className="text-gray-600 text-lg dark:text-gray-400">
-            {t.processSubtitle ??
-              "Gak perlu pusing teknis. Kami buat prosesnya sesimpel mungkin agar Anda bisa fokus bisnis."}
+            {t.processSteps.subtitle}
           </p>
         </SlideLeft>
         <div className="relative grid md:grid-cols-3 gap-12">
@@ -62,12 +62,12 @@ export function ProcessSteps({ t, items }: ProcessStepsProps) {
         </div>
         <div className="mt-16 text-center">
           <a
-            className="inline-flex items-center justify-center bg-white border border-gray-200 text-sky-500 font-semibold py-3 px-8 rounded-full shadow-sm hover:shadow-md hover:bg-gray-50 transition-all text-sm group dark:bg-gray-900 dark:border-gray-700 dark:text-sky-400 dark:hover:bg-gray-800"
+            className="inline-flex items-center bg-white border-2 border-gray-100 text-gray-700 px-10 py-5 rounded-full font-bold hover:border-sky-500 hover:text-sky-500 transition-all shadow-sm hover:shadow-xl dark:bg-gray-900 dark:border-gray-800 dark:text-gray-300 dark:hover:border-sky-500 group"
             href="https://forms.gle/a1kGLvuSwCWBCamv6"
             rel="noopener noreferrer"
             target="_blank"
           >
-            {t.processFormCta ?? "Isi Formulir Konsultasi"}
+            {t.processSteps.formCta}
             <MaterialIcon
               className="ml-2 group-hover:translate-x-1 transition-transform"
               name="assignment"

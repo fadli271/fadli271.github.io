@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
 
-import { Project } from "@/features/portfolio/types";
 import { Language } from "@/types";
+import { Project, PortfolioContent } from "@/features/portfolio/types";
+import { ServicesContent } from "@/features/services/types";
 
 const rootDirectory = process.cwd();
 
@@ -40,10 +41,10 @@ export function getExperience(lang: Language = "id") {
   return data?.experience || [];
 }
 
-export function getTranslation(lang: Language) {
-  return getJsonData<any>(`content/translations/${lang}.json`);
+export function getTranslation(lang: Language): PortfolioContent | null {
+  return getJsonData<PortfolioContent>(`content/${lang}.json`);
 }
 
-export function getServicesData(lang: Language) {
-  return getJsonData<any>(`features/services/data/${lang}.json`);
+export function getServicesData(lang: Language): ServicesContent | null {
+  return getJsonData<ServicesContent>(`features/services/data/${lang}.json`);
 }

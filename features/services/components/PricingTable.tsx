@@ -4,8 +4,10 @@ import Link from "next/link";
 import React from "react";
 
 import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
+import { ServicesContent } from "../types";
+
 interface PricingTableProps {
-  t: any;
+  t: ServicesContent;
 }
 
 export function PricingTable({ t }: PricingTableProps) {
@@ -14,17 +16,17 @@ export function PricingTable({ t }: PricingTableProps) {
 
   return (
     <section className="py-24 bg-gray-50 dark:bg-gray-950" id="harga">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SlideLeft className="text-center mb-16 max-w-2xl mx-auto">
           <span className="text-sky-500 font-bold tracking-wider text-xs uppercase mb-2 block">
-            {t.pricingLabel ?? "Investasi"}
+            {t.pricing.label}
           </span>
           <h2 className="text-3xl font-bold text-gray-900 mb-4 dark:text-white">
-            {t.pricingTitle ?? "Pilihan Paket Sesuai Kebutuhan Anda"}
+            {t.pricing.title}
           </h2>
           <p className="text-gray-600 text-sm dark:text-gray-400">
-            {t.pricingSubtitle ??
-              "Harga transparan untuk landing page. Untuk layanan lain, mari diskusi kebutuhan Anda terlebih dahulu."}
+            {t.pricing.subtitle}
           </p>
           <div className="mt-6">
             <Link
@@ -45,11 +47,10 @@ export function PricingTable({ t }: PricingTableProps) {
             </div>
             <div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                {t.landingPageTitle ?? "Landing Page"}
+                Landing Page
               </h3>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                {t.landingPageDescription ??
-                  "Setup sekali bayar + Infra tahunan (server, domain, tools)"}
+                Setup sekali bayar + Infra tahunan (server, domain, tools)
               </p>
             </div>
           </div>
@@ -68,7 +69,7 @@ export function PricingTable({ t }: PricingTableProps) {
                 {pkg.isPopular && (
                   <div className="absolute top-0 right-0 left-0 -mt-5 flex justify-center">
                     <span className="bg-sky-500 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-                      {t.popularBadge ?? "Paling Populer"}
+                      {t.services.popularBadge}
                     </span>
                   </div>
                 )}
@@ -79,7 +80,7 @@ export function PricingTable({ t }: PricingTableProps) {
                 </h3>
                 <div className="mt-3 mb-2">
                   <span className="text-xs text-gray-500 dark:text-gray-400">
-                    {t.setupLabel ?? "Setup (sekali bayar)"}
+                    Setup (sekali bayar)
                   </span>
                   <div className="flex items-baseline">
                     <span className="text-3xl font-extrabold text-gray-900 dark:text-white">
@@ -118,7 +119,7 @@ export function PricingTable({ t }: PricingTableProps) {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  {t.packageButton ?? "Pesan Paket Ini"}
+                  Pesan Paket Ini
                 </a>
               </div>
             </FadeUp>
@@ -136,11 +137,10 @@ export function PricingTable({ t }: PricingTableProps) {
             </div>
             <div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                {t.otherServicesHeading ?? "Layanan Lainnya"}
+                {t.pricing.otherServicesHeading}
               </h3>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                {t.otherServicesSubtitle ??
-                  "Harga disesuaikan dengan fitur & kompleksitas kebutuhan Anda"}
+                {t.pricing.otherServicesSubtitle}
               </p>
             </div>
           </div>
@@ -204,12 +204,10 @@ export function PricingTable({ t }: PricingTableProps) {
               </div>
               <div className="space-y-1.5">
                 <p className="text-sm text-amber-900 leading-relaxed dark:text-amber-200">
-                  {t.pricingInfoSetup ??
-                    "Setup = biaya pembuatan awal (sekali bayar). Infra = server, domain & tools (tahunan)."}
+                  {t.pricing.infoSetup}
                 </p>
                 <p className="text-sm text-amber-700 leading-relaxed dark:text-amber-300">
-                  {t.pricingInfoMaintenance ??
-                    "Maintenance rutin bersifat opsional, bisa ditambah kapan saja sesuai kebutuhan."}
+                  {t.pricing.infoMaintenance}
                 </p>
               </div>
             </div>
