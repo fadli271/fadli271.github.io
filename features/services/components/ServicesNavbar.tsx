@@ -51,7 +51,7 @@ export function ServicesNavbar({
                 alt="Fadli Dev Studio"
                 className="h-12 w-12 rounded-xl object-contain shadow-md shadow-sky-500/20 ring-1 ring-gray-100"
                 height={48}
-                src="/brand.png"
+                src="/brand.webp"
                 width={48}
               />
               <span className="text-xl font-bold text-gray-900 tracking-tight dark:text-white">
@@ -114,6 +114,7 @@ export function ServicesNavbar({
           </div>
           <div className="md:hidden flex items-center">
             <button
+              aria-label="Toggle menu"
               className="text-gray-500 hover:text-gray-900 focus:outline-none dark:text-gray-400 dark:hover:text-white"
               onClick={() => setMenuOpen((v) => !v)}
             >

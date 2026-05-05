@@ -28,6 +28,14 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning className={inter.variable} lang="id">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={clsx("min-h-screen font-sans antialiased")}>
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ? (
           <>

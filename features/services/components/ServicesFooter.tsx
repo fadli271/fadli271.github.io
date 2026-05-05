@@ -29,7 +29,7 @@ export function ServicesFooter({ footerRightsText, t }: ServicesFooterProps) {
                 alt="Fadli Dev Studio"
                 className="h-10 w-10 rounded-lg object-contain"
                 height={40}
-                src="/brand.png"
+                src="/brand.webp"
                 width={40}
               />
               <span className="text-xl font-bold tracking-tight">

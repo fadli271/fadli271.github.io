@@ -86,7 +86,7 @@ const localBusiness = {
   description:
     "Jasa pembuatan website profesional untuk UMKM. Landing page, toko online, sistem operasional dengan teknologi modern.",
   url: SERVICES_URL,
-  logo: `${SITE_URL}/brand.png`,
+  logo: `${SITE_URL}/brand.webp`,
   image: `${SITE_URL}/services/opengraph-image`,
   telephone: "+6282189642027",
   email: "fadli.dev.studio27@gmail.com",

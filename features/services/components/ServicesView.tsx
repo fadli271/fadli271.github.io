@@ -6,20 +6,49 @@ import Script from "next/script";
 import { ServicesContent } from "../types";
 import { useServicesState } from "../hooks/use-services-state";
 
+import dynamic from "next/dynamic";
+
+// Feature Components
 import { ServicesNavbar } from "./ServicesNavbar";
 import { ServicesHero } from "./ServicesHero";
-import { WhyChooseUs } from "./WhyChooseUs";
-import { ProcessSteps } from "./ProcessSteps";
-import { PromoBanner } from "./PromoBanner";
-import { ServicesList } from "./ServicesList";
-import { PortfolioGrid } from "./PortfolioGrid";
-import { TestimonialsMarquee } from "./TestimonialsMarquee";
-import { ImpactROI } from "./ImpactROI";
-import { PricingTable } from "./PricingTable";
-import { StandardFeatures } from "./StandardFeatures";
-import { FAQSection } from "./FAQSection";
-import { FinalCTA } from "./FinalCTA";
-import { ServicesFooter } from "./ServicesFooter";
+
+// Lazy Loaded Sections
+const WhyChooseUs = dynamic(() =>
+  import("./WhyChooseUs").then((mod) => mod.WhyChooseUs),
+);
+const ProcessSteps = dynamic(() =>
+  import("./ProcessSteps").then((mod) => mod.ProcessSteps),
+);
+const PromoBanner = dynamic(() =>
+  import("./PromoBanner").then((mod) => mod.PromoBanner),
+);
+const ServicesList = dynamic(() =>
+  import("./ServicesList").then((mod) => mod.ServicesList),
+);
+const PortfolioGrid = dynamic(() =>
+  import("./PortfolioGrid").then((mod) => mod.PortfolioGrid),
+);
+const TestimonialsMarquee = dynamic(() =>
+  import("./TestimonialsMarquee").then((mod) => mod.TestimonialsMarquee),
+);
+const ImpactROI = dynamic(() =>
+  import("./ImpactROI").then((mod) => mod.ImpactROI),
+);
+const PricingTable = dynamic(() =>
+  import("./PricingTable").then((mod) => mod.PricingTable),
+);
+const StandardFeatures = dynamic(() =>
+  import("./StandardFeatures").then((mod) => mod.StandardFeatures),
+);
+const FAQSection = dynamic(() =>
+  import("./FAQSection").then((mod) => mod.FAQSection),
+);
+const FinalCTA = dynamic(() =>
+  import("./FinalCTA").then((mod) => mod.FinalCTA),
+);
+const ServicesFooter = dynamic(() =>
+  import("./ServicesFooter").then((mod) => mod.ServicesFooter),
+);
 
 import FloatingWaButton from "@/components/shared/floating-wa-button";
 
@@ -97,7 +126,7 @@ export function ServicesView({ initialData }: ServicesViewProps) {
       {
         "@type": "ProfessionalService",
         name: "Fadli Dev Studio",
-        image: "https://fadlidevstudio.my.id/brand.png",
+        image: "https://fadlidevstudio.my.id/brand.webp",
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: "4.9",

@@ -1,13 +1,27 @@
 import { Home, Briefcase, FolderCode, Mail } from "lucide-react";
+import dynamic from "next/dynamic";
 
-import { PortfolioExperience } from "./PortfolioExperience";
-import { PortfolioContact } from "./PortfolioContact";
 import { PortfolioHero } from "./PortfolioHero";
-import { PortfolioProjects } from "./PortfolioProjects";
-import { PortfolioSkills } from "./PortfolioSkills";
 
-import ScrollToTopButton from "@/components/layout/scroll-to-top-button";
 import FloatingNavbar from "@/components/layout/floating-navbar";
+
+// Lazy Loaded Sections
+const PortfolioExperience = dynamic(() =>
+  import("./PortfolioExperience").then((mod) => mod.PortfolioExperience),
+);
+const PortfolioSkills = dynamic(() =>
+  import("./PortfolioSkills").then((mod) => mod.PortfolioSkills),
+);
+const PortfolioProjects = dynamic(() =>
+  import("./PortfolioProjects").then((mod) => mod.PortfolioProjects),
+);
+const PortfolioContact = dynamic(() =>
+  import("./PortfolioContact").then((mod) => mod.PortfolioContact),
+);
+const ScrollToTopButton = dynamic(
+  () => import("@/components/layout/scroll-to-top-button"),
+);
+
 import {
   getProjects,
   getTranslation,

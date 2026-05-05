@@ -115,7 +115,7 @@ export function CalculatorView({ packages }: CalculatorViewProps) {
               alt="Fadli Dev Studio"
               className="h-10 w-10 rounded-xl object-contain shadow-md shadow-sky-500/10 ring-1 ring-gray-100 dark:ring-gray-800"
               height={40}
-              src="/brand.png"
+              src="/brand.webp"
               width={40}
             />
             <span className="text-xl font-bold text-gray-900 tracking-tight dark:text-white">

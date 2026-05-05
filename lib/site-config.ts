@@ -34,7 +34,7 @@ export const siteMetadata: Metadata = {
     siteName: "Fadli Dev Studio",
     images: [
       {
-        url: "/brand.png",
+        url: "/brand.webp",
         width: 1200,
         height: 630,
         alt: "Fadli Dev Studio - Solusi Website UMKM",
@@ -55,9 +55,9 @@ export const siteMetadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ rel: "icon", url: "/brand.png", type: "image/png" }],
-    shortcut: [{ url: "/brand.png", type: "image/png" }],
-    apple: [{ url: "/brand.png", type: "image/png" }],
+    icon: [{ rel: "icon", url: "/brand.webp", type: "image/webp" }],
+    shortcut: [{ url: "/brand.webp", type: "image/webp" }],
+    apple: [{ url: "/brand.webp", type: "image/webp" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -65,7 +65,7 @@ export const siteMetadata: Metadata = {
     title: "Fadli Dev Studio | Website Modern untuk Bisnis Anda",
     description:
       "Jasa pembuatan landing page & sistem web profesional untuk UMKM. Cek estimasi biaya sekarang!",
-    images: ["/brand.png"],
+    images: ["/brand.webp"],
   },
   manifest: "/site.webmanifest",
 };
@@ -86,7 +86,7 @@ export const structuredData = [
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Fadli Dev Studio",
-    image: `${SITE_URL}/brand.png`,
+    image: `${SITE_URL}/brand.webp`,
     "@id": `${SITE_URL}/#business`,
     url: SITE_URL,
     telephone: "+6282189642027",

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Web Price Calculator | Fadli Dev Studio",
     description:
       "Dapatkan estimasi biaya transparan untuk proyek digital bisnis Anda dalam hitungan detik.",
-    images: ["/brand.png"],
+    images: ["/brand.webp"],
   },
 };
 
