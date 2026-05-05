@@ -30,13 +30,14 @@ import { FinalCTA } from "./FinalCTA";
 import { ServicesFooter } from "./ServicesFooter";
 
 import FloatingWaButton from "@/components/shared/floating-wa-button";
+import { Language } from "@/types";
 
 export function ServicesView({ initialData }: ServicesViewProps) {
   // --- States ---
   const [activeCategory, setActiveCategory] = useState("Semua");
   const [activeSection, setActiveSection] = useState("");
   const [darkMode, setDarkMode] = useState(false);
-  const [lang, setLang] = useState<"id" | "en">("id");
+  const [lang, setLang] = useState<Language>("id");
 
   // --- Scroll Progress ---
   const { scrollYProgress } = useScroll();

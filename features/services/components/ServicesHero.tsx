@@ -4,8 +4,10 @@ import Link from "next/link";
 import React from "react";
 
 import { MaterialIcon } from "./animations";
+
+import { Language } from "@/types";
 interface ServicesHeroProps {
-  lang: "id" | "en";
+  lang: Language;
   t: any;
   heroTrustBadgesList: string[];
   waLink: string;

@@ -6,9 +6,11 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 import { MaterialIcon } from "./animations";
+
+import { Language } from "@/types";
 interface ServicesNavbarProps {
-  lang: "id" | "en";
-  setLang: React.Dispatch<React.SetStateAction<"id" | "en">>;
+  lang: Language;
+  setLang: React.Dispatch<React.SetStateAction<Language>>;
   darkMode: boolean;
   toggleDarkMode: () => void;
   activeSection: string;

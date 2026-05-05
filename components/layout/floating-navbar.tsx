@@ -9,8 +9,7 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 
 import { useMediaQuery } from "@/hooks/use-media-query";
-
-export type Language = "id" | "en";
+import { Language } from "@/types";
 
 const MOBILE_SHOW_THRESHOLD = 60;
 

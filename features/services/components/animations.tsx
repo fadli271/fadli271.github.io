@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import React from "react";
 
+import { BaseProps } from "@/types";
+
 export function MaterialIcon({
   name,
   className = "",
@@ -24,13 +26,7 @@ export function MaterialIcon({
 
 const viewportOnce = { once: true, amount: 0.2 };
 
-export function SlideLeft({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+export function SlideLeft({ children, className = "" }: BaseProps) {
   return (
     <motion.div
       className={className}
@@ -48,11 +44,7 @@ export function FadeUp({
   children,
   delay = 0,
   className = "",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
+}: BaseProps & { delay?: number }) {
   return (
     <motion.div
       className={className}
@@ -66,13 +58,7 @@ export function FadeUp({
   );
 }
 
-export function ScaleIn({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+export function ScaleIn({ children, className = "" }: BaseProps) {
   return (
     <motion.div
       className={className}

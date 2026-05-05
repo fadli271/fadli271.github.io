@@ -12,9 +12,10 @@ import {
   getSkills,
   getExperience,
 } from "@/lib/data-loader";
+import { Language } from "@/types";
 
 interface PortfolioViewProps {
-  lang: "id" | "en";
+  lang: Language;
 }
 
 export function PortfolioView({ lang }: PortfolioViewProps) {

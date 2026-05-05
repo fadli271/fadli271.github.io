@@ -1,31 +1,22 @@
-export interface NavLink {
-  label: string;
-  href: string;
-}
+import { FeatureItem } from "@/types";
 
-export interface WhyChooseUsItem {
+export interface WhyChooseUsItem extends FeatureItem {
   iconName: string;
   iconBgClass: string;
   iconHoverBgClass: string;
   iconTextClass: string;
-  title: string;
-  description: string;
 }
 
-export interface ProcessStep {
+export interface ProcessStep extends FeatureItem {
   iconName: string;
   iconColor: string;
   numberBg: string;
   blurBg: string;
-  title: string;
-  description: string;
 }
 
-export interface ServiceItem {
+export interface ServiceItem extends FeatureItem {
   iconName: string;
   iconBgClass: string;
-  title: string;
-  description: string;
   features: string[];
   isPopular: boolean;
 }
@@ -70,15 +61,9 @@ export interface Package {
   includes: PackageInclude[];
 }
 
-export interface StandardFeature {
-  iconName: string;
-  title: string;
-  description: string;
-}
+export interface StandardFeature extends FeatureItem {}
 
 export interface FAQ {
   question: string;
   answer: string;
 }
-
-export type Lang = "id" | "en";
