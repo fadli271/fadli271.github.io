@@ -1,4 +1,3 @@
-import { Home, Briefcase, FolderCode, Mail } from "lucide-react";
 import dynamic from "next/dynamic";
 
 import { PortfolioHero } from "./PortfolioHero";
@@ -44,10 +43,10 @@ export function PortfolioView({ lang }: PortfolioViewProps) {
   if (!content) return <div>Content not found</div>;
 
   const navItems = {
-    home: { label: content.nav.home, icon: Home },
-    experience: { label: content.nav.experience, icon: Briefcase },
-    projects: { label: content.nav.projects, icon: FolderCode },
-    contact: { label: content.nav.contact, icon: Mail },
+    home: { label: content.nav.home, icon: "home" },
+    experience: { label: content.nav.experience, icon: "experience" },
+    projects: { label: content.nav.projects, icon: "projects" },
+    contact: { label: content.nav.contact, icon: "contact" },
   };
 
   return (

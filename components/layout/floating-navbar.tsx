@@ -1,10 +1,18 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu, Sparkles } from "lucide-react";
+import {
+  LucideIcon,
+  Home,
+  Briefcase,
+  FolderCode,
+  Mail,
+  Sparkles,
+  ChevronDown,
+  Menu,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
-import { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 
@@ -17,11 +25,19 @@ interface FloatingNavbarProps {
   content: {
     [key: string]: {
       label: string;
-      icon: LucideIcon;
+      icon: string | LucideIcon;
     };
   };
   currentLang: Language;
 }
+
+const ICON_MAP: Record<string, LucideIcon> = {
+  home: Home,
+  experience: Briefcase,
+  projects: FolderCode,
+  contact: Mail,
+  sparkles: Sparkles,
+};
 
 const EXTRA_MENU_ITEMS = [
   { label: "Jasa Dev", href: "/services", icon: Sparkles },
@@ -41,6 +57,7 @@ export default function FloatingNavbar({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [showNav, setShowNav] = useState(false);
+  const [atTop, setAtTop] = useState(true);
   const [hasScrolledPastInitial, setHasScrolledPastInitial] = useState(false);
   const lastScrollY = useRef(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -51,8 +68,10 @@ export default function FloatingNavbar({
   useEffect(() => {
     const handleScroll = () => {
       const current = window.scrollY;
-      const isAtTop = current < 80;
+      const isAtTop = current < 50;
       const isScrollingUp = current < lastScrollY.current;
+
+      setAtTop(isAtTop);
 
       if (!hasScrolledPastInitial && current > MOBILE_SHOW_THRESHOLD) {
         setHasScrolledPastInitial(true);
@@ -128,22 +147,32 @@ export default function FloatingNavbar({
           ref={containerRef}
           animate={{ opacity: 1, y: 0 }}
           className={clsx(
-            "fixed z-50 w-full left-0 top-0 border-b border-white/20 bg-white/70 backdrop-blur-md px-4 py-2",
+            "fixed z-50 left-0 top-0 w-full transition-all duration-300",
+            atTop
+              ? "bg-transparent border-transparent py-5"
+              : "bg-white/80 backdrop-blur-md border-b border-white/20 py-3 shadow-sm",
           )}
           exit={{ opacity: 0, y: -20 }}
           initial={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.3 }}
         >
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
-            {/* Logo/Brand (Optional addition for top navbar) */}
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-sky-500 flex items-center justify-center text-white font-bold">
-                F
+          <div
+            className={clsx(
+              "max-w-7xl mx-auto flex items-center",
+              pathname === "/" ? "justify-end" : "justify-between",
+            )}
+          >
+            {/* Logo/Brand (Hidden on root) */}
+            {pathname !== "/" && (
+              <div className="flex items-center gap-2">
+                <div className="h-8 w-8 rounded-full bg-sky-500 flex items-center justify-center text-white font-bold">
+                  F
+                </div>
+                <span className="font-bold text-slate-800 hidden sm:block">
+                  Fadli Dev
+                </span>
               </div>
-              <span className="font-bold text-slate-800 hidden sm:block">
-                Fadli Dev
-              </span>
-            </div>
+            )}
 
             <div className="flex items-center gap-3">
               {/* Language Switcher */}
@@ -206,8 +235,13 @@ export default function FloatingNavbar({
                     )}
                   >
                     <ul className="divide-y divide-gray-100 text-sm text-gray-700">
-                      {Object.entries(content).map(
-                        ([key, { label, icon: Icon }]) => (
+                      {Object.entries(content).map(([key, { label, icon }]) => {
+                        const Icon =
+                          typeof icon === "string"
+                            ? ICON_MAP[icon] || Sparkles
+                            : icon;
+
+                        return (
                           <li key={key}>
                             <a
                               className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"
@@ -218,18 +252,18 @@ export default function FloatingNavbar({
                               {label}
                             </a>
                           </li>
-                        ),
-                      )}
+                        );
+                      })}
                       {EXTRA_MENU_ITEMS.map(({ label, href, icon: Icon }) => (
                         <li key={href}>
-                          <a
+                          <Link
                             className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50"
                             href={href}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             <Icon className="h-4 w-4 text-sky-500" />
                             {label}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
