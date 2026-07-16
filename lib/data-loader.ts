@@ -15,16 +15,19 @@ export function getPortfolioData(lang: Language) {
 
 export function getProjects(lang: Language): Project[] {
   const data = getPortfolioData(lang);
+
   return (data as any)?.projects || [];
 }
 
 export function getSkills(lang: Language = "id") {
   const data = getPortfolioData(lang);
+
   return (data as any)?.skills || [];
 }
 
 export function getExperience(lang: Language = "id") {
   const data = getPortfolioData(lang);
+
   return (data as any)?.experience || [];
 }
 
@@ -35,4 +38,3 @@ export function getTranslation(lang: Language): PortfolioContent | null {
 export function getServicesData(lang: Language): ServicesContent | null {
   return lang === "en" ? (enServices as any) : (idServices as any);
 }
-
