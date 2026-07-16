@@ -1,7 +1,5 @@
 import { PortfolioView } from "@/features/portfolio/components/PortfolioView";
 
-export const runtime = "edge";
-
 export default async function HomePage({
   searchParams,
 }: {
