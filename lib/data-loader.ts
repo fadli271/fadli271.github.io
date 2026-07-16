@@ -1,50 +1,38 @@
-import fs from "fs";
-import path from "path";
+import idPortfolio from "../features/portfolio/data/id.json";
+import enPortfolio from "../features/portfolio/data/en.json";
+import idContent from "../content/id.json";
+import enContent from "../content/en.json";
+import idServices from "../features/services/data/id.json";
+import enServices from "../features/services/data/en.json";
 
 import { Language } from "@/types";
 import { Project, PortfolioContent } from "@/features/portfolio/types";
 import { ServicesContent } from "@/features/services/types";
 
-const rootDirectory = process.cwd();
-
-export function getJsonData<T>(filePath: string): T | null {
-  const fullPath = path.join(rootDirectory, filePath);
-
-  if (!fs.existsSync(fullPath)) {
-    return null;
-  }
-
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-
-  return JSON.parse(fileContents);
-}
-
 export function getPortfolioData(lang: Language) {
-  return getJsonData<any>(`features/portfolio/data/${lang}.json`);
+  return lang === "en" ? enPortfolio : idPortfolio;
 }
 
 export function getProjects(lang: Language): Project[] {
   const data = getPortfolioData(lang);
-
-  return data?.projects || [];
+  return (data as any)?.projects || [];
 }
 
 export function getSkills(lang: Language = "id") {
   const data = getPortfolioData(lang);
-
-  return data?.skills || [];
+  return (data as any)?.skills || [];
 }
 
 export function getExperience(lang: Language = "id") {
   const data = getPortfolioData(lang);
-
-  return data?.experience || [];
+  return (data as any)?.experience || [];
 }
 
 export function getTranslation(lang: Language): PortfolioContent | null {
-  return getJsonData<PortfolioContent>(`content/${lang}.json`);
+  return lang === "en" ? (enContent as any) : (idContent as any);
 }
 
 export function getServicesData(lang: Language): ServicesContent | null {
-  return getJsonData<ServicesContent>(`features/services/data/${lang}.json`);
+  return lang === "en" ? (enServices as any) : (idServices as any);
 }
+
