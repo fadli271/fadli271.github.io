@@ -5,8 +5,31 @@ import { motion } from "framer-motion";
 import { Card, CardBody, Button, Divider } from "@heroui/react";
 import Link from "next/link";
 import { Package, ChevronDown, ChevronUp } from "lucide-react";
-import * as FaIcons from "react-icons/fa";
-import * as SiIcons from "react-icons/si";
+import {
+  FaPhp,
+  FaLaravel,
+  FaPython,
+  FaNodeJs,
+  FaJs,
+  FaReact,
+  FaDocker,
+  FaAws,
+  FaGitAlt
+} from "react-icons/fa";
+import {
+  SiGoland,
+  SiDjango,
+  SiNestjs,
+  SiRuby,
+  SiRubyonrails,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiMysql,
+  SiPostgresql,
+  SiRedis,
+  SiGooglecloud
+} from "react-icons/si";
 
 import { SkillCategory } from "../types";
 
@@ -19,10 +42,32 @@ interface SkillsSectionProps {
   skillsData: SkillCategory[];
 }
 
-const getIcon = (iconName: string) => {
-  const Icon = (FaIcons as any)[iconName] || (SiIcons as any)[iconName];
+const iconMap: Record<string, React.ComponentType<any>> = {
+  FaPhp,
+  FaLaravel,
+  FaPython,
+  FaNodeJs,
+  FaJs,
+  FaReact,
+  FaDocker,
+  FaAws,
+  FaGitAlt,
+  SiGoland,
+  SiDjango,
+  SiNestjs,
+  SiRuby,
+  SiRubyonrails,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiMysql,
+  SiPostgresql,
+  SiRedis,
+  SiGooglecloud,
+};
 
-  return Icon || Package;
+const getIcon = (iconName: string) => {
+  return iconMap[iconName] || Package;
 };
 
 /**
