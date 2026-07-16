@@ -1,6 +1,5 @@
 import { ImageResponse } from "next/og";
 
-export const dynamic = "force-static";
 export const revalidate = false;
 
 export const alt = "Fadli Dev Studio — Jasa Pembuatan Website UMKM";
