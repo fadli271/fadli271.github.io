@@ -87,8 +87,7 @@ export default function OpenGraphImage() {
                   width: 44,
                   height: 44,
                   borderRadius: 999,
-                  background:
-                    "linear-gradient(135deg, #38bdf8, #4f46e5)",
+                  background: "linear-gradient(135deg, #38bdf8, #4f46e5)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -385,8 +384,8 @@ export default function OpenGraphImage() {
 
                 <div
                   style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+                    display: "flex",
+                    flexWrap: "wrap",
                     gap: 10,
                     marginTop: 6,
                   }}
@@ -402,6 +401,7 @@ export default function OpenGraphImage() {
                           border: "1px solid rgba(30,64,175,0.7)",
                           fontSize: 16,
                           color: "#cbd5e1",
+                          width: 137,
                         }}
                       >
                         {item}
