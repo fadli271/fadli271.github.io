@@ -88,7 +88,7 @@ export default function OpenGraphImage() {
                   height: 44,
                   borderRadius: 999,
                   background:
-                    "conic-gradient(from 160deg, #38bdf8, #4f46e5, #0ea5e9, #38bdf8)",
+                    "linear-gradient(135deg, #38bdf8, #4f46e5)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
