@@ -2,8 +2,9 @@
 
 import React from "react";
 
-import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
 import { ServicesContent, ProcessStep } from "../types";
+
+import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
 interface ProcessStepsProps {
   t: ServicesContent;
   items: ProcessStep[];

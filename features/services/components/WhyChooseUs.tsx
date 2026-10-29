@@ -2,9 +2,9 @@
 
 import React from "react";
 
-import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
-
 import { ServicesContent, WhyChooseUsItem } from "../types";
+
+import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
 
 interface WhyChooseUsProps {
   t: ServicesContent;

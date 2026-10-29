@@ -2,8 +2,9 @@
 
 import React from "react";
 
-import { MaterialIcon, SlideLeft } from "./animations";
 import { ServicesContent } from "../types";
+
+import { MaterialIcon, SlideLeft } from "./animations";
 interface TestimonialsMarqueeProps {
   t: ServicesContent;
 }

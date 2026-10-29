@@ -17,14 +17,18 @@ import { TfiLightBulb } from "react-icons/tfi";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import { Rocket } from "lucide-react";
+import dynamic from "next/dynamic";
 
 import { Project } from "../types";
 
-import dynamic from "next/dynamic";
-
-const ImageCarousel = dynamic(() => import("@/components/shared/image-carousel"), {
-  loading: () => <div className="h-64 bg-gray-100 animate-pulse rounded-2xl" />,
-});
+const ImageCarousel = dynamic(
+  () => import("@/components/shared/image-carousel"),
+  {
+    loading: () => (
+      <div className="h-64 bg-gray-100 animate-pulse rounded-2xl" />
+    ),
+  },
+);
 
 interface ProjectsSectionProps {
   content: {

@@ -3,8 +3,9 @@
 import Link from "next/link";
 import React from "react";
 
-import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
 import { ServicesContent } from "../types";
+
+import { FadeUp, MaterialIcon, SlideLeft } from "./animations";
 
 interface PricingTableProps {
   t: ServicesContent;

@@ -14,7 +14,7 @@ import {
   FaReact,
   FaDocker,
   FaAws,
-  FaGitAlt
+  FaGitAlt,
 } from "react-icons/fa";
 import {
   SiGoland,
@@ -28,7 +28,7 @@ import {
   SiMysql,
   SiPostgresql,
   SiRedis,
-  SiGooglecloud
+  SiGooglecloud,
 } from "react-icons/si";
 
 import { SkillCategory } from "../types";

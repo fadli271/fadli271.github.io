@@ -3,12 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-import { MaterialIcon } from "./animations";
+import { Facebook, Instagram, Linkedin, Github } from "lucide-react";
 
 import { ServicesContent } from "../types";
 
-import { Facebook, Instagram, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
+import { MaterialIcon } from "./animations";
 
 interface ServicesFooterProps {
   footerRightsText: string;
@@ -57,6 +56,7 @@ export function ServicesFooter({ footerRightsText, t }: ServicesFooterProps) {
             <div className="flex gap-4">
               {SOCIAL_LINKS.map((social, idx) => {
                 const Icon = social.icon;
+
                 return (
                   <a
                     key={idx}

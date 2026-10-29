@@ -1,16 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Script from "next/script";
 
-// Feature Components
-import { ServicesContent } from "../types";
 import { useServicesState } from "../hooks/use-services-state";
+import { ServicesContent } from "../types";
 
-import dynamic from "next/dynamic";
-
-// Feature Components
-import { ServicesNavbar } from "./ServicesNavbar";
 import { ServicesHero } from "./ServicesHero";
+import { ServicesNavbar } from "./ServicesNavbar";
 
 // Lazy Loaded Sections
 const WhyChooseUs = dynamic(() =>
@@ -125,7 +122,9 @@ export function ServicesView({ initialData }: ServicesViewProps) {
       },
       {
         "@type": "ProfessionalService",
+        "@id": "https://fadlidevstudio.my.id/#business",
         name: "Fadli Dev Studio",
+        url: "https://fadlidevstudio.my.id/services",
         image: "https://fadlidevstudio.my.id/brand.webp",
         aggregateRating: {
           "@type": "AggregateRating",

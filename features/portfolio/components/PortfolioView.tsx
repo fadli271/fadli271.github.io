@@ -3,6 +3,14 @@ import dynamic from "next/dynamic";
 import { PortfolioHero } from "./PortfolioHero";
 
 import FloatingNavbar from "@/components/layout/floating-navbar";
+import { CONTACT_INFO } from "@/lib/contact-info";
+import {
+  getProjects,
+  getTranslation,
+  getSkills,
+  getExperience,
+} from "@/lib/data-loader";
+import { Language } from "@/types";
 
 // Lazy Loaded Sections
 const PortfolioExperience = dynamic(() =>
@@ -20,15 +28,6 @@ const PortfolioContact = dynamic(() =>
 const ScrollToTopButton = dynamic(
   () => import("@/components/layout/scroll-to-top-button"),
 );
-
-import {
-  getProjects,
-  getTranslation,
-  getSkills,
-  getExperience,
-} from "@/lib/data-loader";
-import { CONTACT_INFO } from "@/lib/contact-info";
-import { Language } from "@/types";
 
 interface PortfolioViewProps {
   lang: Language;

@@ -3,20 +3,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CountUp from "react-countup";
-import {
-  Briefcase,
-  Sparkles,
-  ChevronDown,
-  ChevronUp,
-  FileText,
-} from "lucide-react";
-import {
-  Accordion,
-  AccordionItem,
-  Button,
-  Card,
-  CardBody,
-} from "@heroui/react";
+import { Briefcase, Sparkles, ChevronDown, ChevronUp } from "lucide-react";
+import { Accordion, AccordionItem, Card, CardBody } from "@heroui/react";
 import NextImage from "next/image";
 
 import { Experience } from "../types";
@@ -29,7 +17,6 @@ interface ExperienceSectionProps {
     partner: { title: string; subtitle: string };
     stack: { title: string };
     cta: { title: string; button: string };
-    download: { cv: string; link: string };
     ui: { careerTitle: string; showMore: string; showLess: string };
   };
   experienceData: Experience[];
@@ -118,7 +105,7 @@ export const PortfolioExperience = ({
                 viewport={{ once: true, amount: 0.3 }}
                 whileInView={{ opacity: 1, y: 0 }}
               >
-                {/* --- Profile Image + CV --- */}
+                {/* --- Profile Image --- */}
                 <div className="flex flex-col items-center gap-6 md:col-span-1">
                   <NextImage
                     alt="Foto Profil Mohamad Fadli"
@@ -127,17 +114,6 @@ export const PortfolioExperience = ({
                     src="/images/profile/my-profile.JPG"
                     width={240}
                   />
-                  <Button
-                    as="a"
-                    className="text-sm py-3 inline-flex items-center gap-2 px-6 font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-500 rounded-full shadow-md hover:scale-105 transition-transform duration-300"
-                    endContent={<FileText className="w-4 h-4" />}
-                    href="/docs/cv-mohamad-fadli.pdf"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    variant="shadow"
-                  >
-                    {content.download.cv}
-                  </Button>
                 </div>
 
                 {/* --- Experience Timeline --- */}
