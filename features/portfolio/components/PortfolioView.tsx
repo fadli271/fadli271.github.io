@@ -1,4 +1,7 @@
+"use client";
+
 import dynamic from "next/dynamic";
+import { useSearchParams } from "next/navigation";
 
 import { PortfolioHero } from "./PortfolioHero";
 
@@ -30,10 +33,14 @@ const ScrollToTopButton = dynamic(
 );
 
 interface PortfolioViewProps {
-  lang: Language;
+  initialLang?: Language;
 }
 
-export function PortfolioView({ lang }: PortfolioViewProps) {
+export function PortfolioView({ initialLang = "id" }: PortfolioViewProps) {
+  const searchParams = useSearchParams();
+  const langParam = searchParams ? searchParams.get("lang") : null;
+  const lang: Language = langParam === "en" ? "en" : initialLang;
+
   const content = getTranslation(lang);
   const projectsData = getProjects(lang);
   const skillsData = getSkills(lang);
