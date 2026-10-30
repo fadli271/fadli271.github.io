@@ -8,14 +8,14 @@
   "description": "Portfolio & web services by Mohamad Fadli.",
   "icons": [
     {
-      "src": "/brand.png",
+      "src": "/brand.webp",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "/brand.png",
+      "src": "/brand.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ]
 }

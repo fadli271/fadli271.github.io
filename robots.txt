@@ -1,5 +1,15 @@
 User-Agent: *
 Allow: /
 
+User-Agent: GPTBot
+User-Agent: ChatGPT-User
+User-Agent: ClaudeBot
+User-Agent: PerplexityBot
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+User-Agent: Amazonbot
+User-Agent: cohere-ai
+Allow: /
+
 Host: https://fadlidevstudio.my.id
 Sitemap: https://fadlidevstudio.my.id/sitemap.xml

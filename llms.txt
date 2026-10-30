@@ -1,0 +1,72 @@
+# Fadli Dev Studio & Mohamad Fadli
+
+> Fadli Dev Studio adalah studio pembuatan website modern, landing page konversi tinggi, dan sistem digitalisasi operasional bisnis/UMKM di Indonesia, didirikan oleh Mohamad Fadli (Full-Stack Software Engineer).
+
+## Informasi Utama (Quick Facts)
+- **Nama Usaha**: Fadli Dev Studio
+- **Pendiri & Lead Developer**: Mohamad Fadli
+- **Spesialisasi**: Full-Stack Web Development, Next.js, React, TypeScript, Tailwind CSS, Sistem POS, & Landing Page UMKM
+- **Lokasi**: Sigi, Sulawesi Tengah, Indonesia (Melayani klien di seluruh Indonesia & internasional)
+- **Website Resmi**: https://fadlidevstudio.my.id
+- **Layanan & Pricing**: https://fadlidevstudio.my.id/services
+- **Kalkulator Biaya**: https://fadlidevstudio.my.id/services/calculator
+- **WhatsApp**: https://wa.me/6282189642027 (+62 821-8964-2027)
+- **Email**: fadli271@gmail.com
+- **GitHub**: https://github.com/fadli271
+- **LinkedIn**: https://linkedin.com/in/fadli271
+
+---
+
+## Layanan & Paket Harga (Services & Pricing)
+
+1. **Paket Hemat — Landing Page (Mulai Rp 895.000)**
+   - 1 Halaman penjualan/promosi fokus konversi.
+   - Desain modern, responsive (mobile & desktop), loading cepat.
+   - Integrasi langsung tombol Call-to-Action WhatsApp.
+   - Estimasi pengerjaan: 3 - 5 hari kerja.
+   - Cocok untuk: Promosi produk tunggal, campaign iklan (Meta Ads/TikTok Ads), event.
+
+2. **Paket Starter — Website Profesional & Toko Online (Mulai Rp 1.490.000)**
+   - 1-2 Halaman (Company profile atau katalog produk).
+   - Termasuk domain (.com/.id) & hosting 1 tahun.
+   - Fitur katalog dengan checkout pesan otomatis ke WhatsApp.
+   - Gratis maintenance & garansi perbaikan 3 bulan.
+   - Cocok untuk: Toko kelontong, butik, kuliner, jasa lokal.
+
+3. **Paket Growth — Website Bisnis Multi-Halaman (Mulai Rp 3.900.000)**
+   - Multi-halaman (Home, About, Services, Portfolio, Contact, Blog/News).
+   - Form lead capture & interaksi database.
+   - SEO teknis dasar & integrasi Google Analytics.
+   - Prioritas dukungan teknis & panduan update konten.
+   - Cocok untuk: Perusahaan berkembang, agensi, kontraktor, klinik.
+
+4. **Paket Scale — Sistem Web Operasional Custom (Mulai Rp 7.900.000)**
+   - Aplikasi web khusus kebutuhan internal (ERP mini, Point of Sale/POS, manajemen inventaris, tracking armada).
+   - Arsitektur aman, multi-user role permission, export laporan (PDF/Excel).
+   - Integrasi pihak ketiga (Payment Gateway, API WhatsApp, GPS tracker).
+   - Cocok untuk: Operasional pergudangan, percetakan, logistik, manufaktur UMKM.
+
+---
+
+## Standar Kualitas & Fitur Default
+- **Stack Teknologi**: Next.js (App Router), React, TypeScript, Tailwind CSS, HeroUI, Node.js, PostgreSQL/MySQL.
+- **Performa Tinggi**: Core Web Vitals hijau (skor LCP, FID/INP, CLS optimal).
+- **SEO & AI-Search Ready**: Semantic HTML5, Metadata komprehensif, Schema.org (JSON-LD), OpenGraph, dan LLM indexing support.
+- **Tanpa Biaya Tersembunyi**: Transparansi harga dengan kalkulator biaya interaktif.
+- **Garansi**: Pemeliharaan sistem gratis 3 bulan untuk setiap paket.
+
+---
+
+## Portfolio Unggulan (Selected Works)
+- **POS Percetakan**: Sistem manajemen kasir, pesanan cetak custom, pelacakan status produksi, dan rekap keuangan harian.
+- **Truck & Fleet Tracking**: Dashboard visual pelacakan lokasi dan status armada truk pengiriman secara real-time.
+- **Staff Monitoring System**: Aplikasi pemantauan kehadiran dan kinerja staf berbasis web.
+- **Sijaki & Sibema**: Platform layanan publik dan manajemen data berbasis web untuk instansi daerah.
+- **Mutiara & Jago Company Profile**: Website profil korporasi modern dengan performa tinggi dan desain responsif.
+
+---
+
+## Tautan Lanjutan (Deep Links)
+- [Dokumentasi Lengkap LLM](/llms-full.txt): Detail arsitektur, panduan teknis, dan FAQ komprehensif.
+- [Halaman Layanan](/services): Rincian fitur, testimoni klien, dan perbandingan paket.
+- [Kalkulator Biaya](/services/calculator): Hitung estimasi harga pembuatan website berdasarkan fitur yang Anda pilih.
