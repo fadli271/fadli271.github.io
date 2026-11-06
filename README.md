@@ -1,51 +1,52 @@
-# Next.js & HeroUI Template
+# Mohamad Fadli — Personal Portfolio & Dev Studio
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+> Official portfolio website of **Mohamad Fadli**, Full-Stack Software Engineer & Web Developer based in Jakarta, Indonesia.
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
-
-## Technologies Used
-
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+[![Website](https://img.shields.io/badge/Website-fadlidevstudio.my.id-0ea5e9?style=flat-square&logo=google-chrome&logoColor=white)](https://fadlidevstudio.my.id)
+[![Next.js](https://img.shields.io/badge/Next.js%2014-black?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![HeroUI](https://img.shields.io/badge/HeroUI-000000?style=flat-square)](https://heroui.com/)
 
 ---
-## How to Use
 
-### Use the template with create-next-app
+## 🌐 Live Website
 
-To create a new project based on this template using `create-next-app`, run the following command:
+- **Custom Domain:** [https://fadlidevstudio.my.id](https://fadlidevstudio.my.id)
+- **GitHub Pages:** [https://fadli271.github.io](https://fadli271.github.io)
 
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
+---
 
-### Install dependencies
+## 💻 Tech Stack & Architecture
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+- **Core Framework:** [Next.js 14](https://nextjs.org/) (React 18 / App Router)
+- **Language:** TypeScript with strict type checking
+- **UI & Component System:** [HeroUI](https://heroui.com/) & [Tailwind CSS](https://tailwindcss.com/)
+- **Animation & Transitions:** [Framer Motion](https://www.framer.com/motion/)
+- **Theme Support:** Dark / Light mode with `next-themes`
+- **Hosting & Deployment:** GitHub Pages static export (`output: 'export'`) & Cloudflare integration
 
-```bash
-npm install
-```
+---
 
-### Run the development server
+## 🚀 Key Highlights
 
-```bash
-npm run dev
-```
+- 💼 **Interactive Project Showcase:** Case studies across enterprise web systems (POS, ERP, staff monitoring, corporate company profiles).
+- 🧮 **Services & Cost Calculator:** Interactive estimation tool for potential business clients.
+- 🌍 **Internationalization (i18n):** Bilingual support (Bahasa Indonesia & English) with instant toggle.
+- ⚡ **SEO & Performance:** Optimized Core Web Vitals, dynamic OpenGraph preview cards, sitemap, and robots.txt.
 
-### Setup pnpm (optional)
+---
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+## 🌿 Branching Strategy
 
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
+- **`development`**: Active source code repository (Next.js components, features, hooks, and content).
+- **`main`**: Production release branch containing compiled static export served via GitHub Pages.
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+---
 
+## 👤 Connect with Me
+
+- **Mohamad Fadli**
+- **GitHub:** [@fadli271](https://github.com/fadli271)
+- **LinkedIn:** [linkedin.com/in/mfadli27a](https://www.linkedin.com/in/mfadli27a/)
+- **Email:** [fadli.mohamad62@gmail.com](mailto:fadli.mohamad62@gmail.com)
